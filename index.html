@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0753bd">
+    <title>Yalla Shop | يلا شوب</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شاشة التحميل -->
+    <section id="splashScreen" class="splash-screen">
+        <img src="images/background.jpg"
+             alt="Yalla Shop"
+             class="splash-image">
+
+        <div class="loading-container">
+            <div class="loading-track">
+                <div id="loadingBar" class="loading-bar"></div>
+            </div>
+
+            <div class="loading-text">
+                <span id="loadingPercent">0%</span>
+                <span>جاري التحميل...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- الشاشة الرئيسية -->
+    <main id="homeScreen" class="home-screen" hidden>
+
+        <!-- رأس الصفحة -->
+       <!-- الهيدر الأزرق -->
+<header class="top-header">
+    <div class="top-row">
+        <div class="brand">
+            <img
+                src="images/logo.png"
+                alt="Yalla Shop"
+                class="brand-logo"
+            >
+
+            <div class="brand-name">
+                <strong>Yalla Shop</strong>
+                <span>يلا شوب</span>
+            </div>
+        </div>
+
+    <button id="notificationButton"
+        type="button"
+        class="icon-button"
+        aria-label="الإشعارات">
+            <svg viewBox="0 0 24 24" width="27" height="27"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                <path d="M10 21h4"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- البحث وخيارات اللغة والعملة -->
+<div class="search-settings">
+    <form class="search-box" id="searchForm">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="ابحث عن منتج أو قسم..."
+            aria-label="ابحث عن منتج أو قسم"
+        >
+
+        <button type="submit" aria-label="بحث">
+            <svg viewBox="0 0 24 24" width="28" height="28"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2">
+                <circle cx="10.5" cy="10.5" r="7"/>
+                <path d="m16 16 5 5"/>
+            </svg>
+        </button>
+    </form>
+
+    <div class="settings-row">
+
+        <!-- اللغة -->
+        <label class="setting-card">
+          <span class="setting-icon">
+    <img src="images/language.png"
+         alt=""
+         class="setting-icon-img">
+</span>
+
+            <span class="setting-info">
+                <strong>اللغة</strong>
+                <select id="languageSelect" aria-label="اللغة">
+                    <option value="ar">AR | العربية</option>
+                    <option value="en">EN | English</option>
+                </select>
+            </span>
+
+         
+        </label>
+
+        <!-- العملة -->
+        <label class="setting-card">
+           <span class="setting-icon">
+    <img src="images/currency.png"
+         alt=""
+         class="setting-icon-img">
+</span>
+
+            <span class="setting-info">
+                <strong>العملة</strong>
+                <select id="currencySelect" aria-label="العملة">
+                    <option value="USD">$ | USD</option>
+                    <option value="LBP">ل.ل | LBP</option>
+                </select>
+            </span>
+
+          
+        </label>
+
+    </div>
+</div>
+
+        <!-- محتوى الصفحة -->
+        <div class="home-content">
+
+            <!-- البانر الرئيسي -->
+           <section class="hero-banner">
+
+    <div class="hero-copy">
+        <h1>كل احتياجاتك<br>في مكان واحد</h1>
+        <p>تسوّق كل ما تحتاجه بسهولة</p>
+        <button id="shopNowButton" class="shop-button">
+            تسوّق الآن <span>→</span>
+        </button>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+        <img src="images/background1.jpg" class="banner-image active" alt="">
+        <img src="images/background2.jpg" class="banner-image" alt="">
+        <img src="images/background3.jpg" class="banner-image" alt="">
+             <img src="images/background2.jpg" class="banner-image" alt="">
+    </div>
+
+</section>
+           
+<div class="slider-dots" aria-label="اختيار صورة العرض">
+
+    <button class="dot active" type="button"
+            aria-label="العرض الأول"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الثاني"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الثالث"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الرابع"></button>
+
+</div>
+
+
+            <!-- الأقسام -->
+            <section class="categories-section" id="categoriesSection">
+                <div class="section-heading">
+                    <h2>الأقسام الرئيسية</h2>
+                    <button id="showAllButton">عرض الكل</button>
+                </div>
+
+             
+<div class="categories-grid" id="categoriesGrid">
+
+    <button class="category-card" data-category="سوبر ماركت">
+        <div class="category-picture supermarket">
+            <img src="images/supermarket.jpg" alt="سوبر ماركت">
+        </div>
+        <span>سوبر ماركت</span>
+    </button>
+
+    <button class="category-card" data-category="مكتبة">
+        <div class="category-picture stationery">
+            <img src="images/library.jpg" alt="مكتبة">
+        </div>
+        <span>مكتبة</span>
+    </button>
+
+    <button class="category-card" data-category="خضرة وفواكه">
+        <div class="category-picture fruits">
+            <img src="images/green.jpg" alt="خضرة وفواكه">
+        </div>
+        <span>خضرة وفواكه</span>
+    </button>
+
+    <button class="category-card" data-category="مطاعم">
+        <div class="category-picture restaurants">
+            <img src="images/Restaurants.jpg" alt="مطاعم">
+        </div>
+        <span>مطاعم</span>
+    </button>
+
+    <button class="category-card" data-category="ملحمة">
+        <div class="category-picture butcher">
+            <img src="images/Meat.jpg" alt="ملحمة">
+        </div>
+        <span>ملحمة</span>
+    </button>
+
+    <button class="category-card" data-category="حلويات">
+        <div class="category-picture sweets">
+            <img src="images/Sweets.jpg" alt="حلويات">
+        </div>
+        <span>حلويات</span>
+    </button>
+
+    <button class="category-card wide-card" data-category="منظفات">
+        <div class="category-picture cleaning">
+            <img src="images/Cleaning.jpg" alt="منظفات">
+        </div>
+        <span>منظفات</span>
+    </button>
+
+    <button class="category-card more-card" id="moreCategoriesButton">
+        <div class="more-icon">⠿</div>
+        <span>المزيد من الأقسام</span>
+    </button>
+
+</div>
+
+
+                <p id="searchMessage" class="search-message" hidden></p>
+            </section>
+
+            <!-- مساحة لإضافة منتجات لاحقاً -->
+            <section class="products-section" id="productsSection">
+                <div class="section-heading">
+                    <h2>منتجات مميزة</h2>
+                    <button id="productsButton">عرض الكل</button>
+                </div>
+
+                <div class="empty-products">
+                    <span>🛍️</span>
+                    <p>اكتشف منتجاتنا قريباً</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- التنقل السفلي -->
+       
+<!-- القائمة السفلية -->
+<nav class="bottom-nav" aria-label="القائمة الرئيسية">
+
+    <!-- الرئيسية -->
+    <button class="nav-item active"
+            type="button"
+            data-page="الرئيسية">
+
+        <svg viewBox="0 0 24 24" class="nav-svg"
+             fill="none" stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M3 10L12 3L21 10V21H3Z"/>
+            <path d="M9 21V14H15V21"/>
+        </svg>
+
+        <span>الرئيسية</span>
+    </button>
+
+    <!-- السلة -->
+    <button class="nav-item"
+            type="button"
+            data-page="السلة">
+
+        <span class="cart-icon">
+            <svg viewBox="0 0 24 24" class="nav-svg"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.8"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 2H4L7 16H21L23 6H5"/>
+            </svg>
+
+            <i>0</i>
+        </span>
+
+        <span>السلة</span>
+    </button>
+
+    <!-- بروفايل -->
+    <button class="nav-item"
+            type="button"
+            data-page="حسابي">
+
+        <svg viewBox="0 0 24 24" class="nav-svg"
+             fill="none" stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21V19C4 15 7 13 12 13S20 15 20 19V21"/>
+        </svg>
+
+        <span>بروفايل</span>
+    </button>
+
+</nav>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
