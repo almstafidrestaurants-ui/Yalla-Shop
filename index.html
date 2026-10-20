@@ -88,49 +88,8 @@
             </svg>
         </button>
     </form>
-
-    <div class="settings-row">
-
-        <!-- اللغة -->
-        <label class="setting-card">
-          <span class="setting-icon">
-    <img src="images/language.png"
-         alt=""
-         class="setting-icon-img">
-</span>
-
-            <span class="setting-info">
-                <strong>اللغة</strong>
-                <select id="languageSelect" aria-label="اللغة">
-                    <option value="ar">AR | العربية</option>
-                    <option value="en">EN | English</option>
-                </select>
-            </span>
-
-         
-        </label>
-
-        <!-- العملة -->
-        <label class="setting-card">
-           <span class="setting-icon">
-    <img src="images/currency.png"
-         alt=""
-         class="setting-icon-img">
-</span>
-
-            <span class="setting-info">
-                <strong>العملة</strong>
-                <select id="currencySelect" aria-label="العملة">
-                    <option value="USD">$ | USD</option>
-                    <option value="LBP">ل.ل | LBP</option>
-                </select>
-            </span>
-
-          
-        </label>
-
-    </div>
 </div>
+ 
 
         <!-- محتوى الصفحة -->
         <div class="home-content">
@@ -150,7 +109,7 @@
         <img src="images/background1.jpg" class="banner-image active" alt="">
         <img src="images/background2.jpg" class="banner-image" alt="">
         <img src="images/background3.jpg" class="banner-image" alt="">
-             <img src="images/background2.jpg" class="banner-image" alt="">
+             <img src="images/background4.jpg" class="banner-image" alt="">
     </div>
 
 </section>
@@ -231,15 +190,8 @@
         <span>منظفات</span>
     </button>
 
-    <button class="category-card more-card" id="moreCategoriesButton">
-        <div class="more-icon">⠿</div>
-        <span>المزيد من الأقسام</span>
-    </button>
-
 </div>
-
-
-                <p id="searchMessage" class="search-message" hidden></p>
+         <p id="searchMessage" class="search-message" hidden></p>
             </section>
 
             <!-- مساحة لإضافة منتجات لاحقاً -->
@@ -256,6 +208,84 @@
             </section>
 
         </div>
+
+        
+<!-- صفحة سوبر ماركت -->
+<section id="supermarketScreen" class="supermarket-screen" hidden>
+
+    <!-- رأس الصفحة -->
+    <header class="market-header">
+        <button type="button" id="marketBackButton"
+                class="market-back" aria-label="رجوع">
+            <svg viewBox="0 0 24 24" width="23" height="23"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+
+        <strong>سوبر ماركت</strong>
+
+        <button type="button" class="market-search-icon"
+                id="marketSearchButton" aria-label="بحث">
+            <svg viewBox="0 0 24 24" width="22" height="22"
+                 fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="10.5" cy="10.5" r="7"/>
+                <path d="m16 16 5 5"/>
+            </svg>
+        </button>
+
+    </header>
+
+    <!-- البحث عن المنتجات -->
+    <div class="market-search-wrap" id="marketSearchWrap" hidden>
+        <input id="marketProductSearch" type="search"
+               placeholder="ابحث عن منتج..."
+               aria-label="ابحث عن منتج">
+    </div>
+
+    <!-- تصنيفات السوبر ماركت -->
+    <nav class="market-categories" id="marketCategories">
+        <button type="button" class="market-filter active"
+                data-filter="all">الكل</button>
+        <button type="button" class="market-filter"
+                data-filter="drinks">مشروبات</button>
+        <button type="button" class="market-filter"
+                data-filter="Bakery">  مخبوزات وإفطار  </button>
+        <button type="button" class="market-filter"
+                data-filter="dairy">ألبان وأجبان</button>
+        <button type="button" class="market-filter"
+                data-filter="food">مواد غذائية</button>
+        <button type="button" class="market-filter"
+                data-filter="cleaning">منظفات</button>
+                 <button type="button" class="market-filter"
+                data-filter="spices">بهارات</button>
+                 <button type="button" class="market-filter"
+                data-filter="Snacks">المقرمشات </button>
+                   <button type="button" class="market-filter"
+                data-filter="Vegetables">الخضروات </button>
+                                  <button type="button" class="market-filter"
+                data-filter="Electrical">الكهربائية </button>
+    </nav>
+
+    <!-- المنتجات -->
+    <div class="market-products-scroll">
+        <div class="market-products-heading">
+            <h2 id="marketProductsTitle">كل المنتجات</h2>
+            <span id="marketProductsCount">10 منتجات</span>
+        </div>
+
+       <div class="market-products-grid" id="marketProductsGrid">
+</div>
+
+        <p id="marketNoProducts" class="market-no-products" hidden>
+            ما لقينا منتجات مطابقة لبحثك.
+        </p>
+    </div>
+
+    
+</section>
+
 
         <!-- التنقل السفلي -->
        

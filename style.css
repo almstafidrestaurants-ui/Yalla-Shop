@@ -24,7 +24,9 @@ body {
 
 body {
     min-height: 100vh;
+    padding-bottom: 85px;
 }
+
 button,
 input,
 select {
@@ -117,70 +119,105 @@ select {
    الشاشة الرئيسية
 ========================= */
 
+/* إطار التطبيق */
 .home-screen {
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 430px;
+    height: 100dvh;
+    display: block;
+    overflow: hidden;
     background: #fff;
 }
 
-/* الرأس الأبيض العام */
+/* الهيدر الأزرق */
 .top-header {
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
-    padding: 0;
-    color: var(--text);
-    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+     height: 55px !important;
+    min-height: 0 !important;
+    padding: 8px 16px 0 !important;
+    z-index: 10;
+    background:
+        radial-gradient(
+            circle at 60% 0%,
+            #087eea,
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #0758c4,
+            #053d98
+        );
     border-radius: 0;
 }
 
-/* المنطقة الزرقاء: اللوغو والاسم والجرس */
-.top-brand-area {
-    padding: 18px 16px 24px;
-    color: #fff;
-    background: linear-gradient(
-        140deg,
-        #06419e,
-        #0874e8
-    );
-    border-radius: 0 0 25px 25px;
-}
-
+/* ترتيب الشعار والجرس */
 .top-row {
     display: flex;
     flex-direction: row;
     direction: ltr;
-    justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 0;
+    justify-content: space-between;
+    gap: 10px;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    direction: ltr;
+    gap: 10px;
+}
 
+.brand-logo {
+       width: 48px !important;
+    height: 48px !important;
+    margin-top: -10px !important;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;  
+}
 
-/* جرس الإشعارات */
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    color: white;
+    
+}
+
+.brand-name strong {
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.brand-name span {
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    top: -8px;
+}
+
+/* تصغير جرس الإشعارات */
 .icon-button {
+    width: 31px !important;
+    height: 31px !important;
     display: grid;
     place-items: center;
-    width: 46px;
-    height: 46px;
-    flex-shrink: 0;
-    color: #fff;
-    background: #ffffff18;
+    color: white;
+    background: #ffffff20;
     border: 1px solid #ffffff50;
     border-radius: 50%;
-    cursor: pointer;
-}
-
-/* =========================
-   البحث واللغة والعملة
-========================= */
-
-.header-settings {
-    position: relative;
-    z-index: 3;
-    padding: 16px 14px 18px;
-    background: #fff;
+      margin-top: -10px !important;
 }
 
 /* =========================
@@ -419,77 +456,60 @@ select {
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    gap: 10px;
+    direction: rtl;
+    align-items: stretch;
 }
 
+/* الصور تملأ المساحة بشكل موحد */
 .category-card {
-    display: flex;
+        display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ grid-column: auto !important;
+    min-width: 0;
+    min-height: 0;
     flex-direction: column;
     align-items: stretch;
-    min-width: 0;
-    padding: 7px;
+    padding: 5px;
     overflow: hidden;
-    border: 1px solid #edf0f5;
-    border-radius: 18px;
+    border: 1px solid #e8edf5;
+    border-radius: 15px;
     background: #fff;
-    box-shadow: 0 4px 12px #14213d08;
-    cursor: pointer;
-    font-family: inherit;
-    transition: transform 0.15s, border-color 0.15s;
+    box-shadow: 0 2px 7px #14213d08;
+}
+
+/* نفس حجم الصورة لجميع الأقسام */
+.home-screen .category-card .category-picture,
+.home-screen .category-card.wide-card .category-picture {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 1 / 0.78 !important;
+    flex: none;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .category-card:active {
     transform: scale(0.97);
 }
 
-.category-picture {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    aspect-ratio: 1 / 0.88;
-    border-radius: 13px;
-    font-size: clamp(39px, 12vw, 55px);
-}
-
-.supermarket {
-    background: #e3f8fc;
-}
-
-.stationery {
-    background: #f0eaff;
-}
-
-.fruits {
-    background: #f5f6d9;
-}
-
-.restaurants {
-    background: #fff0d8;
-}
-
-.butcher {
-    background: #ffe7ed;
-}
-
-.sweets {
-    background: #ffeadf;
-}
-
-.cleaning {
-    background: #e2f8f8;
-}
-
+/* توحيد مكان وحجم أسماء الأقسام */
 .category-card > span {
+ width: 100%;
+    min-height: 34px;
+    padding: 5px 2px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 42px;
-    padding: 5px 0 1px;
-    color: #1c2740;
-    font-size: 13px;
-    font-weight: bold;
+    justify-content: center;
+    color: #10214e;
+    font-size: 12px;
+    font-weight: 700;
     text-align: center;
-    line-height: 1.5;
+    direction: rtl;
 }
 
 .wide-card {
@@ -557,28 +577,35 @@ select {
 ========================= */
 
 /* الشريط السفلي */
+
+/* شريط التنقل الموحد */
 .bottom-nav {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 10000;
 
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    direction: rtl;
-    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    width: 100%;
-    height: 60px;
-    min-height: 60px;
-
-    padding: 4px 8px max(4px, env(safe-area-inset-bottom));
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
 
     background: #ffffff;
-    border-top: 1px solid #e7edf5;
-    box-shadow: 0 -3px 12px rgba(0, 35, 80, 0.05);
+    border-top: 1px solid #e8e8e8;
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.07);
 }
+
+
+
+/* تأكيد أن أزرار الشريط تبقى قابلة للضغط */
+.bottom-nav .nav-item {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* الأزرار */
 .nav-item {
@@ -688,21 +715,8 @@ select {
         padding: 14px 12px 20px;
     }
 
-    .brand-logo {
-        width: 54px;
-        height: 54px;
-    }
-
-    .brand-name strong {
-        font-size: 20px;
-    }
-
     .brand-name span {
         font-size: 15px;
-    }
-
-    .header-settings {
-        padding: 12px 10px 14px;
     }
 
     .categories-grid {
@@ -734,93 +748,45 @@ select {
         font-size: 8px;
     }
 
-}
+    .top-header {
+      height: 55px !important;
+        padding: 8px 10px 0 !important;
+    }
 
-/* ===== تصميم Yalla Shop مثل الصورة المرجعية ===== */
+    .brand-logo {
+        width: 56px;
+        height: 56px;
+    }
 
-:root {
-    --blue: #0753bd;
-    --dark-blue: #063d94;
-    --light-blue: #eef5ff;
-    --text: #14213d;
-    --muted: #7c8798;
-    --white: #ffffff;
-}
+    .brand-name strong {
+        font-size: 19px;
+    }
 
-/* خلفية التطبيق */
-.home-screen {
-    background: #fff;
-    overflow: hidden;
-}
+    .search-settings {
+        padding: 0 10px;
+          top: 70px !important;
+    }
 
-/* الهيدر الأزرق: الشعار والاسم والجرس فقط */
-.top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 125px;
-    padding: 20px 16px 35px;
-    background:
-        radial-gradient(circle at 55% 0%, #0878e8, transparent 55%),
-        linear-gradient(135deg, #0753bd, #063d94);
-    border-radius: 0;
-    z-index: 3;
-}
+    .home-content {
+    top: 120px !important;
+        padding: 8px 10px 20px;
+    }
+    .home-screen .top-header {
+        height: 55px;
+        min-height: 55px;
+        padding: 8px 10px 0;
+    }
 
-.top-row {
-    display: flex;
-    flex-direction: row;
-    direction: ltr;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-}
+    .home-screen .search-settings {
+        top: 70px;
+        padding: 0 10px;
+    }
 
-
-.icon-button {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-    color: #fff;
-    background: #ffffff18;
-    border: 1px solid #ffffff45;
-    border-radius: 50%;
-}
-
-/* البحث واللغة والعملة تحت الهيدر */
-.search-settings {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    z-index: 4;
-    padding: 0 16px;
-    background: transparent;
-}
-
-
-/* العناوين */
-.section-heading h2 {
-    color: #091b4c;
-    font-size: 21px;
-    font-weight: 800;
-}
-
-/* البطاقات */
-.categories-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-}
-
-.category-card {
-    padding: 6px;
-    border-radius: 17px;
-    border: 1px solid #e8edf5;
-    box-shadow: 0 2px 8px #14213d08;
+    .home-screen .home-content {
+        top: 115px;
+        padding: 8px 10px 20px;
+    }
+   
 }
 
 .category-picture {
@@ -831,18 +797,12 @@ select {
 
 /* إذا وضعت صورة داخل بطاقة القسم */
 .category-picture img {
-    display: block;
+  display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.category-card > span {
-    min-height: 38px;
-    color: #10214e;
-    font-size: 13px;
-    font-weight: bold;
-}
 
 
 /* اللابتوب: عرض موبايل ثابت */
@@ -857,226 +817,10 @@ select {
     }
 }
 
-/* الشاشات الصغيرة */
-@media (max-width: 360px) {
-    .top-header {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .brand-logo {
-        width: 53px;
-        height: 53px;
-    }
-
-    .brand-name strong {
-        font-size: 19px;
-    }
-
-    .search-settings {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .settings-row {
-        gap: 6px;
-    }
-
-    .setting-card {
-        gap: 5px;
-        padding: 7px;
-    }
-
-    .setting-icon {
-        font-size: 21px;
-    }
-
-    .setting-info strong {
-        font-size: 12px;
-    }
-
-    .setting-info select {
-        font-size: 10px;
-    }
-
-
-    .categories-grid {
-        gap: 7px;
-    }
-}
-/* تثبيت الشاشة الرئيسية على كامل شاشة الموبايل */
-.home-screen {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-
-    width: 100%;
-    max-width: 430px;
-
-    height: 100vh;
-    height: 100dvh;
-
-    overflow: hidden;
-    background: #ffffff;
-}
-
-
-/* الهيدر والبحث فوق المحتوى */
-.top-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.search-settings {
-    position: absolute;
-    top: 145px;
-    right: 0;
-    left: 0;
-    z-index: 9;
-
-    padding: 16px 14px 0;
-    background: #ffffff;
-}
-
-/* شاشة اللابتوب */
-@media (min-width: 431px) {
-    .home-screen {
-        width: 390px;
-    }
-
-    .home-content {
-        top: 360px;
-    }
-}
-
-/* الهواتف الصغيرة */
-@media (max-width: 360px) {
-    .home-content {
-        top: 340px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-
-    .search-settings {
-        top: 135px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-}
-
-
-/* =====================================
-   YALLA SHOP - HOME SCREEN REDESIGN
-===================================== */
-
-/* إطار التطبيق */
-.home-screen {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 430px;
-    height: 100dvh;
-    display: block;
-    overflow: hidden;
-    background: #fff;
-}
-
-/* الهيدر الأزرق */
-.top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 115px;
-    padding: 15px 16px 0;
-    z-index: 10;
-    background:
-        radial-gradient(
-            circle at 60% 0%,
-            #087eea,
-            transparent 65%
-        ),
-        linear-gradient(
-            135deg,
-            #0758c4,
-            #053d98
-        );
-    border-radius: 0;
-}
-
-/* ترتيب الشعار والجرس */
-.top-row {
-    display: flex;
-    flex-direction: row;
-    direction: ltr;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    direction: ltr;
-    gap: 8px;
-}
-
-.brand-logo {
-    width: 67px;
-    height: 67px;
-    object-fit: contain;
-    border-radius: 0;
-    background: transparent;
-       margin-top: -10px;
-  
-}
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0px;
-    color: white;
-    
-}
-
-.brand-name strong {
-    font-size: 22px;
-    font-weight: 800;
-    white-space: nowrap;
-}
-
-.brand-name span {
-    font-size: 15px;
-    font-weight: 700;
-    position: relative;
-    top: -8px;
-}
-
-.icon-button {
-    width: 45px;
-    height: 45px;
-    display: grid;
-    place-items: center;
-    color: white;
-    background: #ffffff20;
-    border: 1px solid #ffffff50;
-    border-radius: 50%;
-}
-
 /* البحث واللغة والعملة */
 .search-settings {
     position: absolute;
-    top: 87px;
+          top: 60px !important;
     left: 0;
     right: 0;
     z-index: 20;
@@ -1117,100 +861,11 @@ select {
     place-items: center;
 }
 
-/* بطاقتا اللغة والعملة */
-.settings-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    direction: ltr;
-    gap: 10px;
-    margin-top: 5px;
-}
 
-/* الحفاظ على ارتفاع البوتون */
-.setting-card {
-     height: 40px;
-    min-height: 40px;
-    padding: 4px 10px;
-    align-items: center;
-    gap: 5px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    min-width: 0;
-    background: #f0f6ff;
-    border: 1px solid #dae7f8;
-    box-shadow: none;
-}
-
-
-/* إطار أيقونة اللغة والعملة */
-.setting-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 36px;
-    height: 36px;
-
-    flex-shrink: 0;
-}
-
-/* صور الأيقونات */
-.setting-icon-img {
-    display: block;
-
-    width: 32px;
-    height: 32px;
-
-    object-fit: contain;
-    background: transparent;
-}
-
-/* ترتيب النصوص داخل البوتون */
-.setting-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-    min-width: 0;
-    gap: 0px;
-}
-
-/* كلمة اللغة أو العملة */
-.setting-info strong {
-    font-size: 11px;
-    font-weight: 800;
-    line-height: 12px;
-    margin: 0;
-      padding: 0;
-}
-
-/* العربية والدولار */
-.setting-info select {
-  display: block;
-    width: 100%;
-    min-width: 0;
-    height: 20px;
-    min-height: 20px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: #25344e;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: normal;
-    appearance: auto;
-}
-
-
-
-/* منطقة المحتوى - إزالة الفراغ الكبير */
+/* الحفاظ على مكان البانر والأقسام */
 .home-content {
     position: absolute;
-    top: 178px;
+       top: 105px !important;
     padding: 4px 15px 22px;
     right: 0;
     bottom: calc(75px + env(safe-area-inset-bottom));
@@ -1250,27 +905,7 @@ select {
     border: none;
 }
 
-/* بطاقات الأقسام */
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-    direction: ltr;
-}
 
-.category-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    padding: 5px;
-    overflow: hidden;
-    border: 1px solid #e8edf5;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 2px 7px #14213d08;
-    font-family: inherit;
-    cursor: pointer;
-}
 
 .category-picture {
     width: 100%;
@@ -1279,13 +914,6 @@ select {
     place-items: center;
     overflow: hidden;
     border-radius: 12px;
-}
-
-.category-picture img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
 }
 
 .category-card > span {
@@ -1322,39 +950,6 @@ select {
 }
 
 
-/* الشاشات الصغيرة */
-@media (max-width: 360px) {
-    .top-header {
-        padding: 12px 10px 0;
-    }
-
-    .brand-logo {
-        width: 56px;
-        height: 56px;
-    }
-
-    .brand-name strong {
-        font-size: 19px;
-    }
-
-    .search-settings {
-        padding: 0 10px;
-    }
-
-    .home-content {
-        top: 222px;
-        padding: 8px 10px 20px;
-    }
-
-    .categories-grid {
-        gap: 7px;
-    }
-
-    .hero-copy h1 {
-        font-size: 18px;
-    }
-}
-
 /* إبقاء الواجهة بعرض موبايل على الكمبيوتر */
 @media (min-width: 431px) {
     .home-screen {
@@ -1363,18 +958,6 @@ select {
     }
 }
 
-/* للموبايلات الصغيرة */
-@media (max-width: 360px) {
-    .setting-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .setting-icon-img {
-        width: 27px;
-        height: 27px;
-    }
-}
 
 /* إخفاء شريط التمرير مع إبقاء التمرير شغال */
 .home-content {
@@ -1387,4 +970,476 @@ select {
 .home-content::-webkit-scrollbar {
     display: none;
     width: 0;
+}
+
+/* =====================================
+   الإصلاح النهائي - Yalla Shop
+   البحث فقط من دون اللغة والعملة
+===================================== */
+
+/* الهيدر الأزرق */
+.home-screen .top-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    min-height: 55px;
+    padding: 8px 16px 0;
+    z-index: 30;
+}
+
+/* البحث */
+.home-screen .search-settings {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    z-index: 25;
+}
+
+
+
+.hero-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+}
+
+.banner-image.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* ==================================================================================================
+   Yalla Shop - Supermarket
+============================================================================================================ */
+
+.supermarket-screen[hidden] {
+    display: none !important;
+}
+
+.home-screen .supermarket-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f7f9fc;
+    color: #14213d;
+}
+
+.home-screen .supermarket-screen[hidden] {
+    display: none !important;
+}
+
+.market-header {
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 14px;
+    color: #fff;
+    background: linear-gradient(135deg, #0753bd, #087de8);
+    box-shadow: 0 3px 12px #0753bd20;
+}
+
+.market-header strong {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.market-header button {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+}
+
+.market-back,
+.market-search-icon,
+.market-cart-icon {
+    width: 32px;
+    height: 36px;
+}
+
+.market-cart-icon {
+    position: relative;
+    font-size: 22px;
+}
+
+.market-cart-icon i {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    display: grid;
+    place-items: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 3px;
+    border-radius: 50%;
+    background: #ef3349;
+    color: white;
+    font-size: 10px;
+    font-style: normal;
+}
+
+.market-search-wrap {
+    flex: 0 0 auto;
+    padding: 9px 12px 0;
+    background: white;
+}
+
+.market-search-wrap[hidden] {
+    display: none !important;
+}
+
+.market-search-wrap input {
+    width: 100%;
+    height: 38px;
+    padding: 0 13px;
+    border: 1px solid #e2eaf4;
+    border-radius: 22px;
+    outline: none;
+    background: #f7f9fc;
+    font: inherit;
+    font-size: 13px;
+}
+
+.market-search-wrap input:focus {
+    border-color: #0753bd;
+}
+
+.market-categories {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 7px;
+    padding: 12px 10px;
+    overflow-x: auto;
+    background: white;
+    scrollbar-width: none;
+}
+
+.market-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.market-filter {
+    flex: 0 0 auto;
+    padding: 7px 13px;
+    border: 1px solid #e7edf6;
+    border-radius: 18px;
+    background: #f5f8fc;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.market-filter.active {
+    border-color: #0753bd;
+    background: #0753bd;
+    color: white;
+}
+
+.market-products-scroll {
+    flex: 1;
+    min-height: 0;
+    padding: 14px 11px 18px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+}
+
+.market-products-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.market-products-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.market-products-heading h2 {
+    color: #14213d;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.market-products-heading span {
+    color: #8793a5;
+    font-size: 11px;
+}
+
+.market-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 11px;
+}
+
+.market-product {
+    position: relative;
+    min-width: 0;
+    padding: 8px;
+    overflow: hidden;
+    border: 1px solid #e8edf5;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(25, 53, 90, .035);
+}
+
+.market-product-picture {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 112px;
+    margin-bottom: 8px;
+    border-radius: 11px;
+    font-size: 54px;
+    background: #f1f6ff;
+}
+.market-product-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.market-product-picture:has(img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.milk-picture { background: #e8f8ff; }
+.chips-picture { background: #e8f8ff; }
+.tomato-picture { background: #e8f8ff; }
+.banana-picture { background: #e8f8ff; }
+.eggs-picture { background: #e8f8ff; }
+.rice-picture { background: #e8f8ff; }
+.juice-picture { background: #e8f8ff; }
+.cleaning-picture { background: #e8f8ff; }
+
+.market-product h3 {
+    min-height: 20px;
+    margin: 0;
+    color: #17233d;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.market-product-unit {
+    margin-top: 2px;
+    color: #8994a6;
+    font-size: 10px;
+}
+
+.market-product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 9px;
+}
+
+.market-product-bottom strong {
+    color: #14213d;
+    font-size: 13px;
+    direction: ltr;
+}
+
+.market-add {
+    display: grid;
+    place-items: center;
+    width: 31px;
+    height: 31px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 9px;
+    background: #0875e1;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 3px 7px #0875e130;
+}
+
+.market-add:active {
+    transform: scale(.92);
+}
+
+.market-favorite {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #edf0f5;
+    border-radius: 50%;
+    background: #ffffffeb;
+    color: #8190a5;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.market-favorite.favorited {
+    color: #ef4056;
+}
+
+.market-no-products {
+    padding: 28px 10px;
+    color: #8290a4;
+    text-align: center;
+    font-size: 13px;
+}
+
+.market-bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    flex: 0 0 62px;
+    padding: 5px 3px max(5px, env(safe-area-inset-bottom));
+    border-top: 1px solid #e9eef5;
+    background: white;
+}
+
+.market-bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: #8996aa;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.market-bottom-nav button span {
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.market-bottom-nav button.selected {
+    color: #0753bd;
+}
+
+
+@media (max-width: 360px) {
+    .market-product-picture {
+        height: 98px;
+    }
+
+    .market-products-grid {
+        gap: 8px;
+    }
+
+    .market-product {
+        padding: 6px;
+    }
+}
+
+/* الشريط السفلي ضمن إطار التطبيق فقط */
+.home-screen .bottom-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    min-height: 60px;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 8px 12px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* عدم إظهار الشريط أثناء شاشة البداية */
+.splash-screen ~ .bottom-nav {
+    display: none !important;
+}
+
+/* ترك مساحة للمحتوى حتى لا يغطيه الشريط */
+.home-screen .home-content {
+    bottom: calc(60px + env(safe-area-inset-bottom));
+}
+/* شريط الأقسام المتحرك */
+.market-categories {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.market-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.market-filter {
+    flex-shrink: 0;
+}
+
+.market-categories {
+    overflow-x: auto;
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+}
+
+.market-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.market-filter {
+    flex-shrink: 0;
 }
