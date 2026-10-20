@@ -328,7 +328,7 @@ if (moreCategoriesButton) {
             name: "  معتوق شوفان +ميكس     ",
             price: 	0.666,
             unit: "  ",
-            category: "Bakery",
+            category: "food",
              image: "images/Maatouk Oats + Mix.png",
             pictureClass: "cleaning-picture"
          },
@@ -400,7 +400,7 @@ if (moreCategoriesButton) {
             name: " اوزمو هابي بسكويت     ",
             price: 		0.3333	 ,
             unit: "  37.5غ",
-            category: "spices",
+            category: "Snacks",
              image: "images/Ozmo Happy Biscuits.png",
             pictureClass: "cleaning-picture"
          },
@@ -729,16 +729,1089 @@ if (moreCategoriesButton) {
             pictureClass: "cleaning-picture"
         },
 {
-            id: 58,
+            id: 59,
             name: "  بطارية انرجيزر   ",
             price: 0.55 ,
             unit: "  ",
             category: "Electrical",
              image: "images/Energizer Battery.png",
             pictureClass: "cleaning-picture"
+        },
+{
+            id: 60,
+            name: "  ديمة سوفتي  ",
+            price: 0.38888 ,
+            unit: "  ",
+            category: "Snacks",
+             image: "images/Dima Softi.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+            id: 61,
+            name: "  جبنة بريزيدون  ",
+            price: 1.47 ,
+            unit: " *16 ",
+            category: "dairy",
+             image: "images/President Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+            id: 62,
+            name: "  	بوظة السلطان  ",
+            price: 4 ,
+            unit: " 1ك ",
+            category: "IceCream",
+             image: "images/Sultan Ice Cream.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+            id: 63,
+            name: "  	قداحة ضو  ",
+            price:	0.222 ,
+            unit: "  ",
+            category: "Electrical",
+             image: "images/Lighter.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+            id: 64,
+            name: "  اكياس نفايات اسود بيرلا  ",
+            price: 1.6666 ,
+            unit: " 20* ",
+            category: "cleaning",
+             image: "images/Perla Black.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+            id: 65,
+            name: "  جنرال معطر حمامات  ",
+            price: 1.75 ,
+            unit: "  2+1 ",
+            category: "cleaning",
+             image: "images/General Bathroom.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+            id: 66,
+            name: " لمبة برم ",
+            price: 2 ,
+            unit: "   30 W ",
+            category: "Electrical",
+             image: "images/LED Bulb 30W.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 67,
+            name: "  ذرة  ",
+            price: 3.822 ,
+            unit: "  2500غ ",
+            category: "food",
+             image: "images/Corn1.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+            id: 68,
+            name: "   قرقش شوكولا ",
+            price: 2.888 ,
+            unit: "  علبة ",
+            category: "food",
+             image: "images/Qarqash Chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+            id: 69,
+            name: "  انفنتي سائل غسيل ",
+            price: 4 ,
+            unit: "   3 لتر ",
+            category: "cleaning",
+             image: "images/Infinity Laundry Detergent.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+            id: 70,
+            name: "  وايف اب ",
+            price: 0.444 ,
+            unit: " 40غ ",
+            category: "Snacks",
+             image: "images/Wipe Up.png",
+            pictureClass: "cleaning-picture"
+        },
+                {
+            id: 71,
+            name: "  	شوال طحين ",
+            price:22 ,
+            unit: "  50ك ",
+            category: "food",
+             image: "images/Flour.png",
+            pictureClass: "cleaning-picture"
+        },
+                {
+            id: 72,
+            name: "  	مكنة حلاقة بيك نسائي",
+            price:	1.5,
+            unit: "  5+1",
+            category: "cleaning",
+             image: "images/Women’s Razor.png",
+            pictureClass: "cleaning-picture"
+        },
+                {
+            id: 73,
+            name: "  	قضامة فلت ",
+            price: 0.65 ,
+            unit: "  200 غ",
+            category: "Snacks",
+             image: "images/Chickpeas.png",
+            pictureClass: "cleaning-picture"
+        },
+                {
+            id: 74,
+            name: "  فلقة مياه نسلة",
+            price: 1.8888 ,
+            unit: "  0.33 لتر  ",
+            category: "drinks",
+             image: "images/Nestlé Pure.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+            id: 75,
+            name: "  منتوس اي سي علكة ",
+            price: 0.5 ,
+            unit: "  *8 ",
+            category: "Snacks",
+             image: "images/Mentos Ice Gum.png",
+            pictureClass: "cleaning-picture"
+        },
+       {
+            id: 76,
+            name: "  بازيلا مع جزر ",
+            price: 1.77 ,
+            unit: "  400 غ ",
+            category: "Snacks",
+             image: "images/Peas with carrots.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 77,
+            name: "  بلاك غولد سمن نباتي ممتاز",
+            price: 1.55 ,
+            unit: "  700مل",
+            category: "food",
+             image: "images/Black Gold.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 78,
+            name: "  كيك اولكر ",
+            price: 1.333 ,
+            unit: "  160غ",
+            category: "Snacks",
+             image: "images/Ülker Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 79,
+            name: "  عصير ريندا ",
+            price: 0.8888 ,
+            unit: "  1.25ليتر",
+            category: "drinks",
+             image: "images/Rinda Juice.png",
+            pictureClass: "cleaning-picture"
+        },
+    
+        {
+            id: 80,
+            name: "  فرشاة اسنان اطفال ",
+            price: 0.9 ,
+            unit: "   ",
+            category: "cleaning",
+             image: "images/Children's toothbrush.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 81,
+            name: "  بيتزوللو لازانيا ",
+            price: 1.8888 ,
+            unit: "   ",
+            category: "food",
+             image: "images/Pizzallo lasagna.png",
+            pictureClass: "cleaning-picture"
+        },
+
+    {
+            id: 76,
+            name: "  نسكافيه ماتينال	 ",
+            price: 6.333 ,
+            unit: "  200 غ ",
+            category: "food",
+             image: "images/Nescafé Matinal.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 77,
+            name: "  مايونيز تركي",
+            price: 1.22 ,
+            unit: "  550غ",
+            category: "dairy",
+             image: "images/Turkish Mayonnaise.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 78,
+            name: "  صابون بالموليف ",
+            price: 0.6666 ,
+            unit: "  90غ",
+            category: "cleaning",
+             image: "images/Palmolive Soap.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 79,
+            name: "  كولونيا ",
+            price: 1.333 ,
+            unit: "  125مل",
+            category: "cleaning",
+             image: "images/Cologne.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 80,
+            name: "  خبز تنور مرقوق ",
+            price: 0.555 ,
+            unit: "   ",
+            category: "Bakery",
+             image: "images/tandoor bread.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 81,
+            name: "  سامون	",
+            price: 0.8333 ,
+            unit: "   ",
+            category: "Bakery",
+             image: "images/Samoun.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 82,
+            name: "  ذرة ديروني 	",
+            price: 1.2777 ,
+            unit: "  340غ ",
+            category: "food",
+             image: "images/Corn.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+            id: 83,
+            name: "  صلصة البندورة يوردوم	",
+            price: 2 ,
+            unit: "  830غ",
+            category: "food",
+             image: "images/Yurdum Tomato.png",
+            pictureClass: "cleaning-picture"
+        },
+       {
+            id: 84,
+            name: "  شامبو اكس سمارت  ",
+            price: 1.75 ,
+            unit: "  750 مل ",
+            category: "cleaning",
+             image: "images/X-Smart Shampoo.png",
+            pictureClass: "cleaning-picture"
+        },
+           {
+            id: 85,
+            name: "  كاتشاب اكسترا  عصارة ",
+            price: 2.1111 ,
+            unit: "  800غ",
+            category: "food",
+             image: "images/Extra Ketchup.png",
+            pictureClass: "cleaning-picture"
+        },
+               {
+            id: 85,
+            name: "  شامبو برت بلاس",
+            price:	3.2222 ,
+            unit: " 600مل",
+            category: "cleaning",
+             image: "images/Pert Plus.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+            id: 86,
+            name: "  شامبو برت بلاس",
+            price:	3.2222 ,
+            unit: " 600مل",
+            category: "cleaning",
+             image: "images/Pert Plus.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+            id: 87,
+            name: " فانيليا دومو ",
+            price:	0.7777 ,
+            unit: " 28 غ تنك",
+            category: "food",
+             image: "images/Domo Vanilla.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+            id: 88,
+            name: " لمبة  ",
+            price:	1.1 ,
+            unit: "  13 واط ",
+            category: "Electrical",
+             image: "images/13W Light Bulb.png",
+            pictureClass: "cleaning-picture"
+        },
+      {
+            id: 89,
+            name: " بونبون مينت  ",
+            price:	0.166 ,
+            unit: "   ",
+            category: "Snacks",
+             image: "images/Mint Bonbon.png",
+            pictureClass: "cleaning-picture"
+        },
+      {
+            id: 90,
+            name: " 	شاي ليبتون ",
+            price:	2.77777 ,
+            unit: " 100ظرف  ",
+            category: "food",
+             image: "images/Lipton Tea.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 91,
+            name: " 	برايفت ماكسي بوكيت   ",
+            price:  0.875,
+            unit: "  *8 ",
+            category: "cleaning",
+             image: "images/Private Maxi.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 92,
+            name: " السفير محارم  ",
+            price:  0.35,
+            unit: " 100غ",
+            category: "cleaning",
+             image: "images/Safeer Tissues.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 93,
+            name: " ريماس محاشي ",
+            price:  0.222 ,
+            unit: " 40غ",
+            category: "Snacks",
+             image: "images/Rimas.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 94,
+            name: " سميدس ",
+            price:  7 ,
+            unit: " 900غ",
+            category: "dairy",
+             image: "images/Smedes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 95,
+            name: " خبز مرقوق ",
+            price:  0.888 ,
+            unit: "  ",
+            category: "Bakery",
+             image: "images/Markook bread.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 96,
+            name: " 	كومفورت منعم للملابس",
+            price:  3.8888,
+            unit: " 2 ليتر ",
+            category: "cleaning",
+             image: "images/Comfort Fabric.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 97,
+            name: " 	كراكي مالح ",
+            price:  0.333 ,
+            unit: " 2 ليتر ",
+            category: "Snacks",
+             image: "images/Salty Crackers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 98,
+            name: " 	شعيرية راميتو ",
+            price:  1.25 ,
+            unit: "  750غ",
+            category: "food",
+             image: "images/Ramito vermicelli.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 99,
+            name: " 	كادبري  ",
+            price:  4.9 ,
+            unit: "  500غ ",
+            category: "Snacks",
+             image: "images/Cadbury.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 100,
+            name: " 		سائل جلي كرمل   ",
+            price:  1.218 ,
+            unit: "  1100مل",
+            category: "Snacks",
+             image: "images/Karmel.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 101,
+            name: " برغل ابيض طراد  ",
+            price:  4.287 ,
+            unit: "  5ك",
+            category: "food",
+             image: "images/White Bulgur.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 102,
+            name: " قداحة خفيف ",
+            price: 0.166 ,
+            unit: "   ",
+            category: "Electrical",
+             image: "images/Lighter.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 103,
+            name: " دونات كريسبي",
+            price: 0.6666 ,
+            unit: "   ",
+            category: "Snacks",
+             image: "images/Krispy Donut.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 104,
+            name: " مكنسة نايلون خشنة ",
+            price: 1.2222 ,
+            unit: "   ",
+            category: "cleaning",
+             image: "images/Coarse Nylon Broom.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 105,
+            name: " سيف مقطع ",
+            price: 0.45 ,
+            unit: "  *12 ",
+            category: "cleaning",
+             image: "images/Scouring Pad.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 106,
+            name: " 	ظرف حليب ديليش",
+            price: 	0.175 ,
+            unit: "    ",
+            category: "dairy",
+             image: "images/Delish Milk Sachet.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 107,
+            name: " 	مايونيز جيرسي ",
+            price: 	6.5 ,
+            unit: "  3.785ليتر  ",
+            category: "dairy",
+             image: "images/Jersey Mayonnaise.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 108,
+            name: " 	البني رول",
+            price: 	0.7777 ,
+            unit: "    ",
+            category: "Snacks",
+             image: "images/Al-Bani.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 109,
+            name: " 	 فيتال اكياس تفريز سحاب",
+            price: 0.9 ,
+            unit: "   *18  ",
+            category: "cleaning",
+             image: "images/Freezing.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 110,
+            name: " 	 صابون تي شو+ديتول غالون",
+            price:2.25 ,
+            unit: "   4 ليتر  ",
+            category: "cleaning",
+             image: "images/T-Show + Dettol Soap.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 111,
+            name: " 	دبي بوظة كويين",
+            price: 1.333 ,
+            unit: "      ",
+            category: "IceCream",
+             image: "images/Dubai Queen Ice Cream.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 112,
+            name: " 	جبنة موزيريلا بوك	 ",
+            price: 12.222 ,
+            unit: "   1800غ ",
+            category: "dairy",
+             image: "images/Puck Mozzarella Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 113,
+            name: " 	 شطة",
+            price: 2 ,
+            unit: "   800غ  ",
+            category: "food",
+             image: "images/Freezing.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 114,
+            name: " 	 مستر جوسي ",
+            price: 0.888 ,
+            unit: "  1 ليتر ",
+            category: "drinks",
+             image: "images/Mr. Juicy.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 115,
+            name: " 	 بيض كبير",
+            price: 2.444,
+            unit: "    ",
+            category: "food",
+             image: "images/Large Eggs.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 116,
+            name: " 	  خردل ميا ",
+            price: 1 ,
+            unit: "  260 غ",
+            category: "food",
+             image: "images/Mustard.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 117,
+            name: " نيو بارك جبنة مطبوخة ",
+            price: 1.555 ,
+            unit: " 300 غ",
+            category: "dairy",
+             image: "images/New Park.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 118,
+            name: " مالتيزرس ",
+            price: 1 ,
+            unit: " 37غ",
+            category: "Snacks",
+             image: "images/Maltesers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 119,
+            name: " بهار فاهيتا ",
+            price: 0.888 ,
+            unit: " 100 غ",
+            category: "spices",
+             image: "images/Fajita Seasoning.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 120,
+            name: " شامبو السادا ",
+            price: 2.6666,
+            unit: " 750مل",
+            category: "cleaning",
+             image: "images/Al-Sada.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 121,
+            name: " بيغ ام ميغا  بندق  ",
+            price: 0.175,
+            unit: "  ",
+            category: "Snacks",
+             image: "images/Big M.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 122,
+            name: " 	صندوق معتوق ساندويش كريمة ",
+            price: 4.75,
+            unit: "  ",
+            category: "Snacks",
+             image: "images/Maatouk Cream.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 123,
+            name: " 	حلاوة سرور",
+            price: 4.5,
+            unit: " 1ك ",
+            category: "food",
+             image: "images/Surour Halawa.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 124,
+            name: " 	وانتد بوبس كارمل",
+            price: 0.277,
+            unit: "  28غ",
+            category: "Snacks",
+            image: "images/Wanted.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 125,
+            name: " 	قرقش	",
+            price: 0.444,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Qarqash.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 126,
+            name: " 	منتوس رول	",
+            price: 0.4 ,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Mentos Roll.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 127,
+            name: " 	صندوق مستر جوسي   ",
+            price: 4.7777 ,
+            unit: " *30	  ",
+            category: "drinks",
+            image: "images/Mr. Juicy (Box.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 128,
+            name: " 	اسطنبولي بلدي  ",
+            price: 5 ,
+            unit: " *1ك	  ",
+            category: "food",
+            image: "images/Istanbuli Baladi.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 129,
+            name: " 	اوسلو كيك ريد لوف  ",
+            price: 0.23 ,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Oslo Red Love Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 130,
+            name: " 	معالق بلاستيك ",
+            price: 0.6666 ,
+            unit: "  *50  ",
+            category: "cleaning",
+            image: "images/Plastic Spoons.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 131,
+            name: " 	ام اند ام ",
+            price: 0.7777 ,
+            unit: "     ",
+            category: "Snacks",
+            image: "images/M&M's.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 132,
+            name: " 	مرتديلا الراعي ",
+            price: 1.3888 ,
+            unit: "   200غ   ",
+            category: "food",
+            image: "images/Al-Ra'i Mortadella.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 133,
+            name: " 	يانسون ناعم",
+            price: 0.424 ,
+            unit: "      ",
+            category: "spices",
+            image: "images/Fennel (Ground or Coarse).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 134,
+            name: " 	براوني كيك هازلنت  ",
+            price: 0.6666 ,
+            unit: "   40غ   ",
+            category: "Snacks",
+            image: "images/Hazelnut Brownie Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 135,
+            name: " 	 لوز مدخن الرئيف ",
+            price: 	0.388 ,
+            unit: "      ",
+            category: "Snacks",
+            image: "images/Al-Ra'if Smoked Almonds.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 136,
+            name: " 	زيت انجي ",
+            price: 	7.555 ,
+            unit: "    5 ليتر  ",
+            category: "food",
+            image: "images/Inji Oil.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 137,
+            name: " 	مصاصة تشوبا تشوبس ",
+            price: 	0.106 ,
+            unit: "      ",
+            category: "Snacks",
+            image: "images/Chupa Chups Lollipop.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 138,
+            name: " 	توست محمص شمسين",
+            price: 	1.2 ,
+            unit: "      ",
+            category: "Bakery",
+            image: "images/Shamsin Toasted Bread (Toast).png",
+            pictureClass: "cleaning-picture"
+        },
+
+{
+             id: 139,
+            name: " 	شومر ناعم او خشن",
+            price: 	0.666 ,
+            unit: "   100غ   ",
+            category: "spices",
+            image: "images/Fennel (Ground or Coarse).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 140,
+            name: " 	تمر خضري عادي ",
+            price: 	1.11 ,
+            unit: "  400غ  ",
+            category: "food",
+            image: "images/Regular Khodri Dates.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 141,
+            name: " 	  سكر  لوباس ",
+            price: 	4.555 ,
+            unit: "  5ك ",
+            category: "food",
+            image: "images/Lubas sugar (5 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 142,
+            name: " 	 زعتر اسرتي",
+            price: 	2.1 ,
+            unit: "  1ك",
+            category: "food",
+            image: "images/Usrati Thyme (Za'atar).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 143,
+            name: " 	 سكر نبات الجودة  ",
+            price: 	1.11 ,
+            unit: "  200 غ ",
+            category: "food",
+            image: "images/nabat sugar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 144,
+            name: " 	 مرطبان زجاج ",
+            price: 0.4444 ,
+            unit: "  1ك",
+            category: "food",
+            image: "images/Glass Jar (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 145,
+            name: " 	سكر ناعم الفيحاء ",
+            price: 1 ,
+            unit: "  900غ ",
+            category: "food",
+            image: "images/Al-Fayhaa Fine Sugar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 146,
+            name: " 	هيستيريا شوكولا",
+            price: 	0.222 ,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Hysteria Chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 147,
+            name: " 	رز مصري زين ",
+            price: 4.444 ,
+            unit: "  5ك",
+            category: "food",
+            image: "images/Zein Egyptian Rice (5 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 148,
+            name: " 	 ظرف عصير دارينا",
+            price: 0.222 ,
+            unit: "   ",
+            category: "drinks",
+            image: "images/Darina Juice Sachet.png",
+            pictureClass: "cleaning-picture"
+        },
+
+{
+             id: 149,
+            name: "  	صابون جيف يدين  ",
+            price: 0.2777 ,
+            unit: "  76غ ",
+            category: "cleaning",
+            image: "images/Cif Hand Soap.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 150,
+            name: "  	الفيف  دريم لونغ ",
+            price:3.8888,
+            unit: "  400 مل",
+            category: "cleaning",
+            image: "images/Elvive Dream Long.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 151,
+            name: "  	كيس بالون ",
+            price:1.111,
+            unit: "  *100",
+            category: "cleaning",
+            image: "images/Bag of balloons.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 152,
+            name: "  		فرشاة اسنان اورال ب سوفت",
+            price:0.5555,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Oral-B Soft Toothbrush.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 153,
+            name: "  بالون مصران",
+            price:0.555,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Balloon  erpentine).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 154,
+            name: "  تمر خضري فلت",
+            price:2.6666,
+            unit: "  1ك ",
+            category: "food",
+            image: "images/Khudri Dates (loose).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 155,
+            name: "  زيت الوردة دوار ",
+            price:5.777,
+            unit: "  5 ليتر",
+            category: "food",
+            image: "images/Al-Warda Sunflower Oil.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 156,
+            name: "  كعك اكسترا ريداني ",
+            price:2.111,
+            unit: "  800غ ",
+            category: "Bakery",
+            image: "images/Extra Ridani Cakes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 157,
+            name: " علبةاولكر بيسكريم ",
+            price:9.5,
+            unit: "  *18 ",
+            category: "Snacks",
+            image: "images/Ülker Bisrem Box.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 158,
+            name: "  البني بار كيك",
+            price:0.6666,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Al-Bani.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 159,
+            name: "  برينس ",
+            price:0.833,
+            unit: " 80غ   ",
+            category: "Snacks",
+            image: "images/Prince.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 160,
+            name: "  اوزمو فان ",
+            price:0.675,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Osmo Fan.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 161,
+            name: "  عجينة بصمة",
+            price:2.7222,
+            unit: "  800غ  ",
+            category: "Bakery",
+            image: "images/Basma Dough.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 162,
+            name: "  عجينة الاوزي فوزي",
+            price:1.3111,
+            unit: "    ",
+            category: "Bakery",
+            image: "images/Fawzi Ouzi Dough.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 163,
+            name: " شيش برك فوزي",
+            price:1.4,
+            unit: "    ",
+            category: "Bakery",
+            image: "images/Fawzi Shish Barak.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 164,
+            name: " 	التاج شطة حارة",
+            price:0.5,
+            unit: "    ",
+            category: "food",
+            image: "images/Al-Taj Hot Sauce.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 165,
+            name: " 	اوريو",
+            price:0.833,
+            unit: "   102غ	  ",
+            category: "Snacks",
+            image: "images/Oreo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 166,
+            name: " 	عجينة بيتزا فوزي",
+            price:1.7111,
+            unit: "     ",
+            category: "Bakery",
+            image: "images/Fawzi Pizza Dough.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 167,
+            name: " 	رقائق طويلة",
+            price:2,
+            unit: "     ",
+            category: "Bakery",
+            image: "images/Long Chips.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 168,
+            name: " 	رقائق لف",
+            price:1.5	,
+            unit: "     ",
+            category: "Bakery",
+            image: "images/Wrappers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 169,
+            name: " 	شوربة ماجي ",
+            price:2	,
+            unit: "  عرض   ",
+            category: "food",
+            image: "images/Maggi Soup.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 170,
+            name: " 	لوح داماك",
+            price:0.833	,
+            unit: "     ",
+            category: "Snacks",
+            image: "images/Damac Board.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 171,
+            name: " 	بهار مغربية ",
+            price:0.666	,
+            unit: "  100   ",
+            category: "spices",
+            image: "images/Morocco.png",
+            pictureClass: "cleaning-picture"
         }
-
-
     ];
 
     let activeMarketFilter = "all";
