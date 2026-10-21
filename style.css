@@ -1443,3 +1443,95 @@ select {
 .market-filter {
     flex-shrink: 0;
 }
+
+/* =====================================
+   مودال الخضرة والفواكه
+===================================== */
+
+.home-screen .vegetables-screen[hidden] {
+    display: none !important;
+}
+
+/* شاشة الخضرة والفواكه */
+.home-screen .vegetables-screen {
+    z-index: 85;
+    background: #f7f9fc;
+}
+
+/* تصنيفات الخضرة والفواكه */
+.vegetables-categories .vegetables-filter {
+    flex: 0 0 auto;
+    padding: 7px 15px;
+    border: 1px solid #e7edf6;
+    border-radius: 18px;
+    background: #f5f8fc;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* التصنيف المحدد */
+.vegetables-categories .vegetables-filter.active {
+    border-color: #0753bd;
+    background: #0753bd;
+    color: #fff;
+}
+
+/* إخفاء المنتجات غير المطابقة */
+.vegetables-screen .market-product[hidden] {
+    display: none !important;
+}
+
+/* صور رمزية للمنتجات */
+.vegetables-screen .market-product-picture {
+    background: #eef8ee;
+    font-size: 55px;
+}
+
+/* زر إضافة المنتج */
+.vegetables-screen .vegetables-add {
+    background: #0875e1;
+    color: #fff;
+}
+
+/* زر السلة في الهيدر */
+.vegetables-screen .market-cart-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 36px;
+    flex-shrink: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ===== Butcher Modal ===== */
+
+.home-screen .butcher-screen[hidden] {
+    display: none !important;
+}
+
+.home-screen .butcher-screen {
+    z-index: 86;
+    background: #f7f9fc;
+}
+
+.butcher-screen .butcher-categories {
+    flex-shrink: 0;
+}
+
+.butcher-screen .butcher-filter {
+    white-space: nowrap;
+}
+
+.butcher-screen .market-product[hidden] {
+    display: none !important;
+}
+

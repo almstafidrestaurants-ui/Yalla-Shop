@@ -71,22 +71,33 @@ document.addEventListener("DOMContentLoaded", function () {
    
     // اختيار قسم وفتح صفحة سوبر ماركت
     const supermarketScreen = document.getElementById("supermarketScreen");
-
+    const vegetablesScreen = document.getElementById("vegetablesScreen");
+const butcherScreen = document.getElementById("butcherScreen");
     categoryCards.forEach(function (card) {
         card.addEventListener("click", function () {
             const category = card.dataset.category;
 
-            if (category === "سوبر ماركت") {
-                supermarketScreen.hidden = false;
-                home.classList.add("market-open");
+          
+if (category === "سوبر ماركت") {
+    supermarketScreen.hidden = false;
+    home.classList.add("market-open");
+    return;
+}
 
-                document.getElementById("marketProductsScroll")?.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
-                return;
-            }
+if (category === "خضرة وفواكه") {
+    vegetablesScreen.hidden = false;
+    home.classList.add("market-open");
+    document.getElementById("vegetablesProductsGrid")?.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    return;
+}
+if (category === "ملحمة") {
+    butcherScreen.hidden = false;
+    home.classList.add("market-open");
+    return;
+}
 
             searchInput.value = category;
             searchForm.requestSubmit();
@@ -314,15 +325,7 @@ if (moreCategoriesButton) {
              image: "images/Lotus Biscoff.png",
             pictureClass: "cleaning-picture"
          },
-             {
-            id: 11,
-            name: "  تفاح     ",
-            price: 1.5555,
-            unit: " 1ك",
-            category: "Vegetables",
-             image: "images/apples.png",
-            pictureClass: "cleaning-picture"
-         },
+
              {
             id: 12,
             name: "  معتوق شوفان +ميكس     ",
@@ -1811,6 +1814,177 @@ if (moreCategoriesButton) {
             category: "spices",
             image: "images/Morocco.png",
             pictureClass: "cleaning-picture"
+        },
+        {
+             id: 172,
+            name: " 		محارم معطرة غود لايف",
+            price:0.833		,
+            unit: "      ",
+            category: "cleaning",
+            image: "images/Morocco.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 173,
+            name: " 			موزوريلا فرسانا ",
+            price: 1.277	,
+            unit: "  200غ    ",
+            category: "dairy",
+            image: "images/Farsana Mozzarella.png",
+            pictureClass: "cleaning-picture"
+        },
+                    {
+             id: 174,
+            name: " ديروني خردل",
+            price: 1.65	,
+            unit: "   8 اونز   ",
+            category: "food",
+            image: "images/Deroni Mustard 8 oz.png",
+            pictureClass: "cleaning-picture"
+        },
+                            {
+             id: 175,
+            name: "  ديروني رز ايطالي جامبو  ",
+            price:2	,
+            unit: "   900غ  ",
+            category: "food",
+            image: "images/Deroni Italian Rice (Jumbo).png",
+            pictureClass: "cleaning-picture"
+        },
+                                    {
+             id: 176,
+            name: "  عكاوي بلدي ",
+            price:7.7777	,
+            unit: "  1ك ",
+            category: "dairy",
+            image: "images/Baladi Akawi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 177,
+            name: "  جبنة فيتا",
+            price:3.888	,
+            unit: "  1ك ",
+            category: "dairy",
+            image: "images/Feta Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+          {
+             id: 178,
+            name: "  جبنة نابلسي",
+            price:6	,
+            unit: "  1ك ",
+            category: "dairy",
+            image: "images/Nabulsi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+                  {
+             id: 179,
+            name: " 	جبنة مسنرة",
+            price:3.611	,
+            unit: "  1ك ",
+            category: "dairy",
+            image: "images/Musanara Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 180,
+            name: " 	 زيتون بلدي ",
+            price:3.333	,
+            unit: "  1ك ",
+            category: "food",
+            image: "images/Local Olives.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 181,
+            name: " 	مكنة حلاقة فينيس",
+            price:2	,
+            unit: "  1ك ",
+            category: "cleaning",
+            image: "images/Venus Razor.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 182,
+            name: " 	 مكدوس مرطبان",
+            price:	3.222	,
+            unit: "  ",
+            category: "food",
+            image: "images/Makdous (jar).png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 183,
+            name: " 	ملح ملوك",
+            price:	0.111	,
+            unit: " 700غ ",
+            category: "food",
+            image: "images/Kings Salt.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 184,
+            name: " 	سميد سفرتي",
+            price:	0.944	,
+            unit: "  ",
+            category: "food",
+            image: "images/Safrati Semolina.png",
+            pictureClass: "cleaning-picture"
+        },
+                    {
+             id: 185,
+            name: " 	كيك سابليه ",
+            price:	0.222	,
+            unit: "  ",
+            category: "Snacks",
+            image: "images/Sablé Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 186,
+            name: " 	زي كولا",
+            price:	0.333	,
+            unit: " 250 مل ",
+            category: "drinks",
+            image: "images/Z-Cola.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 187,
+            name: "  بن حموي اكسترا هال",
+            price:	10.6666	,
+            unit: " 450غ",
+            category: "food",
+            image: "images/Bin Hamwi Extra Hall.png",
+            pictureClass: "cleaning-picture"
+        },
+           {
+             id: 188,
+            name: "  	لازانيا ريجيا ",
+            price:	2.555	,
+            unit: " ",
+            category: "food",
+            image: "images/Lasagna Reggia.png",
+            pictureClass: "cleaning-picture"
+        },
+                   {
+             id: 189,
+            name: "  		المراعي جبنة مطبوخة",
+            price:	2.89	,
+            unit: " 1ك ",
+            category: "dairy",
+            image: "images/Almarai Processed Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+                          {
+             id: 190,
+            name: "  		 حليب كانديا نصف دسم ",
+            price:	1.8333		,
+            unit: " 1ليتر",
+            category: "dairy",
+            image: "images/Candia Semi-Skimmed.png",
+            pictureClass: "cleaning-picture"
         }
     ];
 
@@ -1839,7 +2013,7 @@ if (moreCategoriesButton) {
                     <p class="market-product-unit">${product.unit}</p>
 
                     <div class="market-product-bottom">
-                        <strong>$${product.price.toFixed(2)}</strong>
+                      <strong>${product.price.toLocaleString("en-US")} ل.ل</strong>
 
                         <button type="button" class="market-add"
                             data-product-id="${product.id}"
@@ -1981,9 +2155,7 @@ if (moreCategoriesButton) {
         }
 
         const lines = marketCart.map(item =>
-            `${item.name} × ${item.quantity} — $${(
-                item.price * item.quantity
-            ).toFixed(2)}`
+         `${item.name} × ${item.quantity} — ${(item.price * item.quantity).toLocaleString("en-US")} ل.ل`
         );
 
         const total = marketCart.reduce(
@@ -1993,7 +2165,7 @@ if (moreCategoriesButton) {
         alert(
             "محتويات السلة:\n\n" +
             lines.join("\n") +
-            "\n\nالمجموع: $" + total.toFixed(2)
+          "\n\nالمجموع: " + total.toFixed(2)
         );
     }
 
@@ -2023,6 +2195,574 @@ if (moreCategoriesButton) {
             });
         });
     });
+
+
+    // ================================================================================================
+    // مودال الخضرة والفواكه
+    // ======================================================================================
+
+    const vegetablesBackButton =
+        document.getElementById("vegetablesBackButton");
+
+    const vegetablesProductsGrid =
+        document.getElementById("vegetablesProductsGrid");
+
+    const vegetablesSearchInput =
+        document.getElementById("vegetablesProductSearch");
+
+    const vegetablesSearchWrap =
+        document.getElementById("vegetablesSearchWrap");
+
+    const vegetablesSearchButton =
+        document.getElementById("vegetablesSearchButton");
+
+    const vegetablesProductsTitle =
+        document.getElementById("vegetablesProductsTitle");
+
+    const vegetablesProductsCount =
+        document.getElementById("vegetablesProductsCount");
+
+    const vegetablesNoProducts =
+        document.getElementById("vegetablesNoProducts");
+
+    const vegetablesFilters =
+        document.querySelectorAll(".vegetables-filter");
+
+    let activeVegetablesFilter = "all";
+
+    const vegetablesProducts = [
+                     {
+            id: 1001,
+            name: "  تفاح     ",
+            price: 140000,
+            unit: " 1ك",
+            category: "fruit",
+            image: "images/apples.png",
+         },
+        {
+            id: 1002,
+            name: "موز",
+            price: 120000,
+            unit: "1ك",
+            category: "fruit",
+            image: "images/banana.png",
+        },
+        {
+            id: 1003,
+            name: "لوبية",
+            price: 100000,
+            unit: "1ك",
+            category: "vegetable",
+   image: "images/Cowpeas.png",
+        },
+        {
+            id: 1004,
+            name: "بندورة",
+            price:600000,
+            unit: "1ك",
+            category: "vegetable",
+                image: "images/tomato.png",
+        },
+        {
+            id: 1005,
+            name: "فليفلة",
+            price: 80000,
+            unit: "1ك",
+            category: "vegetable",
+            image: "images/Bell pepper.png",
+        },
+        {
+            id: 1006,
+            name: "حامض",
+            price: 80000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/sour.png",
+        },
+                {
+            id: 1007,
+            name: "كوسا",
+            price: 70000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/zucchini.png",
+        },
+                {
+            id: 1008,
+            name: "خيار",
+            price: 80000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/option.png",
+        },
+                {
+            id: 1009,
+            name: "مانجا",
+            price: 130000,
+            unit: "1ك",
+            category: "fruit",
+             image: "images/Manga.png",
+        },
+              {
+            id: 1010,
+            name: "زهرة",
+            price: 60000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/Cauliflower.png",
+        },
+              {
+            id: 1011,
+            name: "ملفوف",
+            price: 30000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/cabbage.png",
+        },
+              {
+            id: 1012,
+            name: "عنب",
+            price: 120000,
+            unit: "1ك",
+            category: "fruit",
+             image: "images/grapes.png",
+        },
+              {
+            id: 1013,
+            name: "افوكا",
+            price: 150000,
+            unit: "1ك",
+            category: "fruit",
+             image: "images/Avoca.png",
+        },
+              {
+            id: 1014,
+            name: "جزر",
+            price: 100000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/carrot.png",
+        },
+              {
+            id: 1015,
+            name: "ثوم",
+            price: 300000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/garlic.png",
+        },
+         {
+            id: 1016,
+            name: "بصل",
+            price: 60000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/onion.png",
+        },
+              {
+            id: 1017,
+            name: "بطاطا ",
+            price: 570000,
+            unit: "شوال",
+            category: "vegetable",
+             image: "images/Sack potatoes.png",
+        },
+                   {
+            id: 1018,
+            name: "باذنجان ",
+            price:  70000,
+            unit: "1ك",
+            category: "vegetable",
+             image: "images/eggplant.png",
+        }
+    ];
+
+    // إنشاء بطاقات المنتجات
+    function renderVegetablesProducts() {
+        vegetablesProductsGrid.innerHTML =
+            vegetablesProducts.map(product => `
+                <article class="market-product"
+                         data-product-id="${product.id}">
+
+                    <div class="market-product-picture">
+                       ${product.image
+    ? `<img src="${product.image}" alt="${product.name}">`
+    : (product.emoji || "")}
+                    </div>
+
+                    <h3>${product.name}</h3>
+
+                    <p class="market-product-unit">
+                        ${product.unit}
+                    </p>
+
+                    <div class="market-product-bottom">
+                      <strong>${product.price.toLocaleString("en-US")} ل.ل</strong>
+
+                        <button type="button"
+                                class="market-add vegetables-add"
+                                data-product-id="${product.id}"
+                                aria-label="إضافة ${product.name} للسلة">
+                            +
+                        </button>
+                    </div>
+                </article>
+            `).join("");
+
+        filterVegetablesProducts();
+    }
+
+    // البحث والتصنيف
+    function filterVegetablesProducts() {
+        const query =
+            vegetablesSearchInput.value.trim().toLowerCase();
+
+        const filtered = vegetablesProducts.filter(product => {
+            const matchesCategory =
+                activeVegetablesFilter === "all" ||
+                product.category === activeVegetablesFilter;
+
+            const matchesSearch =
+                product.name.toLowerCase().includes(query);
+
+            return matchesCategory && matchesSearch;
+        });
+
+        vegetablesProductsGrid
+            .querySelectorAll(".market-product")
+            .forEach(card => {
+                const id = Number(card.dataset.productId);
+
+                card.hidden = !filtered.some(
+                    product => product.id === id
+                );
+            });
+
+        vegetablesProductsCount.textContent =
+            filtered.length + " منتجات";
+
+        vegetablesNoProducts.hidden = filtered.length > 0;
+    }
+
+    vegetablesFilters.forEach(button => {
+        button.addEventListener("click", () => {
+            vegetablesFilters.forEach(filter =>
+                filter.classList.remove("active")
+            );
+
+            button.classList.add("active");
+            activeVegetablesFilter = button.dataset.filter;
+
+            vegetablesProductsTitle.textContent =
+                activeVegetablesFilter === "all"
+                    ? "كل المنتجات"
+                    : button.textContent.trim();
+
+            filterVegetablesProducts();
+        });
+    });
+
+    // تشغيل البحث
+    vegetablesSearchInput.addEventListener(
+        "input",
+        filterVegetablesProducts
+    );
+
+    vegetablesSearchButton.addEventListener("click", () => {
+        vegetablesSearchWrap.hidden =
+            !vegetablesSearchWrap.hidden;
+
+        if (!vegetablesSearchWrap.hidden) {
+            vegetablesSearchInput.focus();
+        } else {
+            vegetablesSearchInput.value = "";
+            filterVegetablesProducts();
+        }
+    });
+
+    // الرجوع إلى الصفحة الرئيسية
+    vegetablesBackButton.addEventListener("click", () => {
+        vegetablesScreen.hidden = true;
+        home.classList.remove("market-open");
+    });
+
+    // إضافة المنتجات إلى سلة المشروع نفسها
+    vegetablesProductsGrid.addEventListener("click", event => {
+        const addButton = event.target.closest(".vegetables-add");
+
+        if (!addButton) return;
+
+        const productId = Number(addButton.dataset.productId);
+
+        const product = vegetablesProducts.find(
+            item => item.id === productId
+        );
+
+        if (!product) return;
+
+        const existing = marketCart.find(
+            item => item.id === productId
+        );
+
+        if (existing) {
+            existing.quantity++;
+        } else {
+            marketCart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: 1
+            });
+        }
+
+        updateMarketCart();
+    });
+
+    // فتح السلة المشتركة
+const vegetablesCartButton =
+    document.getElementById("vegetablesCartButton");
+
+if (vegetablesCartButton) {
+    vegetablesCartButton.addEventListener("click", () => {
+        showMarketCart();
+    });
+}
+
+    renderVegetablesProducts();
+/* ==============================================================================================================
+   مودال الملحمة - Yalla Shop
+================================================================================================================== */
+const butcherBackButton = document.getElementById("butcherBackButton");
+const butcherSearchButton =document.getElementById("butcherSearchButton");
+const butcherSearchWrap =  document.getElementById("butcherSearchWrap");
+const butcherSearchInput = document.getElementById("butcherProductSearch");
+const butcherProductsGrid = document.getElementById("butcherProductsGrid");
+const butcherProductsTitle = document.getElementById("butcherProductsTitle");
+const butcherProductsCount = document.getElementById("butcherProductsCount");
+const butcherNoProducts =  document.getElementById("butcherNoProducts");
+const butcherFilters = document.querySelectorAll(".butcher-filter");
+let activeButcherFilter = "all";
+const butcherProducts = [
+    {
+        id: 2001,
+        name: "صفايح",
+        price: 1700000,
+        unit: "1ك",
+        category: "grill",
+        image: "images/Meat pies (Sfiha).png"
+    },
+    {
+        id: 2002,
+        name: "مشاوي مشكل",
+        price: 1800000,
+        unit: "1ك",
+        category: "grill",
+        image: "images/Mixed Grill.png"
+    },
+    {
+        id: 2003,
+        name: "لحم غنم",
+        price: 1800000,
+        unit: "1ك",
+        category: "raw",
+        image: "images/Lamb.png"
+    },
+    {
+        id: 2004,
+        name: "لحم بقر",
+        price: 1300000,
+        unit: "1ك",
+        category: "raw",
+        image: "images/beef.png"
+    },
+        {
+        id: 2005,
+        name: "طاووق مشوي  ",
+        price: 1200000,
+        unit: " مع سرفيس 1ك",
+        category: "grill",
+        image: "images/Grilled Tawook.png"
+    },
+            {
+        id: 2006,
+        name: "كفته    ",
+        price: 1800000,
+        unit: " مع سرفيس 1ك",
+        category: "grill",
+        image: "images/Grilled Kofta.png"
+    },
+                {
+        id: 2007,
+        name: "مقانق    ",
+        price: 1200000,
+        unit: "    1ك",
+        category: "grill",
+        image: "images/Grilled sausages.png"
+    },
+                    {
+        id: 2008,
+        name: "سجق    ",
+        price: 1000000,
+        unit: "    1ك",
+        category: "raw",
+        image: "images/Raw sausage.png"
+    },
+                        {
+        id: 2009,
+        name: "مقانق    ",
+        price: 1350000,
+        unit: "    1ك",
+        category: "raw",
+        image: "images/Makanek.png"
+    }
+];
+
+// إنشاء بطاقات المنتجات
+function renderButcherProducts() {
+    butcherProductsGrid.innerHTML = butcherProducts.map(product => `
+        <article class="market-product"
+                 data-product-id="${product.id}">
+
+            <div class="market-product-picture">
+                <img src="${product.image}"
+                     alt="${product.name}"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <h3>${product.name}</h3>
+
+            <p class="market-product-unit">${product.unit}</p>
+
+            <div class="market-product-bottom">
+                <strong>
+                    ${product.price.toLocaleString("en-US")} ل.ل
+                </strong>
+
+                <button type="button"
+                        class="market-add butcher-add"
+                        data-product-id="${product.id}"
+                        aria-label="إضافة ${product.name} للسلة">
+                    +
+                </button>
+            </div>
+        </article>
+    `).join("");
+
+    filterButcherProducts();
+}
+
+// البحث والتصنيف
+function filterButcherProducts() {
+    const query = butcherSearchInput.value.trim().toLowerCase();
+
+    const filtered = butcherProducts.filter(product => {
+        const matchesCategory =
+            activeButcherFilter === "all" ||
+            product.category === activeButcherFilter;
+
+        const matchesSearch =
+            product.name.toLowerCase().includes(query);
+
+        return matchesCategory && matchesSearch;
+    });
+
+    butcherProductsGrid.querySelectorAll(".market-product")
+        .forEach(card => {
+            const id = Number(card.dataset.productId);
+
+            card.hidden = !filtered.some(product => product.id === id);
+        });
+
+    butcherProductsCount.textContent = filtered.length + " منتجات";
+
+    butcherNoProducts.hidden = filtered.length > 0;
+
+    const activeButton = document.querySelector(
+        ".butcher-filter.active"
+    );
+
+    butcherProductsTitle.textContent =
+        activeButcherFilter === "all"
+            ? "كل المنتجات"
+            : activeButton
+                ? activeButton.textContent.trim()
+                : "كل المنتجات";
+}
+
+// الضغط على التصنيفات
+butcherFilters.forEach(button => {
+    button.addEventListener("click", function () {
+        butcherFilters.forEach(filter =>
+            filter.classList.remove("active")
+        );
+
+        button.classList.add("active");
+        activeButcherFilter = button.dataset.filter;
+
+        filterButcherProducts();
+    });
+});
+
+// فتح وإغلاق البحث
+butcherSearchButton.addEventListener("click", function () {
+    butcherSearchWrap.hidden = !butcherSearchWrap.hidden;
+
+    if (!butcherSearchWrap.hidden) {
+        butcherSearchInput.focus();
+    } else {
+        butcherSearchInput.value = "";
+        filterButcherProducts();
+    }
+});
+
+butcherSearchInput.addEventListener(
+    "input",
+    filterButcherProducts
+);
+
+// الرجوع إلى الصفحة الرئيسية
+butcherBackButton.addEventListener("click", function () {
+    butcherScreen.hidden = true;
+    home.classList.remove("market-open");
+});
+
+// إضافة منتجات الملحمة إلى السلة المشتركة
+butcherProductsGrid.addEventListener("click", function (event) {
+    const addButton = event.target.closest(".butcher-add");
+
+    if (!addButton) return;
+
+    const productId = Number(addButton.dataset.productId);
+
+    const product = butcherProducts.find(
+        item => item.id === productId
+    );
+
+    if (!product) return;
+
+    const existing = marketCart.find(
+        item => item.id === productId
+    );
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        marketCart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1
+        });
+    }
+
+    updateMarketCart();
+});
+
+// تشغيل المنتجات
+renderButcherProducts();
+
+
+
 
     // إنشاء المنتجات عند تحميل الصفحة
     renderMarketProducts();

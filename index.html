@@ -288,9 +288,159 @@
     
 </section>
 
+<!-- ======================================================================================================
+ مودال الخضرة والفواكه 
+ =====================================================================================================-->
+<section id="vegetablesScreen"
+         class="supermarket-screen vegetables-screen"
+         hidden>
 
-        <!-- التنقل السفلي -->
+    <header class="market-header">
+        <button type="button"
+                id="vegetablesBackButton"
+                class="market-back"
+                aria-label="رجوع">
+            <svg viewBox="0 0 24 24" width="23" height="23"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+
+        <strong> محل يونس للخضار  </strong>
+
+        <button type="button"
+                id="vegetablesSearchButton"
+                class="market-search-icon"
+                aria-label="بحث">
+            <svg viewBox="0 0 24 24" width="22" height="22"
+                 fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="10.5" cy="10.5" r="7"/>
+                <path d="m16 16 5 5"/>
+            </svg>
+        </button>
+    </header>
+
+    <!-- البحث -->
+    <div class="market-search-wrap" id="vegetablesSearchWrap" hidden>
+        <input id="vegetablesProductSearch"
+               type="search"
+               placeholder="ابحث عن خضرة أو فاكهة..."
+               aria-label="ابحث عن خضرة أو فاكهة">
+    </div>
+
+    <!-- التصنيفات -->
+    <nav class="market-categories vegetables-categories">
+        <button type="button"
+                class="vegetables-filter active"
+                data-filter="all">الكل</button>
+
+        <button type="button"
+                class="vegetables-filter"
+                data-filter="fruit">الفواكه</button>
+
+        <button type="button"
+                class="vegetables-filter"
+                data-filter="vegetable">الخضار</button>
+    </nav>
+
+    <!-- المنتجات -->
+    <div class="market-products-scroll">
+        <div class="market-products-heading">
+            <h2 id="vegetablesProductsTitle">كل المنتجات</h2>
+            <span id="vegetablesProductsCount">6 منتجات</span>
+        </div>
+
+        <div id="vegetablesProductsGrid"
+             class="market-products-grid"></div>
+
+        <p id="vegetablesNoProducts"
+           class="market-no-products"
+           hidden>
+            ما لقينا منتجات مطابقة لبحثك.
+        </p>
+    </div>
+
+</section>
+
        
+<!-- =========================================================
+     مودال الملحمة
+========================================================= -->
+<section id="butcherScreen"
+         class="supermarket-screen vegetables-screen butcher-screen"
+         hidden>
+
+    <header class="market-header">
+        <button type="button"
+                id="butcherBackButton"
+                class="market-back"
+                aria-label="رجوع">
+            <svg viewBox="0 0 24 24" width="23" height="23"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+
+        <strong>ملحمة يلا شوب</strong>
+
+        <button type="button"
+                id="butcherSearchButton"
+                class="market-search-icon"
+                aria-label="بحث">
+            <svg viewBox="0 0 24 24" width="22" height="22"
+                 fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="10.5" cy="10.5" r="7"/>
+                <path d="m16 16 5 5"/>
+            </svg>
+        </button>
+    </header>
+
+    <!-- البحث -->
+    <div class="market-search-wrap" id="butcherSearchWrap" hidden>
+        <input id="butcherProductSearch"
+               type="search"
+               placeholder="ابحث عن منتج لحمة..."
+               aria-label="ابحث عن منتج لحمة">
+    </div>
+
+    <!-- التصنيفات -->
+    <nav class="market-categories vegetables-categories butcher-categories">
+
+        <button type="button"
+                class="vegetables-filter butcher-filter active"
+                data-filter="all">الكل</button>
+
+        <button type="button"
+                class="vegetables-filter butcher-filter"
+                data-filter="grill">مشاوي</button>
+
+        <button type="button"
+                class="vegetables-filter butcher-filter"
+                data-filter="raw">لحمة نيّة</button>
+
+    </nav>
+
+    <!-- المنتجات -->
+    <div class="market-products-scroll">
+        <div class="market-products-heading">
+            <h2 id="butcherProductsTitle">كل المنتجات</h2>
+            <span id="butcherProductsCount">0 منتجات</span>
+        </div>
+
+        <div id="butcherProductsGrid"
+             class="market-products-grid"></div>
+
+        <p id="butcherNoProducts"
+           class="market-no-products"
+           hidden>
+            ما لقينا منتجات مطابقة لبحثك.
+        </p>
+    </div>
+
+</section>
+
 <!-- القائمة السفلية -->
 <nav class="bottom-nav" aria-label="القائمة الرئيسية">
 
