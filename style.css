@@ -2623,3 +2623,40 @@ select {
     background: #dceeff;
 }
 
+
+/* مودال المنظفات: حركة ظهور المنتجات بشكل متتابع */
+.home-screen .cleaning-screen { z-index: 87; background: #fcfaf7; }
+.cleaning-screen .market-product { animation: cleaningReveal .42s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--reveal-order) * 55ms); }
+@keyframes cleaningReveal {
+    from { opacity: 0; transform: translateY(18px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cleaning-screen .market-product { animation: none; }
+}
+
+/* نتائج البحث الشامل أسفل شريط البحث */
+.global-search-results { margin-top: 7px; max-height: min(55dvh, 430px); overflow-y: auto; background: white; border: 1px solid #dce8f8; border-radius: 16px; box-shadow: 0 12px 28px #0b28552b; padding: 5px; direction: rtl; }
+.global-search-results[hidden] { display: none !important; }
+.global-search-row { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 7px; border: 0; border-bottom: 1px solid #eef2f8; background: white; text-align: right; color: #14213d; cursor: pointer; }
+.global-search-row:last-child { border-bottom: 0; }
+.global-search-thumb { width: 48px; height: 48px; flex-shrink: 0; display: grid; place-items: center; background: #e8f8ff; border-radius: 9px; overflow: hidden; }
+.global-search-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.global-search-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.global-search-row strong { font-size: 12px; }
+.global-search-row small { color: #7c8798; font-size: 10px; }
+.global-search-row b { font-size: 11px; color: #0753bd; white-space: nowrap; }
+.global-search-empty { padding: 15px; text-align: center; color: #7c8798; font-size: 12px; }
+
+/* إبراز المنتج الذي تم الوصول إليه من البحث الشامل */
+.search-product-highlight {
+    outline: 3px solid #1688f0 !important;
+    outline-offset: -3px;
+    box-shadow: 0 0 0 4px rgba(22,136,240,.16), 0 7px 20px rgba(7,83,189,.20) !important;
+    border-radius: 15px;
+    animation: searchedProductPulse 1.2s ease-in-out 2;
+}
+@keyframes searchedProductPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(22,136,240,.12); }
+    50% { box-shadow: 0 0 0 7px rgba(22,136,240,.27); }
+}

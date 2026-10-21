@@ -88,6 +88,7 @@
             </svg>
         </button>
     </form>
+    <div id="globalSearchResults" class="global-search-results" hidden aria-live="polite"></div>
 </div>
  
 
@@ -269,8 +270,6 @@
                 data-filter="dairy">ألبان وأجبان</button>
         <button type="button" class="market-filter"
                 data-filter="food">مواد غذائية</button>
-        <button type="button" class="market-filter"
-                data-filter="cleaning">منظفات</button>
                  <button type="button" class="market-filter"
                 data-filter="spices">بهارات</button>
                  <button type="button" class="market-filter"
@@ -452,6 +451,30 @@
         </p>
     </div>
 
+</section>
+
+<!-- مودال المنظفات -->
+<section id="cleaningScreen" class="supermarket-screen vegetables-screen butcher-screen cleaning-screen" hidden>
+    <header class="market-header">
+        <button type="button" id="cleaningBackButton" class="market-back" aria-label="رجوع">
+            <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <strong>منظفات</strong>
+        <button type="button" id="cleaningSearchButton" class="market-search-icon" aria-label="بحث">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg>
+        </button>
+    </header>
+    <div class="market-search-wrap" id="cleaningSearchWrap" hidden>
+        <input id="cleaningProductSearch" type="search" placeholder="ابحث عن منتج منظفات..." aria-label="ابحث عن منتج منظفات">
+    </div>
+    <div class="market-products-scroll">
+        <div class="market-products-heading">
+            <h2>كل المنتجات</h2>
+            <span id="cleaningProductsCount">0 منتجات</span>
+        </div>
+        <div id="cleaningProductsGrid" class="market-products-grid"></div>
+        <p id="cleaningNoProducts" class="market-no-products" hidden>ما لقينا منتجات مطابقة لبحثك.</p>
+    </div>
 </section>
 
 <!-- القائمة السفلية -->

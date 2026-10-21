@@ -38,41 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     const searchMessage = document.getElementById("searchMessage");
 
-    searchForm.addEventListener("submit", function (event) {
+    // البحث الشامل يتم تفعيله بعد تحميل مصفوفات المنتجات أدناه.
+    searchForm.addEventListener("submit", event => {
         event.preventDefault();
-
-        const query = searchInput.value.trim().toLowerCase();
-        let matches = 0;
-
-        categoryCards.forEach(function (card) {
-            const name = card.dataset.category.toLowerCase();
-            const found = !query || name.includes(query);
-
-            card.hidden = !found;
-            if (found) matches++;
-        });
-
-        searchMessage.hidden = false;
-
-        if (!query) {
-            searchMessage.hidden = true;
-        } else if (matches > 0) {
-            searchMessage.textContent =
-                "الأقسام المطابقة لبحثك: " + matches;
-        } else {
-            searchMessage.textContent =
-                "ما لقينا قسم مطابق. جرّب كلمة تانية.";
-        }
-
-        document.getElementById("categoriesSection")
-            .scrollIntoView({ behavior: "smooth" });
+        renderGlobalSearch();
     });
 
-   
     // اختيار قسم وفتح صفحة سوبر ماركت
     const supermarketScreen = document.getElementById("supermarketScreen");
     const vegetablesScreen = document.getElementById("vegetablesScreen");
 const butcherScreen = document.getElementById("butcherScreen");
+const cleaningScreen = document.getElementById("cleaningScreen");
     categoryCards.forEach(function (card) {
         card.addEventListener("click", function () {
             const category = card.dataset.category;
@@ -91,6 +67,12 @@ if (category === "خضرة وفواكه") {
         top: 0,
         behavior: "smooth"
     });
+    return;
+}
+if (category === "منظفات") {
+    cleaningScreen.hidden = false;
+    home.classList.add("market-open");
+    renderCleaningProducts();
     return;
 }
 if (category === "ملحمة") {
@@ -282,7 +264,19 @@ addButton.textContent = "+";
 addButton.setAttribute("aria-label", "إضافة " + product.name + " إلى السلة");
 
 addButton.addEventListener("click", function () {
-    alert("تم اختيار: " + product.name);
+    const cartId = "gharib-" + index;
+    const existing = marketCart.find(item => item.id === cartId);
+    if (existing) existing.quantity++;
+    else marketCart.push({
+        id: cartId,
+        name: product.name.trim(),
+        price: Number(product.price),
+        unit: product.unit,
+        image: product.image,
+        quantity: 1
+    });
+    updateMarketCart();
+    showAddToCartToast();
 });
 
 bottom.append(price, unit, addButton);
@@ -2133,7 +2127,7 @@ gharibGrid.appendChild(card);
 
     // إنشاء بطاقات المنتجات تلقائياً
     function renderMarketProducts() {
-        marketProductsGrid.innerHTML = marketProducts.map(product => {
+        marketProductsGrid.innerHTML = marketProducts.filter(product => product.category !== "cleaning").map(product => {
             const picture = product.image
                 ? `<img src="${product.image}" alt="${product.name}">`
                 : product.emoji;
@@ -2172,6 +2166,7 @@ gharibGrid.appendChild(card);
         const query = marketSearchInput.value.trim().toLowerCase();
 
         const filteredProducts = marketProducts.filter(product => {
+            if (product.category === "cleaning") return false;
             const matchesCategory =
                 activeMarketFilter === "all" ||
                 product.category === activeMarketFilter;
@@ -2359,6 +2354,7 @@ cartScreen.innerHTML = `
       <textarea id="ycAddress" rows="2"
         placeholder="المنطقة، الشارع، المبنى..."></textarea>
 
+      <p class="yc-location-help">📱 تحديد الموقع اختياري. إذا بدك ترسل موقعك، افتح المتجر من الموبايل وشغّل GPS واضغط الزر. فيك تطلب بدون تحديد موقع.</p>
       <button type="button" id="ycLocation">
         📍 تحديد موقعي من الهاتف
       </button>
@@ -2511,117 +2507,115 @@ document.getElementById("ycKinds").textContent =
         cartMoney(total);
 }
 
+// رسائل التحقق الخاصة بواجهة Yalla Shop
+const ycMessage = document.createElement("div");
+ycMessage.id = "ycCustomMessage";
+ycMessage.setAttribute("role", "alert");
+ycMessage.hidden = true;
+cartScreen.querySelector(".yc-delivery").prepend(ycMessage);
+const ycMessageStyle = document.createElement("style");
+ycMessageStyle.textContent = `
+#ycCustomMessage:not([hidden]){display:block;padding:12px 14px;margin:8px 0 16px;border-radius:12px;background:#eaf3ff;border:1px solid #93c5fd;color:#084b9c;font-size:14px;font-weight:700;line-height:1.8;box-shadow:0 4px 14px #0954aa12}
+.yc-field-error{border:2px solid #e05252!important;background:#fff7f7!important;outline:none!important}
+`;
+document.head.appendChild(ycMessageStyle);
+function ycNotify(message, field) {
+    ycMessage.textContent = message;
+    ycMessage.hidden = false;
+    [cartName, cartPhone, cartAddress].forEach(el => el.classList.remove("yc-field-error"));
+    if (field) {
+        field.classList.add("yc-field-error");
+        field.focus();
+    }
+}
+[cartName, cartPhone, cartAddress].forEach(field => {
+    field.addEventListener("input", () => {
+        field.classList.remove("yc-field-error");
+        ycMessage.hidden = true;
+    });
+});
+const ycMobile = () => /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+let ycLocationPending = null;
+function ycRequestLocation() {
+    if (!navigator.geolocation) {
+        cartLocationStatus.textContent = "تحديد الموقع غير مدعوم بهالجهاز.";
+        return Promise.resolve(false);
+    }
+    if (!window.isSecureContext) {
+        cartLocationStatus.textContent = "تحديد الموقع بحاجة لاتصال HTTPS آمن أو تطبيق WebView يسمح بالموقع.";
+        return Promise.resolve(false);
+    }
+    if (ycLocationPending) return ycLocationPending;
+    cartLocationStatus.textContent = "عم نطلب إذن تحديد موقعك...";
+    ycLocationPending = new Promise(resolve => {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                customerCoordinates = {lat:position.coords.latitude,lng:position.coords.longitude};
+                cartLocationStatus.textContent = "✓ تم تحديد موقع التوصيل بنجاح";
+                resolve(true);
+            },
+            error => {
+                customerCoordinates = null;
+                cartLocationStatus.textContent = error.code === 1
+                    ? "ما سمحت بتحديد الموقع. فعّل إذن الموقع من إعدادات التطبيق."
+                    : "تعذّر تحديد الموقع. تأكد من تشغيل GPS والإنترنت.";
+                resolve(false);
+            },
+            {enableHighAccuracy:true,timeout:15000,maximumAge:0}
+        );
+    }).finally(() => { ycLocationPending = null; });
+    return ycLocationPending;
+}
 function showMarketCart() {
     renderYallaCart();
     cartScreen.hidden = false;
+    if (!ycMobile()) {
+        ycNotify("📱 لتحديد موقع التوصيل وإرساله مع الطلب، افتح Yalla Shop من الموبايل.");
+    }
 }
-
-function closeYallaCart() {
-    cartScreen.hidden = true;
-}
-
+function closeYallaCart() { cartScreen.hidden = true; }
 document.getElementById("ycBack").onclick = closeYallaCart;
-
-// زر السلة في الشريط السفلي
-document.querySelectorAll(
-    '.bottom-nav .nav-item[data-page="السلة"]'
-).forEach(button => {
+document.querySelectorAll('.bottom-nav .nav-item[data-page="السلة"]').forEach(button => {
     button.addEventListener("click", showMarketCart);
 });
-
-// تحديد الموقع بعد موافقة الزبون
 document.getElementById("ycLocation").onclick = () => {
-    if (!navigator.geolocation) {
-        cartLocationStatus.textContent =
-            "المتصفح لا يدعم تحديد الموقع.";
+    if (!ycMobile()) {
+        ycNotify("📱 افتح المتجر من الموبايل حتى تقدر تحدد موقعك وترسله مع الطلب.");
         return;
     }
-
-    cartLocationStatus.textContent =
-        "عم نحاول نحدد موقعك...";
-
-    navigator.geolocation.getCurrentPosition(
-        position => {
-            customerCoordinates = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            cartLocationStatus.textContent =
-                "✓ تم تحديد الموقع بنجاح";
-        },
-        () => {
-            customerCoordinates = null;
-            cartLocationStatus.textContent =
-                "تعذّر تحديد الموقع. اكتبي العنوان يدوياً.";
-        },
-        {
-            enableHighAccuracy: true,
-            timeout: 15000,
-            maximumAge: 0
-        }
-    );
+    ycRequestLocation();
 };
-
-// إرسال الطلب عبر واتساب
-document.getElementById("ycOrder").onclick = () => {
-
-
+// تجهيز الطلب وإرساله إلى واتساب، ثم تفريغ السلة فور فتح الرابط
+ document.getElementById("ycOrder").onclick = async () => {
+    if (!marketCart.length) { ycNotify("سلتك فاضية، ضيف منتجات أولاً."); return; }
     const name = cartName.value.trim();
     const phone = cartPhone.value.trim();
     const address = cartAddress.value.trim();
-
-    if (!marketCart.length) {
-        alert("السلة فاضية. اختاري منتجات أولاً.");
-        return;
+    if (!name) { ycNotify("يرجى كتابة الاسم الكامل قبل إرسال الطلب.",cartName); return; }
+    if (!phone) { ycNotify("يرجى كتابة رقم الهاتف قبل إرسال الطلب.",cartPhone); return; }
+    if (!/^[+\d\s()-]{7,20}$/.test(phone) || phone.replace(/\D/g, "").length < 7) {
+        ycNotify("يرجى كتابة رقم هاتف صحيح.",cartPhone); return;
     }
-
-    if (!name || !phone || !address) {
-        alert("يرجى تعبئة الاسم ورقم الهاتف والعنوان.");
-        return;
-    }
-
+    if (!address) { ycNotify("يرجى كتابة عنوان التوصيل قبل إرسال الطلب.",cartAddress); return; }
     if (!/^961\d{7,12}$/.test(SHOP_WHATSAPP)) {
-        alert("لازم تضيفي رقم واتساب المتجر الصحيح بالكود.");
-        return;
+        ycNotify("رقم واتساب المتجر غير مضبوط، تواصل مع إدارة المتجر."); return;
     }
-
-    const total = marketCart.reduce(
-        (sum, item) => sum + item.price * item.quantity, 0
-    );
-
-    const count = marketCart.reduce(
-        (sum, item) => sum + item.quantity, 0
-    );
-
-    const lines = marketCart.map((item, index) => {
-        return `${index + 1}. ${item.name}
-الكمية: ${item.quantity}
-السعر: ${cartMoney(item.price * item.quantity)}`;
-    });
-
+    const total = marketCart.reduce((sum,item) => sum + item.price * item.quantity,0);
     const locationLink = customerCoordinates
         ? `https://www.google.com/maps?q=${customerCoordinates.lat},${customerCoordinates.lng}`
-        : "لم يتم مشاركة الموقع";
-
-   
-const message = createYallaWhatsAppInvoice({
-    name,
-    phone,
-    address,
-    locationLink: customerCoordinates
-        ? locationLink
-        : "",
-    cart: marketCart,
-    total
-});
-
-
-    const url = "https://wa.me/" +
-        SHOP_WHATSAPP +
-        "?text=" + encodeURIComponent(message);
-
-    window.open(url, "_blank", "noopener,noreferrer");
+        : "";
+    const message = createYallaWhatsAppInvoice({
+        name,phone,address,locationLink,
+        cart:marketCart.map(item => ({...item})),total
+    });
+    const url = "https://wa.me/" + SHOP_WHATSAPP + "?text=" + encodeURIComponent(message);
+    // فتح واتساب عبر انتقال مباشر لتوافق أفضل مع WebView على Android
+    // عند محاولة الانتقال، نفرغ السلة فوراً حسب طلب صاحب المتجر.
+    marketCart.length = 0;
+    updateMarketCart();
+    renderYallaCart();
+    closeYallaCart();
+    window.location.href = url;
 };
 
 /* ===== Yalla Shop WhatsApp Invoice ===== */
@@ -3277,6 +3271,166 @@ butcherProductsGrid.addEventListener("click", function (event) {
     showAddToCartToast();
 });
 
+// بحث شامل تحت شريط البحث الرئيسي
+const globalSearchResults = document.getElementById("globalSearchResults");
+const globalSearchNormalize = value => String(value || "").toLowerCase()
+    .replace(/[أإآ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه")
+    .replace(/[\u064b-\u065f]/g, "").trim();
+
+function renderGlobalSearch() {
+    const query = globalSearchNormalize(searchInput.value);
+    if (!query) {
+        globalSearchResults.hidden = true;
+        globalSearchResults.innerHTML = "";
+        return;
+    }
+    const sources = [
+        ...marketProducts.map(p => ({...p, section: p.category === "cleaning" ? "منظفات" : "سوبر ماركت"})),
+        ...vegetablesProducts.map(p => ({...p, section: "خضرة وفواكه"})),
+        ...butcherProducts.map(p => ({...p, section: "ملحمة"})),
+        ...gharibProducts.map((p, index) => ({...p, section: "غريب تشكن", searchIndex: index}))
+    ];
+    const sections = categoryCards.filter(card => globalSearchNormalize(card.dataset.category).includes(query));
+    const products = sources.filter(p => globalSearchNormalize(p.name).includes(query));
+    const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, char =>
+        ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    globalSearchResults.innerHTML = `
+        ${sections.map(card => `<button type="button" class="global-search-row" data-section="${escapeHTML(card.dataset.category)}"><strong>📁 ${escapeHTML(card.dataset.category)}</strong><small>قسم</small></button>`).join("")}
+        ${products.map(p => `<button type="button" class="global-search-row" data-section="${escapeHTML(p.section)}" data-product-id="${escapeHTML(p.id ?? "")}" data-search-index="${escapeHTML(p.searchIndex ?? "")}">
+            <span class="global-search-thumb">${p.image ? `<img src="${escapeHTML(p.image)}" alt="" loading="lazy">` : escapeHTML(p.emoji || "🛍️")}</span>
+            <span class="global-search-info"><strong>${escapeHTML(p.name)}</strong><small>${escapeHTML(p.section)} · ${escapeHTML(p.unit || "")}</small></span>
+            <b>${escapeHTML(p.price)} ل.ل</b>
+        </button>`).join("")}
+        ${!products.length && !sections.length ? '<p class="global-search-empty">ما لقينا منتجات أو أقسام مطابقة.</p>' : ''}`;
+    globalSearchResults.hidden = false;
+}
+searchInput.addEventListener("input", renderGlobalSearch);
+// الانتقال مباشرة إلى بطاقة المنتج من نتائج البحث
+function focusSearchedProduct(section, productId, searchIndex) {
+    let grid;
+    if (section === "سوبر ماركت") {
+        activeMarketFilter = "all";
+        marketFilters.forEach(button => button.classList.toggle("active", button.dataset.filter === "all"));
+        marketProductsTitle.textContent = "كل المنتجات";
+        marketSearchInput.value = "";
+        filterMarketProducts();
+        grid = marketProductsGrid;
+    } else if (section === "منظفات") {
+        cleaningSearchInput.value = "";
+        renderCleaningProducts();
+        grid = cleaningGrid;
+    } else if (section === "خضرة وفواكه") {
+        activeVegetablesFilter = "all";
+        document.querySelectorAll(".vegetables-filter:not(.butcher-filter)").forEach(button =>
+            button.classList.toggle("active", button.dataset.filter === "all"));
+        document.getElementById("vegetablesProductSearch").value = "";
+        filterVegetablesProducts();
+        grid = vegetablesProductsGrid;
+    } else if (section === "ملحمة") {
+        activeButcherFilter = "all";
+        document.querySelectorAll(".butcher-filter").forEach(button =>
+            button.classList.toggle("active", button.dataset.filter === "all"));
+        butcherSearchInput.value = "";
+        filterButcherProducts();
+        grid = butcherProductsGrid;
+    } else if (section === "غريب تشكن") {
+        gharibShowAll = true;
+        renderGharibProducts();
+        grid = gharibGrid;
+    }
+    if (!grid) return;
+    const selector = section === "غريب تشكن"
+        ? `.gharib-product-card:nth-child(${Number(searchIndex) + 1})`
+        : `[data-product-id="${String(productId).replace(/[^0-9]/g, "")}"]`;
+    // ننتظر ظهور الشاشة واكتمال رسم البطاقات
+    setTimeout(() => {
+        const target = grid.querySelector(selector);
+        if (!target) return;
+        const scrollArea = target.closest(".market-products-scroll");
+        if (scrollArea) {
+            const targetRect = target.getBoundingClientRect();
+            const areaRect = scrollArea.getBoundingClientRect();
+            scrollArea.scrollTo({top: scrollArea.scrollTop + targetRect.top - areaRect.top - 65, behavior: "smooth"});
+        } else {
+            target.scrollIntoView({behavior: "smooth", block: "center"});
+        }
+        target.classList.remove("search-product-highlight");
+        void target.offsetWidth;
+        target.classList.add("search-product-highlight");
+        setTimeout(() => target.classList.remove("search-product-highlight"), 2400);
+    }, 180);
+}
+
+globalSearchResults.addEventListener("click", event => {
+    const item = event.target.closest("[data-section]");
+    if (!item) return;
+    const section = item.dataset.section;
+    const productId = item.dataset.productId;
+    const searchIndex = item.dataset.searchIndex;
+    const card = categoryCards.find(c => c.dataset.category === section);
+    globalSearchResults.hidden = true;
+    searchInput.value = "";
+    searchInput.blur();
+    if (card) card.click();
+    else if (section === "غريب تشكن") {
+        document.getElementById("gharibSection")?.scrollIntoView({behavior:"smooth"});
+    }
+    if (productId !== undefined || searchIndex !== undefined) {
+        focusSearchedProduct(section, productId, searchIndex);
+    }
+});
+
+// مودال المنظفات: نفس بطاقات الملحمة مع ظهور تدريجي عند الفتح
+const cleaningGrid = document.getElementById("cleaningProductsGrid");
+const cleaningSearchInput = document.getElementById("cleaningProductSearch");
+const cleaningSearchWrap = document.getElementById("cleaningSearchWrap");
+const cleaningCount = document.getElementById("cleaningProductsCount");
+const cleaningEmpty = document.getElementById("cleaningNoProducts");
+
+function renderCleaningProducts() {
+    const query = cleaningSearchInput.value.trim().toLowerCase();
+    const products = marketProducts.filter(product =>
+        product.category === "cleaning" && product.name.toLowerCase().includes(query)
+    );
+    cleaningCount.textContent = products.length + " منتجات";
+    cleaningEmpty.hidden = products.length !== 0;
+    cleaningGrid.innerHTML = products.map((product, index) => `
+        <article class="market-product cleaning-reveal" style="--reveal-order:${Math.min(index, 11)}" data-product-id="${product.id}">
+            <div class="market-product-picture">
+                <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <h3>${product.name}</h3>
+            <p class="market-product-unit">${product.unit || ""}</p>
+            <div class="market-product-bottom">
+                <strong>${product.price.toLocaleString("en-US")} ل.ل</strong>
+                <button type="button" class="market-add cleaning-add" data-product-id="${product.id}" aria-label="إضافة ${product.name} للسلة">+</button>
+            </div>
+        </article>
+    `).join("");
+}
+
+document.getElementById("cleaningBackButton").addEventListener("click", () => {
+    cleaningScreen.hidden = true;
+    home.classList.remove("market-open");
+});
+document.getElementById("cleaningSearchButton").addEventListener("click", () => {
+    cleaningSearchWrap.hidden = !cleaningSearchWrap.hidden;
+    if (!cleaningSearchWrap.hidden) cleaningSearchInput.focus();
+    else { cleaningSearchInput.value = ""; renderCleaningProducts(); }
+});
+cleaningSearchInput.addEventListener("input", renderCleaningProducts);
+cleaningGrid.addEventListener("click", event => {
+    const button = event.target.closest(".cleaning-add");
+    if (!button) return;
+    const product = marketProducts.find(item => item.id === Number(button.dataset.productId) && item.category === "cleaning");
+    if (!product) return;
+    const existing = marketCart.find(item => item.id === product.id);
+    if (existing) existing.quantity++;
+    else marketCart.push({id:product.id, name:product.name, price:product.price, quantity:1});
+    updateMarketCart();
+    showAddToCartToast();
+});
+
 // تشغيل المنتجات
 renderButcherProducts();
 
@@ -3289,35 +3443,7 @@ renderButcherProducts();
 
 });
 
-// تحريك شريط الأقسام تلقائياً
-document.addEventListener("DOMContentLoaded", function () {
 
-    const slider = document.getElementById("marketCategories");
-
-    if (!slider) return;
-
-    let direction = 1;
-
-    setInterval(function () {
-
-        const maxScroll =
-            slider.scrollWidth - slider.clientWidth;
-
-        if (maxScroll <= 0) return;
-
-        slider.scrollLeft += direction * 1;
-
-        if (Math.abs(slider.scrollLeft) >= maxScroll) {
-            direction = -1;
-        }
-
-        if (slider.scrollLeft === 0) {
-            direction = 1;
-        }
-
-    }, 80);
-
-});
 
 // سحب شريط الأقسام بالماوس
 const categoriesSlider = document.getElementById("marketCategories");
@@ -3369,7 +3495,7 @@ document.querySelectorAll(".bottom-nav .nav-item").forEach(function(button) {
         button.addEventListener("click", function() {
 
             // إغلاق صفحات الأقسام
-            ["supermarketScreen", "vegetablesScreen", "butcherScreen"]
+            ["supermarketScreen", "vegetablesScreen", "butcherScreen", "cleaningScreen"]
                 .forEach(function(id) {
                     const screen = document.getElementById(id);
                     if (screen) screen.hidden = true;
