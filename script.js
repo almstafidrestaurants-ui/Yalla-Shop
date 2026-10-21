@@ -98,7 +98,14 @@ if (category === "ملحمة") {
     home.classList.add("market-open");
     return;
 }
-
+if (
+    category === "حلويات" ||
+    category === "مطاعم" ||
+     category === "مكتبة" ||
+    category === "منظفات"
+) {
+    return;
+}
             searchInput.value = category;
             searchForm.requestSubmit();
         });
@@ -143,23 +150,11 @@ if (moreCategoriesButton) {
 
             const page = item.dataset.page;
 
-            if (page === "الرئيسية") {
-                document.querySelector(".home-content")
-                    .scrollTo({ top: 0, behavior: "smooth" });
-            } else if (page === "السلة") {
-                alert("سلّتك فارغة حالياً.");
-            } else {
-                alert("صفحة " + page + " قيد التجهيز.");
-            }
+          
         });
     });
 
-    // الإشعارات
-    document.getElementById("notificationButton")
-        .addEventListener("click", function () {
-            alert("ما عندك إشعارات جديدة.");
-        });
-
+   
   
     // زر العروضات اليومية: الانتقال إلى القسم
     document.getElementById("productsButton")
@@ -2269,6 +2264,7 @@ gharibGrid.appendChild(card);
             }
 
             updateMarketCart();
+            showAddToCartToast();
             return;
         }
 
@@ -2291,27 +2287,405 @@ gharibGrid.appendChild(card);
         }
     }
 
-    // عرض السلة
-    function showMarketCart() {
-        if (marketCart.length === 0) {
-            alert("سلّة السوبر ماركت فارغة حالياً.");
-            return;
-        }
+    
+/* ===== Yalla Shop - Shopping Cart ===== */
 
-        const lines = marketCart.map(item =>
-         `${item.name} × ${item.quantity} — ${(item.price * item.quantity).toLocaleString("en-US")} ل.ل`
-        );
+// ضعي رقم واتساب المتجر مع رمز الدولة، بدون +
+const SHOP_WHATSAPP = "96171918022";
 
-        const total = marketCart.reduce(
-            (sum, item) => sum + item.price * item.quantity, 0
-        );
+// إنشاء شاشة السلة
+const cartScreen = document.createElement("section");
+cartScreen.id = "yallaCartScreen";
+cartScreen.hidden = true;
 
-        alert(
-            "محتويات السلة:\n\n" +
-            lines.join("\n") +
-          "\n\nالمجموع: " + total.toFixed(2)
+cartScreen.innerHTML = `
+  <div class="yc-header">
+    <button type="button" id="ycBack">❮</button>
+    
+<h2 class="yc-header-title">
+    <span>سلة مشترياتك</span>
+    <svg class="yc-cart-icon"
+         width="23" height="23"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"/>
+        <circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.5 13h12l2.5-9H6"/>
+    </svg>
+</h2>
+
+  </div>
+
+  <div class="yc-scroll">
+    <div class="yc-date" id="ycDate"></div>
+
+    <h3 class="yc-title">المنتجات المختارة</h3>
+    <div id="ycItems"></div>
+
+    <div class="yc-summary">
+      <div>
+        <span>عدد الأصناف</span>
+        <strong id="ycKinds">0</strong>
+      </div>
+      <div>
+        <span>مجموع القطع</span>
+        <strong id="ycCount">0</strong>
+      </div>
+      <div class="yc-total">
+        <span>المجموع الكلي</span>
+        <strong id="ycTotal">0 ل.ل</strong>
+      </div>
+    </div>
+
+    <div class="yc-delivery">
+      <h3>📍 معلومات التوصيل</h3>
+
+      <label for="ycName">الاسم الكامل</label>
+      <input id="ycName"
+        placeholder="اكتب اسمك الكامل"
+        autocomplete="name">
+
+      <label for="ycPhone">رقم الهاتف</label>
+      <input id="ycPhone"
+        type="tel"
+        placeholder="رقم للتواصل معك"
+        autocomplete="tel">
+
+      <label for="ycAddress">عنوان التوصيل</label>
+      <textarea id="ycAddress" rows="2"
+        placeholder="المنطقة، الشارع، المبنى..."></textarea>
+
+      <button type="button" id="ycLocation">
+        📍 تحديد موقعي من الهاتف
+      </button>
+
+      <p id="ycLocationStatus"></p>
+    </div>
+
+    <button type="button" id="ycOrder">
+      اطلب الآن عبر واتساب
+    </button>
+
+    <p class="yc-note">
+      سيتم فتح واتساب برسالة جاهزة لمراجعتها وإرسالها.
+    </p>
+  </div>
+`;
+
+document.body.appendChild(cartScreen);
+
+const cartItemsBox = document.getElementById("ycItems");
+const cartName = document.getElementById("ycName");
+const cartPhone = document.getElementById("ycPhone");
+const cartAddress = document.getElementById("ycAddress");
+const cartLocationStatus =
+    document.getElementById("ycLocationStatus");
+
+let customerCoordinates = null;
+
+function cartMoney(value) {
+    return Number(value).toLocaleString("en-US", {
+        maximumFractionDigits: 4
+    }) + " ل.ل";
+}
+
+// البحث عن صورة المنتج من بيانات الأقسام
+function getCartProduct(item) {
+    const sources = [
+        marketProducts,
+        ...(typeof vegetablesProducts !== "undefined"
+            ? [vegetablesProducts] : []),
+        ...(typeof butcherProducts !== "undefined"
+            ? [butcherProducts] : [])
+    ];
+
+    for (const products of sources) {
+        const found = products.find(p =>
+            p.id === item.id && p.name === item.name
         );
+        if (found) return found;
     }
+
+    return item;
+}
+
+function renderYallaCart() {
+    cartItemsBox.replaceChildren();
+
+    marketCart.forEach((item, index) => {
+        const product = getCartProduct(item);
+
+        const card = document.createElement("article");
+        card.className = "yc-item";
+
+        const image = document.createElement("img");
+        image.className = "yc-image";
+        image.alt = item.name;
+        image.src = product.image || "";
+        image.hidden = !product.image;
+
+        const details = document.createElement("div");
+        details.className = "yc-details";
+
+        const name = document.createElement("strong");
+        name.textContent = item.name;
+
+        const unit = document.createElement("small");
+        unit.textContent = product.unit || "";
+
+        const price = document.createElement("b");
+        price.textContent = cartMoney(
+            item.price * item.quantity
+        );
+
+        const controls = document.createElement("div");
+        controls.className = "yc-controls";
+
+        const minus = document.createElement("button");
+        minus.textContent = "−";
+        minus.setAttribute("aria-label", "تقليل " + item.name);
+
+        const quantity = document.createElement("span");
+        quantity.textContent = item.quantity;
+
+        const plus = document.createElement("button");
+        plus.textContent = "+";
+        plus.setAttribute("aria-label", "زيادة " + item.name);
+
+        const remove = document.createElement("button");
+        remove.className = "yc-remove";
+        remove.textContent = "×";
+        remove.setAttribute("aria-label", "حذف " + item.name);
+
+        plus.onclick = () => {
+            item.quantity++;
+            updateMarketCart();
+            showAddToCartToast();
+            renderYallaCart();
+        };
+
+        minus.onclick = () => {
+            if (item.quantity > 1) {
+                item.quantity--;
+            } else {
+                marketCart.splice(index, 1);
+            }
+            updateMarketCart();
+            renderYallaCart();
+        };
+
+        remove.onclick = () => {
+            marketCart.splice(index, 1);
+            updateMarketCart();
+            renderYallaCart();
+        };
+
+        controls.append(minus, quantity, plus);
+        details.append(name, unit, price, controls);
+        card.append(image, details, remove);
+        cartItemsBox.appendChild(card);
+    });
+
+
+
+    const count = marketCart.reduce(
+        (sum, item) => sum + item.quantity, 0
+    );
+
+    const total = marketCart.reduce(
+        (sum, item) => sum + item.price * item.quantity, 0
+    );
+
+  
+document.getElementById("ycKinds").textContent =
+    marketCart.reduce(
+        (total, item) => total + Number(item.quantity || 0),
+        0
+    );
+
+    document.getElementById("ycTotal").textContent =
+        cartMoney(total);
+}
+
+function showMarketCart() {
+    renderYallaCart();
+    cartScreen.hidden = false;
+}
+
+function closeYallaCart() {
+    cartScreen.hidden = true;
+}
+
+document.getElementById("ycBack").onclick = closeYallaCart;
+
+// زر السلة في الشريط السفلي
+document.querySelectorAll(
+    '.bottom-nav .nav-item[data-page="السلة"]'
+).forEach(button => {
+    button.addEventListener("click", showMarketCart);
+});
+
+// تحديد الموقع بعد موافقة الزبون
+document.getElementById("ycLocation").onclick = () => {
+    if (!navigator.geolocation) {
+        cartLocationStatus.textContent =
+            "المتصفح لا يدعم تحديد الموقع.";
+        return;
+    }
+
+    cartLocationStatus.textContent =
+        "عم نحاول نحدد موقعك...";
+
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            customerCoordinates = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            cartLocationStatus.textContent =
+                "✓ تم تحديد الموقع بنجاح";
+        },
+        () => {
+            customerCoordinates = null;
+            cartLocationStatus.textContent =
+                "تعذّر تحديد الموقع. اكتبي العنوان يدوياً.";
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            maximumAge: 0
+        }
+    );
+};
+
+// إرسال الطلب عبر واتساب
+document.getElementById("ycOrder").onclick = () => {
+
+
+    const name = cartName.value.trim();
+    const phone = cartPhone.value.trim();
+    const address = cartAddress.value.trim();
+
+    if (!marketCart.length) {
+        alert("السلة فاضية. اختاري منتجات أولاً.");
+        return;
+    }
+
+    if (!name || !phone || !address) {
+        alert("يرجى تعبئة الاسم ورقم الهاتف والعنوان.");
+        return;
+    }
+
+    if (!/^961\d{7,12}$/.test(SHOP_WHATSAPP)) {
+        alert("لازم تضيفي رقم واتساب المتجر الصحيح بالكود.");
+        return;
+    }
+
+    const total = marketCart.reduce(
+        (sum, item) => sum + item.price * item.quantity, 0
+    );
+
+    const count = marketCart.reduce(
+        (sum, item) => sum + item.quantity, 0
+    );
+
+    const lines = marketCart.map((item, index) => {
+        return `${index + 1}. ${item.name}
+الكمية: ${item.quantity}
+السعر: ${cartMoney(item.price * item.quantity)}`;
+    });
+
+    const locationLink = customerCoordinates
+        ? `https://www.google.com/maps?q=${customerCoordinates.lat},${customerCoordinates.lng}`
+        : "لم يتم مشاركة الموقع";
+
+   
+const message = createYallaWhatsAppInvoice({
+    name,
+    phone,
+    address,
+    locationLink: customerCoordinates
+        ? locationLink
+        : "",
+    cart: marketCart,
+    total
+});
+
+
+    const url = "https://wa.me/" +
+        SHOP_WHATSAPP +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank", "noopener,noreferrer");
+};
+
+/* ===== Yalla Shop WhatsApp Invoice ===== */
+
+function createYallaWhatsAppInvoice({
+    name,
+    phone,
+    address,
+    locationLink = "",
+    cart,
+    total
+}) {
+    const money = value =>
+        Number(value).toLocaleString("en-US", {
+            maximumFractionDigits: 4
+        }) + " ل.ل";
+
+    const date = new Date().toLocaleString("ar-LB");
+
+    const count = cart.reduce(
+        (sum, item) => sum + Number(item.quantity || 0),
+        0
+    );
+
+    const products = cart.map((item, index) => {
+        const quantity = Number(item.quantity);
+        const price = Number(item.price);
+
+        return [
+            `*${index + 1}. ${item.name}*`,
+            `الكمية: ${quantity}`,
+            `سعر الوحدة: ${money(price)}`,
+            `الإجمالي: ${money(price * quantity)}`
+        ].join("\n");
+    }).join("\n\n");
+
+    return [
+        "*Yalla Shop*",
+        "فاتورة طلب مشتريات",
+        `التاريخ: ${date}`,
+        "━━━━━━━━━━━━━━",
+        "",
+        "*معلومات الزبون*",
+        `الاسم: ${name}`,
+        `الهاتف: ${phone}`,
+        `العنوان: ${address}`,
+        ...(locationLink
+            ? ["", "*موقع التوصيل*", locationLink]
+            : []),
+        "",
+        "━━━━━━━━━━━━━━",
+        "*المنتجات المطلوبة*",
+        "",
+        products,
+        "",
+        "━━━━━━━━━━━━━━",
+        `عدد القطع: ${count}`,
+        `*المجموع النهائي: ${money(total)}*`,
+        "━━━━━━━━━━━━━━",
+        "",
+        "شكراً لتسوقكم من Yalla Shop"
+    ].join("\n");
+}
+
 
     // أزرار القائمة السفلية للسوبر ماركت
     document.querySelectorAll("[data-market-page]").forEach(button => {
@@ -2900,6 +3274,7 @@ butcherProductsGrid.addEventListener("click", function (event) {
     }
 
     updateMarketCart();
+    showAddToCartToast();
 });
 
 // تشغيل المنتجات
@@ -2940,7 +3315,7 @@ document.addEventListener("DOMContentLoaded", function () {
             direction = 1;
         }
 
-    }, 50);
+    }, 80);
 
 });
 
@@ -2986,4 +3361,238 @@ if (categoriesSlider) {
             moved = false;
         }
     }, true);
+}
+
+
+document.querySelectorAll(".bottom-nav .nav-item").forEach(function(button) {
+    if (button.dataset.page === "الرئيسية") {
+        button.addEventListener("click", function() {
+
+            // إغلاق صفحات الأقسام
+            ["supermarketScreen", "vegetablesScreen", "butcherScreen"]
+                .forEach(function(id) {
+                    const screen = document.getElementById(id);
+                    if (screen) screen.hidden = true;
+                });
+
+            // الرجوع للشاشة الرئيسية
+            const home = document.getElementById("homeScreen");
+            home.classList.remove("market-open");
+            home.hidden = false;
+
+            // الرجوع لأول الصفحة
+            const content = home.querySelector(".home-content");
+            if (content) content.scrollTop = 0;
+
+        });
+    }
+});
+
+// حركة ظهور عناوين العروض عند التمرير
+document.addEventListener("DOMContentLoaded", function () {
+
+    const animatedTitles = document.querySelectorAll(
+        ".products-section .section-heading, " +
+        ".gharib-section .gharib-title"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+        animatedTitles.forEach(function(title) {
+            title.classList.add("show");
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    animatedTitles.forEach(function(title) {
+        observer.observe(title);
+    });
+
+});
+
+// ===== ظهور منتجات العروض عند التمرير =====
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const grid = document.getElementById("gharibProductsGrid");
+
+    if (!grid) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -20px 0px"
+        }
+    );
+
+    function observeProducts() {
+        const cards = grid.querySelectorAll(
+            ".gharib-product-card:not(.reveal)"
+        );
+
+        cards.forEach(function(card) {
+            if (reducedMotion) {
+                card.classList.add("reveal");
+            } else {
+                observer.observe(card);
+            }
+        });
+    }
+
+    // مراقبة المنتجات الموجودة
+    observeProducts();
+
+    // مراقبة المنتجات الجديدة عند عرض الكل
+    const mutationObserver = new MutationObserver(
+        observeProducts
+    );
+
+    mutationObserver.observe(grid, {
+        childList: true
+    });
+
+});
+
+// =====================================
+// Yalla Shop - Category Reveal Animation
+// =====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const section = document.getElementById("categoriesSection");
+
+    if (!section) return;
+
+    const heading = section.querySelector(".section-heading");
+
+    const cards = section.querySelectorAll(".category-card");
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // تأخير خفيف بين البطاقات
+    cards.forEach(function(card, index) {
+        card.style.transitionDelay =
+            ((index % 3) * 0.1) + "s";
+    });
+
+    // إذا الجهاز لا يدعم المراقبة أو يفضّل تقليل الحركة
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+        if (heading) heading.classList.add("category-visible");
+
+        cards.forEach(function(card) {
+            card.classList.add("category-visible");
+        });
+
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("category-visible");
+
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            root: document.querySelector(".home-content"),
+            threshold: 0.12,
+            rootMargin: "0px 0px -15px 0px"
+        }
+    );
+
+    if (heading) observer.observe(heading);
+
+    cards.forEach(function(card) {
+        observer.observe(card);
+    });
+
+});
+
+// =====================================
+// Yalla Shop - Global Cart Toast
+// =====================================
+
+let yallaToastTimer;
+
+function showAddToCartToast() {
+
+    let toast = document.getElementById("yallaCartToast");
+
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "yallaCartToast";
+        toast.setAttribute("role", "status");
+        toast.setAttribute("aria-live", "polite");
+
+        toast.innerHTML = `
+            <div class="yalla-toast-icon">
+                <svg width="23" height="23"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2.5"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m7 12 3 3 7-7"/>
+                </svg>
+            </div>
+
+            <div class="yalla-toast-text">
+                <strong>تمت الإضافة بنجاح!</strong>
+                <span>تم إضافة المنتج إلى سلة المشتريات</span>
+            </div>
+        `;
+
+        document.body.appendChild(toast);
+    }
+
+    clearTimeout(yallaToastTimer);
+
+    toast.classList.remove("show");
+
+    // إعادة تشغيل الحركة عند الإضافة المتكررة
+    void toast.offsetWidth;
+
+    toast.classList.add("show");
+
+    yallaToastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2500);
 }

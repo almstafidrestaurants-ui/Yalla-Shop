@@ -1652,3 +1652,974 @@ select {
     }
 }
 
+/* إصلاح آخر المنتجات مع إبقاء الأقسام قابلة للضغط */
+
+.home-screen .supermarket-screen {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* الأقسام تبقى فوق المنتجات وقابلة للضغط */
+.supermarket-screen .market-categories {
+    position: relative;
+    z-index: 5;
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.supermarket-screen .market-filter {
+    position: relative;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* تمرير المنتجات فقط */
+.supermarket-screen .market-products-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 85px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* المحافظة على تصميم البطاقات */
+.supermarket-screen .market-product {
+    height: auto;
+    min-height: 0;
+}
+
+/* السعر وزر الإضافة */
+.supermarket-screen .market-product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 9px;
+}
+
+/* الشريط السفلي */
+.supermarket-screen .market-bottom-nav {
+    flex-shrink: 0;
+}
+
+/* ===== حركات قسم العروض اليومية ===== */
+
+/* عنوان العروض */
+.products-section .section-heading h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* لمعة صغيرة */
+.products-section .section-heading h2::before {
+    content: "✦";
+    color: #0875e1;
+    font-size: 17px;
+    display: inline-block;
+    animation: offerSparkle 2.5s ease-in-out infinite;
+}
+
+/* ظهور العناوين عند التمرير */
+.products-section .section-heading,
+.gharib-section .gharib-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.products-section .section-heading.show,
+.gharib-section .gharib-title.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* لمعة هادئة */
+@keyframes offerSparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* خط أزرق تحت اسم المحل */
+.gharib-section .gharib-title {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.gharib-section .gharib-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #00b8ff,
+        #0753bd
+    );
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s ease 0.3s;
+}
+
+.gharib-section .gharib-title.show::after {
+    transform: scaleX(1);
+}
+
+/* تخفيف الفراغات */
+.products-section {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.gharib-section {
+    margin-top: 12px;
+}
+
+/* احترام إعداد تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .products-section .section-heading,
+    .gharib-section .gharib-title {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .products-section .section-heading h2::before {
+        animation: none;
+    }
+
+    .gharib-section .gharib-title::after {
+        transform: scaleX(1);
+        transition: none;
+    }
+}
+
+/* ===== حركة ظهور منتجات العروض ===== */
+
+/* حالة البداية */
+.gharib-products-grid .gharib-product-card {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(
+            0.22, 1, 0.36, 1
+        );
+    will-change: opacity, transform;
+}
+
+/* ظهور المنتج */
+.gharib-products-grid .gharib-product-card.reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* تأخير بسيط بين المنتجات */
+.gharib-products-grid .gharib-product-card:nth-child(2n) {
+    transition-delay: 0.12s;
+}
+
+/* لمسة عند لمس المنتج */
+@media (hover: hover) {
+    .gharib-products-grid
+    .gharib-product-card.reveal:hover {
+        transform: translateY(-4px) scale(1.01);
+        box-shadow: 0 8px 20px rgba(7,83,189,0.12);
+    }
+}
+
+/* للمستخدمين الذين يفضلون تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .gharib-products-grid .gharib-product-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* =====================================
+   Yalla Shop - Premium Categories
+===================================== */
+
+/* عنوان الأقسام */
+#categoriesSection .section-heading {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* الخط الأزرق المتحرك */
+#categoriesSection .section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg, #00b8ff, #0753bd
+    );
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s ease 0.2s;
+}
+
+#categoriesSection .section-heading.category-visible::after {
+    transform: scaleX(1);
+}
+
+/* ظهور العنوان */
+#categoriesSection .section-heading {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+#categoriesSection .section-heading.category-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ظهور بطاقات الأقسام */
+#categoriesSection .category-card {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(
+            0.22, 1, 0.36, 1
+        ),
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* البطاقة بعد ظهورها */
+#categoriesSection .category-card.category-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* تأثير مرور الماوس */
+@media (hover: hover) {
+    #categoriesSection .category-card.category-visible:hover {
+        transform: translateY(-4px) scale(1.015);
+        border-color: #b5d8ff;
+        box-shadow: 0 8px 20px rgba(7,83,189,0.12);
+    }
+
+    #categoriesSection .category-picture img {
+        transition: transform 0.4s ease;
+    }
+
+    #categoriesSection .category-card:hover
+    .category-picture img {
+        transform: scale(1.06);
+    }
+}
+
+/* تأثير اللمس على الموبايل */
+#categoriesSection .category-card.category-visible:active {
+    transform: scale(0.97);
+    border-color: #0875e1;
+    box-shadow: 0 0 0 2px rgba(8,117,225,0.12);
+}
+
+/* عدم إظهار الأقسام المخفية بالبحث */
+#categoriesSection .category-card[hidden] {
+    display: none !important;
+}
+
+/* احترام إعدادات تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    #categoriesSection .section-heading,
+    #categoriesSection .category-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    #categoriesSection .section-heading::after {
+        transform: scaleX(1);
+        transition: none;
+    }
+}
+
+/* خلفية صور منتجات ملحمة أبو أنس */
+
+.butcher-screen .market-product-picture {
+    background: #ffe8ec !important;
+}
+
+/* المحافظة على حجم الصور */
+.butcher-screen .market-product-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== Yalla Shop Cart Design ===== */
+
+#yallaCartScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    width: 100%;
+    max-width: 390px;
+    height: 100dvh;
+    margin: 0 auto;
+    background: #f5f8fd;
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    direction: rtl;
+    color: #09265c;
+}
+
+#yallaCartScreen[hidden] {
+    display: none !important;
+}
+
+.yc-header {
+    background: linear-gradient(120deg, #0753bd, #0878e8);
+    color: white;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.yc-header h2 {
+    color: white;
+    font-size: 19px;
+    margin: 0;
+}
+
+#ycBack {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.yc-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 16px 13px 35px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.yc-date {
+    color: #8494af;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.yc-title {
+    font-size: 17px;
+    margin-bottom: 13px;
+}
+
+.yc-item {
+    background: white;
+    border: 1px solid #e1eaf6;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 11px;
+    box-shadow: 0 4px 12px rgba(0,50,120,.04);
+    animation: ycAppear .35s ease both;
+}
+
+.yc-image {
+    width: 78px;
+    height: 85px;
+    object-fit: contain;
+    background: #e8f6ff;
+    border-radius: 11px;
+    flex-shrink: 0;
+}
+
+.yc-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.yc-details strong {
+    font-size: 13px;
+}
+
+.yc-details small {
+    color: #8a9ab4;
+    font-size: 11px;
+}
+
+.yc-details b {
+    color: #075dc9;
+    font-size: 13px;
+}
+
+.yc-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.yc-controls button {
+    background: #0875e1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 29px;
+    height: 29px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.yc-controls span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.yc-remove {
+    align-self: flex-start;
+    border: none;
+    background: #fff0f2;
+    color: #e34a5c;
+    border-radius: 7px;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.yc-summary,
+.yc-delivery {
+    background: white;
+    border: 1px solid #e1eaf6;
+    border-radius: 16px;
+    padding: 15px;
+    margin-top: 17px;
+}
+
+.yc-summary > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.yc-summary .yc-total {
+    border-top: 1px solid #e1eaf6;
+    padding-top: 14px;
+    margin-bottom: 0;
+}
+
+.yc-total strong {
+    color: #075dc9;
+    font-size: 19px;
+}
+
+.yc-delivery h3 {
+    margin: 0 0 16px;
+    font-size: 17px;
+}
+
+.yc-delivery label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.yc-delivery input,
+.yc-delivery textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #dce7f5;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #f9fbff;
+    color: #09265c;
+    outline-color: #0875e1;
+}
+
+#ycLocation {
+    width: 100%;
+    margin-top: 15px;
+    padding: 13px;
+    background: #eef6ff;
+    border: 1px solid #9acaff;
+    border-radius: 11px;
+    color: #075dc9;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#ycLocationStatus {
+    font-size: 12px;
+    color: #47739e;
+}
+
+#ycOrder {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(120deg, #0753bd, #0878e8);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(7,83,189,.18);
+}
+
+.yc-note,
+.yc-empty {
+    text-align: center;
+    font-size: 12px;
+    color: #8494af;
+    margin-top: 12px;
+}
+
+@keyframes ycAppear {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .yc-item {
+        animation: none;
+    }
+}
+
+/* =====================================
+   Yalla Shop - Compact Cart Design
+   ===================================== */
+
+/* المساحة العامة */
+#yallaCartScreen .yc-scroll {
+    padding: 10px 12px 22px !important;
+    box-sizing: border-box;
+}
+
+/* التاريخ */
+#yallaCartScreen .yc-date {
+    font-size: 11px;
+    margin-bottom: 10px !important;
+    line-height: 1.5;
+}
+
+/* عنوان المنتجات */
+#yallaCartScreen .yc-title {
+    font-size: 15px;
+    margin: 5px 0 10px !important;
+}
+
+/* بطاقة المنتج */
+#yallaCartScreen .yc-item {
+    padding: 9px !important;
+    gap: 9px !important;
+    margin-bottom: 8px !important;
+    min-height: 0 !important;
+    align-items: center;
+    border-radius: 13px;
+}
+
+/* صورة المنتج */
+#yallaCartScreen .yc-image {
+    width: 72px !important;
+    height: 76px !important;
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+/* تفاصيل المنتج */
+#yallaCartScreen .yc-details {
+    gap: 4px !important;
+    justify-content: center;
+    min-width: 0;
+}
+
+#yallaCartScreen .yc-details strong {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+#yallaCartScreen .yc-details small {
+    font-size: 10px;
+}
+
+#yallaCartScreen .yc-details b {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* أزرار الزيادة والنقصان */
+#yallaCartScreen .yc-controls {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: 7px !important;
+    margin-top: 3px;
+}
+
+#yallaCartScreen .yc-controls button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 27px !important;
+    height: 27px !important;
+    min-width: 27px !important;
+    min-height: 27px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-family: Arial, sans-serif;
+    font-size: 19px !important;
+    font-weight: 500;
+    line-height: 1 !important;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#yallaCartScreen .yc-controls span {
+    min-width: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* زر حذف المنتج */
+#yallaCartScreen .yc-remove {
+    width: 23px !important;
+    height: 23px !important;
+    min-width: 23px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px !important;
+    line-height: 1;
+}
+
+/* صندوق المجموع */
+#yallaCartScreen .yc-summary {
+    padding: 12px 13px !important;
+    margin-top: 10px !important;
+    border-radius: 13px;
+}
+
+#yallaCartScreen .yc-summary > div {
+    margin-bottom: 8px !important;
+    font-size: 12px;
+    align-items: center;
+}
+
+#yallaCartScreen .yc-summary .yc-total {
+    padding-top: 10px !important;
+    margin-bottom: 0 !important;
+}
+
+#yallaCartScreen .yc-total strong {
+    font-size: 17px;
+}
+
+/* معلومات التوصيل */
+#yallaCartScreen .yc-delivery {
+    padding: 12px 13px !important;
+    margin-top: 10px !important;
+    border-radius: 13px;
+}
+
+#yallaCartScreen .yc-delivery h3 {
+    font-size: 15px;
+    margin: 0 0 10px !important;
+}
+
+#yallaCartScreen .yc-delivery label {
+    font-size: 12px;
+    margin: 9px 0 5px !important;
+}
+
+/* خانات الإدخال */
+#yallaCartScreen .yc-delivery input,
+#yallaCartScreen .yc-delivery textarea {
+    width: 100%;
+    min-height: 0 !important;
+    padding: 9px 11px !important;
+    font-size: 12px;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+
+#yallaCartScreen .yc-delivery input {
+    height: 39px !important;
+}
+
+#yallaCartScreen .yc-delivery textarea {
+    height: 57px !important;
+    resize: vertical;
+}
+
+/* تحديد الموقع */
+#yallaCartScreen #ycLocation {
+    margin-top: 11px !important;
+    padding: 10px !important;
+    min-height: 40px;
+    font-size: 12px;
+    border-radius: 9px;
+}
+
+#yallaCartScreen #ycLocationStatus {
+    margin: 5px 0 0 !important;
+    font-size: 11px;
+}
+
+/* زر اطلب الآن */
+#yallaCartScreen #ycOrder {
+    margin-top: 12px !important;
+    padding: 12px !important;
+    min-height: 45px;
+    font-size: 14px;
+    border-radius: 11px;
+}
+
+/* النص تحت الزر */
+#yallaCartScreen .yc-note {
+    font-size: 10px;
+    margin: 8px 0 0 !important;
+    line-height: 1.5;
+}
+
+/* تثبيت التمرير */
+#yallaCartScreen {
+    height: 100dvh;
+    overflow: hidden;
+}
+
+#yallaCartScreen .yc-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* إخفاء التاريخ والوقت */
+#yallaCartScreen .yc-date {
+    display: none !important;
+}
+
+/* إخفاء مجموع القطع */
+#yallaCartScreen .yc-summary > div:nth-child(2) {
+    display: none !important;
+}
+
+/* إخفاء شريط التمرير مع إبقاء التمرير شغال */
+#yallaCartScreen .yc-scroll {
+    overflow-y: auto !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none;
+}
+
+#yallaCartScreen .yc-scroll::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* ترتيب هيدر سلة المشتريات */
+
+#yallaCartScreen .yc-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+}
+
+/* العنوان بالنص */
+#yallaCartScreen .yc-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* أيقونة السلة بأقصى اليسار */
+#yallaCartScreen .yc-cart-icon {
+    position: absolute;
+    left: 16px;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 23px;
+    color: white !important;
+    stroke: white !important;
+}
+
+/* سهم الرجوع بأقصى اليمين */
+#yallaCartScreen #ycBack {
+    position: absolute;
+    right: 15px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* =====================================
+   Yalla Shop - Premium Cart Toast
+===================================== */
+
+#yallaCartToast {
+    position: fixed;
+    top: 72px;
+    left: 50%;
+    transform: translate(-50%, -18px) scale(.96);
+
+    width: calc(100% - 32px);
+    max-width: 355px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    direction: ltr;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 15px;
+    background: #ffffff;
+    border: 1px solid #dcece4;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 35, 85, .16);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 99999;
+
+    transition:
+        opacity .3s ease,
+        transform .4s cubic-bezier(.22, 1, .36, 1),
+        visibility .3s;
+}
+
+/* ظهور الرسالة */
+#yallaCartToast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0) scale(1);
+}
+
+/* دائرة علامة الصح */
+.yalla-toast-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #e4f8ed;
+    color: #16a36a;
+}
+
+/* النص */
+.yalla-toast-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    direction: rtl;
+    gap: 4px;
+    flex: 1;
+}
+
+.yalla-toast-text strong {
+    font-size: 13px;
+    font-weight: 700;
+    color: #09265c;
+}
+
+.yalla-toast-text span {
+    font-size: 11px;
+    color: #7184a3;
+    line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #yallaCartToast {
+        transition: none;
+    }
+}
+
+/* Yalla Shop - PDF Button */
+
+#ycDownloadPDF {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 14px;
+    padding: 11px;
+    border: 1px solid #0875e1;
+    border-radius: 11px;
+    background: #eef6ff;
+    color: #075dc9;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+#ycDownloadPDF:hover {
+    background: #dceeff;
+}
+
