@@ -160,12 +160,156 @@ if (moreCategoriesButton) {
             alert("ما عندك إشعارات جديدة.");
         });
 
-    // منتجات مميزة: مكان جاهز لإضافة المنتجات لاحقاً
+  
+    // زر العروضات اليومية: الانتقال إلى القسم
     document.getElementById("productsButton")
         .addEventListener("click", function () {
             document.getElementById("productsSection")
                 .scrollIntoView({ behavior: "smooth" });
         });
+
+    // =====================================
+    // غريب تشكن - المنتجات التجريبية
+    // =====================================
+
+    const gharibProducts = [
+        {
+            name: "فخاد  ",
+            price: "220000",
+            unit: "1ك",
+            image: "images/Thighs.png"
+        },
+
+        {
+            name: "فخاد  ",
+            price: "1000000",
+            unit: "5ك",
+            image: "images/Thighs.png"
+        },
+        {
+            name: "جوانح  ",
+            price: "250000",
+            unit: "1ك",
+            image: "images/Wings.png"
+        },
+        {
+            name: "سفاين   ",
+            price: "600000",
+            unit: "1ك",
+            image: "images/Safayen.png"
+        },
+        {
+            name: "  طاووق",
+            price: "700000",
+            unit: "1ك",
+            image: "images/Raw tawook.png"
+        },
+        {
+            name: "سودة  ",
+            price: "320000",
+            unit: "1ك",
+            image: "images/Gizzards.png"
+        },
+        {
+            name: "قوانص  ",
+            price: "150000",
+            unit: "1ك",
+            image: "images/Black-hearted.png"
+        },
+        {
+            name: "فروج كامل   ",
+            price: "250000",
+            unit: "1ك",
+            image: "images/chicken.png"
+        }
+    ];
+
+    const gharibGrid =
+        document.getElementById("gharibProductsGrid");
+
+    const gharibToggleButton =
+        document.getElementById("gharibToggleButton");
+
+    let gharibShowAll = false;
+
+    function renderGharibProducts() {
+        gharibGrid.innerHTML = "";
+
+        gharibProducts.forEach(function (product, index) {
+            const card = document.createElement("article");
+            card.className = "gharib-product-card";
+
+            if (!gharibShowAll && index >= 4) {
+                card.hidden = true;
+            }
+
+            const picture = document.createElement("div");
+            picture.className = "gharib-product-image";
+
+            const image = document.createElement("img");
+            image.src = product.image;
+            image.alt = product.name;
+            image.loading = "lazy";
+
+            // صورة بديلة إذا لم تكن الصورة موجودة
+            image.onerror = function () {
+                picture.innerHTML = "";
+                picture.textContent = "🍗";
+                picture.style.fontSize = "55px";
+            };
+
+            picture.appendChild(image);
+
+            const title = document.createElement("h3");
+            title.textContent = product.name;
+
+            const description = document.createElement("p");
+            description.className = "gharib-product-description";
+            description.textContent = product.description;
+
+            const bottom = document.createElement("div");
+            bottom.className = "gharib-product-bottom";
+
+            const price = document.createElement("strong");
+            price.className = "gharib-product-price";
+         price.textContent = product.price + " ل.ل";
+
+            const unit = document.createElement("span");
+            unit.className = "gharib-product-unit";
+            unit.textContent = product.unit;
+
+           
+
+const addButton = document.createElement("button");
+addButton.className = "market-add";
+addButton.type = "button";
+addButton.textContent = "+";
+addButton.setAttribute("aria-label", "إضافة " + product.name + " إلى السلة");
+
+addButton.addEventListener("click", function () {
+    alert("تم اختيار: " + product.name);
+});
+
+bottom.append(price, unit, addButton);
+
+card.append(picture, title, description, bottom);
+gharibGrid.appendChild(card);
+
+        });
+
+        gharibToggleButton.textContent =
+            gharibShowAll ? "عرض أقل" : "عرض الكل";
+
+        gharibToggleButton.hidden = gharibProducts.length <= 4;
+    }
+
+    gharibToggleButton.addEventListener("click", function () {
+        gharibShowAll = !gharibShowAll;
+        renderGharibProducts();
+    });
+
+    renderGharibProducts();
+
 
 
     // ==================================

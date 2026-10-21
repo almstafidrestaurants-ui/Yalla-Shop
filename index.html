@@ -194,22 +194,35 @@
          <p id="searchMessage" class="search-message" hidden></p>
             </section>
 
-            <!-- مساحة لإضافة منتجات لاحقاً -->
-            <section class="products-section" id="productsSection">
-                <div class="section-heading">
-                    <h2>منتجات مميزة</h2>
-                    <button id="productsButton">عرض الكل</button>
-                </div>
+   
+           
+<!-- ==================================================================================================
+ العروضات اليومية 
+ ========================================================================================================-->
+<section class="products-section" id="productsSection">
+    <div class="section-heading">
+        <h2>عروضات اليومية</h2>
+        <button id="productsButton" type="button">   </button>
+    </div>
+</section>
 
-                <div class="empty-products">
-                    <span>🛍️</span>
-                    <p>اكتشف منتجاتنا قريباً</p>
-                </div>
-            </section>
-
+<!-- قسم غريب تشكن -->
+<section class="gharib-section" id="gharibSection">
+    <div class="section-heading">
+        <div class="gharib-title">
+            <h2>غريب تشكن</h2>
         </div>
 
-        
+        <button id="gharibToggleButton" type="button">
+            عرض الكل
+        </button>
+    </div>
+
+    <div class="gharib-products-grid" id="gharibProductsGrid"> </div>
+</section>
+        </div>
+
+    
 <!-- صفحة سوبر ماركت -->
 <section id="supermarketScreen" class="supermarket-screen" hidden>
 
@@ -383,7 +396,7 @@
             </svg>
         </button>
 
-        <strong>ملحمة يلا شوب</strong>
+        <strong>ملحمة أبو أنس   </strong>
 
         <button type="button"
                 id="butcherSearchButton"
