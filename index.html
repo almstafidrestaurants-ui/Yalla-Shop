@@ -184,43 +184,28 @@
         <span>حلويات</span>
     </button>
 
-    <button class="category-card wide-card" data-category="منظفات">
+    <button class="category-card" data-category="منظفات">
         <div class="category-picture cleaning">
             <img src="images/Cleaning.jpg" alt="منظفات">
         </div>
         <span>منظفات</span>
     </button>
 
+       <button class="category-card" data-category="دواجن">
+       <div class="category-picture poultry">
+            <img src="images/poultry.jpg" alt="دواجن">
+        </div>
+        <span>دواجن</span>
+    </button>
+
+   
 </div>
          <p id="searchMessage" class="search-message" hidden></p>
             </section>
 
    
            
-<!-- ==================================================================================================
- العروضات اليومية 
- ========================================================================================================-->
-<section class="products-section" id="productsSection">
-    <div class="section-heading">
-        <h2>عروضات اليومية</h2>
-        <button id="productsButton" type="button">   </button>
-    </div>
-</section>
 
-<!-- قسم غريب تشكن -->
-<section class="gharib-section" id="gharibSection">
-    <div class="section-heading">
-        <div class="gharib-title">
-            <h2>غريب تشكن</h2>
-        </div>
-
-        <button id="gharibToggleButton" type="button">
-            عرض الكل
-        </button>
-    </div>
-
-    <div class="gharib-products-grid" id="gharibProductsGrid"> </div>
-</section>
         </div>
 
     
@@ -475,6 +460,23 @@
         <div id="cleaningProductsGrid" class="market-products-grid"></div>
         <p id="cleaningNoProducts" class="market-no-products" hidden>ما لقينا منتجات مطابقة لبحثك.</p>
     </div>
+</section>
+
+<!-- صفحة الدواجن -->
+<section id="poultryScreen" class="supermarket-screen vegetables-screen butcher-screen poultry-screen" hidden>
+  <header class="market-header">
+    <button type="button" id="poultryBackButton" class="market-back" aria-label="رجوع">❯</button>
+    <strong>دواجن - غريب تشكن</strong>
+    <button type="button" id="poultrySearchButton" class="market-search-icon" aria-label="بحث">⌕</button>
+  </header>
+  <div class="market-search-wrap" id="poultrySearchWrap" hidden>
+    <input type="search" id="poultryProductSearch" placeholder="ابحث عن دواجن..." aria-label="ابحث عن دواجن">
+  </div>
+  <div class="market-products-scroll">
+    <div class="market-products-heading"><h2>كل منتجات الدواجن</h2><span id="poultryProductsCount">8 منتجات</span></div>
+    <div class="gharib-products-grid" id="gharibProductsGrid"></div>
+    <p id="poultryNoProducts" class="market-no-products" hidden>ما لقينا منتجات مطابقة لبحثك.</p>
+  </div>
 </section>
 
 <!-- القائمة السفلية -->

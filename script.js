@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const vegetablesScreen = document.getElementById("vegetablesScreen");
 const butcherScreen = document.getElementById("butcherScreen");
 const cleaningScreen = document.getElementById("cleaningScreen");
+const poultryScreen = document.getElementById("poultryScreen");
     categoryCards.forEach(function (card) {
         card.addEventListener("click", function () {
             const category = card.dataset.category;
@@ -67,6 +68,12 @@ if (category === "خضرة وفواكه") {
         top: 0,
         behavior: "smooth"
     });
+    return;
+}
+if (category === "دواجن") {
+    poultryScreen.hidden = false;
+    home.classList.add("market-open");
+    renderGharibProducts();
     return;
 }
 if (category === "منظفات") {
@@ -138,13 +145,6 @@ if (moreCategoriesButton) {
 
    
   
-    // زر العروضات اليومية: الانتقال إلى القسم
-    document.getElementById("productsButton")
-        .addEventListener("click", function () {
-            document.getElementById("productsSection")
-                .scrollIntoView({ behavior: "smooth" });
-        });
-
     // =====================================
     // غريب تشكن - المنتجات التجريبية
     // =====================================
@@ -204,10 +204,9 @@ if (moreCategoriesButton) {
     const gharibGrid =
         document.getElementById("gharibProductsGrid");
 
-    const gharibToggleButton =
-        document.getElementById("gharibToggleButton");
+    const gharibToggleButton = null;
 
-    let gharibShowAll = false;
+    let gharibShowAll = true;
 
     function renderGharibProducts() {
         gharibGrid.innerHTML = "";
@@ -216,7 +215,7 @@ if (moreCategoriesButton) {
             const card = document.createElement("article");
             card.className = "gharib-product-card";
 
-            if (!gharibShowAll && index >= 4) {
+            if ((!gharibShowAll && index >= 4) || !product.name.trim().includes(document.getElementById("poultryProductSearch").value.trim())) {
                 card.hidden = true;
             }
 
@@ -242,7 +241,7 @@ if (moreCategoriesButton) {
 
             const description = document.createElement("p");
             description.className = "gharib-product-description";
-            description.textContent = product.description;
+            description.textContent = product.description || "";
 
             const bottom = document.createElement("div");
             bottom.className = "gharib-product-bottom";
@@ -286,16 +285,10 @@ gharibGrid.appendChild(card);
 
         });
 
-        gharibToggleButton.textContent =
-            gharibShowAll ? "عرض أقل" : "عرض الكل";
 
-        gharibToggleButton.hidden = gharibProducts.length <= 4;
     }
 
-    gharibToggleButton.addEventListener("click", function () {
-        gharibShowAll = !gharibShowAll;
-        renderGharibProducts();
-    });
+
 
     renderGharibProducts();
 
@@ -3271,6 +3264,18 @@ butcherProductsGrid.addEventListener("click", function (event) {
     showAddToCartToast();
 });
 
+document.getElementById("poultryBackButton").addEventListener("click", () => {
+    poultryScreen.hidden = true;
+    home.classList.remove("market-open");
+});
+document.getElementById("poultrySearchButton").addEventListener("click", () => {
+    const wrap = document.getElementById("poultrySearchWrap");
+    wrap.hidden = !wrap.hidden;
+    if (!wrap.hidden) document.getElementById("poultryProductSearch").focus();
+    else { document.getElementById("poultryProductSearch").value = ""; renderGharibProducts(); }
+});
+document.getElementById("poultryProductSearch").addEventListener("input", renderGharibProducts);
+
 // بحث شامل تحت شريط البحث الرئيسي
 const globalSearchResults = document.getElementById("globalSearchResults");
 const globalSearchNormalize = value => String(value || "").toLowerCase()
@@ -3288,7 +3293,7 @@ function renderGlobalSearch() {
         ...marketProducts.map(p => ({...p, section: p.category === "cleaning" ? "منظفات" : "سوبر ماركت"})),
         ...vegetablesProducts.map(p => ({...p, section: "خضرة وفواكه"})),
         ...butcherProducts.map(p => ({...p, section: "ملحمة"})),
-        ...gharibProducts.map((p, index) => ({...p, section: "غريب تشكن", searchIndex: index}))
+        ...gharibProducts.map((p, index) => ({...p, section: "دواجن", searchIndex: index}))
     ];
     const sections = categoryCards.filter(card => globalSearchNormalize(card.dataset.category).includes(query));
     const products = sources.filter(p => globalSearchNormalize(p.name).includes(query));
@@ -3333,13 +3338,13 @@ function focusSearchedProduct(section, productId, searchIndex) {
         butcherSearchInput.value = "";
         filterButcherProducts();
         grid = butcherProductsGrid;
-    } else if (section === "غريب تشكن") {
+    } else if (section === "دواجن") {
         gharibShowAll = true;
         renderGharibProducts();
         grid = gharibGrid;
     }
     if (!grid) return;
-    const selector = section === "غريب تشكن"
+    const selector = section === "دواجن"
         ? `.gharib-product-card:nth-child(${Number(searchIndex) + 1})`
         : `[data-product-id="${String(productId).replace(/[^0-9]/g, "")}"]`;
     // ننتظر ظهور الشاشة واكتمال رسم البطاقات
@@ -3372,9 +3377,6 @@ globalSearchResults.addEventListener("click", event => {
     searchInput.value = "";
     searchInput.blur();
     if (card) card.click();
-    else if (section === "غريب تشكن") {
-        document.getElementById("gharibSection")?.scrollIntoView({behavior:"smooth"});
-    }
     if (productId !== undefined || searchIndex !== undefined) {
         focusSearchedProduct(section, productId, searchIndex);
     }
@@ -3495,7 +3497,7 @@ document.querySelectorAll(".bottom-nav .nav-item").forEach(function(button) {
         button.addEventListener("click", function() {
 
             // إغلاق صفحات الأقسام
-            ["supermarketScreen", "vegetablesScreen", "butcherScreen", "cleaningScreen"]
+            ["supermarketScreen", "vegetablesScreen", "butcherScreen", "cleaningScreen", "poultryScreen"]
                 .forEach(function(id) {
                     const screen = document.getElementById(id);
                     if (screen) screen.hidden = true;

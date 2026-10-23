@@ -2660,3 +2660,10 @@ select {
     0%, 100% { box-shadow: 0 0 0 3px rgba(22,136,240,.12); }
     50% { box-shadow: 0 0 0 7px rgba(22,136,240,.27); }
 }
+
+/* قسم الدواجن */
+.category-picture.poultry { background: linear-gradient(135deg,#fff1e4,#ffe0c6); }
+.poultry-icon { font-size: 48px; line-height: 1; }
+.home-screen .poultry-screen { z-index: 88; background: #fff; }
+.poultry-screen .gharib-products-grid { padding: 6px 10px 22px; }
+.poultry-screen .gharib-product-card[hidden] { display: none !important; }
