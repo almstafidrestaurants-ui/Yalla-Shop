@@ -479,6 +479,39 @@
   </div>
 </section>
 
+
+<!-- مودال المكتبة -->
+<section id="restaurantsScreen" class="supermarket-screen restaurants-screen" hidden>
+  <header class="market-header"><button type="button" id="restaurantsBack" class="market-back" aria-label="رجوع">❯</button><strong id="restaurantsHeader">المطاعم</strong><button type="button" id="restaurantsSearchToggle" class="market-search-icon" aria-label="بحث"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg></button></header>
+  <div class="market-search-wrap" id="restaurantsSearchWrap" hidden><input type="search" id="restaurantsSearch" placeholder="ابحث عن مطعم أو صنف..." aria-label="بحث بالمطاعم"></div>
+  <div id="restaurantList" class="restaurants-list"></div>
+  <div id="restaurantMenu" hidden><div id="restaurantCategories" class="restaurant-categories" aria-label="أقسام المنيو"></div><div id="restaurantMenuItems" class="restaurant-menu-items"></div></div>
+</section>
+<section id="libraryScreen" class="supermarket-screen library-screen" hidden>
+  <header class="market-header">
+    <button type="button" id="libraryBackButton" class="market-back" aria-label="رجوع"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <strong>المكتبة - قرطاسية ومدرسة</strong>
+    <button type="button" id="librarySearchButton" class="market-search-icon" aria-label="بحث"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg></button>
+  </header>
+  <div class="market-search-wrap" id="librarySearchWrap" hidden><input id="libraryProductSearch" type="search" placeholder="ابحث عن كتاب، دفتر، قلم..." aria-label="بحث بالمكتبة"></div>
+  <nav class="market-categories library-categories" id="libraryCategories" aria-label="تصنيفات المكتبة">
+    <button type="button" class="library-filter active" data-filter="all">الكل</button>
+    <button type="button" class="library-filter" data-filter="books">كتب وقصص</button>
+    <button type="button" class="library-filter" data-filter="notebooks">دفاتر وورق</button>
+    <button type="button" class="library-filter" data-filter="pens">أقلام وكتابة</button>
+    <button type="button" class="library-filter" data-filter="bags">شنط ومقالم</button>
+    <button type="button" class="library-filter" data-filter="geometry">هندسة وحساب</button>
+    <button type="button" class="library-filter" data-filter="art">رسم وأشغال</button>
+    <button type="button" class="library-filter" data-filter="filing">ملفات وتنظيم</button>
+    <button type="button" class="library-filter" data-filter="other">لوازم متنوعة</button>
+  </nav>
+  <div class="market-products-scroll">
+    <div class="market-products-heading"><h2 id="libraryProductsTitle">كل منتجات المكتبة</h2><span id="libraryProductsCount">0 منتجات</span></div>
+    <div id="libraryProductsGrid" class="market-products-grid"></div>
+    <p id="libraryNoProducts" class="market-no-products" hidden>ما لقينا منتجات مطابقة لبحثك.</p>
+  </div>
+</section>
+
 <!-- القائمة السفلية -->
 <nav class="bottom-nav" aria-label="القائمة الرئيسية">
 

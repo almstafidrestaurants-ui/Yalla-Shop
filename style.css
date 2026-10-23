@@ -2667,3 +2667,97 @@ select {
 .home-screen .poultry-screen { z-index: 88; background: #fff; }
 .poultry-screen .gharib-products-grid { padding: 6px 10px 22px; }
 .poultry-screen .gharib-product-card[hidden] { display: none !important; }
+
+/* تغيير خلفية صور منتجات المنظفات */
+.cleaning-screen .market-product-picture {
+    background: #eaf4ff !important;
+}
+
+/* مكتبة Yalla Shop */
+.library-screen .library-categories {display:flex;gap:8px;overflow-x:auto;white-space:nowrap;padding:11px 12px;scrollbar-width:thin;direction:rtl;flex-shrink:0;}
+.library-screen .library-filter {border:1px solid #dce5f2;border-radius:22px;background:#fff;color:#263956;font-size:11px;font-weight:800;padding:7px 13px;flex-shrink:0;cursor:pointer;}
+.library-screen .library-filter.active {background:#0865cc;color:#fff;border-color:#0865cc;}
+.library-screen .library-product-picture {background:#eaf3ff;display:grid;place-items:center;}
+.library-screen .library-product-picture span {font-size:58px;line-height:1;}
+.library-screen .market-product-bottom strong {color:#14213d;font-size:12px;font-weight:800;direction:ltr;white-space:nowrap;}
+.library-screen .market-product h3 {min-height:37px;}
+.library-screen .market-products-scroll {min-height:0;}
+
+/* شريط تصنيفات المكتبة: سحب باللمس وبالماوس بدون شريط تمرير ظاهر */
+.library-screen #libraryCategories {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.library-screen #libraryCategories::-webkit-scrollbar { display: none !important; }
+.library-screen #libraryCategories.dragging { cursor: grabbing; }
+
+/* Restaurant modal — compact, text-only menus */
+.restaurants-screen .restaurants-list,.restaurants-screen .restaurant-menu-items{padding:14px 15px 90px;display:flex;flex-direction:column;gap:10px;}
+.restaurants-screen .restaurants-list[hidden],.restaurants-screen #restaurantMenu[hidden]{display:none!important;}
+.restaurant-list-row{width:100%;border:1px solid #e4e9f2;background:#fff;border-radius:13px;padding:18px 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;color:#14213d;font-size:15px;text-align:right;}
+.restaurant-categories{display:flex;overflow-x:auto;gap:8px;padding:12px 15px;white-space:nowrap;scrollbar-width:none;touch-action:pan-x;cursor:grab;user-select:none;}
+.restaurant-categories::-webkit-scrollbar{display:none;}
+.restaurant-tab{border:1px solid #dbe3ef;background:#fff;color:#14213d;border-radius:22px;padding:10px 15px;white-space:nowrap;flex:none;font-weight:700;cursor:pointer;}
+.restaurant-tab.active{background:#0753bd;border-color:#0753bd;color:#fff;}
+.restaurant-item{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #e4e9f2;background:#fff;border-radius:12px;padding:14px;min-height:76px;}
+.restaurant-item-info{display:flex;flex-direction:column;gap:8px;text-align:right;flex:1;min-width:0;}
+.restaurant-item-info strong{color:#14213d;font-size:14px;}
+.restaurant-item-info span{color:#14213d;font-weight:700;font-size:13px;}
+.restaurant-add{background:#0753bd;color:white;border:0;border-radius:10px;font-size:23px;font-weight:800;width:40px;height:40px;flex:none;cursor:pointer;}
+.restaurant-empty{padding:26px 15px;text-align:center;color:#64748b;line-height:1.8;}
+
+/* مطاعم: بطاقات مصوّرة خارج المنيو، والمنتجات نصية فقط */
+.restaurants-screen .restaurants-list {padding:12px 12px 90px;gap:12px;}
+.restaurants-screen .restaurant-list-row {padding:0;min-height:108px;overflow:hidden;gap:12px;border-radius:16px;box-shadow:0 3px 12px rgba(19,46,83,.07);}
+.restaurant-list-row .restaurant-cover {width:128px;height:108px;object-fit:cover;flex:none;background:#eaf1fb;}
+.restaurant-list-row strong {flex:1;font-size:15px;font-weight:900;}
+.restaurant-list-row>span {margin-inline-end:15px;font-size:20px;color:#0b5dc4;}
+.restaurant-item {min-height:68px;}
+.restaurant-item-info {gap:5px;}
+.restaurant-categories.dragging {cursor:grabbing;}
+
+
+/* مطاعم: تمرير عمودي مستقل + بطاقات تفاعلية */
+.restaurants-screen {min-height:0;overflow:hidden!important;}
+.restaurants-screen #restaurantList {flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;}
+.restaurants-screen #restaurantMenu:not([hidden]) {display:flex;flex-direction:column;flex:1 1 auto;min-height:0;overflow:hidden;}
+.restaurants-screen #restaurantCategories {flex:0 0 auto;min-height:0;}
+.restaurants-screen #restaurantMenuItems {flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;padding:16px 15px 115px;scrollbar-width:thin;scrollbar-color:#cad8eb transparent;}
+.restaurants-screen .restaurant-item {position:relative;min-height:82px;border:1px solid #e2eaf5;border-radius:16px;background:#fff;box-shadow:0 2px 7px rgba(20,40,80,.045);padding:14px 14px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.restaurants-screen .restaurant-item:hover {transform:translateY(-2px);border-color:#b8d5fa;box-shadow:0 8px 22px rgba(15,69,145,.11);}
+.restaurants-screen .restaurant-item-info {gap:8px;}
+.restaurants-screen .restaurant-item-info strong {font-size:14px;font-weight:850;color:#122444;line-height:1.5;}
+.restaurants-screen .restaurant-item-info span {display:inline-flex;align-items:center;align-self:flex-start;direction:rtl;font-size:13px;font-weight:850;color:#087d59;background:#e9f8f0;border-radius:8px;padding:5px 9px;}
+.restaurants-screen .restaurant-add {display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:linear-gradient(145deg,#0c79eb,#0753bd);box-shadow:0 4px 12px rgba(7,83,189,.22);font-size:25px;line-height:1;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;}
+.restaurants-screen .restaurant-add:hover {transform:translateY(-2px) scale(1.08);box-shadow:0 7px 18px rgba(7,83,189,.34);}
+.restaurants-screen .restaurant-add:active {transform:scale(.88);}
+.restaurants-screen .restaurant-add.added {background:#0b966e;box-shadow:0 4px 13px rgba(11,150,110,.28);}
+.restaurants-screen .restaurant-add:focus-visible,.restaurants-screen .restaurant-tab:focus-visible {outline:3px solid #78b8ff;outline-offset:3px;}
+.restaurants-screen .restaurant-tab {transition:background .2s ease,transform .2s ease,border-color .2s ease;}
+.restaurants-screen .restaurant-tab:hover {transform:translateY(-1px);border-color:#83b6f4;}
+@media (prefers-reduced-motion:reduce) {.restaurants-screen .restaurant-item,.restaurants-screen .restaurant-add,.restaurants-screen .restaurant-tab {transition:none!important;}}
+
+/* Restaurant list arrows: consistent visibility and tactile feedback */
+.restaurants-screen .restaurant-list-row {transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;}
+.restaurants-screen .restaurant-list-row:hover {transform:translateY(-2px);box-shadow:0 8px 22px rgba(12,73,154,.14);border-color:#b4d2fb;}
+.restaurants-screen .restaurant-list-row:active {transform:scale(.985);}
+.restaurants-screen .restaurant-list-row .restaurant-row-arrow {display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;margin-inline-end:12px;border-radius:50%;background:#e9f3ff;color:#0753bd;font-size:21px;font-weight:900;transition:background .2s,color .2s,transform .2s;}
+.restaurants-screen .restaurant-list-row:hover .restaurant-row-arrow {background:#0753bd;color:white;transform:translateX(-3px);}
+.restaurants-screen .restaurant-list-row:focus-visible {outline:3px solid #78b8ff;outline-offset:2px;}
+
+/* إخفاء مؤشر التمرير في صفحات المطاعم مع الحفاظ على التمرير */
+.restaurants-screen, .restaurants-screen * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+.restaurants-screen::-webkit-scrollbar, .restaurants-screen *::-webkit-scrollbar { display: none !important; width: 0 !important; }
+.restaurant-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

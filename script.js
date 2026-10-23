@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const butcherScreen = document.getElementById("butcherScreen");
 const cleaningScreen = document.getElementById("cleaningScreen");
 const poultryScreen = document.getElementById("poultryScreen");
+const libraryScreen = document.getElementById("libraryScreen");
     categoryCards.forEach(function (card) {
         card.addEventListener("click", function () {
             const category = card.dataset.category;
@@ -68,6 +69,20 @@ if (category === "خضرة وفواكه") {
         top: 0,
         behavior: "smooth"
     });
+    return;
+}
+if (category === "مطاعم") {
+    restaurantsScreen.hidden = false;
+    home.classList.add("market-open");
+    restaurantCurrent = null;
+    restaurantFilter = 'all';
+    renderRestaurantView();
+    return;
+}
+if (category === "مكتبة") {
+    libraryScreen.hidden = false;
+    home.classList.add("market-open");
+    renderLibraryProducts();
     return;
 }
 if (category === "دواجن") {
@@ -248,7 +263,7 @@ if (moreCategoriesButton) {
 
             const price = document.createElement("strong");
             price.className = "gharib-product-price";
-         price.textContent = product.price + " ل.ل";
+         price.textContent = Number(product.price).toLocaleString("en-US") + " ل.ل";
 
             const unit = document.createElement("span");
             unit.className = "gharib-product-unit";
@@ -364,7 +379,7 @@ gharibGrid.appendChild(card);
         {
             id: 1,
             name: "  خبز فاهيتا عيسى   ",
-            price: 1.111,
+            price: 99990,
               unit: " ربطة  ",
             category: "Bakery",
             image: "images/Issa.png",
@@ -373,7 +388,7 @@ gharibGrid.appendChild(card);
         {
             id: 2,
             name: "حليب لاكتو  ",
-            price: 4.6666,
+            price: 419994,
             unit: " 750غ  ",
             category: "dairy",
             image: "images/Lacto milk.png",
@@ -382,7 +397,7 @@ gharibGrid.appendChild(card);
         {
             id: 3,
             name: "مرتديلا تغذية بقر  ",
-            price: 1.5555 ,
+            price: 139995 ,
             unit: " 340غ  ",
             category: "food",
             image: "images/Beef Mortadella 340g.png",
@@ -391,7 +406,7 @@ gharibGrid.appendChild(card);
         {
             id: 4,
            name: "حلاوة دعبول سادة  ",
-            price: 3.333 ,
+            price: 299970 ,
             unit: "    800غ ",
             category: "food",
             image: "images/Da'bool Plain Halva 800g.png",
@@ -400,7 +415,7 @@ gharibGrid.appendChild(card);
         {
             id: 5,
             name: "فانسي رز مصري      ",
-            price: 4.3333 ,
+            price: 389997 ,
             unit: "    5ك ",
             category: "food",
             image: "images/Fancy Egyptian Rice 5kg.png",
@@ -409,7 +424,7 @@ gharibGrid.appendChild(card);
         {
             id: 6,
             name: "بهار ابيض  ",
-            price: 0.666 ,
+            price: 59940 ,
             unit: "100غ",
             category: "spices",
             image: "images/White Pepper 100g.png",
@@ -418,7 +433,7 @@ gharibGrid.appendChild(card);
         {
             id: 7,
             name: "نانا مكسي زهري  ",
-            price: 0.7777,
+            price: 69993,
             unit: " مربع*10",
           category: "cleaning",
            image: "images/Nana pink square maxi dress.png",
@@ -427,7 +442,7 @@ gharibGrid.appendChild(card);
         {
             id: 8,
             name: "بسكويت كريمة  ",
-            price: 1.1,
+            price: 99000,
             unit: "320 غ ",
             category: "Snacks",
              image: "images/Cream biscuits 320g.png",
@@ -436,7 +451,7 @@ gharibGrid.appendChild(card);
             {
             id: 9,
             name: "قلوبات الرفاعي    ",
-            price: 2.5,
+            price: 225000,
             unit: " ",
             category: "Snacks",
              image: "images/Al-Rifai Nuts.png",
@@ -445,7 +460,7 @@ gharibGrid.appendChild(card);
            {
             id: 10,
             name: "  لوتس بيسكوف     ",
-            price: 1.3333,
+            price: 119997,
             unit: " *8",
             category: "Snacks",
              image: "images/Lotus Biscoff.png",
@@ -455,7 +470,7 @@ gharibGrid.appendChild(card);
              {
             id: 12,
             name: "  معتوق شوفان +ميكس     ",
-            price: 	0.666,
+            price: 	59940,
             unit: "  ",
             category: "food",
              image: "images/Maatouk Oats + Mix.png",
@@ -464,7 +479,7 @@ gharibGrid.appendChild(card);
       {
             id: 13,
             name: "  برسيل سوري مسحوق للغسيل    ",
-            price: 	8,
+            price: 	720000,
             unit: " 5ك ",
             category: "cleaning",
              image: "images/Persil Syrian Laundry Powder 5kg.png",
@@ -473,7 +488,7 @@ gharibGrid.appendChild(card);
  {
             id: 14,
             name: "  برايفت ماكسي    ",
-            price: 		0.7777,
+            price: 		69993,
             unit: "  *8 ",
             category: "cleaning",
              image: "images/Private Maxi.png",
@@ -482,7 +497,7 @@ gharibGrid.appendChild(card);
  {
             id: 15,
             name: " شاي النحلة    ",
-            price: 		10,
+            price: 		900000,
             unit: "  1000غ ",
             category: "food",
              image: "images/Bee Tea.png",
@@ -491,7 +506,7 @@ gharibGrid.appendChild(card);
  {
             id: 16,
             name: " زبيب    ",
-            price: 		1.1666	 ,
+            price: 		104994	 ,
             unit: "   200غ",
             category: "Snacks",
              image: "images/raisins.png",
@@ -500,7 +515,7 @@ gharibGrid.appendChild(card);
  {
             id: 17,
             name: " جوزة الطيب    ",
-            price: 		18	 ,
+            price: 		1620000	 ,
             unit: "  1ك",
             category: "spices",
              image: "images/nutmeg.png",
@@ -509,7 +524,7 @@ gharibGrid.appendChild(card);
  {
             id: 18,
             name: " غوم وطني      ",
-            price: 		3.555	 ,
+            price: 		319950	 ,
             unit: "  1ك",
             category: "Snacks",
              image: "images/National Gum.png",
@@ -518,7 +533,7 @@ gharibGrid.appendChild(card);
  {
             id: 19,
             name: " مكاديميا     ",
-            price: 		4.444	 ,
+            price: 		399960	 ,
             unit: "  500غ ",
             category: "spices",
              image: "images/Macadamia.png",
@@ -527,7 +542,7 @@ gharibGrid.appendChild(card);
  {
             id: 20,
             name: " اوزمو هابي بسكويت     ",
-            price: 		0.3333	 ,
+            price: 		29997	 ,
             unit: "  37.5غ",
             category: "Snacks",
              image: "images/Ozmo Happy Biscuits.png",
@@ -536,7 +551,7 @@ gharibGrid.appendChild(card);
  {
             id: 21,
             name: " لبن ليبان ليه     ",
-            price: 		2.11	 ,
+            price: 		189900	 ,
             unit: " 1ك",
             category: "dairy",
              image: "images/Liban Lait Milk.png",
@@ -545,7 +560,7 @@ gharibGrid.appendChild(card);
  {
             id: 22,
             name: " اكياس تغليف سجاد    ",
-            price: 		1.1	 ,
+            price: 		99000	 ,
             unit: "  ",
             category: "cleaning",
              image: "images/bags.png",
@@ -554,7 +569,7 @@ gharibGrid.appendChild(card);
  {
             id: 23,
             name: " اجاكس   ",
-            price: 		2.2222	 ,
+            price: 		199998	 ,
             unit: " 1.25ليتر ",
             category: "cleaning",
              image: "images/Ajax.png",
@@ -563,7 +578,7 @@ gharibGrid.appendChild(card);
  {
             id: 24,
             name: " زيت سليم   ",
-            price: 		9.22222	 ,
+            price: 		830000	 ,
             unit: "4 ليتر",
             category: "food",
              image: "images/Slim Oil.png",
@@ -572,7 +587,7 @@ gharibGrid.appendChild(card);
  {
             id: 25,
             name: " نسكافيه غولد نجار  ",
-            price: 		6.5555	 ,
+            price: 		589995	 ,
             unit: " 200غ ",
             category: "food",
              image: "images/Nescafé Gold Najjar.png",
@@ -581,7 +596,7 @@ gharibGrid.appendChild(card);
  {
             id: 26,
             name: " دي يو اكس ",
-            price: 		1.9	 ,
+            price: 		171000	 ,
             unit: " 150مل",
             category: "cleaning",
              image: "images/AXE.png",
@@ -590,7 +605,7 @@ gharibGrid.appendChild(card);
  {
             id: 27,
             name: " دانيال مع هيل ",
-            price: 		7 ,
+            price: 		630000 ,
             unit: " 400غ ",
             category: "food",
              image: "images/Daniel.png",
@@ -599,7 +614,7 @@ gharibGrid.appendChild(card);
  {
             id: 28,
             name: " شامبو برت بلاس",
-            price: 		2.5 ,
+            price: 		225000 ,
             unit: "  400مل",
             category: "cleaning",
              image: "images/Pert Plus.png",
@@ -608,7 +623,7 @@ gharibGrid.appendChild(card);
  {
             id: 29,
             name: " ظرف تورابيكا كابتشينو ",
-            price: 		0.222 ,
+            price: 		19980 ,
             unit: "   ",
             category: "food",
              image: "images/Torabica cappuccino.png",
@@ -617,7 +632,7 @@ gharibGrid.appendChild(card);
  {
             id: 30,
             name: " كبش قرنفل حب ",
-            price: 		1.8 ,
+            price: 		162000 ,
             unit: " 100غ",
             category: "spices",
              image: "images/Whole Cloves.png",
@@ -626,7 +641,7 @@ gharibGrid.appendChild(card);
  {
             id: 32,
             name: " عبيد حبة كبيرة",
-            price: 		3.666 ,
+            price: 		329940 ,
             unit: " 1ك",
             category: "Snacks",
              image: "images/Slaves.png",
@@ -635,7 +650,7 @@ gharibGrid.appendChild(card);
  {
             id: 33,
             name: " قهوة سالي",
-            price: 		3.555 ,
+            price: 		319950 ,
             unit: "  400غ",
             category: "food",
              image: "images/Sally.png",
@@ -644,7 +659,7 @@ gharibGrid.appendChild(card);
  {
             id: 34,
             name: "علبة قرقش ",
-            price: 	3.444 ,
+            price: 	309960 ,
             unit: "  40 حبة",
             category: "Snacks",
              image: "images/Qarqash Box.png",
@@ -653,7 +668,7 @@ gharibGrid.appendChild(card);
  {
             id: 35,
             name: "تاج بسمتي مع 3علب تونا   ",
-            price: 13.5,
+            price: 1215000,
             unit: "  4.5ك",
             category: "food",
              image: "images/Taj Basmati.png",
@@ -662,7 +677,7 @@ gharibGrid.appendChild(card);
  {
             id: 36,
             name: "    شفاطة ماجيك مع راس متحرك  ",
-            price: 5,
+            price: 450000,
             unit: "  ",
             category: "cleaning",
              image: "images/Magic.png",
@@ -671,7 +686,7 @@ gharibGrid.appendChild(card);
  {
             id: 37,
             name: "    اندومي كاري دجاج ",
-            price: 0.277,
+            price: 24930,
             unit: " 75غ ",
             category: "food",
              image: "images/Indomie Chicken Curry.png",
@@ -680,7 +695,7 @@ gharibGrid.appendChild(card);
  {
             id: 38,
             name: "   لوتس *50حبة",
-            price: 4.4444,
+            price: 399996,
             unit: " 312غ",
             category: "Snacks",
              image: "images/Lotus 50 units.png",
@@ -689,7 +704,7 @@ gharibGrid.appendChild(card);
  {
             id: 39,
             name: "   مسحوق الغسيل حياة",
-            price: 6.8888,
+            price: 619992,
             unit: " 4ك",
             category: "cleaning",
              image: "images/Life washing powder.png",
@@ -698,7 +713,7 @@ gharibGrid.appendChild(card);
  {
             id: 40,
             name: "  باكمايا خميرة فورية ",
-            price: 1,
+            price: 90000,
             unit: " 125غ",
             category: "food",
              image: "images/Pakmaya Instant Yeast.png",
@@ -707,7 +722,7 @@ gharibGrid.appendChild(card);
  {
             id: 41,
             name: "  اكس سمارت سائل يدين  ",
-            price: 2.38,
+            price: 214200,
             unit: "   4 ليتر ",
             category: "cleaning",
              image: "images/X-Smart Hand Soap.png",
@@ -716,7 +731,7 @@ gharibGrid.appendChild(card);
  {
             id: 42,
             name: "  لمبة توفيلر ",
-            price: 2.5,
+            price: 225000,
             unit: "  40 وات",
             category: "Electrical",
              image: "images/Tofiler bulb.png",
@@ -725,7 +740,7 @@ gharibGrid.appendChild(card);
  {
             id: 43,
             name: "  مرتديلا هنية  ",
-            price: 0.833,
+            price: 74970,
             unit: "  340غ",
             category: "food",
              image: "images/Hania Mortadella.png",
@@ -734,7 +749,7 @@ gharibGrid.appendChild(card);
  {
             id: 44,
             name: "  	نسلة نسكويك غوفريت ",
-            price: 0.3888,
+            price: 34992,
             unit: "   ",
             category: "Snacks",
              image: "images/Nestlé Nesquik Wafer.png",
@@ -743,7 +758,7 @@ gharibGrid.appendChild(card);
  {
             id: 45,
             name: "  	جبنة حلوة",
-            price: 5 ,
+            price: 450000 ,
             unit: " 1ك  ",
             category: "dairy",
              image: "images/Sweet cheese.png",
@@ -752,7 +767,7 @@ gharibGrid.appendChild(card);
  {
             id: 46,
             name: "  	ربطة خبز ",
-            price: 0.9444 ,
+            price: 84996 ,
             unit: "   ",
             category: "Bakery",
              image: "images/pack of bread.png",
@@ -761,7 +776,7 @@ gharibGrid.appendChild(card);
  {
             id: 47,
             name: "  	زيتون مقطع الجودة ",
-            price: 	2.7 ,
+            price: 	243000 ,
             unit: "   1ك ",
             category: "food",
              image: "images/Nestlé Nesquik Wafer.png",
@@ -770,7 +785,7 @@ gharibGrid.appendChild(card);
         {
             id: 48,
             name: "  	كعك	 ",
-            price: 	0.8333 ,
+            price: 	74997 ,
             unit: "    ",
             category: "Bakery",
              image: "images/Ka'ak.png",
@@ -779,7 +794,7 @@ gharibGrid.appendChild(card);
             {
             id: 49,
             name: "  		بهار حلو ناعم	 ",
-            price: 	0.424 ,
+            price: 	38160 ,
             unit: "  25غ  ",
             category: "spices",
              image: "images/Fine allspice.png",
@@ -788,7 +803,7 @@ gharibGrid.appendChild(card);
          {
             id: 50,
             name: "  	بيغ ام وايفر مغطس مشكل ",
-            price: 	0.166 ,
+            price: 	14940 ,
             unit: "    ",
             category: "Snacks",
              image: "images/Big M-Ever.png",
@@ -797,7 +812,7 @@ gharibGrid.appendChild(card);
        {
             id: 51,
             name: "  	تروبيكانا سلايس",
-            price: 1.111 ,
+            price: 99990 ,
             unit: "  1ليتر ",
             category: "drinks",
              image: "images/Tropicana Slice.png",
@@ -806,7 +821,7 @@ gharibGrid.appendChild(card);
   {
             id: 52,
             name: " سائل غسيل سانيتا ",
-            price: 7 ,
+            price: 630000 ,
             unit: " 5ك ",
             category: "cleaning",
              image: "images/Sanita washing liquid.png",
@@ -815,7 +830,7 @@ gharibGrid.appendChild(card);
   {
             id: 53,
             name: " شامبو نورا ",
-            price: 2.222 ,
+            price: 199980 ,
             unit: " 1250 م",
             category: "cleaning",
              image: "images/Nora Shampoo.png",
@@ -824,7 +839,7 @@ gharibGrid.appendChild(card);
 {
             id: 54,
             name: " دف ميلكا اوريو",
-            price: 0.95 ,
+            price: 85500 ,
             unit: "  ",
             category: "Snacks",
              image: "images/Milka Oreo bar.png",
@@ -833,7 +848,7 @@ gharibGrid.appendChild(card);
 {
             id: 55,
             name: " مرتديلا سلوى",
-            price: 2 ,
+            price: 180000 ,
             unit: " 800غ ",
             category: "food",
              image: "images/Salwa Mortadella.png",
@@ -842,7 +857,7 @@ gharibGrid.appendChild(card);
 {
             id: 56,
             name: "   كيري    ",
-            price: 2 ,
+            price: 180000 ,
             unit: " 4*2 ",
             category: "dairy",
              image: "images/Karry.png",
@@ -851,7 +866,7 @@ gharibGrid.appendChild(card);
 {
             id: 57,
             name: "   لزيق جرح    ",
-            price: 1 ,
+            price: 90000 ,
             unit: " 100 حبة ",
             category: "cleaning",
              image: "images/Bandages.png",
@@ -860,7 +875,7 @@ gharibGrid.appendChild(card);
 {
             id: 59,
             name: "  بطارية انرجيزر   ",
-            price: 0.55 ,
+            price: 49500 ,
             unit: "  ",
             category: "Electrical",
              image: "images/Energizer Battery.png",
@@ -869,7 +884,7 @@ gharibGrid.appendChild(card);
 {
             id: 60,
             name: "  ديمة سوفتي  ",
-            price: 0.38888 ,
+            price: 34999 ,
             unit: "  ",
             category: "Snacks",
              image: "images/Dima Softi.png",
@@ -878,7 +893,7 @@ gharibGrid.appendChild(card);
         {
             id: 61,
             name: "  جبنة بريزيدون  ",
-            price: 1.47 ,
+            price: 132300 ,
             unit: " *16 ",
             category: "dairy",
              image: "images/President Cheese.png",
@@ -887,7 +902,7 @@ gharibGrid.appendChild(card);
         {
             id: 62,
             name: "  	بوظة السلطان  ",
-            price: 4 ,
+            price: 360000 ,
             unit: " 1ك ",
             category: "IceCream",
              image: "images/Sultan Ice Cream.png",
@@ -896,7 +911,7 @@ gharibGrid.appendChild(card);
         {
             id: 63,
             name: "  	قداحة ضو  ",
-            price:	0.222 ,
+            price:	19980 ,
             unit: "  ",
             category: "Electrical",
              image: "images/Lighter.png",
@@ -905,7 +920,7 @@ gharibGrid.appendChild(card);
           {
             id: 64,
             name: "  اكياس نفايات اسود بيرلا  ",
-            price: 1.6666 ,
+            price: 149994 ,
             unit: " 20* ",
             category: "cleaning",
              image: "images/Perla Black.png",
@@ -914,7 +929,7 @@ gharibGrid.appendChild(card);
         {
             id: 65,
             name: "  جنرال معطر حمامات  ",
-            price: 1.75 ,
+            price: 157500 ,
             unit: "  2+1 ",
             category: "cleaning",
              image: "images/General Bathroom.png",
@@ -923,7 +938,7 @@ gharibGrid.appendChild(card);
           {
             id: 66,
             name: " لمبة برم ",
-            price: 2 ,
+            price: 180000 ,
             unit: "   30 W ",
             category: "Electrical",
              image: "images/LED Bulb 30W.png",
@@ -932,7 +947,7 @@ gharibGrid.appendChild(card);
     {
             id: 67,
             name: "  ذرة  ",
-            price: 3.822 ,
+            price: 343980 ,
             unit: "  2500غ ",
             category: "food",
              image: "images/Corn1.png",
@@ -941,7 +956,7 @@ gharibGrid.appendChild(card);
             {
             id: 68,
             name: "   قرقش شوكولا ",
-            price: 2.888 ,
+            price: 259920 ,
             unit: "  علبة ",
             category: "food",
              image: "images/Qarqash Chocolate.png",
@@ -950,7 +965,7 @@ gharibGrid.appendChild(card);
             {
             id: 69,
             name: "  انفنتي سائل غسيل ",
-            price: 4 ,
+            price: 360000 ,
             unit: "   3 لتر ",
             category: "cleaning",
              image: "images/Infinity Laundry Detergent.png",
@@ -959,7 +974,7 @@ gharibGrid.appendChild(card);
             {
             id: 70,
             name: "  وايف اب ",
-            price: 0.444 ,
+            price: 39960 ,
             unit: " 40غ ",
             category: "Snacks",
              image: "images/Wipe Up.png",
@@ -968,7 +983,7 @@ gharibGrid.appendChild(card);
                 {
             id: 71,
             name: "  	شوال طحين ",
-            price:22 ,
+            price:1980000 ,
             unit: "  50ك ",
             category: "food",
              image: "images/Flour.png",
@@ -977,7 +992,7 @@ gharibGrid.appendChild(card);
                 {
             id: 72,
             name: "  	مكنة حلاقة بيك نسائي",
-            price:	1.5,
+            price:	135000,
             unit: "  5+1",
             category: "cleaning",
              image: "images/Women’s Razor.png",
@@ -986,7 +1001,7 @@ gharibGrid.appendChild(card);
                 {
             id: 73,
             name: "  	قضامة فلت ",
-            price: 0.65 ,
+            price: 58500 ,
             unit: "  200 غ",
             category: "Snacks",
              image: "images/Chickpeas.png",
@@ -995,7 +1010,7 @@ gharibGrid.appendChild(card);
                 {
             id: 74,
             name: "  فلقة مياه نسلة",
-            price: 1.8888 ,
+            price: 169992 ,
             unit: "  0.33 لتر  ",
             category: "drinks",
              image: "images/Nestlé Pure.png",
@@ -1004,7 +1019,7 @@ gharibGrid.appendChild(card);
          {
             id: 75,
             name: "  منتوس اي سي علكة ",
-            price: 0.5 ,
+            price: 45000 ,
             unit: "  *8 ",
             category: "Snacks",
              image: "images/Mentos Ice Gum.png",
@@ -1013,7 +1028,7 @@ gharibGrid.appendChild(card);
        {
             id: 76,
             name: "  بازيلا مع جزر ",
-            price: 1.77 ,
+            price: 159300 ,
             unit: "  400 غ ",
             category: "Snacks",
              image: "images/Peas with carrots.png",
@@ -1022,7 +1037,7 @@ gharibGrid.appendChild(card);
     {
             id: 77,
             name: "  بلاك غولد سمن نباتي ممتاز",
-            price: 1.55 ,
+            price: 139500 ,
             unit: "  700مل",
             category: "food",
              image: "images/Black Gold.png",
@@ -1031,7 +1046,7 @@ gharibGrid.appendChild(card);
     {
             id: 78,
             name: "  كيك اولكر ",
-            price: 1.333 ,
+            price: 119970 ,
             unit: "  160غ",
             category: "Snacks",
              image: "images/Ülker Cake.png",
@@ -1040,7 +1055,7 @@ gharibGrid.appendChild(card);
     {
             id: 79,
             name: "  عصير ريندا ",
-            price: 0.8888 ,
+            price: 79992 ,
             unit: "  1.25ليتر",
             category: "drinks",
              image: "images/Rinda Juice.png",
@@ -1050,7 +1065,7 @@ gharibGrid.appendChild(card);
         {
             id: 80,
             name: "  فرشاة اسنان اطفال ",
-            price: 0.9 ,
+            price: 81000 ,
             unit: "   ",
             category: "cleaning",
              image: "images/Children's toothbrush.png",
@@ -1059,7 +1074,7 @@ gharibGrid.appendChild(card);
     {
             id: 81,
             name: "  بيتزوللو لازانيا ",
-            price: 1.8888 ,
+            price: 169992 ,
             unit: "   ",
             category: "food",
              image: "images/Pizzallo lasagna.png",
@@ -1069,7 +1084,7 @@ gharibGrid.appendChild(card);
     {
             id: 76,
             name: "  نسكافيه ماتينال	 ",
-            price: 6.333 ,
+            price: 569970 ,
             unit: "  200 غ ",
             category: "food",
              image: "images/Nescafé Matinal.png",
@@ -1078,7 +1093,7 @@ gharibGrid.appendChild(card);
     {
             id: 77,
             name: "  مايونيز تركي",
-            price: 1.22 ,
+            price: 109800 ,
             unit: "  550غ",
             category: "dairy",
              image: "images/Turkish Mayonnaise.png",
@@ -1087,7 +1102,7 @@ gharibGrid.appendChild(card);
     {
             id: 78,
             name: "  صابون بالموليف ",
-            price: 0.6666 ,
+            price: 59994 ,
             unit: "  90غ",
             category: "cleaning",
              image: "images/Palmolive Soap.png",
@@ -1096,7 +1111,7 @@ gharibGrid.appendChild(card);
     {
             id: 79,
             name: "  كولونيا ",
-            price: 1.333 ,
+            price: 119970 ,
             unit: "  125مل",
             category: "cleaning",
              image: "images/Cologne.png",
@@ -1105,7 +1120,7 @@ gharibGrid.appendChild(card);
     {
             id: 80,
             name: "  خبز تنور مرقوق ",
-            price: 0.555 ,
+            price: 49950 ,
             unit: "   ",
             category: "Bakery",
              image: "images/tandoor bread.png",
@@ -1114,7 +1129,7 @@ gharibGrid.appendChild(card);
     {
             id: 81,
             name: "  سامون	",
-            price: 0.8333 ,
+            price: 74997 ,
             unit: "   ",
             category: "Bakery",
              image: "images/Samoun.png",
@@ -1123,7 +1138,7 @@ gharibGrid.appendChild(card);
     {
             id: 82,
             name: "  ذرة ديروني 	",
-            price: 1.2777 ,
+            price: 114993 ,
             unit: "  340غ ",
             category: "food",
              image: "images/Corn.png",
@@ -1132,7 +1147,7 @@ gharibGrid.appendChild(card);
     {
             id: 83,
             name: "  صلصة البندورة يوردوم	",
-            price: 2 ,
+            price: 180000 ,
             unit: "  830غ",
             category: "food",
              image: "images/Yurdum Tomato.png",
@@ -1141,7 +1156,7 @@ gharibGrid.appendChild(card);
        {
             id: 84,
             name: "  شامبو اكس سمارت  ",
-            price: 1.75 ,
+            price: 157500 ,
             unit: "  750 مل ",
             category: "cleaning",
              image: "images/X-Smart Shampoo.png",
@@ -1150,7 +1165,7 @@ gharibGrid.appendChild(card);
            {
             id: 85,
             name: "  كاتشاب اكسترا  عصارة ",
-            price: 2.1111 ,
+            price: 189999 ,
             unit: "  800غ",
             category: "food",
              image: "images/Extra Ketchup.png",
@@ -1159,7 +1174,7 @@ gharibGrid.appendChild(card);
                {
             id: 85,
             name: "  شامبو برت بلاس",
-            price:	3.2222 ,
+            price:	289998 ,
             unit: " 600مل",
             category: "cleaning",
              image: "images/Pert Plus.png",
@@ -1168,7 +1183,7 @@ gharibGrid.appendChild(card);
           {
             id: 86,
             name: "  شامبو برت بلاس",
-            price:	3.2222 ,
+            price:	289998 ,
             unit: " 600مل",
             category: "cleaning",
              image: "images/Pert Plus.png",
@@ -1177,7 +1192,7 @@ gharibGrid.appendChild(card);
           {
             id: 87,
             name: " فانيليا دومو ",
-            price:	0.7777 ,
+            price:	69993 ,
             unit: " 28 غ تنك",
             category: "food",
              image: "images/Domo Vanilla.png",
@@ -1186,7 +1201,7 @@ gharibGrid.appendChild(card);
           {
             id: 88,
             name: " لمبة  ",
-            price:	1.1 ,
+            price:	99000 ,
             unit: "  13 واط ",
             category: "Electrical",
              image: "images/13W Light Bulb.png",
@@ -1195,7 +1210,7 @@ gharibGrid.appendChild(card);
       {
             id: 89,
             name: " بونبون مينت  ",
-            price:	0.166 ,
+            price:	14940 ,
             unit: "   ",
             category: "Snacks",
              image: "images/Mint Bonbon.png",
@@ -1204,7 +1219,7 @@ gharibGrid.appendChild(card);
       {
             id: 90,
             name: " 	شاي ليبتون ",
-            price:	2.77777 ,
+            price:	249999 ,
             unit: " 100ظرف  ",
             category: "food",
              image: "images/Lipton Tea.png",
@@ -1213,7 +1228,7 @@ gharibGrid.appendChild(card);
   {
              id: 91,
             name: " 	برايفت ماكسي بوكيت   ",
-            price:  0.875,
+            price:  78750,
             unit: "  *8 ",
             category: "cleaning",
              image: "images/Private Maxi.png",
@@ -1222,7 +1237,7 @@ gharibGrid.appendChild(card);
  {
              id: 92,
             name: " السفير محارم  ",
-            price:  0.35,
+            price:  31500,
             unit: " 100غ",
             category: "cleaning",
              image: "images/Safeer Tissues.png",
@@ -1231,7 +1246,7 @@ gharibGrid.appendChild(card);
  {
              id: 93,
             name: " ريماس محاشي ",
-            price:  0.222 ,
+            price:  19980 ,
             unit: " 40غ",
             category: "Snacks",
              image: "images/Rimas.png",
@@ -1240,7 +1255,7 @@ gharibGrid.appendChild(card);
 {
              id: 94,
             name: " سميدس ",
-            price:  7 ,
+            price:  630000 ,
             unit: " 900غ",
             category: "dairy",
              image: "images/Smedes.png",
@@ -1249,7 +1264,7 @@ gharibGrid.appendChild(card);
 {
              id: 95,
             name: " خبز مرقوق ",
-            price:  0.888 ,
+            price:  79920 ,
             unit: "  ",
             category: "Bakery",
              image: "images/Markook bread.png",
@@ -1258,7 +1273,7 @@ gharibGrid.appendChild(card);
 {
              id: 96,
             name: " 	كومفورت منعم للملابس",
-            price:  3.8888,
+            price:  349992,
             unit: " 2 ليتر ",
             category: "cleaning",
              image: "images/Comfort Fabric.png",
@@ -1267,7 +1282,7 @@ gharibGrid.appendChild(card);
 {
              id: 97,
             name: " 	كراكي مالح ",
-            price:  0.333 ,
+            price:  29970 ,
             unit: " 2 ليتر ",
             category: "Snacks",
              image: "images/Salty Crackers.png",
@@ -1276,7 +1291,7 @@ gharibGrid.appendChild(card);
 {
              id: 98,
             name: " 	شعيرية راميتو ",
-            price:  1.25 ,
+            price:  112500 ,
             unit: "  750غ",
             category: "food",
              image: "images/Ramito vermicelli.png",
@@ -1285,7 +1300,7 @@ gharibGrid.appendChild(card);
 {
              id: 99,
             name: " 	كادبري  ",
-            price:  4.9 ,
+            price:  441000 ,
             unit: "  500غ ",
             category: "Snacks",
              image: "images/Cadbury.png",
@@ -1294,7 +1309,7 @@ gharibGrid.appendChild(card);
 {
              id: 100,
             name: " 		سائل جلي كرمل   ",
-            price:  1.218 ,
+            price:  109620 ,
             unit: "  1100مل",
             category: "Snacks",
              image: "images/Karmel.png",
@@ -1303,7 +1318,7 @@ gharibGrid.appendChild(card);
 {
              id: 101,
             name: " برغل ابيض طراد  ",
-            price:  4.287 ,
+            price:  385830 ,
             unit: "  5ك",
             category: "food",
              image: "images/White Bulgur.png",
@@ -1312,7 +1327,7 @@ gharibGrid.appendChild(card);
 {
              id: 102,
             name: " قداحة خفيف ",
-            price: 0.166 ,
+            price: 14940 ,
             unit: "   ",
             category: "Electrical",
              image: "images/Lighter.png",
@@ -1321,7 +1336,7 @@ gharibGrid.appendChild(card);
 {
              id: 103,
             name: " دونات كريسبي",
-            price: 0.6666 ,
+            price: 59994 ,
             unit: "   ",
             category: "Snacks",
              image: "images/Krispy Donut.png",
@@ -1330,7 +1345,7 @@ gharibGrid.appendChild(card);
 {
              id: 104,
             name: " مكنسة نايلون خشنة ",
-            price: 1.2222 ,
+            price: 109998 ,
             unit: "   ",
             category: "cleaning",
              image: "images/Coarse Nylon Broom.png",
@@ -1339,7 +1354,7 @@ gharibGrid.appendChild(card);
 {
              id: 105,
             name: " سيف مقطع ",
-            price: 0.45 ,
+            price: 40500 ,
             unit: "  *12 ",
             category: "cleaning",
              image: "images/Scouring Pad.png",
@@ -1348,7 +1363,7 @@ gharibGrid.appendChild(card);
 {
              id: 106,
             name: " 	ظرف حليب ديليش",
-            price: 	0.175 ,
+            price: 	15750 ,
             unit: "    ",
             category: "dairy",
              image: "images/Delish Milk Sachet.png",
@@ -1357,7 +1372,7 @@ gharibGrid.appendChild(card);
 {
              id: 107,
             name: " 	مايونيز جيرسي ",
-            price: 	6.5 ,
+            price: 	585000 ,
             unit: "  3.785ليتر  ",
             category: "dairy",
              image: "images/Jersey Mayonnaise.png",
@@ -1366,7 +1381,7 @@ gharibGrid.appendChild(card);
 {
              id: 108,
             name: " 	البني رول",
-            price: 	0.7777 ,
+            price: 	69993 ,
             unit: "    ",
             category: "Snacks",
              image: "images/Al-Bani.png",
@@ -1375,7 +1390,7 @@ gharibGrid.appendChild(card);
 {
              id: 109,
             name: " 	 فيتال اكياس تفريز سحاب",
-            price: 0.9 ,
+            price: 81000 ,
             unit: "   *18  ",
             category: "cleaning",
              image: "images/Freezing.png",
@@ -1384,7 +1399,7 @@ gharibGrid.appendChild(card);
 {
              id: 110,
             name: " 	 صابون تي شو+ديتول غالون",
-            price:2.25 ,
+            price:202500 ,
             unit: "   4 ليتر  ",
             category: "cleaning",
              image: "images/T-Show + Dettol Soap.png",
@@ -1393,7 +1408,7 @@ gharibGrid.appendChild(card);
 {
              id: 111,
             name: " 	دبي بوظة كويين",
-            price: 1.333 ,
+            price: 119970 ,
             unit: "      ",
             category: "IceCream",
              image: "images/Dubai Queen Ice Cream.png",
@@ -1402,7 +1417,7 @@ gharibGrid.appendChild(card);
 {
              id: 112,
             name: " 	جبنة موزيريلا بوك	 ",
-            price: 12.222 ,
+            price: 1099980 ,
             unit: "   1800غ ",
             category: "dairy",
              image: "images/Puck Mozzarella Cheese.png",
@@ -1411,7 +1426,7 @@ gharibGrid.appendChild(card);
 {
              id: 113,
             name: " 	 شطة",
-            price: 2 ,
+            price: 180000 ,
             unit: "   800غ  ",
             category: "food",
              image: "images/Freezing.png",
@@ -1420,7 +1435,7 @@ gharibGrid.appendChild(card);
 {
              id: 114,
             name: " 	 مستر جوسي ",
-            price: 0.888 ,
+            price: 79920 ,
             unit: "  1 ليتر ",
             category: "drinks",
              image: "images/Mr. Juicy.png",
@@ -1429,7 +1444,7 @@ gharibGrid.appendChild(card);
 {
              id: 115,
             name: " 	 بيض كبير",
-            price: 2.444,
+            price: 219960,
             unit: "    ",
             category: "food",
              image: "images/Large Eggs.png",
@@ -1438,7 +1453,7 @@ gharibGrid.appendChild(card);
 {
              id: 116,
             name: " 	  خردل ميا ",
-            price: 1 ,
+            price: 90000 ,
             unit: "  260 غ",
             category: "food",
              image: "images/Mustard.png",
@@ -1447,7 +1462,7 @@ gharibGrid.appendChild(card);
 {
              id: 117,
             name: " نيو بارك جبنة مطبوخة ",
-            price: 1.555 ,
+            price: 139950 ,
             unit: " 300 غ",
             category: "dairy",
              image: "images/New Park.png",
@@ -1456,7 +1471,7 @@ gharibGrid.appendChild(card);
 {
              id: 118,
             name: " مالتيزرس ",
-            price: 1 ,
+            price: 90000 ,
             unit: " 37غ",
             category: "Snacks",
              image: "images/Maltesers.png",
@@ -1465,7 +1480,7 @@ gharibGrid.appendChild(card);
 {
              id: 119,
             name: " بهار فاهيتا ",
-            price: 0.888 ,
+            price: 79920 ,
             unit: " 100 غ",
             category: "spices",
              image: "images/Fajita Seasoning.png",
@@ -1474,7 +1489,7 @@ gharibGrid.appendChild(card);
 {
              id: 120,
             name: " شامبو السادا ",
-            price: 2.6666,
+            price: 239994,
             unit: " 750مل",
             category: "cleaning",
              image: "images/Al-Sada.png",
@@ -1483,7 +1498,7 @@ gharibGrid.appendChild(card);
 {
              id: 121,
             name: " بيغ ام ميغا  بندق  ",
-            price: 0.175,
+            price: 15750,
             unit: "  ",
             category: "Snacks",
              image: "images/Big M.png",
@@ -1492,7 +1507,7 @@ gharibGrid.appendChild(card);
 {
              id: 122,
             name: " 	صندوق معتوق ساندويش كريمة ",
-            price: 4.75,
+            price: 427500,
             unit: "  ",
             category: "Snacks",
              image: "images/Maatouk Cream.png",
@@ -1501,7 +1516,7 @@ gharibGrid.appendChild(card);
 {
              id: 123,
             name: " 	حلاوة سرور",
-            price: 4.5,
+            price: 405000,
             unit: " 1ك ",
             category: "food",
              image: "images/Surour Halawa.png",
@@ -1510,7 +1525,7 @@ gharibGrid.appendChild(card);
 {
              id: 124,
             name: " 	وانتد بوبس كارمل",
-            price: 0.277,
+            price: 24930,
             unit: "  28غ",
             category: "Snacks",
             image: "images/Wanted.png",
@@ -1519,7 +1534,7 @@ gharibGrid.appendChild(card);
 {
              id: 125,
             name: " 	قرقش	",
-            price: 0.444,
+            price: 39960,
             unit: "   ",
             category: "Snacks",
             image: "images/Qarqash.png",
@@ -1528,7 +1543,7 @@ gharibGrid.appendChild(card);
 {
              id: 126,
             name: " 	منتوس رول	",
-            price: 0.4 ,
+            price: 36000 ,
             unit: "   ",
             category: "Snacks",
             image: "images/Mentos Roll.png",
@@ -1537,7 +1552,7 @@ gharibGrid.appendChild(card);
 {
              id: 127,
             name: " 	صندوق مستر جوسي   ",
-            price: 4.7777 ,
+            price: 429993 ,
             unit: " *30	  ",
             category: "drinks",
             image: "images/Mr. Juicy (Box.png",
@@ -1546,7 +1561,7 @@ gharibGrid.appendChild(card);
 {
              id: 128,
             name: " 	اسطنبولي بلدي  ",
-            price: 5 ,
+            price: 450000 ,
             unit: " *1ك	  ",
             category: "food",
             image: "images/Istanbuli Baladi.png",
@@ -1555,7 +1570,7 @@ gharibGrid.appendChild(card);
 {
              id: 129,
             name: " 	اوسلو كيك ريد لوف  ",
-            price: 0.23 ,
+            price: 20700 ,
             unit: "    ",
             category: "Snacks",
             image: "images/Oslo Red Love Cake.png",
@@ -1564,7 +1579,7 @@ gharibGrid.appendChild(card);
 {
              id: 130,
             name: " 	معالق بلاستيك ",
-            price: 0.6666 ,
+            price: 59994 ,
             unit: "  *50  ",
             category: "cleaning",
             image: "images/Plastic Spoons.png",
@@ -1573,7 +1588,7 @@ gharibGrid.appendChild(card);
 {
              id: 131,
             name: " 	ام اند ام ",
-            price: 0.7777 ,
+            price: 69993 ,
             unit: "     ",
             category: "Snacks",
             image: "images/M&M's.png",
@@ -1582,7 +1597,7 @@ gharibGrid.appendChild(card);
 {
              id: 132,
             name: " 	مرتديلا الراعي ",
-            price: 1.3888 ,
+            price: 124992 ,
             unit: "   200غ   ",
             category: "food",
             image: "images/Al-Ra'i Mortadella.png",
@@ -1591,7 +1606,7 @@ gharibGrid.appendChild(card);
 {
              id: 133,
             name: " 	يانسون ناعم",
-            price: 0.424 ,
+            price: 38160 ,
             unit: "      ",
             category: "spices",
             image: "images/Fennel (Ground or Coarse).png",
@@ -1600,7 +1615,7 @@ gharibGrid.appendChild(card);
 {
              id: 134,
             name: " 	براوني كيك هازلنت  ",
-            price: 0.6666 ,
+            price: 59994 ,
             unit: "   40غ   ",
             category: "Snacks",
             image: "images/Hazelnut Brownie Cake.png",
@@ -1609,7 +1624,7 @@ gharibGrid.appendChild(card);
 {
              id: 135,
             name: " 	 لوز مدخن الرئيف ",
-            price: 	0.388 ,
+            price: 	34920 ,
             unit: "      ",
             category: "Snacks",
             image: "images/Al-Ra'if Smoked Almonds.png",
@@ -1618,7 +1633,7 @@ gharibGrid.appendChild(card);
 {
              id: 136,
             name: " 	زيت انجي ",
-            price: 	7.555 ,
+            price: 	679950 ,
             unit: "    5 ليتر  ",
             category: "food",
             image: "images/Inji Oil.png",
@@ -1627,7 +1642,7 @@ gharibGrid.appendChild(card);
 {
              id: 137,
             name: " 	مصاصة تشوبا تشوبس ",
-            price: 	0.106 ,
+            price: 	9540 ,
             unit: "      ",
             category: "Snacks",
             image: "images/Chupa Chups Lollipop.png",
@@ -1636,7 +1651,7 @@ gharibGrid.appendChild(card);
 {
              id: 138,
             name: " 	توست محمص شمسين",
-            price: 	1.2 ,
+            price: 	108000 ,
             unit: "      ",
             category: "Bakery",
             image: "images/Shamsin Toasted Bread (Toast).png",
@@ -1646,7 +1661,7 @@ gharibGrid.appendChild(card);
 {
              id: 139,
             name: " 	شومر ناعم او خشن",
-            price: 	0.666 ,
+            price: 	59940 ,
             unit: "   100غ   ",
             category: "spices",
             image: "images/Fennel (Ground or Coarse).png",
@@ -1655,7 +1670,7 @@ gharibGrid.appendChild(card);
 {
              id: 140,
             name: " 	تمر خضري عادي ",
-            price: 	1.11 ,
+            price: 	99900 ,
             unit: "  400غ  ",
             category: "food",
             image: "images/Regular Khodri Dates.png",
@@ -1664,7 +1679,7 @@ gharibGrid.appendChild(card);
 {
              id: 141,
             name: " 	  سكر  لوباس ",
-            price: 	4.555 ,
+            price: 	409950 ,
             unit: "  5ك ",
             category: "food",
             image: "images/Lubas sugar (5 kg).png",
@@ -1673,7 +1688,7 @@ gharibGrid.appendChild(card);
 {
              id: 142,
             name: " 	 زعتر اسرتي",
-            price: 	2.1 ,
+            price: 	189000 ,
             unit: "  1ك",
             category: "food",
             image: "images/Usrati Thyme (Za'atar).png",
@@ -1682,7 +1697,7 @@ gharibGrid.appendChild(card);
 {
              id: 143,
             name: " 	 سكر نبات الجودة  ",
-            price: 	1.11 ,
+            price: 	99900 ,
             unit: "  200 غ ",
             category: "food",
             image: "images/nabat sugar.png",
@@ -1691,7 +1706,7 @@ gharibGrid.appendChild(card);
 {
              id: 144,
             name: " 	 مرطبان زجاج ",
-            price: 0.4444 ,
+            price: 39996 ,
             unit: "  1ك",
             category: "food",
             image: "images/Glass Jar (1 kg).png",
@@ -1700,7 +1715,7 @@ gharibGrid.appendChild(card);
 {
              id: 145,
             name: " 	سكر ناعم الفيحاء ",
-            price: 1 ,
+            price: 90000 ,
             unit: "  900غ ",
             category: "food",
             image: "images/Al-Fayhaa Fine Sugar.png",
@@ -1709,7 +1724,7 @@ gharibGrid.appendChild(card);
 {
              id: 146,
             name: " 	هيستيريا شوكولا",
-            price: 	0.222 ,
+            price: 	19980 ,
             unit: "   ",
             category: "Snacks",
             image: "images/Hysteria Chocolate.png",
@@ -1718,7 +1733,7 @@ gharibGrid.appendChild(card);
 {
              id: 147,
             name: " 	رز مصري زين ",
-            price: 4.444 ,
+            price: 399960 ,
             unit: "  5ك",
             category: "food",
             image: "images/Zein Egyptian Rice (5 kg).png",
@@ -1727,7 +1742,7 @@ gharibGrid.appendChild(card);
 {
              id: 148,
             name: " 	 ظرف عصير دارينا",
-            price: 0.222 ,
+            price: 19980 ,
             unit: "   ",
             category: "drinks",
             image: "images/Darina Juice Sachet.png",
@@ -1737,7 +1752,7 @@ gharibGrid.appendChild(card);
 {
              id: 149,
             name: "  	صابون جيف يدين  ",
-            price: 0.2777 ,
+            price: 24993 ,
             unit: "  76غ ",
             category: "cleaning",
             image: "images/Cif Hand Soap.png",
@@ -1746,7 +1761,7 @@ gharibGrid.appendChild(card);
 {
              id: 150,
             name: "  	الفيف  دريم لونغ ",
-            price:3.8888,
+            price:349992,
             unit: "  400 مل",
             category: "cleaning",
             image: "images/Elvive Dream Long.png",
@@ -1755,7 +1770,7 @@ gharibGrid.appendChild(card);
 {
              id: 151,
             name: "  	كيس بالون ",
-            price:1.111,
+            price:99990,
             unit: "  *100",
             category: "cleaning",
             image: "images/Bag of balloons.png",
@@ -1764,7 +1779,7 @@ gharibGrid.appendChild(card);
 {
              id: 152,
             name: "  		فرشاة اسنان اورال ب سوفت",
-            price:0.5555,
+            price:49995,
             unit: "   ",
             category: "cleaning",
             image: "images/Oral-B Soft Toothbrush.png",
@@ -1773,7 +1788,7 @@ gharibGrid.appendChild(card);
 {
              id: 153,
             name: "  بالون مصران",
-            price:0.555,
+            price:49950,
             unit: "   ",
             category: "cleaning",
             image: "images/Balloon  erpentine).png",
@@ -1782,7 +1797,7 @@ gharibGrid.appendChild(card);
 {
              id: 154,
             name: "  تمر خضري فلت",
-            price:2.6666,
+            price:239994,
             unit: "  1ك ",
             category: "food",
             image: "images/Khudri Dates (loose).png",
@@ -1791,7 +1806,7 @@ gharibGrid.appendChild(card);
 {
              id: 155,
             name: "  زيت الوردة دوار ",
-            price:5.777,
+            price:519930,
             unit: "  5 ليتر",
             category: "food",
             image: "images/Al-Warda Sunflower Oil.png",
@@ -1800,7 +1815,7 @@ gharibGrid.appendChild(card);
 {
              id: 156,
             name: "  كعك اكسترا ريداني ",
-            price:2.111,
+            price:189990,
             unit: "  800غ ",
             category: "Bakery",
             image: "images/Extra Ridani Cakes.png",
@@ -1809,7 +1824,7 @@ gharibGrid.appendChild(card);
 {
              id: 157,
             name: " علبةاولكر بيسكريم ",
-            price:9.5,
+            price:855000,
             unit: "  *18 ",
             category: "Snacks",
             image: "images/Ülker Bisrem Box.png",
@@ -1818,7 +1833,7 @@ gharibGrid.appendChild(card);
 {
              id: 158,
             name: "  البني بار كيك",
-            price:0.6666,
+            price:59994,
             unit: "    ",
             category: "Snacks",
             image: "images/Al-Bani.png",
@@ -1827,7 +1842,7 @@ gharibGrid.appendChild(card);
 {
              id: 159,
             name: "  برينس ",
-            price:0.833,
+            price:74970,
             unit: " 80غ   ",
             category: "Snacks",
             image: "images/Prince.png",
@@ -1836,7 +1851,7 @@ gharibGrid.appendChild(card);
 {
              id: 160,
             name: "  اوزمو فان ",
-            price:0.675,
+            price:60750,
             unit: "    ",
             category: "Snacks",
             image: "images/Osmo Fan.png",
@@ -1845,7 +1860,7 @@ gharibGrid.appendChild(card);
 {
              id: 161,
             name: "  عجينة بصمة",
-            price:2.7222,
+            price:244998,
             unit: "  800غ  ",
             category: "Bakery",
             image: "images/Basma Dough.png",
@@ -1854,7 +1869,7 @@ gharibGrid.appendChild(card);
 {
              id: 162,
             name: "  عجينة الاوزي فوزي",
-            price:1.3111,
+            price:117999,
             unit: "    ",
             category: "Bakery",
             image: "images/Fawzi Ouzi Dough.png",
@@ -1863,7 +1878,7 @@ gharibGrid.appendChild(card);
 {
              id: 163,
             name: " شيش برك فوزي",
-            price:1.4,
+            price:126000,
             unit: "    ",
             category: "Bakery",
             image: "images/Fawzi Shish Barak.png",
@@ -1872,7 +1887,7 @@ gharibGrid.appendChild(card);
 {
              id: 164,
             name: " 	التاج شطة حارة",
-            price:0.5,
+            price:45000,
             unit: "    ",
             category: "food",
             image: "images/Al-Taj Hot Sauce.png",
@@ -1881,7 +1896,7 @@ gharibGrid.appendChild(card);
 {
              id: 165,
             name: " 	اوريو",
-            price:0.833,
+            price:74970,
             unit: "   102غ	  ",
             category: "Snacks",
             image: "images/Oreo.png",
@@ -1890,7 +1905,7 @@ gharibGrid.appendChild(card);
 {
              id: 166,
             name: " 	عجينة بيتزا فوزي",
-            price:1.7111,
+            price:153999,
             unit: "     ",
             category: "Bakery",
             image: "images/Fawzi Pizza Dough.png",
@@ -1899,7 +1914,7 @@ gharibGrid.appendChild(card);
 {
              id: 167,
             name: " 	رقائق طويلة",
-            price:2,
+            price:180000,
             unit: "     ",
             category: "Bakery",
             image: "images/Long Chips.png",
@@ -1908,7 +1923,7 @@ gharibGrid.appendChild(card);
 {
              id: 168,
             name: " 	رقائق لف",
-            price:1.5	,
+            price:135000	,
             unit: "     ",
             category: "Bakery",
             image: "images/Wrappers.png",
@@ -1917,7 +1932,7 @@ gharibGrid.appendChild(card);
 {
              id: 169,
             name: " 	شوربة ماجي ",
-            price:2	,
+            price:180000	,
             unit: "  عرض   ",
             category: "food",
             image: "images/Maggi Soup.png",
@@ -1926,7 +1941,7 @@ gharibGrid.appendChild(card);
 {
              id: 170,
             name: " 	لوح داماك",
-            price:0.833	,
+            price:74970	,
             unit: "     ",
             category: "Snacks",
             image: "images/Damac Board.png",
@@ -1935,7 +1950,7 @@ gharibGrid.appendChild(card);
 {
              id: 171,
             name: " 	بهار مغربية ",
-            price:0.666	,
+            price:59940	,
             unit: "  100   ",
             category: "spices",
             image: "images/Morocco.png",
@@ -1944,7 +1959,7 @@ gharibGrid.appendChild(card);
         {
              id: 172,
             name: " 		محارم معطرة غود لايف",
-            price:0.833		,
+            price:74970		,
             unit: "      ",
             category: "cleaning",
             image: "images/Morocco.png",
@@ -1953,7 +1968,7 @@ gharibGrid.appendChild(card);
             {
              id: 173,
             name: " 			موزوريلا فرسانا ",
-            price: 1.277	,
+            price: 114930	,
             unit: "  200غ    ",
             category: "dairy",
             image: "images/Farsana Mozzarella.png",
@@ -1962,7 +1977,7 @@ gharibGrid.appendChild(card);
                     {
              id: 174,
             name: " ديروني خردل",
-            price: 1.65	,
+            price: 148500	,
             unit: "   8 اونز   ",
             category: "food",
             image: "images/Deroni Mustard 8 oz.png",
@@ -1971,7 +1986,7 @@ gharibGrid.appendChild(card);
                             {
              id: 175,
             name: "  ديروني رز ايطالي جامبو  ",
-            price:2	,
+            price:180000	,
             unit: "   900غ  ",
             category: "food",
             image: "images/Deroni Italian Rice (Jumbo).png",
@@ -1980,7 +1995,7 @@ gharibGrid.appendChild(card);
                                     {
              id: 176,
             name: "  عكاوي بلدي ",
-            price:7.7777	,
+            price:699993	,
             unit: "  1ك ",
             category: "dairy",
             image: "images/Baladi Akawi Cheese.png",
@@ -1989,7 +2004,7 @@ gharibGrid.appendChild(card);
    {
              id: 177,
             name: "  جبنة فيتا",
-            price:3.888	,
+            price:349920	,
             unit: "  1ك ",
             category: "dairy",
             image: "images/Feta Cheese.png",
@@ -1998,7 +2013,7 @@ gharibGrid.appendChild(card);
           {
              id: 178,
             name: "  جبنة نابلسي",
-            price:6	,
+            price:540000	,
             unit: "  1ك ",
             category: "dairy",
             image: "images/Nabulsi Cheese.png",
@@ -2007,7 +2022,7 @@ gharibGrid.appendChild(card);
                   {
              id: 179,
             name: " 	جبنة مسنرة",
-            price:3.611	,
+            price:324990	,
             unit: "  1ك ",
             category: "dairy",
             image: "images/Musanara Cheese.png",
@@ -2016,7 +2031,7 @@ gharibGrid.appendChild(card);
             {
              id: 180,
             name: " 	 زيتون بلدي ",
-            price:3.333	,
+            price:299970	,
             unit: "  1ك ",
             category: "food",
             image: "images/Local Olives.png",
@@ -2025,7 +2040,7 @@ gharibGrid.appendChild(card);
             {
              id: 181,
             name: " 	مكنة حلاقة فينيس",
-            price:2	,
+            price:180000	,
             unit: "  1ك ",
             category: "cleaning",
             image: "images/Venus Razor.png",
@@ -2034,7 +2049,7 @@ gharibGrid.appendChild(card);
             {
              id: 182,
             name: " 	 مكدوس مرطبان",
-            price:	3.222	,
+            price:	289980	,
             unit: "  ",
             category: "food",
             image: "images/Makdous (jar).png",
@@ -2043,7 +2058,7 @@ gharibGrid.appendChild(card);
             {
              id: 183,
             name: " 	ملح ملوك",
-            price:	0.111	,
+            price:	9990	,
             unit: " 700غ ",
             category: "food",
             image: "images/Kings Salt.png",
@@ -2052,7 +2067,7 @@ gharibGrid.appendChild(card);
             {
              id: 184,
             name: " 	سميد سفرتي",
-            price:	0.944	,
+            price:	84960	,
             unit: "  ",
             category: "food",
             image: "images/Safrati Semolina.png",
@@ -2061,7 +2076,7 @@ gharibGrid.appendChild(card);
                     {
              id: 185,
             name: " 	كيك سابليه ",
-            price:	0.222	,
+            price:	19980	,
             unit: "  ",
             category: "Snacks",
             image: "images/Sablé Cake.png",
@@ -2070,7 +2085,7 @@ gharibGrid.appendChild(card);
    {
              id: 186,
             name: " 	زي كولا",
-            price:	0.333	,
+            price:	29970	,
             unit: " 250 مل ",
             category: "drinks",
             image: "images/Z-Cola.png",
@@ -2079,7 +2094,7 @@ gharibGrid.appendChild(card);
    {
              id: 187,
             name: "  بن حموي اكسترا هال",
-            price:	10.6666	,
+            price:	959994	,
             unit: " 450غ",
             category: "food",
             image: "images/Bin Hamwi Extra Hall.png",
@@ -2088,7 +2103,7 @@ gharibGrid.appendChild(card);
            {
              id: 188,
             name: "  	لازانيا ريجيا ",
-            price:	2.555	,
+            price:	229950	,
             unit: " ",
             category: "food",
             image: "images/Lasagna Reggia.png",
@@ -2097,7 +2112,7 @@ gharibGrid.appendChild(card);
                    {
              id: 189,
             name: "  		المراعي جبنة مطبوخة",
-            price:	2.89	,
+            price:	260100	,
             unit: " 1ك ",
             category: "dairy",
             image: "images/Almarai Processed Cheese.png",
@@ -2106,16 +2121,899 @@ gharibGrid.appendChild(card);
                           {
              id: 190,
             name: "  		 حليب كانديا نصف دسم ",
-            price:	1.8333		,
+            price:	164997		,
             unit: " 1ليتر",
             category: "dairy",
             image: "images/Candia Semi-Skimmed.png",
             pictureClass: "cleaning-picture"
+        },
+                    {
+             id: 191,
+            name: " فاتيكا شامبو",
+            price:199998		,
+            unit: " 400+132مل",
+            category: "cleaning",
+            image: "images/Vatika Shampoo 400+132ml.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 192,
+            name: " دوف غو فريش ",
+            price:211500		,
+            unit: "  ",
+            category: "cleaning",
+            image: "images/Dove Go Fresh.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 193,
+            name: " دوف غو فريش ",
+            price:439999		,
+            unit: "  900غ ",
+            category: "food",
+            image: "images/Al-Qalaa’jiya Tahini.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 194,
+            name: " فول شتورة لاند ",
+            price:37800		,
+            unit: "   400 غ",
+            category: "food",
+            image: "images/Shtoura Land Fava.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 195,
+            name: "  كوفري ميلكا ",
+            price:16020,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Milka Bar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 196,
+            name: "   دير عمار دارك كبير   ",
+            price:19998,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Deir Ammar Dark Chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 197,
+            name: "   	مياه نستلة كبير  ",
+            price:	39996,
+            unit: "    2ليتر  ",
+            category: "drinks",
+            image: "images/Nestlé Water (Large).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 198,
+            name: "   	شعيرية بيليلا مكسر ",
+            price:	45000,
+            unit: "     500غ ",
+            category: "food",
+            image: "images/Belila Broken Vermicelli 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 199,
+            name: "    تونا بلان سوليه",
+            price:	135000,
+            unit: "     ",
+            category: "food",
+            image: "images/Plein Soleil Tuna.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 200,
+            name: "   حمص مطحون شتورة لاند ",
+            price:	49950,
+            unit: "   380 غ   ",
+            category: "food",
+            image: "images/Shtoura Land Ground Chickpeas 380g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 201,
+            name: "   سكر ديروني ",
+            price:	74997	,
+            unit: "  900غ  ",
+            category: "food",
+            image: "images/Derouni Sugar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 202,
+            name: "  	ابو راشد بسمتي ",
+            price:		169992	,
+            unit: "   800 غ ",
+            category: "food",
+            image: "images/Abu Rashid Basmati.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 203,
+            name: "  		تيك فايف تيفاني",
+            price:	14999,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Tiffany Take Five.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 204,
+            name: "   كعك مطحون",
+            price:	69930,
+            unit: "  500غ    ",
+            category: "food",
+            image: "images/Breadcrumbs.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 205,
+            name: "   	كبيس خيار الجودة   ",
+            price:	216000,
+            unit: "   1050 غ   ",
+            category: "food",
+            image: "images/Quality Pickled Cucumbers 1050g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 206,
+            name: "  حمص باليس فود  ",
+            price:	121500,
+            unit: "   900غ  ",
+            category: "food",
+            image: "images/Quality Pickled Cucumbers 1050g.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 207,
+            name: "  اكوافينا  ",
+            price:	19980,
+            unit: "   600 مل ",
+            category: "drinks",
+            image: "images/wate.png",
+            pictureClass: "cleaning-picture"
+        },
+     {
+             id: 208,
+            name: "  ماء ورد اليمامة ",
+            price:	166500,
+            unit: "    750 مل ",
+            category: "food",
+            image: "images/Al-Yamama Rose Water.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 209,
+            name: "   فرشاة اسنان هولدنت",
+            price:	45000	,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Holdent Toothbrush.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 210,
+            name: "  علبة شفر استرا ",
+            price:	29997	,
+            unit: "  ا*5  ",
+            category: "cleaning",
+            image: "images/Razor pack.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 211,
+            name: "  اولويز دوبل مكسي ",
+            price:	171000	,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/اولويز دوبل مكسي.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 212,
+            name: "  كلاشي قضامة محلى ",
+            price:	199980	,
+            unit: "  300 غ  ",
+            category: "Snacks",
+            image: "images/Sweetened Roasted Chickpeas (Qadama).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 213,
+            name: "  	منتوس نانو",
+            price:	90000	,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Mentos Nano.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 214,
+            name: "  باريلا صدف صغير",
+            price:	112500	,
+            unit: " 500غ   ",
+            category: "food",
+            image: "images/Barilla Small Shells (Conchiglie).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 215,
+            name: "  	بيضة كيندر جوي",
+            price:	74970	,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Kinder Joy Egg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 216,
+            name: "  	ذرة ديروني مع ملعقة",
+            price:	94950	,
+            unit: "  185غ  ",
+            category: "Snacks",
+            image: "images/Derouni Corn (with spoon).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 217,
+            name: "  تونة تريفا",
+            price:	49500	,
+            unit: "   ",
+            category: "food",
+            image: "images/Tuna Riva.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 218,
+            name: "   الترا دو الفحم الاسود ",
+            price:	429993	,
+            unit: " 600 م  ",
+            category: "cleaning",
+            image: "images/Ultra Doux Black Charcoal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 219,
+            name: "   حليب دانو ",
+            price:		439920	,
+            unit: " 750غ ",
+            category: "dairy",
+            image: "images/Dano Milk 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 220,
+            name: "  نيو بارك حليب منكه",
+            price:		24930	,
+            unit: "  ",
+            category: "dairy",
+            image: "images/New Park Flavored Milk.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 221,
+            name: "  شاور بيزلاين",
+            price:135000	,
+            unit: " 500 مل ",
+            category: "cleaning",
+            image: "images/Beesline Shower Gel 500 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 223,
+            name: "   ماليزيا ديو للرجال ",
+            price:199998,
+            unit: " 150مل",
+            category: "cleaning",
+            image: "images/Malaysia Deo for Men.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 224,
+            name: " بريل جامبو",
+            price:229950,
+            unit: " 1.25ليتر",
+            category: "cleaning",
+            image: "images/Pril Jumbo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 225,
+            name: " بلسم حجاب كوزمال",
+            price:219996,
+            unit: "  ",
+            category: "cleaning",
+            image: "images/Cosmal Hijab Conditioner.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 226,
+            name: " ذرة بوشار باليس فود",
+            price:99000,
+            unit: " 900غ ",
+            category: "food",
+            image: "images/Palis Food Popcorn Kernels.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 227,
+            name: " 	شامبو الفيف",
+            price:342000,
+            unit: " 370مل ",
+            category: "cleaning",
+            image: "images/Elvive Shampoo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 228,
+            name: "  سمنة روابي",
+            price:2070000,
+            unit: "12ك",
+            category: "food",
+            image: "images/Rawabi Ghee.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 229,
+            name: "   شعيرية دوغا",
+            price:299970,
+            unit: "5ك",
+            category: "food",
+            image: "images/Doga Vermicelli.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 230,
+            name: " شفرات exacta 3 للرجال",
+            price:352800,
+            unit: " *4",
+            category: "cleaning",
+            image: "images/Exacta 3 Razors for Men.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 231,
+            name: "  شفر استور",
+            price:139950,
+            unit: " *6",
+            category: "cleaning",
+            image: "images/Shafar Store.png",
+            pictureClass: "cleaning-picture"
+        },
+             {
+             id: 232,
+            name: "  	شوكو لارت",
+            price:39960	,
+            unit: "  ",
+            category: "Snacks",
+            image: "images/Choco Lart.png",
+            pictureClass: "cleaning-picture"
+        },
+                     {
+             id: 232,
+            name: "  	شاي ديروني",
+            price:309960,
+            unit: " 400غ ",
+            category: "food",
+            image: "images/Derouni Tea.png",
+            pictureClass: "cleaning-picture"
+        },
+                             {
+             id: 233,
+            name: "  	اندومي دجاج وجبة البلد",
+            price:679950,
+            unit: " *40",
+            category: "food",
+            image: "images/Indomie Chicken (Wajbat Al-Balad).png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 234,
+            name: " شوكو برينس",
+            price:108000,
+            unit: " 250 غ",
+            category: "Snacks",
+            image: "images/Choco Prince.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 235,
+            name: " 	فلاش اصلي   ",
+            price:209970,
+            unit: " 1ليتر",
+            category: "cleaning",
+            image: "images/Flash (Original).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 236,
+            name: " 	علبة عصير دارينا  ",
+            price:199980,
+            unit: "  ",
+            category: "drinks",
+            image: "images/Darina Juice Carton.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 237,
+            name: " 	كيندر كونتري ",
+            price:59994,
+            unit: "  ",
+            category: "Snacks",
+            image: "images/Kinder Country.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 238,
+            name: " 		ديروني ارز بسمتي",
+            price:169920,
+            unit: " 800 غ ",
+            category: "food",
+            image: "images/Derouni Basmati Rice.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 239,
+            name: " 		تاكز حار",
+            price:124920,
+            unit: "  113 غ ",
+            category: "Snacks",
+            image: "images/Spicy Tacos.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 240,
+            name: " بازيلا سادة",
+            price:45000,
+            unit: "  400غ",
+            category: "food",
+            image: "images/Plain Peas 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 241,
+            name: " مرتديلا الاسرة بقر",
+            price:73620,
+            unit: " 340غ",
+            category: "food",
+            image: "images/Al-Usra Beef Mortadella.png",
+            pictureClass: "cleaning-picture"
+        },
+             {
+             id: 242,
+            name: " بهار دجاج",
+            price:59940,
+            unit: " 100 غ",
+            category: "spices",
+            image: "images/بهار.png",
+            pictureClass: "cleaning-picture"
+        },
+             {
+             id: 243,
+            name: "  جافيل ديمكس غالون",
+            price:219996,
+            unit: " 3.750لتر",
+            category: "cleaning",
+            image: "images/Javel (Bleach) D-Mix, Gallon.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 244,
+            name: "  ماجيك مكنسة مع عصا",
+            price:299970,
+            unit: "  ",
+            category: "cleaning",
+            image: "images/Magic Broom with Handle.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 245,
+            name: "  خل تفاح الجودة",
+            price:109980,
+            unit: " 500مل ",
+            category: "food",
+            image: "images/Apple Cider Vinegar (Quality).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 246,
+            name: "  بيرلا المنيوم رول 25ft",
+            price:79920,
+            unit: "  ",
+            category: "cleaning",
+            image: "images/Perla Aluminum Foil 25ft.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 247,
+            name: "  فيليدا اسفنج جلي غليتزي",
+            price:125010,
+            unit: " *3 ",
+            category: "cleaning",
+            image: "images/Vileda Glitzi Dishwashing Sponge.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 248,
+            name: "  نيفيا ديو",
+            price:270000,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Nivea Deo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 249,
+            name: "  	المراعي الدمشقية",
+            price:119700	,
+            unit: "  *16 ",
+            category: "food",
+            image: "images/(Al-Marai Al-Dimashqiya).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 250,
+            name: "  	سردين اصفر",
+            price:42300	,
+            unit: "    ",
+            category: "food",
+            image: "images/Yellow Sardines.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 251,
+            name: "  	منتوس 3D",
+            price:29970	,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Mentos 3D.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 252,
+            name: "  	تيفاني اوتسفيل شوفان",
+            price:31320	,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Tiffany Oatsville Oats.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 253,
+            name: "  	 شوال سكر",
+            price:2970000,
+            unit: "  50ك  ",
+            category: "food",
+            image: "images/Sack of Sugar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 254,
+            name: "  	 هاجدو جبنة مطبوخة",
+            price:202500,
+            unit: "  400غ ",
+            category: "dairy",
+            image: "images/Hajdu Processed Cheese 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 255,
+            name: "  	 برينغليز كبير",
+            price:199980,
+            unit: "  100غ",
+            category: "Snacks",
+            image: "images/Large Pringles.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 255,
+            name: "  كعك مدور فتاح",
+            price:	99990,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Round Ka'ak (Bread Rings).png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 259,
+            name: "   رب بندورة يمامة",
+            price:	166500,
+            unit: "  660غ	 ",
+            category: "food",
+            image: "images/Yamama Tomato Paste.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 260,
+            name: "  بريل 3ليتر +در جنرال",
+            price:	450000,
+            unit: " 750مل ",
+            category: "cleaning",
+            image: "images/Pril 3L + Der General 750ml.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 261,
+            name: "  	برسيل جيل",
+            price:	599940,
+            unit: " 5ك",
+            category: "cleaning",
+            image: "images/Persil Gel.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 262,
+            name: "  	برسيل جيل",
+            price:	599940,
+            unit: " 5ك",
+            category: "cleaning",
+            image: "images/Persil Gel.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 263,
+            name: "  مربى فريز   مروج",
+            price:	234000,
+            unit: " 800غ",
+            category: "food",
+            image: "images/Murouj Strawberry Jam.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 264,
+            name: "  مربى التين  مروج",
+            price:	234000,
+            unit: " 800غ",
+            category: "food",
+            image: "images/Murooj Preserved Figs.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 265,
+            name: "  تين معقود  مروج",
+            price:	288000,
+            unit: " 800غ",
+            category: "food",
+            image: "images/Murooj Preserved Figs.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 266,
+            name: "   دبس خروب بلدي  مروج",
+            price:	261000,
+            unit: " 1ك",
+            category: "food",
+            image: "images/Murouj Local Carob Molasses.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 267,
+            name: "   زيتون مقطع المروج",
+            price:	309600	,
+            unit: " 1ك",
+            category: "food",
+            image: "images/Al-Murouj Sliced ​​Olives 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 268,
+            name: " نيو بارك جبنة قشطية",
+            price:		 163800	,
+            unit: " عرض	",
+            category: "dairy",
+            image: "images/New Park Cream Cheese (Special Offer).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 269,
+            name: " حليب كانديا خالي الدسم",
+            price:		169992	,
+            unit: " 1ل	",
+            category: "dairy",
+            image: "images/Candia Skimmed Milk.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 270,
+            name: "  زبدة لورباك",
+            price:	259992	,
+            unit: "  200غ",
+            category: "dairy",
+            image: "images/Lurpak Butter 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 271,
+            name: "  	أصابع جبنة",
+            price:	180000	,
+            unit: "  *15",
+            category: "dairy",
+            image: "images/Cheese Sticks.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 272,
+            name: "  برك جبنة",
+            price:	180000	,
+            unit: "  *15",
+            category: "dairy",
+            image: "images/Cheese Borek.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 273,
+            name: "  علبة قرقش  وايفر",
+            price:	180000	,
+            unit: "  *24",
+            category: "Snacks",
+            image: "images/Qarqash Wafer Box (24 count).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 274,
+            name: "  حموي مع هال  اكسترا	",
+            price:	399960	,
+            unit: "  180غ",
+            category: "food",
+            image: "images/Hamwi Classic 180g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 275,
+            name: "  حموي موكا ",
+            price:	630000	,
+            unit: "  450غ",
+            category: "food",
+            image: "images/Hamawi Mocha 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 276,
+            name: "  حموي موكا ",
+            price:	299970	,
+            unit: "  180غ",
+            category: "food",
+            image: "images/Hamawi Mocha 180g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 277,
+            name: "  حموي سائل  ",
+            price:	299970	,
+            unit: "  1ليتر",
+            category: "food",
+            image: "images/Hamawi Liquid 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 278,
+            name: "  حموي كلاسيك   ",
+            price:	359910	,
+            unit: "  180غ",
+            category: "food",
+            image: "images/Hamwi Classic 180g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 279,
+            name: "  	نسكافي اوريجينال  ",
+            price:		319950	,
+            unit: "   *25",
+            category: "food",
+            image: "images/Nescafé Original.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 280,
+            name: "  بيغ بابول علبة ",
+            price:	117000	,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Big Babol Box.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 281,
+            name: " 	صابونة النور",
+            price:	49950	,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Al-Nour Soap.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 282,
+            name: " 	 توت+جلاب الخواجة",
+            price:	306000	,
+            unit: "   ",
+            category: "drinks",
+            image: "images/Al-Khawaja Mulberry.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 283,
+            name: " 	 ليبو  عائلي",
+            price:	159993,
+            unit: "  184غ ",
+            category: "drinks",
+            image: "images/Lipo 184g (Family Size).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 284,
+            name: " 	 بيسكولاتا ستار",
+            price:	54990,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Biscolata Star.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 285,
+            name: " 	نشا ",
+            price:	49950,
+            unit: " 500غ  ",
+            category: "Bakery",
+            image: "images/Starch 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 286,
+            name: " 	بزر ابيض ",
+            price:		249930,
+            unit: "	 500غ ",
+            category: "Snacks",
+            image: "images/White seeds 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 287,
+            name: " 	كري كري",
+            price:	54990,
+            unit: "	  	 200غ	",
+            category: "dairy",
+            image: "images/Kri Kri 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+           {
+             id: 288,
+            name: " 	تويكس ",
+            price:	216000,
+            unit: "	  	 4+1	",
+            category: "Snacks",
+            image: "images/Twix.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 289,
+            name: " 	 تمر سقعي ",
+            price:	300600,
+            unit: "	  	 1ك	",
+            category: "food",
+            image: "images/Saq'i Dates.png",
+            pictureClass: "cleaning-picture"
         }
+
     ];
 
     let activeMarketFilter = "all";
     let marketCart = [];
+    // Bridge for restaurant menu buttons, which are rendered outside this handler.
+    window.yallaAddRestaurantProduct = function(product, restaurantName) {
+        const id = 'restaurant:' + restaurantName + ':' + product.id;
+        const existing = marketCart.find(item => item.id === id);
+        if (existing) existing.quantity += 1;
+        else marketCart.push({id, name: restaurantName + ' - ' + product.name, price: Number(product.price), quantity: 1});
+        updateMarketCart();
+        showAddToCartToast();
+    };
 
 
     // إنشاء بطاقات المنتجات تلقائياً
@@ -3433,6 +4331,56 @@ cleaningGrid.addEventListener("click", event => {
     showAddToCartToast();
 });
 
+
+// المكتبة: أسعار إرشادية بالليرة اللبنانية على أساس 90,000 ل.ل / دولار.
+// تحقق من الأسعار والتوفر قبل نشر المتجر للبيع.
+const libraryProducts = [{"id":"library-1","name":"كتاب تعليم الحروف العربية","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-2","name":"كتاب تعليم الأرقام للأطفال","price":315000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-3","name":"كتاب الحروف الإنجليزية ABC","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-4","name":"كتاب تعليم الفرنسية للمبتدئين","price":450000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-5","name":"كتاب تلوين حيوانات","price":180000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-6","name":"كتاب تلوين أميرات","price":180000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-7","name":"كتاب قصص قصيرة للأطفال","price":315000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-8","name":"قصة الأرنب والسلحفاة","price":225000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-9","name":"قصة ليلى والذئب","price":225000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-10","name":"كتاب أنشطة الروضة","price":450000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-11","name":"كتاب تمارين رياضيات ابتدائي","price":540000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-12","name":"كتاب خط عربي للأطفال","price":270000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-13","name":"قاموس عربي إنجليزي صغير","price":630000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-14","name":"قاموس فرنسي عربي صغير","price":630000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-15","name":"كتاب رسم وتلوين 48 صفحة","price":270000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-16","name":"كتاب ألغاز وذكاء للأطفال","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-17","name":"دفتر مدرسي 48 ورقة","price":89100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-18","name":"دفتر مدرسي 72 ورقة","price":89100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-19","name":"دفتر مدرسي 96 ورقة","price":135000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-20","name":"دفتر مدرسي 120 ورقة","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-21","name":"دفتر مدرسي 192 ورقة","price":247500,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-22","name":"دفتر مدرسي 240 ورقة","price":359100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-23","name":"دفتر جامعي سلك A4 48 ورقة","price":71100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-24","name":"دفتر جامعي سلك A4 96 ورقة","price":235800,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-25","name":"دفتر 5 مواد سلك","price":236700,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-26","name":"دفتر جيب A6","price":90000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-27","name":"دفتر ملاحظات A5","price":54000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-28","name":"دفتر رسم A4","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-29","name":"دفتر رسم A3","price":539100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-30","name":"ورق تصوير A4 رزمة 500","price":450000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-31","name":"ورق مسطر كلاسور 100 ورقة","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-32","name":"مفكرة مدرسية","price":180000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-33","name":"قلم حبر أزرق Cello","price":33300,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-34","name":"قلم حبر أسود","price":31500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-35","name":"قلم حبر أحمر","price":31500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-36","name":"قلم رصاص HB","price":22500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-37","name":"قلم رصاص 2B","price":27000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-38","name":"علبة أقلام رصاص 12","price":450000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-39","name":"قلم حبر قابل للمسح","price":90000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-40","name":"قلم جاف 10 ألوان","price":207000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-41","name":"قلم هايلايتر","price":90000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-42","name":"طقم هايلايتر 4 ألوان","price":315000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-43","name":"قلم ماركر سبورة","price":63000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-44","name":"قلم ماركر دائم","price":72000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-45","name":"قلم تصحيح سائل 7 مل","price":43200,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-46","name":"شريط تصحيح 8 متر","price":82800,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-47","name":"ممحاة بيضاء","price":18000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-48","name":"براية معدنية","price":27000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-49","name":"براية مع ممحاة","price":78300,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-50","name":"قلم رصاص ميكانيكي","price":135000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-51","name":"شنطة مدرسية بسيطة","price":1260000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-52","name":"شنطة مدرسية أولاد","price":2339100,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-53","name":"شنطة مدرسية بنات","price":2430000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-54","name":"شنطة مدرسية كبيرة","price":3150000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-55","name":"شنطة ظهر متعددة الجيوب","price":2430000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-56","name":"شنطة روضة صغيرة","price":1080000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-57","name":"شنطة طعام عازلة","price":1529100,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-58","name":"مقلمة قماش سحاب واحد","price":270000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-59","name":"مقلمة قماش جيبين","price":765000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-60","name":"مقلمة بلاستيك","price":180000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-61","name":"مقلمة مدرسية ثلاث جيوب","price":900000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-62","name":"حقيبة أوراق A4","price":450000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-63","name":"مسطرة بلاستيك 15 سم","price":22500,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-64","name":"مسطرة بلاستيك 30 سم","price":36000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-65","name":"مسطرة معدنية 30 سم","price":72000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-66","name":"طقم هندسة 4 قطع","price":135000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-67","name":"طقم هندسة علبة","price":270000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-68","name":"منقلة 180 درجة","price":36000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-69","name":"مثلث هندسي","price":31500,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-70","name":"بركار مدرسي","price":180000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-71","name":"آلة حاسبة صغيرة","price":360000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-72","name":"آلة حاسبة علمية","price":1260000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-73","name":"مسطرة مرنة","price":54000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-74","name":"قالب دوائر هندسية","price":135000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-75","name":"ألوان خشب 12 لون","price":198000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-76","name":"ألوان خشب 24 لون","price":405000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-77","name":"ألوان شمع 12 لون","price":135000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-78","name":"ألوان فلوماستر 12 لون","price":227700,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-79","name":"ألوان مائية 12 لون","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-80","name":"ألوان غواش 12 لون","price":450000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-81","name":"فرش رسم 6 قطع","price":180000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-82","name":"دفتر رسم سميك A4","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-83","name":"كرتون ملون 10 ورقات","price":135000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-84","name":"صلصال 12 لون","price":180000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-85","name":"ورق كريب ملون","price":45000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-86","name":"ألوان أكريليك 6 عبوات","price":540000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-87","name":"لوحة كانفاس صغيرة","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-88","name":"قلم تلوين مزدوج","price":63000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-89","name":"ملف بلاستيك A4","price":54000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-90","name":"ملف كبس","price":72000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-91","name":"ملف حلقات","price":225000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-92","name":"حافظة أوراق شفافة 10 قطع","price":135000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-93","name":"حافظة أوراق شفافة 100","price":396000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-94","name":"فواصل ملفات 10 ألوان","price":108000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-95","name":"ملاحظات لاصقة صغيرة","price":67500,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-96","name":"ملاحظات لاصقة 3 ألوان","price":135000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-97","name":"ملصقات أسماء دفاتر","price":99000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-98","name":"تجليد دفتر شفاف","price":25200,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-99","name":"مشابك ورق علبة","price":67500,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-100","name":"دباسة صغيرة","price":225000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-101","name":"مقص مدرسي آمن","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-102","name":"مقص مكتبي","price":180000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-103","name":"لاصق غراء ستيك","price":23400,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-104","name":"غراء أبيض","price":36000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-105","name":"شريط لاصق شفاف","price":45000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-106","name":"شريط لاصق ملون","price":72000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-107","name":"لوح كتابة صغير","price":270000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-108","name":"ممحاة سبورة","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-109","name":"طباشير ملون علبة","price":108000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-110","name":"علبة دبابيس","price":45000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-111","name":"خرامة ورق","price":270000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-112","name":"دبوس تثبيت علبة","price":54000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-113","name":"مشابك غسيل للأشغال","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-114","name":"ورق تغليف هدايا","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"}];
+const libraryGrid = document.getElementById('libraryProductsGrid');
+const librarySearchInput = document.getElementById('libraryProductSearch');
+const librarySearchWrap = document.getElementById('librarySearchWrap');
+const libraryFilters = document.querySelectorAll('.library-filter');
+let libraryActiveFilter = 'all';
+const libraryTitles = {all:'كل منتجات المكتبة',books:'كتب وقصص',notebooks:'دفاتر وورق',pens:'أقلام وكتابة',bags:'شنط ومقالم',geometry:'هندسة وحساب',art:'رسم وأشغال',filing:'ملفات وتنظيم',other:'لوازم متنوعة'};
+function renderLibraryProducts() {
+  const query = librarySearchInput.value.trim().toLocaleLowerCase();
+  const shown = libraryProducts.filter(p => (libraryActiveFilter === 'all' || p.category === libraryActiveFilter) && p.name.toLocaleLowerCase().includes(query));
+  document.getElementById('libraryProductsTitle').textContent = libraryTitles[libraryActiveFilter];
+  document.getElementById('libraryProductsCount').textContent = shown.length + ' منتجات';
+  document.getElementById('libraryNoProducts').hidden = shown.length > 0;
+  libraryGrid.innerHTML = '';
+  shown.forEach((product, i) => {
+    const card = document.createElement('article');
+    card.className = 'market-product library-product';
+    card.innerHTML = `<div class="market-product-picture library-product-picture" aria-hidden="true"><span>${product.emoji}</span></div><h3></h3><p class="market-product-unit"></p><div class="market-product-bottom"><strong>${product.price.toLocaleString('en-US')} ل.ل</strong><button type="button" class="market-add library-add" aria-label="إضافة للسلة">+</button></div>`;
+    card.querySelector('h3').textContent = product.name;
+    card.querySelector('.market-product-unit').textContent = product.unit;
+    card.querySelector('.library-add').addEventListener('click', () => {
+      const existing = marketCart.find(item => item.id === product.id);
+      if (existing) existing.quantity++;
+      else marketCart.push({id:product.id,name:product.name,price:product.price,quantity:1});
+      updateMarketCart();
+      showAddToCartToast();
+    });
+    libraryGrid.appendChild(card);
+  });
+}
+document.getElementById('libraryBackButton').addEventListener('click', () => {
+  libraryScreen.hidden = true;
+  home.classList.remove('market-open');
+});
+document.getElementById('librarySearchButton').addEventListener('click', () => {
+  librarySearchWrap.hidden = !librarySearchWrap.hidden;
+  if (!librarySearchWrap.hidden) librarySearchInput.focus();
+  else { librarySearchInput.value = ''; renderLibraryProducts(); }
+});
+librarySearchInput.addEventListener('input', renderLibraryProducts);
+libraryFilters.forEach(button => button.addEventListener('click', () => {
+  libraryActiveFilter = button.dataset.filter;
+  libraryFilters.forEach(b => b.classList.toggle('active', b === button));
+  renderLibraryProducts();
+}));
+renderLibraryProducts();
+
 // تشغيل المنتجات
 renderButcherProducts();
 
@@ -3724,3 +4672,267 @@ function showAddToCartToast() {
         toast.classList.remove("show");
     }, 2500);
 }
+
+// سحب تصنيفات المكتبة بالماوس مثل الهاتف، مع إبقاء النقر على الأقسام شغالاً.
+(() => {
+  const bar = document.getElementById('libraryCategories');
+  if (!bar) return;
+  let dragging = false, startX = 0, startScroll = 0, moved = false, blockClick = false;
+  bar.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    dragging = true; moved = false;
+    startX = e.clientX; startScroll = bar.scrollLeft;
+  });
+  window.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 5) { moved = true; bar.classList.add('dragging'); }
+    if (moved) { bar.scrollLeft = startScroll - dx; e.preventDefault(); }
+  }, {passive:false});
+  window.addEventListener('pointerup', () => {
+    if (!dragging) return;
+    dragging = false; bar.classList.remove('dragging');
+    if (moved) { blockClick = true; setTimeout(() => { blockClick = false; }, 80); }
+  });
+  bar.addEventListener('click', e => {
+    if (blockClick) { e.preventDefault(); e.stopImmediatePropagation(); blockClick = false; }
+  }, true);
+  bar.addEventListener('dragstart', e => e.preventDefault());
+})();
+
+// مطاعم Yalla Shop — لا تُدرج أسعار أو أصناف غير مؤكدة من المنيو الأصلي.
+const restaurantsScreen = document.getElementById('restaurantsScreen');
+const restaurantNames = [
+    "Chicken Breast",
+    "Al Basha Shawarma",
+    "O~Clock",
+    "Kaak Al Ameer",
+    "Bread Top",
+    "Crunx Burgers",
+    "The Breakfast House",
+    "I Love Falafel",
+    "Al Shami Al Aseel",
+    "Al Malek Pastries",
+    "Al Sabil"
+];
+
+const restaurantPhotos = [
+    "images/chicken-breast1.jpg",    // تشيكن بريست
+    "images/al-basha.jpg",          // الباشا شاورما
+    "images/o-clock.jpg",           // أو كلوك
+    "images/kaak-al-ameer.jpg",     // كعك الأمير
+    "images/bread-top.jpg",        // بريد توب
+    "images/crunx-burgers.jpg",    // كرنكس برغر
+    "images/breakfast-house.jpg",   // بيت الفطور
+    "images/i-love-falafel.jpg",    // آي لوف فلافل
+    "images/al-shami.jpg",          // الشامي الأصيل
+    "images/al-malek.jpg",          // الملك للمعجنات
+    "images/al-sabil.jpg"           // السبيل
+];
+
+const chickenCategories = [
+ ['sandwiches','سندويشات'],['burgers','برغر'],['shawarma','شاورما'],
+ ['chicken','دجاج'],['meals','وجبات'],['pizza','بيتزا'],
+ ['manakish','مناقيش وصواريه'],['hot-mezze','مقبلات ساخنة'],
+ ['salads','سلطات وصوصات'],['drinks','مشروبات']
+];
+// أصناف وأسعار تشيكن بريست كما زوّدنا بها صاحب المتجر.
+const restaurantMenus = {'  Chicken Breast': {categories:chickenCategories,items:[
+    {id:'cb-1',name:'سندويش دجاج مشوي',price:450000,category:'sandwiches'},
+    {id:'cb-2',name:'شيكن ساب',price:650000,category:'sandwiches'},
+    {id:'cb-3',name:'ماكسيكانا',price:550000,category:'sandwiches'},
+    {id:'cb-4',name:'فرنسيسكو',price:600000,category:'sandwiches'},
+    {id:'cb-5',name:'فاهيتا',price:650000,category:'sandwiches'},
+    {id:'cb-6',name:'تويستر',price:550000,category:'sandwiches'},
+    {id:'cb-7',name:'طاووق',price:450000,category:'sandwiches'},
+    {id:'cb-8',name:'سكالوب',price:500000,category:'sandwiches'},
+    {id:'cb-9',name:'كرسبي',price:450000,category:'sandwiches'},
+    {id:'cb-10',name:'بطاطا',price:200000,category:'sandwiches'},
+    {id:'cb-11',name:'تاكيس برغر',price:800000,category:'burgers'},
+    {id:'cb-12',name:'ترياكي برغر',price:550000,category:'burgers'},
+    {id:'cb-13',name:'برغر شيكن برست',price:800000,category:'burgers'},
+    {id:'cb-14',name:'شيكن شيز برغر',price:400000,category:'burgers'},
+    {id:'cb-15',name:'شيز برغر',price:550000,category:'burgers'},
+    {id:'cb-16',name:'زينجر',price:450000,category:'burgers'},
+    {id:'cb-17',name:'برغر لحمة',price:550000,category:'burgers'},
+    {id:'cb-18',name:'شيكن برغر',price:400000,category:'burgers'},
+    {id:'cb-19',name:'شاورما مكسيكي',price:600000,category:'shawarma'},
+    {id:'cb-20',name:'شاورما تركي',price:650000,category:'shawarma'},
+    {id:'cb-21',name:'ساندويش شاورما',price:400000,category:'shawarma'},
+    {id:'cb-22',name:'وجبة بروستد عائلية',price:3000000,category:'chicken'},
+    {id:'cb-23',name:'وجبة كرسبي عائلية',price:2700000,category:'chicken'},
+    {id:'cb-24',name:'فروج مشوي عالفحم',price:1350000,category:'chicken'},
+    {id:'cb-25',name:'بروستد',price:1600000,category:'chicken'},
+    {id:'cb-26',name:'وجبة مكسيكانا',price:800000,category:'meals'},
+    {id:'cb-27',name:'وجبة كاساديا',price:800000,category:'meals'},
+    {id:'cb-28',name:'وجبة فاهيتا',price:800000,category:'meals'},
+    {id:'cb-29',name:'وجبة كرسبي',price:800000,category:'meals'},
+    {id:'cb-30',name:'وجبة شيكن شيز برغر',price:650000,category:'meals'},
+    {id:'cb-31',name:'وجبة زينجر',price:800000,category:'meals'},
+    {id:'cb-32',name:'وجبة همبرغر',price:800000,category:'meals'},
+    {id:'cb-33',name:'وجبة شيز برغر',price:800000,category:'meals'},
+    {id:'cb-34',name:'وجبة طاووق',price:800000,category:'meals'},
+    {id:'cb-35',name:'وجبة شيكن ساب',price:800000,category:'meals'},
+    {id:'cb-36',name:'وجبة اسكالوب',price:800000,category:'meals'},
+    {id:'cb-37',name:'وجبة شيكن برغر',price:650000,category:'meals'},
+    {id:'cb-38',name:'بيتزا ببروني كبير',price:1200000,category:'pizza'},
+    {id:'cb-39',name:'بيتزا ببروني وسط',price:1000000,category:'pizza'},
+    {id:'cb-40',name:'بيتزا ببروني صغير',price:700000,category:'pizza'},
+    {id:'cb-41',name:'بيتزا باربكيو كبير',price:1200000,category:'pizza'},
+    {id:'cb-42',name:'بيتزا باربكيو وسط',price:1000000,category:'pizza'},
+    {id:'cb-43',name:'بيتزا باربكيو صغير',price:700000,category:'pizza'},
+    {id:'cb-44',name:'بيتزا مارغريتا كبير',price:1000000,category:'pizza'},
+    {id:'cb-45',name:'بيتزا مارغريتا وسط',price:800000,category:'pizza'},
+    {id:'cb-46',name:'بيتزا مارغريتا صغير',price:500000,category:'pizza'},
+    {id:'cb-47',name:'بيتزا فاهيتا كبير',price:1200000,category:'pizza'},
+    {id:'cb-48',name:'بيتزا فاهيتا وسط',price:1000000,category:'pizza'},
+    {id:'cb-49',name:'بيتزا فاهيتا صغير',price:800000,category:'pizza'},
+    {id:'cb-50',name:'بيتزا خضار كبير',price:1000000,category:'pizza'},
+    {id:'cb-51',name:'بيتزا خضار وسط',price:800000,category:'pizza'},
+    {id:'cb-52',name:'بيتزا خضرة صغير',price:500000,category:'pizza'},
+    {id:'cb-53',name:'سواريه جبنة',price:450000,category:'manakish'},
+    {id:'cb-54',name:'سواريه بيتزا',price:450000,category:'manakish'},
+    {id:'cb-55',name:'زعتر سواريه',price:350000,category:'manakish'},
+    {id:'cb-56',name:'جبنة خضرة مع زعتر',price:220000,category:'manakish'},
+    {id:'cb-57',name:'منقوشة فاهيتا',price:500000,category:'manakish'},
+    {id:'cb-58',name:'زعتر خضرة',price:120000,category:'manakish'},
+    {id:'cb-59',name:'كعكة شيكن برست',price:180000,category:'manakish'},
+    {id:'cb-60',name:'جبنة خضرة',price:220000,category:'manakish'},
+    {id:'cb-61',name:'زعتر وجبنة',price:150000,category:'manakish'},
+    {id:'cb-62',name:'جبنة',price:200000,category:'manakish'},
+    {id:'cb-63',name:'زعتر',price:80000,category:'manakish'},
+    {id:'cb-64',name:'شيكن وينجز',price:450000,category:'hot-mezze'},
+    {id:'cb-65',name:'موزاريلا ستيك',price:450000,category:'hot-mezze'},
+    {id:'cb-66',name:'بطاطا ويدجز',price:450000,category:'hot-mezze'},
+    {id:'cb-67',name:'بطاطا',price:450000,category:'hot-mezze'},
+    {id:'cb-68',name:'كبيس',price:100000,category:'salads'},
+    {id:'cb-69',name:'ثوم',price:100000,category:'salads'},
+    {id:'cb-70',name:'صوص كوكتيل',price:100000,category:'salads'},
+    {id:'cb-71',name:'صوص مايونيز',price:100000,category:'salads'},
+    {id:'cb-72',name:'صوص افوكا',price:100000,category:'salads'},
+    {id:'cb-73',name:'سلطة مايونيز',price:100000,category:'salads'},
+    {id:'cb-74',name:'سيزر سلاد',price:600000,category:'salads'},
+    {id:'cb-75',name:'غريك سلاد',price:600000,category:'salads'},
+    {id:'cb-76',name:'شرقية سلاد',price:550000,category:'salads'},
+    {id:'cb-77',name:'مشروب غازي ( لتر وربع )',price:180000,category:'drinks'},
+    {id:'cb-78',name:'مشروب غازي (ليترين وربع)',price:220000,category:'drinks'},
+    {id:'cb-79',name:'مشروبات غازية (تنك)',price:100000,category:'drinks'},
+    {id:'cb-80',name:'مشروبات غازية قنينة',price:80000,category:'drinks'}
+]},
+  'الباشا شاورما': {categories:[['sandwiches','سندويشات'],['meals','وجبات'],['rice','أرز'],['drinks','مشروبات']],items:[
+    {id:'basha-1',name:'شاورما دجاج كبير',price:499500,category:'sandwiches'},
+    {id:'basha-2',name:'شاورما دجاج صغير',price:399600,category:'sandwiches'},
+    {id:'basha-3',name:'شاورما لحم كبير',price:599400,category:'sandwiches'},
+    {id:'basha-4',name:'شاورما لحم صغير',price:450000,category:'sandwiches'},
+    {id:'basha-5',name:'كريبسي',price:549900,category:'sandwiches'},
+    {id:'basha-6',name:'طاووق',price:549900,category:'sandwiches'},
+    {id:'basha-7',name:'فاهيتا',price:649800,category:'sandwiches'},
+    {id:'basha-8',name:'زنجر',price:549900,category:'sandwiches'},
+    {id:'basha-9',name:'شيز برغر',price:699300,category:'sandwiches'},
+    {id:'basha-10',name:'شيكن برغر',price:549900,category:'sandwiches'},
+    {id:'basha-11',name:'صحن بطاطا وسط',price:300600,category:'sandwiches'},
+    {id:'basha-12',name:'فروج مشوي على الفحم',price:1215000,category:'sandwiches'},
+    {id:'basha-13',name:'فلافل',price:150300,category:'sandwiches'},
+    {id:'basha-14',name:'صحن بطاطا كبير',price:602100,category:'sandwiches'},
+    {id:'basha-15',name:'فروج مشوي عالغاز',price:990000,category:'sandwiches'},
+    {id:'basha-16',name:'دزينة فلافل',price:200700,category:'sandwiches'},
+    {id:'basha-17',name:'وجبة شاورما فلت',price:900000,category:'meals'},
+    {id:'basha-18',name:'وجبة شاورما عربي',price:900000,category:'meals'},
+    {id:'basha-19',name:'وجبة كريسبي',price:990000,category:'meals'},
+    {id:'basha-20',name:'وجبة طاووق',price:990000,category:'meals'},
+    {id:'basha-21',name:'رز وسط سادة',price:299700,category:'rice'},
+    {id:'basha-22',name:'رز صغير سادة',price:149400,category:'rice'},
+    {id:'basha-23',name:'رز كبير سادة',price:599400,category:'rice'},
+    {id:'basha-24',name:'رز وسط كبير سادة',price:399600,category:'rice'},
+    {id:'basha-25',name:'رز وسط مع شاورما',price:649800,category:'rice'},
+    {id:'basha-26',name:'رز صغير مع شاورما',price:349200,category:'rice'},
+    {id:'basha-27',name:'رز كبير مع شاورما',price:1299600,category:'rice'},
+    {id:'basha-28',name:'رز وسط كبير مع شاورما',price:849600,category:'rice'},
+    {id:'basha-29',name:'كينزا كولا',price:99900,category:'drinks'},
+    {id:'basha-30',name:'كينزا كولا دايت',price:99900,category:'drinks'},
+    {id:'basha-31',name:'كينزا ليمون',price:99900,category:'drinks'},
+    {id:'basha-32',name:'عيران',price:99900,category:'drinks'},
+  ]}};
+let restaurantCurrent = null;
+let restaurantFilter = 'all';
+const restaurantSearch = document.getElementById('restaurantsSearch');
+function renderRestaurantView() {
+  const list = document.getElementById('restaurantList');
+  const menu = document.getElementById('restaurantMenu');
+  const query = restaurantSearch.value.trim().toLocaleLowerCase();
+  document.getElementById('restaurantsHeader').textContent = restaurantCurrent || 'المطاعم';
+  list.hidden = Boolean(restaurantCurrent);
+  menu.hidden = !restaurantCurrent;
+  if (!restaurantCurrent) {
+    list.replaceChildren();
+    restaurantNames.filter(n => n.toLocaleLowerCase().includes(query)).forEach(name => {
+      const button = document.createElement('button');
+      button.type = 'button'; button.className = 'restaurant-list-row';
+      const photo = document.createElement('img'); photo.className = 'restaurant-cover'; photo.alt = ''; photo.loading = 'lazy'; photo.src = restaurantPhotos[restaurantNames.indexOf(name)]; photo.onerror = () => {photo.style.display='none';};
+      const label = document.createElement('strong'); label.textContent = name;
+      const arrow = document.createElement('span'); arrow.className = 'restaurant-row-arrow'; arrow.textContent = '❮'; arrow.setAttribute('aria-hidden','true');
+      button.append(photo,label,arrow);
+      button.addEventListener('click',()=>{restaurantCurrent=name;restaurantFilter='all';restaurantSearch.value='';renderRestaurantView();document.getElementById('restaurantMenuItems').scrollTop=0;});
+      list.appendChild(button);
+    });
+    if (!list.children.length) {const empty=document.createElement('p');empty.className='restaurant-empty';empty.textContent='ما لقينا مطعم بهالاسم.';list.appendChild(empty);}
+    return;
+  }
+
+// اربط المنيو بمعرّف ثابت حسب ترتيب المطعم، وليس باسم العرض.
+// الأسماء الإنكليزية والصور تبقى كما هي حتى لو تغيّر الاسم لاحقاً.
+const restaurantMenuKeys = [
+    '  Chicken Breast', // المفتاح الأصلي موجود مع فراغات في البيانات
+    'الباشا شاورما'      // المفتاح الأصلي لمنيو الباشا
+];
+const restaurantIndex = restaurantNames.indexOf(restaurantCurrent);
+const menuKey = restaurantMenuKeys[restaurantIndex];
+const data = (menuKey && restaurantMenus[menuKey]) || {
+    categories: [],
+    items: []
+};
+  const tabs = document.getElementById('restaurantCategories');tabs.replaceChildren();
+  const categories = [['all','الكل'],...data.categories];
+  categories.forEach(([id,label])=>{
+    const b=document.createElement('button');b.type='button';b.textContent=label;
+    b.className='restaurant-tab'+(restaurantFilter===id?' active':'');
+    b.addEventListener('click',()=>{restaurantFilter=id;renderRestaurantView();document.getElementById('restaurantMenuItems').scrollTop=0;});tabs.appendChild(b);
+  });
+  const items=document.getElementById('restaurantMenuItems');items.replaceChildren();
+  const shown=data.items.filter(x=>(restaurantFilter==='all'||x.category===restaurantFilter)&&x.name.toLocaleLowerCase().includes(query));
+  shown.forEach(product=>{
+    const line=document.createElement('div');line.className='restaurant-item';
+    const info=document.createElement('div');info.className='restaurant-item-info';
+    const name=document.createElement('strong');name.textContent=product.name;
+    const price=document.createElement('span');price.textContent=Number(product.price).toLocaleString('en-US')+' ل.ل';
+    info.append(name,price);
+    const add=document.createElement('button');add.type='button';add.className='restaurant-add';add.textContent='+';add.setAttribute('aria-label','إضافة '+product.name+' إلى السلة');
+    add.addEventListener('click',()=>{
+      if (typeof window.yallaAddRestaurantProduct !== 'function') {
+        console.error('Shopping cart is not ready yet');
+        return;
+      }
+      window.yallaAddRestaurantProduct(product, restaurantCurrent);
+      add.classList.add('added');add.textContent='✓';
+      window.setTimeout(()=>{if(add.isConnected){add.classList.remove('added');add.textContent='+';}},650);
+    });
+    line.append(info,add);items.appendChild(line);
+  });
+  if(!shown.length){const empty=document.createElement('p');empty.className='restaurant-empty';empty.textContent=data.items.length?'ما في أصناف مطابقة للبحث بهالقسم.':'المنيو لهيدا المطعم ما انضافت بعد. ابعتلي الأصناف والأسعار لنضيفها من دون تخمين.';items.appendChild(empty);}
+}
+document.getElementById('restaurantsBack').addEventListener('click',()=>{
+  if(restaurantCurrent){restaurantCurrent=null;restaurantFilter='all';restaurantSearch.value='';renderRestaurantView();}
+  else{restaurantsScreen.hidden=true;home.classList.remove('market-open');}
+});
+document.getElementById('restaurantsSearchToggle').addEventListener('click',()=>{
+  const wrap=document.getElementById('restaurantsSearchWrap');wrap.hidden=!wrap.hidden;
+  if(!wrap.hidden)restaurantSearch.focus();else{restaurantSearch.value='';renderRestaurantView();}
+});
+restaurantSearch.addEventListener('input',renderRestaurantView);
+// سحب التصنيفات بالماوس، واللمس مدعوم عبر CSS overflow-x.
+(()=>{const bar=document.getElementById('restaurantCategories');let down=false,start=0,scroll=0,moved=false,block=false;
+bar.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;down=true;moved=false;start=e.clientX;scroll=bar.scrollLeft;});
+window.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-start;if(Math.abs(dx)>5)moved=true;if(moved){bar.scrollLeft=scroll-dx;e.preventDefault();}},{passive:false});
+window.addEventListener('pointerup',()=>{if(!down)return;down=false;if(moved){block=true;setTimeout(()=>block=false,90);}});
+bar.addEventListener('click',e=>{if(block){e.preventDefault();e.stopImmediatePropagation();block=false;}},true);
+bar.addEventListener('dragstart',e=>e.preventDefault());})();
