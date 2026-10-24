@@ -3185,7 +3185,7 @@ gharibGrid.appendChild(card);
 /* ===== Yalla Shop - Shopping Cart ===== */
 
 // ضعي رقم واتساب المتجر مع رمز الدولة، بدون +
-const SHOP_WHATSAPP = "96171918022";
+const SHOP_WHATSAPP = "96171780180";
 
 // إنشاء شاشة السلة
 const cartScreen = document.createElement("section");
