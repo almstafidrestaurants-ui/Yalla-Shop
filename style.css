@@ -2752,12 +2752,171 @@ select {
 .restaurants-screen .restaurant-list-row:hover .restaurant-row-arrow {background:#0753bd;color:white;transform:translateX(-3px);}
 .restaurants-screen .restaurant-list-row:focus-visible {outline:3px solid #78b8ff;outline-offset:2px;}
 
-/* إخفاء مؤشر التمرير في صفحات المطاعم مع الحفاظ على التمرير */
-.restaurants-screen, .restaurants-screen * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
-.restaurants-screen::-webkit-scrollbar, .restaurants-screen *::-webkit-scrollbar { display: none !important; width: 0 !important; }
-.restaurant-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+/* RAAD restaurant: photos, descriptions and prices */
+.restaurants-screen .restaurant-item {gap:10px; padding:11px; align-items:center;}
+.restaurants-screen .restaurant-item-photo {width:76px;height:76px;object-fit:cover;border-radius:12px;background:#eaf1fb;flex:none;}
+.restaurants-screen .restaurant-item-description {display:block;color:#64748b;font-size:11px;line-height:1.6;font-weight:400;}
+.restaurants-screen .restaurant-item-info span.restaurant-price-pending {color:#8b6c24;background:#fff6dc;}
+.restaurants-screen .restaurant-add:disabled {opacity:.4;cursor:not-allowed;transform:none;}
+@media(max-width:380px){.restaurants-screen .restaurant-item-photo{width:64px;height:64px;}}
+
+/* RAAD: polished, image-ready product cards */
+.restaurants-screen .restaurant-menu-items {gap:12px!important;padding:14px 12px 105px!important;}
+.restaurants-screen .restaurant-item {direction:rtl;display:grid!important;grid-template-columns:96px minmax(0,1fr);grid-template-rows:auto auto;column-gap:12px;row-gap:8px;align-items:start!important;min-height:128px!important;padding:12px!important;border-radius:18px!important;border:1px solid #e3eaf4!important;box-shadow:0 3px 12px rgba(15,35,70,.055)!important;overflow:hidden;}
+.restaurants-screen .restaurant-item:hover {border-color:#a9caff!important;box-shadow:0 9px 24px rgba(15,70,145,.12)!important;}
+.restaurants-screen .restaurant-item-photo {grid-column:1;grid-row:1 / span 2;width:96px!important;height:104px!important;object-fit:cover;display:block!important;border-radius:13px!important;background:#edf3fa!important;border:1px solid #e1eaf4;align-self:stretch;}
+.restaurants-screen .restaurant-item-photo.restaurant-photo-empty {background:#edf3fa!important;}
+.restaurants-screen .restaurant-item-info {grid-column:2;grid-row:1;min-width:0;display:flex;flex-direction:column;gap:5px!important;align-items:flex-start;text-align:right!important;}
+.restaurants-screen .restaurant-item-info strong {display:block;font-size:14px!important;line-height:1.45!important;font-weight:850;color:#13294b!important;overflow-wrap:anywhere;}
+.restaurants-screen .restaurant-item-description {font-size:11px!important;line-height:1.65!important;color:#718099!important;overflow-wrap:anywhere;}
+.restaurants-screen .restaurant-item-info span:not(.restaurant-price-pending) {align-self:flex-start!important;direction:rtl!important;color:#08754d!important;background:#e8f7ef!important;font-size:12px!important;font-weight:850!important;padding:5px 9px!important;border-radius:8px!important;}
+.restaurants-screen .restaurant-add {grid-column:2;grid-row:2;justify-self:end;align-self:end;width:35px!important;height:35px!important;min-width:35px!important;border-radius:11px!important;font-size:22px!important;box-shadow:0 3px 8px rgba(0,93,206,.17)!important;transition:transform .18s,box-shadow .18s,background .18s!important;}
+.restaurants-screen .restaurant-add:hover {transform:translateY(-2px) scale(1.06)!important;box-shadow:0 7px 16px rgba(0,93,206,.24)!important;}
+.restaurants-screen .restaurant-add:active {transform:scale(.93)!important;}
+@media(max-width:380px){.restaurants-screen .restaurant-item {grid-template-columns:82px minmax(0,1fr)}.restaurants-screen .restaurant-item-photo {width:82px!important;height:100px!important;}}
+
+
+/* RAAD Resto Café — dedicated mobile food-delivery cards. Other stores untouched. */
+.restaurants-screen #restaurantMenuItems .raad-product-card {
+  display:grid!important;direction:rtl;grid-template-columns:92px minmax(0,1fr)!important;
+  grid-template-rows:auto!important;column-gap:12px!important;row-gap:0!important;
+  align-items:stretch!important;min-height:120px!important;height:auto!important;
+  padding:11px!important;overflow:visible!important;border-radius:17px!important;
+  background:#fff!important;border:1px solid #e3eaf5!important;
+  box-shadow:0 3px 12px rgba(20,51,101,.06)!important;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important;
+  animation:raad-card-enter .3s ease both;
+}
+.restaurants-screen #restaurantMenuItems .raad-product-card:hover {
+  transform:translateY(-3px)!important;border-color:#bdd6f5!important;
+  box-shadow:0 11px 24px rgba(17,74,146,.13)!important;
+}
+.restaurants-screen .raad-product-card .raad-photo-frame {
+  grid-column:1;grid-row:1;position:relative;width:92px;height:100%;min-height:98px;
+  max-height:154px;overflow:hidden;border-radius:12px;background:#edf3fa;
+}
+.restaurants-screen .raad-product-card .restaurant-item-photo {
+  display:block!important;width:100%!important;height:100%!important;min-height:98px;
+  max-height:none!important;object-fit:cover!important;border-radius:12px!important;
+  grid-column:auto!important;grid-row:auto!important;border:0!important;
+  transition:transform .25s ease!important;
+}
+.restaurants-screen .raad-product-card .raad-photo-frame:hover .restaurant-item-photo {transform:scale(1.065);}
+.restaurants-screen .raad-product-card .restaurant-item-info {
+  grid-column:2!important;grid-row:1!important;display:flex!important;flex-direction:column!important;
+  gap:5px!important;min-width:0!important;align-items:stretch!important;text-align:right!important;
+}
+.restaurants-screen .raad-product-card .restaurant-item-info strong {
+  color:#122b4c!important;font-size:13.5px!important;line-height:1.5!important;
+  font-weight:850!important;overflow-wrap:anywhere;
+}
+.restaurants-screen .raad-product-card .restaurant-item-description {
+  color:#738196!important;font-size:11px!important;line-height:1.6!important;
+  font-weight:400!important;overflow-wrap:anywhere;
+}
+.restaurants-screen .raad-product-card .raad-product-actions {
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:7px;min-width:0;margin-top:auto;padding-top:7px;
+}
+.restaurants-screen .raad-product-card .raad-product-price {
+  display:inline-flex;align-items:center;width:max-content;max-width:100%;min-width:0;
+  direction:rtl;color:#08764d!important;background:#e7f7ed!important;
+  padding:5px 9px!important;border-radius:9px!important;
+  font-size:11.5px!important;font-weight:850!important;white-space:nowrap;
+}
+.restaurants-screen .raad-product-card .restaurant-add {
+  position:static!important;grid-column:auto!important;grid-row:auto!important;
+  display:grid!important;place-items:center!important;flex:0 0 37px!important;
+  width:37px!important;height:37px!important;min-width:37px!important;
+  align-self:center!important;justify-self:auto!important;padding:0!important;
+  margin:0!important;border:0!important;border-radius:50%!important;
+  background:#0753bd!important;color:#fff!important;font-size:25px!important;line-height:1!important;
+  cursor:pointer;box-shadow:0 4px 10px rgba(7,83,189,.20)!important;
+  transition:transform .18s ease,background-color .2s ease,box-shadow .2s ease!important;
+}
+.restaurants-screen .raad-product-card .restaurant-add:hover {
+  background:#0879eb!important;transform:scale(1.11)!important;
+  box-shadow:0 6px 14px rgba(7,83,189,.3)!important;
+}
+.restaurants-screen .raad-product-card .restaurant-add:active {transform:scale(.94)!important;}
+.restaurants-screen .raad-product-card .restaurant-add.added,
+.restaurants-screen .raad-product-card .restaurant-add.added:hover {
+  background:#10966e!important;transform:scale(1.03)!important;
+  box-shadow:0 4px 12px rgba(16,150,110,.24)!important;
+}
+.restaurants-screen .raad-product-card .restaurant-add:focus-visible {outline:3px solid #7bb6ff;outline-offset:3px;}
+@keyframes raad-card-enter {from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:360px){
+ .restaurants-screen #restaurantMenuItems .raad-product-card {grid-template-columns:78px minmax(0,1fr)!important;column-gap:9px!important;padding:9px!important;}
+ .restaurants-screen .raad-product-card .raad-photo-frame {width:78px;min-height:94px;}
+ .restaurants-screen .raad-product-card .raad-product-price {font-size:10.5px!important;padding:4px 6px!important;}
+ .restaurants-screen .raad-product-card .restaurant-add {width:34px!important;height:34px!important;min-width:34px!important;flex-basis:34px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ .restaurants-screen #restaurantMenuItems .raad-product-card,
+ .restaurants-screen .raad-product-card .restaurant-item-photo,
+ .restaurants-screen .raad-product-card .restaurant-add {animation:none!important;transition:none!important;}
+ .restaurants-screen #restaurantMenuItems .raad-product-card:hover,
+ .restaurants-screen .raad-product-card .raad-photo-frame:hover .restaurant-item-photo,
+ .restaurants-screen .raad-product-card .restaurant-add:hover {transform:none!important;}
+}
+
+/* RAAD menu: lift add button visually while preserving its size and interactions. */
+.restaurants-screen .raad-product-card .raad-product-actions { padding-bottom:10px!important; }
+.restaurants-screen .raad-product-card .restaurant-add { translate:0 -10px; }
+@media (max-width:360px) { .restaurants-screen .raad-product-card .raad-product-actions { padding-bottom:10px!important; } }
+@media (prefers-reduced-motion:reduce) { .restaurants-screen .raad-product-card .restaurant-add { transition:none!important; } }
+
+
+/* RAAD sauces only: reserve the usual bottom price/add row; keep price empty. */
+.restaurants-screen #restaurantMenuItems .raad-product-card.raad-sauce-card {
+  min-height:120px!important;
+}
+.restaurants-screen .raad-sauce-card .restaurant-item-info {
+  min-height:98px!important;
+}
+.restaurants-screen .raad-sauce-card .raad-product-actions.raad-sauce-actions {
+  width:100%;
+  min-height:47px;
+  flex-wrap:nowrap;
+  justify-content:flex-end!important; /* RTL: button anchored to left edge */
+  align-items:flex-end!important;
+  margin-top:auto!important;
+  padding-top:7px!important;
+  padding-bottom:10px!important;
+}
+.restaurants-screen .raad-sauce-card .raad-sauce-actions .restaurant-add {
+  flex-shrink:0!important;
+  align-self:flex-end!important;
+}
+@media(max-width:360px) {
+ .restaurants-screen .raad-sauce-card .restaurant-item-info {min-height:94px!important;}
+}
+
+/* توحيد قياس صور المكتبة مع السوبر ماركت */
+
+.library-screen .market-product-picture {
+    width: 100% !important;
+    height: 112px !important;
+    margin-bottom: 8px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 11px;
+}
+
+.library-screen .market-product-picture img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 360px) {
+    .library-screen .market-product-picture {
+        height: 98px !important;
+    }
 }

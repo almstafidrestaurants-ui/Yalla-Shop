@@ -3010,7 +3010,15 @@ gharibGrid.appendChild(card);
         const id = 'restaurant:' + restaurantName + ':' + product.id;
         const existing = marketCart.find(item => item.id === id);
         if (existing) existing.quantity += 1;
-        else marketCart.push({id, name: restaurantName + ' - ' + product.name, price: Number(product.price), quantity: 1});
+        else {
+            const priceUnknown = restaurantName === 'RAAD Resto Café' && product.category === 'sauces' && product.price == null;
+            marketCart.push({
+                id, name: restaurantName + ' - ' + product.name,
+                price: priceUnknown ? null : Number(product.price),
+                priceUndetermined: priceUnknown,
+                image: product.image, quantity: 1
+            });
+        }
         updateMarketCart();
         showAddToCartToast();
     };
@@ -3325,9 +3333,9 @@ function renderYallaCart() {
         unit.textContent = product.unit || "";
 
         const price = document.createElement("b");
-        price.textContent = cartMoney(
-            item.price * item.quantity
-        );
+        price.textContent = item.priceUndetermined || item.price == null
+            ? 'السعر غير محدد'
+            : cartMoney(item.price * item.quantity);
 
         const controls = document.createElement("div");
         controls.className = "yc-controls";
@@ -3384,7 +3392,7 @@ function renderYallaCart() {
     );
 
     const total = marketCart.reduce(
-        (sum, item) => sum + item.price * item.quantity, 0
+        (sum, item) => sum + (item.priceUndetermined || item.price == null ? 0 : Number(item.price) * item.quantity), 0
     );
 
   
@@ -3479,6 +3487,11 @@ document.getElementById("ycLocation").onclick = () => {
 // تجهيز الطلب وإرساله إلى واتساب، ثم تفريغ السلة فور فتح الرابط
  document.getElementById("ycOrder").onclick = async () => {
     if (!marketCart.length) { ycNotify("سلتك فاضية، ضيف منتجات أولاً."); return; }
+    // Pending RAAD sauce prices must be confirmed by the merchant before checkout.
+    if (marketCart.some(item => item.priceUndetermined || item.price == null)) {
+        ycNotify("في صوص بالسلة سعره غير محدد. يرجى تأكيد سعر الصوص مع المطعم قبل إرسال الطلب.");
+        return;
+    }
     const name = cartName.value.trim();
     const phone = cartPhone.value.trim();
     const address = cartAddress.value.trim();
@@ -4334,13 +4347,24 @@ cleaningGrid.addEventListener("click", event => {
 
 // المكتبة: أسعار إرشادية بالليرة اللبنانية على أساس 90,000 ل.ل / دولار.
 // تحقق من الأسعار والتوفر قبل نشر المتجر للبيع.
-const libraryProducts = [{"id":"library-1","name":"كتاب تعليم الحروف العربية","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-2","name":"كتاب تعليم الأرقام للأطفال","price":315000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-3","name":"كتاب الحروف الإنجليزية ABC","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-4","name":"كتاب تعليم الفرنسية للمبتدئين","price":450000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-5","name":"كتاب تلوين حيوانات","price":180000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-6","name":"كتاب تلوين أميرات","price":180000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-7","name":"كتاب قصص قصيرة للأطفال","price":315000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-8","name":"قصة الأرنب والسلحفاة","price":225000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-9","name":"قصة ليلى والذئب","price":225000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-10","name":"كتاب أنشطة الروضة","price":450000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-11","name":"كتاب تمارين رياضيات ابتدائي","price":540000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-12","name":"كتاب خط عربي للأطفال","price":270000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-13","name":"قاموس عربي إنجليزي صغير","price":630000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-14","name":"قاموس فرنسي عربي صغير","price":630000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-15","name":"كتاب رسم وتلوين 48 صفحة","price":270000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-16","name":"كتاب ألغاز وذكاء للأطفال","price":360000,"category":"books","emoji":"📚","unit":"قطعة"},{"id":"library-17","name":"دفتر مدرسي 48 ورقة","price":89100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-18","name":"دفتر مدرسي 72 ورقة","price":89100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-19","name":"دفتر مدرسي 96 ورقة","price":135000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-20","name":"دفتر مدرسي 120 ورقة","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-21","name":"دفتر مدرسي 192 ورقة","price":247500,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-22","name":"دفتر مدرسي 240 ورقة","price":359100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-23","name":"دفتر جامعي سلك A4 48 ورقة","price":71100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-24","name":"دفتر جامعي سلك A4 96 ورقة","price":235800,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-25","name":"دفتر 5 مواد سلك","price":236700,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-26","name":"دفتر جيب A6","price":90000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-27","name":"دفتر ملاحظات A5","price":54000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-28","name":"دفتر رسم A4","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-29","name":"دفتر رسم A3","price":539100,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-30","name":"ورق تصوير A4 رزمة 500","price":450000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-31","name":"ورق مسطر كلاسور 100 ورقة","price":225000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-32","name":"مفكرة مدرسية","price":180000,"category":"notebooks","emoji":"📒","unit":"قطعة"},{"id":"library-33","name":"قلم حبر أزرق Cello","price":33300,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-34","name":"قلم حبر أسود","price":31500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-35","name":"قلم حبر أحمر","price":31500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-36","name":"قلم رصاص HB","price":22500,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-37","name":"قلم رصاص 2B","price":27000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-38","name":"علبة أقلام رصاص 12","price":450000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-39","name":"قلم حبر قابل للمسح","price":90000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-40","name":"قلم جاف 10 ألوان","price":207000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-41","name":"قلم هايلايتر","price":90000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-42","name":"طقم هايلايتر 4 ألوان","price":315000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-43","name":"قلم ماركر سبورة","price":63000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-44","name":"قلم ماركر دائم","price":72000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-45","name":"قلم تصحيح سائل 7 مل","price":43200,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-46","name":"شريط تصحيح 8 متر","price":82800,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-47","name":"ممحاة بيضاء","price":18000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-48","name":"براية معدنية","price":27000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-49","name":"براية مع ممحاة","price":78300,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-50","name":"قلم رصاص ميكانيكي","price":135000,"category":"pens","emoji":"🖊️","unit":"قطعة"},{"id":"library-51","name":"شنطة مدرسية بسيطة","price":1260000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-52","name":"شنطة مدرسية أولاد","price":2339100,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-53","name":"شنطة مدرسية بنات","price":2430000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-54","name":"شنطة مدرسية كبيرة","price":3150000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-55","name":"شنطة ظهر متعددة الجيوب","price":2430000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-56","name":"شنطة روضة صغيرة","price":1080000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-57","name":"شنطة طعام عازلة","price":1529100,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-58","name":"مقلمة قماش سحاب واحد","price":270000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-59","name":"مقلمة قماش جيبين","price":765000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-60","name":"مقلمة بلاستيك","price":180000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-61","name":"مقلمة مدرسية ثلاث جيوب","price":900000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-62","name":"حقيبة أوراق A4","price":450000,"category":"bags","emoji":"🎒","unit":"قطعة"},{"id":"library-63","name":"مسطرة بلاستيك 15 سم","price":22500,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-64","name":"مسطرة بلاستيك 30 سم","price":36000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-65","name":"مسطرة معدنية 30 سم","price":72000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-66","name":"طقم هندسة 4 قطع","price":135000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-67","name":"طقم هندسة علبة","price":270000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-68","name":"منقلة 180 درجة","price":36000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-69","name":"مثلث هندسي","price":31500,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-70","name":"بركار مدرسي","price":180000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-71","name":"آلة حاسبة صغيرة","price":360000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-72","name":"آلة حاسبة علمية","price":1260000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-73","name":"مسطرة مرنة","price":54000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-74","name":"قالب دوائر هندسية","price":135000,"category":"geometry","emoji":"📐","unit":"قطعة"},{"id":"library-75","name":"ألوان خشب 12 لون","price":198000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-76","name":"ألوان خشب 24 لون","price":405000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-77","name":"ألوان شمع 12 لون","price":135000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-78","name":"ألوان فلوماستر 12 لون","price":227700,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-79","name":"ألوان مائية 12 لون","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-80","name":"ألوان غواش 12 لون","price":450000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-81","name":"فرش رسم 6 قطع","price":180000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-82","name":"دفتر رسم سميك A4","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-83","name":"كرتون ملون 10 ورقات","price":135000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-84","name":"صلصال 12 لون","price":180000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-85","name":"ورق كريب ملون","price":45000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-86","name":"ألوان أكريليك 6 عبوات","price":540000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-87","name":"لوحة كانفاس صغيرة","price":270000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-88","name":"قلم تلوين مزدوج","price":63000,"category":"art","emoji":"🎨","unit":"قطعة"},{"id":"library-89","name":"ملف بلاستيك A4","price":54000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-90","name":"ملف كبس","price":72000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-91","name":"ملف حلقات","price":225000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-92","name":"حافظة أوراق شفافة 10 قطع","price":135000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-93","name":"حافظة أوراق شفافة 100","price":396000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-94","name":"فواصل ملفات 10 ألوان","price":108000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-95","name":"ملاحظات لاصقة صغيرة","price":67500,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-96","name":"ملاحظات لاصقة 3 ألوان","price":135000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-97","name":"ملصقات أسماء دفاتر","price":99000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-98","name":"تجليد دفتر شفاف","price":25200,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-99","name":"مشابك ورق علبة","price":67500,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-100","name":"دباسة صغيرة","price":225000,"category":"filing","emoji":"📁","unit":"قطعة"},{"id":"library-101","name":"مقص مدرسي آمن","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-102","name":"مقص مكتبي","price":180000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-103","name":"لاصق غراء ستيك","price":23400,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-104","name":"غراء أبيض","price":36000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-105","name":"شريط لاصق شفاف","price":45000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-106","name":"شريط لاصق ملون","price":72000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-107","name":"لوح كتابة صغير","price":270000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-108","name":"ممحاة سبورة","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-109","name":"طباشير ملون علبة","price":108000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-110","name":"علبة دبابيس","price":45000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-111","name":"خرامة ورق","price":270000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-112","name":"دبوس تثبيت علبة","price":54000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-113","name":"مشابك غسيل للأشغال","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"},{"id":"library-114","name":"ورق تغليف هدايا","price":90000,"category":"other","emoji":"✂️","unit":"قطعة"}];
+const libraryProducts = [{"id":"library-001","name":"قلم لوح كوفرت","price":29970,"category":"pens","image":"images/library/library-001.png","unit":"قطعة"},{"id":"library-002","name":"علبة هندسة زيرو","price":109998,"category":"geometry","image":"images/library/library-002.png","unit":"قطعة"},{"id":"library-003","name":"قلم حبر كلارو اخضر","price":19998,"category":"pens","image":"images/library/library-003.png","unit":"قطعة"},{"id":"library-004","name":"براية مع غطا  يلانغ","price":29997,"category":"pens","image":"images/library/library-004.png","unit":"قطعة"},{"id":"library-005","name":"كوركتار يلانغ*8مل","price":29970,"category":"pens","image":"images/library/library-005.png","unit":"قطعة"},{"id":"library-006","name":"براية فضاء","price":19980,"category":"pens","image":"images/library/library-006.png","unit":"قطعة"},{"id":"library-007","name":"لوح20*30","price":129960,"category":"geometry","image":"images/library/library-007.png","unit":"قطعة"},{"id":"library-008","name":"قلم ماركة صيني","price":24999.3,"category":"pens","image":"images/library/library-008.png","unit":"قطعة"},{"id":"library-009","name":"دفتر 5 مواضيع كوفرت *80","price":90000,"category":"notebooks","image":"images/library/library-009.png","unit":"قطعة"},{"id":"library-010","name":"تلوين مي خفيف*12 قلم","price":49950,"category":"art","image":"images/library/library-010.png","unit":"قطعة"},{"id":"library-011","name":"دفتر *12 لون","price":319950,"category":"notebooks","image":"images/library/library-011.png","unit":"قطعة"},{"id":"library-012","name":"جيب ريموتEQUIPMENT","price":900000,"category":"bags","image":"images/library/library-012.png","unit":"قطعة"},{"id":"library-013","name":"اجاندة نوت بوك صغيرة مع مغيطة","price":90000,"category":"notebooks","image":"images/library/library-013.png","unit":"قطعة"},{"id":"library-014","name":"دفتر 120ورقة 5 الوان","price":149940,"category":"notebooks","image":"images/library/library-014.png","unit":"قطعة"},{"id":"library-015","name":"مسطرة بلاستيك 30سنتم صور","price":9999,"category":"geometry","image":"images/library/library-015.png","unit":"قطعة"},{"id":"library-016","name":"لانش بوكس حجم كبير","price":900000,"category":"supplies","image":"images/library/library-016.png","unit":"قطعة"},{"id":"library-017","name":"دفتر بريو *50ورقة","price":19998,"category":"notebooks","image":"images/library/library-017.png","unit":"قطعة"},{"id":"library-018","name":"مقلمة علب","price":315000,"category":"bags","image":"images/library/library-018.png","unit":"قطعة"},{"id":"library-019","name":"كوركتار","price":45000,"category":"pens","image":"images/library/library-019.png","unit":"قطعة"},{"id":"library-020","name":"علب ورق *500","price":99990,"category":"notebooks","image":"images/library/library-020.png","unit":"قطعة"},{"id":"library-021","name":"شنطة prime.","price":1350000,"category":"bags","image":"images/library/library-021.png","unit":"قطعة"},{"id":"library-022","name":"غورد بلاستيك*750مل*2","price":599940,"category":"supplies","image":"images/library/library-022.png","unit":"قطعة"},{"id":"library-023","name":"دفتر 5 الوان ZOK","price":81000,"category":"notebooks","image":"images/library/library-023.png","unit":"قطعة"},{"id":"library-024","name":"دفتر 10الوان رصور","price":299970,"category":"notebooks","image":"images/library/library-024.png","unit":"قطعة"},{"id":"library-025","name":"اقلام تلوين خشب كاسبر*12قلم","price":90000,"category":"art","image":"images/library/library-025.png","unit":"قطعة"},{"id":"library-026","name":"الة حاسبة علمية eco-026","price":720000,"category":"geometry","image":"images/library/library-026.png","unit":"قطعة"},{"id":"library-027","name":"مقص بونينيا","price":69993,"category":"other","image":"images/library/library-027.png","unit":"قطعة"},{"id":"library-028","name":"اجاندة ستيتش","price":299970,"category":"notebooks","image":"images/library/library-028.png","unit":"قطعة"},{"id":"library-029","name":"غورد فاكيوم كاب","price":900000,"category":"supplies","image":"images/library/library-029.png","unit":"قطعة"},{"id":"library-030","name":"cp 89 mouse","price":270000,"category":"electronics","image":"images/library/library-030.png","unit":"قطعة"},{"id":"library-031","name":"دفتر رصور 5 الوان عربي","price":180000,"category":"notebooks","image":"images/library/library-031.png","unit":"قطعة"},{"id":"library-032","name":"مقص كورفت","price":49950,"category":"other","image":"images/library/library-032.png","unit":"قطعة"},{"id":"library-033","name":"تلوين رنا*12 قلم","price":79992,"category":"art","image":"images/library/library-033.png","unit":"قطعة"},{"id":"library-034","name":"مسطرة BOOKMARKسلكون","price":29970,"category":"geometry","image":"images/library/library-034.png","unit":"قطعة"},{"id":"library-035","name":"شنطة prime   .","price":1350000,"category":"bags","image":"images/library/library-035.png","unit":"قطعة"},{"id":"library-036","name":"دفتر 5الوان *80 ورقة","price":99990,"category":"notebooks","image":"images/library/library-036.png","unit":"قطعة"},{"id":"library-037","name":"قلم حبر كلارو احمر","price":19998,"category":"pens","image":"images/library/library-037.png","unit":"قطعة"},{"id":"library-038","name":"اجاندة لابوبو","price":199980,"category":"notebooks","image":"images/library/library-038.png","unit":"قطعة"},{"id":"library-039","name":"لعبة مجموعة عمار","price":630000,"category":"toys","image":"images/library/library-039.png","unit":"قطعة"},{"id":"library-040","name":"قلم مكتب","price":90000,"category":"pens","image":"images/library/library-040.png","unit":"قطعة"},{"id":"library-041","name":"تلوين شمع يلانغ*12قلم","price":149994,"category":"art","image":"images/library/library-041.png","unit":"قطعة"},{"id":"library-042","name":"مجموعة طيارة وسيارة","price":450000,"category":"toys","image":"images/library/library-042.png","unit":"قطعة"},{"id":"library-043","name":"قلم مع ممحاة","price":24999.93,"category":"pens","image":"images/library/library-043.png","unit":"قطعة"},{"id":"library-044","name":"مقلمة مدرسية 264351","price":199980,"category":"bags","image":"images/library/library-044.png","unit":"قطعة"},{"id":"library-045","name":"رول تسعير","price":99990,"category":"notebooks","image":"images/library/library-045.png","unit":"قطعة"},{"id":"library-046","name":"مكبسة مايبد","price":299999.7,"category":"other","image":"images/library/library-046.png","unit":"قطعة"},{"id":"library-047","name":"محاية استرا ناعمة","price":9999,"category":"pens","image":"images/library/library-047.png","unit":"قطعة"},{"id":"library-050","name":"قلم حبر بيك ازرق","price":19998,"category":"pens","image":"images/library/library-050.png","unit":"قطعة"},{"id":"library-051","name":"دفتر نوت","price":270000,"category":"notebooks","image":"images/library/library-051.png","unit":"قطعة"},{"id":"library-052","name":"شنطة سبورت اسود","price":1800000,"category":"bags","image":"images/library/library-052.png","unit":"قطعة"},{"id":"library-053","name":"قلم رصاص مع محاية vneeds","price":9999,"category":"pens","image":"images/library/library-053.png","unit":"قطعة"},{"id":"library-054","name":"مفكرة بريو *192 ورقة","price":99999.9,"category":"notebooks","image":"images/library/library-054.png","unit":"قطعة"},{"id":"library-055","name":"اجاندة  ستيتش","price":299970,"category":"notebooks","image":"images/library/library-055.png","unit":"قطعة"},{"id":"library-056","name":"wireless mouse ms9922","price":630000,"category":"electronics","image":"images/library/library-056.png","unit":"قطعة"},{"id":"library-057","name":"كوريكتير تايب*2","price":119970,"category":"pens","image":"images/library/library-057.png","unit":"قطعة"},{"id":"library-059","name":"علبة اقلام تلوين خشب يلانغ*12قلم","price":119997,"category":"art","image":"images/library/library-059.png","unit":"قطعة"},{"id":"library-060","name":"جبالة باطون لعبة","price":450000,"category":"toys","image":"images/library/library-060.png","unit":"قطعة"},{"id":"library-061","name":"كول يلانغ اصفر*25غ","price":39996,"category":"other","image":"images/library/library-061.png","unit":"قطعة"},{"id":"library-062","name":"قلم  لوح زيرو","price":39960,"category":"pens","image":"images/library/library-062.png","unit":"قطعة"},{"id":"library-064","name":"علبة اقلام رصاص كورفت*12","price":119997,"category":"pens","image":"images/library/library-064.png","unit":"قطعة"},{"id":"library-065","name":"w 920 mouse wireless","price":450000,"category":"electronics","image":"images/library/library-065.png","unit":"قطعة"},{"id":"library-066","name":"دفتر رسم صغير احمر","price":19998,"category":"notebooks","image":"images/library/library-066.png","unit":"قطعة"},{"id":"library-067","name":"كوركتار *5مم","price":79920,"category":"pens","image":"images/library/library-067.png","unit":"قطعة"},{"id":"library-069","name":"دفتر رصور 72 ورقة","price":90000,"category":"notebooks","image":"images/library/library-069.png","unit":"قطعة"},{"id":"library-071","name":"الة حاسبة kk837b","price":315000,"category":"geometry","image":"images/library/library-071.png","unit":"قطعة"},{"id":"library-073","name":"دفتر غلاف بلاسيك *48ورقة","price":45000,"category":"notebooks","image":"images/library/library-073.png","unit":"قطعة"},{"id":"library-074","name":"شنطة روضة بارلي","price":1350000,"category":"bags","image":"images/library/library-074.png","unit":"قطعة"},{"id":"library-075","name":"براية","price":14994,"category":"pens","image":"images/library/library-075.png","unit":"قطعة"},{"id":"library-076","name":"ورق تصوير*500ورق","price":450000,"category":"notebooks","image":"images/library/library-076.png","unit":"قطعة"},{"id":"library-077","name":"علبة هندسة ماب","price":90000,"category":"geometry","image":"images/library/library-077.png","unit":"قطعة"},{"id":"library-081","name":"قلم رصاص زيرو مع محاية","price":9999,"category":"pens","image":"images/library/library-081.png","unit":"قطعة"},{"id":"library-082","name":"دفتر 48*70غ مجلد حساب","price":34920,"category":"notebooks","image":"images/library/library-082.png","unit":"قطعة"},{"id":"library-084","name":"دفتر ديلوكس*50ورقة","price":24999.3,"category":"notebooks","image":"images/library/library-084.png","unit":"قطعة"},{"id":"library-086","name":"اجاندة صغيرة","price":69930,"category":"notebooks","image":"images/library/library-086.png","unit":"قطعة"},{"id":"library-087","name":"دفتر 48ورقة*70غمجلد","price":34992,"category":"notebooks","image":"images/library/library-087.png","unit":"قطعة"},{"id":"library-088","name":"دفتر*48ورقة فرنسيMPP","price":19980,"category":"notebooks","image":"images/library/library-088.png","unit":"قطعة"},{"id":"library-089","name":"براية دبدوب","price":49950,"category":"pens","image":"images/library/library-089.png","unit":"قطعة"},{"id":"library-091","name":"قلم كورفت اسود","price":14994,"category":"pens","image":"images/library/library-091.png","unit":"قطعة"},{"id":"library-092","name":"شوميز سحاب مع حلقة","price":45000,"category":"bags","image":"images/library/library-092.png","unit":"قطعة"},{"id":"library-094","name":"قلم حبر كلارو ازرق","price":19998,"category":"pens","image":"images/library/library-094.png","unit":"قطعة"},{"id":"library-095","name":"ورق كلاسور حساب","price":45000,"category":"notebooks","image":"images/library/library-095.png","unit":"قطعة"},{"id":"library-097","name":"دفتر رسم احمر كبير","price":49950,"category":"notebooks","image":"images/library/library-097.png","unit":"قطعة"},{"id":"library-098","name":"دفتر غلاف بلاستيك عربي *48 ورقة","price":45000,"category":"notebooks","image":"images/library/library-098.png","unit":"قطعة"},{"id":"library-099","name":"شنطة بارلي روضة","price":1350000,"category":"bags","image":"images/library/library-099.png","unit":"قطعة"},{"id":"library-103","name":"قلم ازرق بيانو","price":19980,"category":"pens","image":"images/library/library-103.png","unit":"قطعة"},{"id":"library-105","name":"دفتر 12 لون رصور","price":319950,"category":"notebooks","image":"images/library/library-105.png","unit":"قطعة"},{"id":"library-106","name":"قلم هايليتر كورفت","price":29997,"category":"pens","image":"images/library/library-106.png","unit":"قطعة"},{"id":"library-107","name":"شنطة prime  .","price":1350000,"category":"bags","image":"images/library/library-107.png","unit":"قطعة"},{"id":"library-108","name":"تلوين خشب mba*24","price":180000,"category":"art","image":"images/library/library-108.png","unit":"قطعة"},{"id":"library-109","name":"علبة اقلام الوان*12 قلم","price":270000,"category":"art","image":"images/library/library-109.png","unit":"قطعة"},{"id":"library-111","name":"مقلمة SPORT24","price":270000,"category":"bags","image":"images/library/library-111.png","unit":"قطعة"},{"id":"library-112","name":"قلم بيانو احمر","price":19999.8,"category":"pens","image":"images/library/library-112.png","unit":"قطعة"},{"id":"library-114","name":"الة حاسبة ستايفري ct-140e","price":675000,"category":"geometry","image":"images/library/library-114.png","unit":"قطعة"},{"id":"library-115","name":"براية دوبل مع محاية دايمرس","price":69993,"category":"pens","image":"images/library/library-115.png","unit":"قطعة"},{"id":"library-117","name":"علبة تلوين شمع*12 لون","price":45000,"category":"art","image":"images/library/library-117.png","unit":"قطعة"},{"id":"library-118","name":"علبة اقلام حبر ملونة*12 قلم","price":139995,"category":"pens","image":"images/library/library-118.png","unit":"قطعة"},{"id":"library-119","name":"كرتون ملون","price":49950,"category":"notebooks","image":"images/library/library-119.png","unit":"قطعة"},{"id":"library-120","name":"شنطة lovencar","price":2700000,"category":"bags","image":"images/library/library-120.png","unit":"قطعة"},{"id":"library-121","name":"قلم حبر كورفيت اخضر","price":14999.94,"category":"pens","image":"images/library/library-121.png","unit":"قطعة"},{"id":"library-122","name":"دفتر نوت زهري","price":270000,"category":"notebooks","image":"images/library/library-122.png","unit":"قطعة"},{"id":"library-131","name":"قلم حبر كلارو اسود","price":19980,"category":"pens","image":"images/library/library-131.png","unit":"قطعة"},{"id":"library-132","name":"دفتر 48 ورقة PAPEC","price":19980,"category":"notebooks","image":"images/library/library-132.png","unit":"قطعة"},{"id":"library-150","name":"قلم بيانو اسود","price":19980,"category":"pens","image":"images/library/library-150.png","unit":"قطعة"},{"id":"library-153","name":"دفتر رصور 5 الوان","price":99990,"category":"notebooks","image":"images/library/library-153.png","unit":"قطعة"},{"id":"library-158","name":"دفتر 6 الوان رصور","price":199980,"category":"notebooks","image":"images/library/library-158.png","unit":"قطعة"},{"id":"library-166","name":"قلم كورفت اخضر","price":14994,"category":"pens","image":"images/library/library-166.png","unit":"قطعة"},{"id":"library-185","name":"قلم حبر كورفيت ازرق فاتح","price":14994,"category":"pens","image":"images/library/library-185.png","unit":"قطعة"},{"id":"library-189","name":"دفتر مدرسي بلاستيك*48ورقة حساب","price":45000,"category":"notebooks","image":"images/library/library-189.png","unit":"قطعة"}];
 const libraryGrid = document.getElementById('libraryProductsGrid');
 const librarySearchInput = document.getElementById('libraryProductSearch');
 const librarySearchWrap = document.getElementById('librarySearchWrap');
+// فلاتر خاصة بقسم المكتبة فقط.
+const libraryFilterBar = document.querySelector('.library-filter')?.parentElement;
+if (libraryFilterBar) {
+  [{id:'toys',label:'ألعاب'},{id:'electronics',label:'إلكترونيات'},{id:'supplies',label:'مستلزمات'}].forEach(f => {
+    if (!libraryFilterBar.querySelector(`[data-filter="${f.id}"]`)) {
+      const btn = document.createElement('button');
+      btn.type='button'; btn.className='library-filter'; btn.dataset.filter=f.id; btn.textContent=f.label;
+      libraryFilterBar.appendChild(btn);
+    }
+  });
+}
 const libraryFilters = document.querySelectorAll('.library-filter');
 let libraryActiveFilter = 'all';
-const libraryTitles = {all:'كل منتجات المكتبة',books:'كتب وقصص',notebooks:'دفاتر وورق',pens:'أقلام وكتابة',bags:'شنط ومقالم',geometry:'هندسة وحساب',art:'رسم وأشغال',filing:'ملفات وتنظيم',other:'لوازم متنوعة'};
+const libraryTitles = {all:'كل منتجات المكتبة',books:'كتب وقصص',notebooks:'دفاتر وورق',pens:'أقلام وكتابة',bags:'شنط ومقالم',geometry:'هندسة وحساب',art:'رسم وأشغال',filing:'ملفات وتنظيم',other:'لوازم متنوعة',toys:'ألعاب',electronics:'إلكترونيات',supplies:'مستلزمات'};
 function renderLibraryProducts() {
   const query = librarySearchInput.value.trim().toLocaleLowerCase();
   const shown = libraryProducts.filter(p => (libraryActiveFilter === 'all' || p.category === libraryActiveFilter) && p.name.toLocaleLowerCase().includes(query));
@@ -4351,13 +4375,16 @@ function renderLibraryProducts() {
   shown.forEach((product, i) => {
     const card = document.createElement('article');
     card.className = 'market-product library-product';
-    card.innerHTML = `<div class="market-product-picture library-product-picture" aria-hidden="true"><span>${product.emoji}</span></div><h3></h3><p class="market-product-unit"></p><div class="market-product-bottom"><strong>${product.price.toLocaleString('en-US')} ل.ل</strong><button type="button" class="market-add library-add" aria-label="إضافة للسلة">+</button></div>`;
+    const libraryPicture = product.image
+      ? `<img src="${product.image}" alt="" loading="lazy" width="94" height="94" style="width:94px;height:94px;object-fit:contain;display:block">`
+      : '<span style="font-size:11px;color:#718096;text-align:center;line-height:1.5">الصورة قيد التجهيز</span>';
+    card.innerHTML = `<div class="market-product-picture library-product-picture" style="width:94px;height:94px;flex:0 0 94px;overflow:hidden;display:grid;place-items:center" aria-hidden="true">${libraryPicture}</div><h3></h3><p class="market-product-unit"></p><div class="market-product-bottom"><strong>${product.price.toLocaleString('en-US',{maximumFractionDigits:8})} ل.ل</strong><button type="button" class="market-add library-add" aria-label="إضافة للسلة">+</button></div>`;
     card.querySelector('h3').textContent = product.name;
     card.querySelector('.market-product-unit').textContent = product.unit;
     card.querySelector('.library-add').addEventListener('click', () => {
       const existing = marketCart.find(item => item.id === product.id);
       if (existing) existing.quantity++;
-      else marketCart.push({id:product.id,name:product.name,price:product.price,quantity:1});
+      else marketCart.push({id:product.id,name:product.name,price:product.price,image:product.image,quantity:1});
       updateMarketCart();
       showAddToCartToast();
     });
@@ -4700,159 +4727,330 @@ function showAddToCartToast() {
   bar.addEventListener('dragstart', e => e.preventDefault());
 })();
 
-// مطاعم Yalla Shop — لا تُدرج أسعار أو أصناف غير مؤكدة من المنيو الأصلي.
+// مطعم رعد: كل البيانات والأسعار مستخرجة من المنيو المرسلة.
+// غيّر image لكل صنف إلى مسار الصورة التي تضعها في مجلد images/raad.
 const restaurantsScreen = document.getElementById('restaurantsScreen');
-const restaurantNames = [
-    "Chicken Breast",
-    "Al Basha Shawarma",
-    "O~Clock",
-    "Kaak Al Ameer",
-    "Bread Top",
-    "Crunx Burgers",
-    "The Breakfast House",
-    "I Love Falafel",
-    "Al Shami Al Aseel",
-    "Al Malek Pastries",
-    "Al Sabil"
-];
-
-const restaurantPhotos = [
-    "images/chicken-breast1.jpg",    // تشيكن بريست
-    "images/al-basha.jpg",          // الباشا شاورما
-    "images/o-clock.jpg",           // أو كلوك
-    "images/kaak-al-ameer.jpg",     // كعك الأمير
-    "images/bread-top.jpg",        // بريد توب
-    "images/crunx-burgers.jpg",    // كرنكس برغر
-    "images/breakfast-house.jpg",   // بيت الفطور
-    "images/i-love-falafel.jpg",    // آي لوف فلافل
-    "images/al-shami.jpg",          // الشامي الأصيل
-    "images/al-malek.jpg",          // الملك للمعجنات
-    "images/al-sabil.jpg"           // السبيل
-];
-
-const chickenCategories = [
- ['sandwiches','سندويشات'],['burgers','برغر'],['shawarma','شاورما'],
- ['chicken','دجاج'],['meals','وجبات'],['pizza','بيتزا'],
- ['manakish','مناقيش وصواريه'],['hot-mezze','مقبلات ساخنة'],
- ['salads','سلطات وصوصات'],['drinks','مشروبات']
-];
-// أصناف وأسعار تشيكن بريست كما زوّدنا بها صاحب المتجر.
-const restaurantMenus = {'  Chicken Breast': {categories:chickenCategories,items:[
-    {id:'cb-1',name:'سندويش دجاج مشوي',price:450000,category:'sandwiches'},
-    {id:'cb-2',name:'شيكن ساب',price:650000,category:'sandwiches'},
-    {id:'cb-3',name:'ماكسيكانا',price:550000,category:'sandwiches'},
-    {id:'cb-4',name:'فرنسيسكو',price:600000,category:'sandwiches'},
-    {id:'cb-5',name:'فاهيتا',price:650000,category:'sandwiches'},
-    {id:'cb-6',name:'تويستر',price:550000,category:'sandwiches'},
-    {id:'cb-7',name:'طاووق',price:450000,category:'sandwiches'},
-    {id:'cb-8',name:'سكالوب',price:500000,category:'sandwiches'},
-    {id:'cb-9',name:'كرسبي',price:450000,category:'sandwiches'},
-    {id:'cb-10',name:'بطاطا',price:200000,category:'sandwiches'},
-    {id:'cb-11',name:'تاكيس برغر',price:800000,category:'burgers'},
-    {id:'cb-12',name:'ترياكي برغر',price:550000,category:'burgers'},
-    {id:'cb-13',name:'برغر شيكن برست',price:800000,category:'burgers'},
-    {id:'cb-14',name:'شيكن شيز برغر',price:400000,category:'burgers'},
-    {id:'cb-15',name:'شيز برغر',price:550000,category:'burgers'},
-    {id:'cb-16',name:'زينجر',price:450000,category:'burgers'},
-    {id:'cb-17',name:'برغر لحمة',price:550000,category:'burgers'},
-    {id:'cb-18',name:'شيكن برغر',price:400000,category:'burgers'},
-    {id:'cb-19',name:'شاورما مكسيكي',price:600000,category:'shawarma'},
-    {id:'cb-20',name:'شاورما تركي',price:650000,category:'shawarma'},
-    {id:'cb-21',name:'ساندويش شاورما',price:400000,category:'shawarma'},
-    {id:'cb-22',name:'وجبة بروستد عائلية',price:3000000,category:'chicken'},
-    {id:'cb-23',name:'وجبة كرسبي عائلية',price:2700000,category:'chicken'},
-    {id:'cb-24',name:'فروج مشوي عالفحم',price:1350000,category:'chicken'},
-    {id:'cb-25',name:'بروستد',price:1600000,category:'chicken'},
-    {id:'cb-26',name:'وجبة مكسيكانا',price:800000,category:'meals'},
-    {id:'cb-27',name:'وجبة كاساديا',price:800000,category:'meals'},
-    {id:'cb-28',name:'وجبة فاهيتا',price:800000,category:'meals'},
-    {id:'cb-29',name:'وجبة كرسبي',price:800000,category:'meals'},
-    {id:'cb-30',name:'وجبة شيكن شيز برغر',price:650000,category:'meals'},
-    {id:'cb-31',name:'وجبة زينجر',price:800000,category:'meals'},
-    {id:'cb-32',name:'وجبة همبرغر',price:800000,category:'meals'},
-    {id:'cb-33',name:'وجبة شيز برغر',price:800000,category:'meals'},
-    {id:'cb-34',name:'وجبة طاووق',price:800000,category:'meals'},
-    {id:'cb-35',name:'وجبة شيكن ساب',price:800000,category:'meals'},
-    {id:'cb-36',name:'وجبة اسكالوب',price:800000,category:'meals'},
-    {id:'cb-37',name:'وجبة شيكن برغر',price:650000,category:'meals'},
-    {id:'cb-38',name:'بيتزا ببروني كبير',price:1200000,category:'pizza'},
-    {id:'cb-39',name:'بيتزا ببروني وسط',price:1000000,category:'pizza'},
-    {id:'cb-40',name:'بيتزا ببروني صغير',price:700000,category:'pizza'},
-    {id:'cb-41',name:'بيتزا باربكيو كبير',price:1200000,category:'pizza'},
-    {id:'cb-42',name:'بيتزا باربكيو وسط',price:1000000,category:'pizza'},
-    {id:'cb-43',name:'بيتزا باربكيو صغير',price:700000,category:'pizza'},
-    {id:'cb-44',name:'بيتزا مارغريتا كبير',price:1000000,category:'pizza'},
-    {id:'cb-45',name:'بيتزا مارغريتا وسط',price:800000,category:'pizza'},
-    {id:'cb-46',name:'بيتزا مارغريتا صغير',price:500000,category:'pizza'},
-    {id:'cb-47',name:'بيتزا فاهيتا كبير',price:1200000,category:'pizza'},
-    {id:'cb-48',name:'بيتزا فاهيتا وسط',price:1000000,category:'pizza'},
-    {id:'cb-49',name:'بيتزا فاهيتا صغير',price:800000,category:'pizza'},
-    {id:'cb-50',name:'بيتزا خضار كبير',price:1000000,category:'pizza'},
-    {id:'cb-51',name:'بيتزا خضار وسط',price:800000,category:'pizza'},
-    {id:'cb-52',name:'بيتزا خضرة صغير',price:500000,category:'pizza'},
-    {id:'cb-53',name:'سواريه جبنة',price:450000,category:'manakish'},
-    {id:'cb-54',name:'سواريه بيتزا',price:450000,category:'manakish'},
-    {id:'cb-55',name:'زعتر سواريه',price:350000,category:'manakish'},
-    {id:'cb-56',name:'جبنة خضرة مع زعتر',price:220000,category:'manakish'},
-    {id:'cb-57',name:'منقوشة فاهيتا',price:500000,category:'manakish'},
-    {id:'cb-58',name:'زعتر خضرة',price:120000,category:'manakish'},
-    {id:'cb-59',name:'كعكة شيكن برست',price:180000,category:'manakish'},
-    {id:'cb-60',name:'جبنة خضرة',price:220000,category:'manakish'},
-    {id:'cb-61',name:'زعتر وجبنة',price:150000,category:'manakish'},
-    {id:'cb-62',name:'جبنة',price:200000,category:'manakish'},
-    {id:'cb-63',name:'زعتر',price:80000,category:'manakish'},
-    {id:'cb-64',name:'شيكن وينجز',price:450000,category:'hot-mezze'},
-    {id:'cb-65',name:'موزاريلا ستيك',price:450000,category:'hot-mezze'},
-    {id:'cb-66',name:'بطاطا ويدجز',price:450000,category:'hot-mezze'},
-    {id:'cb-67',name:'بطاطا',price:450000,category:'hot-mezze'},
-    {id:'cb-68',name:'كبيس',price:100000,category:'salads'},
-    {id:'cb-69',name:'ثوم',price:100000,category:'salads'},
-    {id:'cb-70',name:'صوص كوكتيل',price:100000,category:'salads'},
-    {id:'cb-71',name:'صوص مايونيز',price:100000,category:'salads'},
-    {id:'cb-72',name:'صوص افوكا',price:100000,category:'salads'},
-    {id:'cb-73',name:'سلطة مايونيز',price:100000,category:'salads'},
-    {id:'cb-74',name:'سيزر سلاد',price:600000,category:'salads'},
-    {id:'cb-75',name:'غريك سلاد',price:600000,category:'salads'},
-    {id:'cb-76',name:'شرقية سلاد',price:550000,category:'salads'},
-    {id:'cb-77',name:'مشروب غازي ( لتر وربع )',price:180000,category:'drinks'},
-    {id:'cb-78',name:'مشروب غازي (ليترين وربع)',price:220000,category:'drinks'},
-    {id:'cb-79',name:'مشروبات غازية (تنك)',price:100000,category:'drinks'},
-    {id:'cb-80',name:'مشروبات غازية قنينة',price:80000,category:'drinks'}
-]},
-  'الباشا شاورما': {categories:[['sandwiches','سندويشات'],['meals','وجبات'],['rice','أرز'],['drinks','مشروبات']],items:[
-    {id:'basha-1',name:'شاورما دجاج كبير',price:499500,category:'sandwiches'},
-    {id:'basha-2',name:'شاورما دجاج صغير',price:399600,category:'sandwiches'},
-    {id:'basha-3',name:'شاورما لحم كبير',price:599400,category:'sandwiches'},
-    {id:'basha-4',name:'شاورما لحم صغير',price:450000,category:'sandwiches'},
-    {id:'basha-5',name:'كريبسي',price:549900,category:'sandwiches'},
-    {id:'basha-6',name:'طاووق',price:549900,category:'sandwiches'},
-    {id:'basha-7',name:'فاهيتا',price:649800,category:'sandwiches'},
-    {id:'basha-8',name:'زنجر',price:549900,category:'sandwiches'},
-    {id:'basha-9',name:'شيز برغر',price:699300,category:'sandwiches'},
-    {id:'basha-10',name:'شيكن برغر',price:549900,category:'sandwiches'},
-    {id:'basha-11',name:'صحن بطاطا وسط',price:300600,category:'sandwiches'},
-    {id:'basha-12',name:'فروج مشوي على الفحم',price:1215000,category:'sandwiches'},
-    {id:'basha-13',name:'فلافل',price:150300,category:'sandwiches'},
-    {id:'basha-14',name:'صحن بطاطا كبير',price:602100,category:'sandwiches'},
-    {id:'basha-15',name:'فروج مشوي عالغاز',price:990000,category:'sandwiches'},
-    {id:'basha-16',name:'دزينة فلافل',price:200700,category:'sandwiches'},
-    {id:'basha-17',name:'وجبة شاورما فلت',price:900000,category:'meals'},
-    {id:'basha-18',name:'وجبة شاورما عربي',price:900000,category:'meals'},
-    {id:'basha-19',name:'وجبة كريسبي',price:990000,category:'meals'},
-    {id:'basha-20',name:'وجبة طاووق',price:990000,category:'meals'},
-    {id:'basha-21',name:'رز وسط سادة',price:299700,category:'rice'},
-    {id:'basha-22',name:'رز صغير سادة',price:149400,category:'rice'},
-    {id:'basha-23',name:'رز كبير سادة',price:599400,category:'rice'},
-    {id:'basha-24',name:'رز وسط كبير سادة',price:399600,category:'rice'},
-    {id:'basha-25',name:'رز وسط مع شاورما',price:649800,category:'rice'},
-    {id:'basha-26',name:'رز صغير مع شاورما',price:349200,category:'rice'},
-    {id:'basha-27',name:'رز كبير مع شاورما',price:1299600,category:'rice'},
-    {id:'basha-28',name:'رز وسط كبير مع شاورما',price:849600,category:'rice'},
-    {id:'basha-29',name:'كينزا كولا',price:99900,category:'drinks'},
-    {id:'basha-30',name:'كينزا كولا دايت',price:99900,category:'drinks'},
-    {id:'basha-31',name:'كينزا ليمون',price:99900,category:'drinks'},
-    {id:'basha-32',name:'عيران',price:99900,category:'drinks'},
-  ]}};
+const restaurantNames = ['RAAD Resto Café'];
+const restaurantPhotos = ['images/raad/cover.jpg']; // صورة بطاقة المطعم
+const restaurantMenus = {
+  'RAAD Resto Café': {
+    categories: [['sandwiches','السندويشات'],['burgers','البرغر'],['meals','الوجبات'],['pizza','البيتزا'],['sauces','الصوصات']],
+    items: [
+    {
+        "id": "raad-1",
+        "name": "فاهيتا",
+        "price": 600000,
+        "description": "دجاج، بصل، فليفلة، موزاريلا، صويا، أفوكا وصوص",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-01.jpg"
+    },
+    {
+        "id": "raad-2",
+        "name": "فرنسيسكو",
+        "price": 600000,
+        "description": "دجاج، جبنة، مايونيز، آيسبرغ، كبيس، ذرة",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-02.jpg"
+    },
+    {
+        "id": "raad-3",
+        "name": "فيلادلفيا",
+        "price": 700000,
+        "description": "ستيك لحم، فليفلة، بصل، جبنة، صويا، مايونيز",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-03.jpg"
+    },
+    {
+        "id": "raad-4",
+        "name": "كفتة",
+        "price": 400000,
+        "description": "كفتة، مايونيز، بندورة، كبيس، آيسبرغ",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-04.jpg"
+    },
+    {
+        "id": "raad-5",
+        "name": "طاووق",
+        "price": 400000,
+        "description": "طاووق، توم، كبيس، بطاطا",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-05.jpg"
+    },
+    {
+        "id": "raad-6",
+        "name": "كريسبي",
+        "price": 400000,
+        "description": "دجاج كريسبي، بطاطا، توم، كبيس، كوكتيل صوص",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-06.jpg"
+    },
+    {
+        "id": "raad-7",
+        "name": "بطاطا ساندويش",
+        "price": 250000,
+        "description": "بطاطا، سلطة ملفوف، كبيس، مايونيز، كاتشب، توم",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-07.jpg"
+    },
+    {
+        "id": "raad-8",
+        "name": "سجق",
+        "price": 400000,
+        "description": "سجق، جبنة، مايونيز، كبيس، بطاطا",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-08.jpg"
+    },
+    {
+        "id": "raad-9",
+        "name": "ستيك مشروم راب",
+        "price": 700000,
+        "description": "لحمة، بطاطا ستيك، جبنة موزاريلا، فطر، صوص الفطر",
+        "category": "sandwiches",
+        "image": "images/raad/sandwiches-09.jpg"
+    },
+    {
+        "id": "raad-10",
+        "name": "هامبرغر",
+        "price": 500000,
+        "description": "برغر لحم، تشيدر، بندورة، بصل مشوي، هاني ماسترد، خس",
+        "category": "burgers",
+        "image": "images/raad/burgers-10.jpg"
+    },
+    {
+        "id": "raad-11",
+        "name": "برغر المختار",
+        "price": 600000,
+        "description": "دبل برغر لحم، مكس جبنة، آيسبرغ، كبيس، باربكيو، مايونيز، بطاطا ستيك",
+        "category": "burgers",
+        "image": "images/raad/burgers-11.jpg"
+    },
+    {
+        "id": "raad-12",
+        "name": "لبناني برغر",
+        "price": 500000,
+        "description": "برغر لحم، مايونيز، كاتشب، بطاطا، سلطة ملفوف",
+        "category": "burgers",
+        "image": "images/raad/burgers-12.jpg"
+    },
+    {
+        "id": "raad-13",
+        "name": "تشيكن برغر",
+        "price": 500000,
+        "description": "برغر دجاج، جبنة، كوكتيل صوص، خس، كبيس",
+        "category": "burgers",
+        "image": "images/raad/burgers-13.jpg"
+    },
+    {
+        "id": "raad-14",
+        "name": "برغر فطر",
+        "price": 700000,
+        "description": "لحمة، قطعتان تشيدر، فطر، صوص الفطر",
+        "category": "burgers",
+        "image": "images/raad/burgers-14.jpg"
+    },
+    {
+        "id": "raad-15",
+        "name": "كريسبي وجبة",
+        "price": 700000,
+        "description": "4 قطع دجاج كريسبي، بطاطا، سلطة ملفوف، كاتشب، توم",
+        "category": "meals",
+        "image": "images/raad/meals-15.jpg"
+    },
+    {
+        "id": "raad-16",
+        "name": "طاووق وجبة",
+        "price": 700000,
+        "description": "سيخان طاووق، بطاطا، سلطة ملفوف، توم، كاتشب",
+        "category": "meals",
+        "image": "images/raad/meals-16.jpg"
+    },
+    {
+        "id": "raad-17",
+        "name": "موزاريلا ستيك",
+        "price": 300000,
+        "description": "4 حبات مع هاني ماسترد",
+        "category": "meals",
+        "image": "images/raad/meals-17.jpg"
+    },
+    {
+        "id": "raad-18",
+        "name": "علبة بطاطا",
+        "price": 200000,
+        "description": "بطاطا مقلية مع صوصات",
+        "category": "meals",
+        "image": "images/raad/meals-18.jpg"
+    },
+    {
+        "id": "raad-19",
+        "name": "بيتزا فاهيتا صغير",
+        "price": 500000,
+        "description": "صلصة بيتزا، دجاج، فليفلة، بصل، موزاريلا، أفوكا صوص",
+        "category": "pizza",
+        "image": "images/raad/pizza-19.jpg"
+    },
+    {
+        "id": "raad-20",
+        "name": "بيتزا فاهيتا وسط",
+        "price": 700000,
+        "description": "صلصة بيتزا، دجاج، فليفلة، بصل، موزاريلا، أفوكا صوص",
+        "category": "pizza",
+        "image": "images/raad/pizza-20.jpg"
+    },
+    {
+        "id": "raad-21",
+        "name": "بيتزا فاهيتا كبير",
+        "price": 1000000,
+        "description": "صلصة بيتزا، دجاج، فليفلة، بصل، موزاريلا، أفوكا صوص",
+        "category": "pizza",
+        "image": "images/raad/pizza-21.jpg"
+    },
+    {
+        "id": "raad-22",
+        "name": "بيتزا سجق صغير",
+        "price": 400000,
+        "description": "صلصة بيتزا، سجق، موزاريلا، سمنة",
+        "category": "pizza",
+        "image": "images/raad/pizza-22.jpg"
+    },
+    {
+        "id": "raad-23",
+        "name": "بيتزا سجق وسط",
+        "price": 600000,
+        "description": "صلصة بيتزا، سجق، موزاريلا، سمنة",
+        "category": "pizza",
+        "image": "images/raad/pizza-23.jpg"
+    },
+    {
+        "id": "raad-24",
+        "name": "بيتزا سجق كبير",
+        "price": 900000,
+        "description": "صلصة بيتزا، سجق، موزاريلا، سمنة",
+        "category": "pizza",
+        "image": "images/raad/pizza-24.jpg"
+    },
+    {
+        "id": "raad-25",
+        "name": "بيتزا مارغريتا صغير",
+        "price": 400000,
+        "description": "صلصة بيتزا، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-25.jpg"
+    },
+    {
+        "id": "raad-26",
+        "name": "بيتزا مارغريتا وسط",
+        "price": 600000,
+        "description": "صلصة بيتزا، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-26.jpg"
+    },
+    {
+        "id": "raad-27",
+        "name": "بيتزا مارغريتا كبير",
+        "price": 900000,
+        "description": "صلصة بيتزا، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-27.jpg"
+    },
+    {
+        "id": "raad-28",
+        "name": "بيتزا خضرة صغير",
+        "price": 400000,
+        "description": "صلصة بيتزا، موزاريلا، فليفلة، زيتون، ذرة، فطر",
+        "category": "pizza",
+        "image": "images/raad/pizza-28.jpg"
+    },
+    {
+        "id": "raad-29",
+        "name": "بيتزا خضرة وسط",
+        "price": 600000,
+        "description": "صلصة بيتزا، موزاريلا، فليفلة، زيتون، ذرة، فطر",
+        "category": "pizza",
+        "image": "images/raad/pizza-29.jpg"
+    },
+    {
+        "id": "raad-30",
+        "name": "بيتزا خضرة كبير",
+        "price": 900000,
+        "description": "صلصة بيتزا، موزاريلا، فليفلة، زيتون، ذرة، فطر",
+        "category": "pizza",
+        "image": "images/raad/pizza-30.jpg"
+    },
+    {
+        "id": "raad-31",
+        "name": "بيتزا بيبروني صغير",
+        "price": 400000,
+        "description": "صلصة بيتزا، بيبروني، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-31.jpg"
+    },
+    {
+        "id": "raad-32",
+        "name": "بيتزا بيبروني وسط",
+        "price": 600000,
+        "description": "صلصة بيتزا، بيبروني، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-32.jpg"
+    },
+    {
+        "id": "raad-33",
+        "name": "بيتزا بيبروني كبير",
+        "price": 900000,
+        "description": "صلصة بيتزا، بيبروني، موزاريلا",
+        "category": "pizza",
+        "image": "images/raad/pizza-33.jpg"
+    },
+    {
+        "id": "raad-34",
+        "name": "صوص كوكتيل",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-34.jpg"
+    },
+    {
+        "id": "raad-35",
+        "name": "صوص باربكيو",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-35.jpg"
+    },
+    {
+        "id": "raad-36",
+        "name": "صوص كاتشب",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-36.jpg"
+    },
+    {
+        "id": "raad-37",
+        "name": "صوص أفوكا صوص",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-37.jpg"
+    },
+    {
+        "id": "raad-38",
+        "name": "صوص دايناميت",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-38.jpg"
+    },
+    {
+        "id": "raad-39",
+        "name": "صوص هاني ماسترد",
+        "price": null,
+        "description": "السعر غير مذكور في المنيو",
+        "category": "sauces",
+        "image": "images/raad/sauces-39.jpg"
+    }
+]
+  }
+};
 let restaurantCurrent = null;
 let restaurantFilter = 'all';
 const restaurantSearch = document.getElementById('restaurantsSearch');
@@ -4879,18 +5077,7 @@ function renderRestaurantView() {
     return;
   }
 
-// اربط المنيو بمعرّف ثابت حسب ترتيب المطعم، وليس باسم العرض.
-// الأسماء الإنكليزية والصور تبقى كما هي حتى لو تغيّر الاسم لاحقاً.
-const restaurantMenuKeys = [
-    '  Chicken Breast', // المفتاح الأصلي موجود مع فراغات في البيانات
-    'الباشا شاورما'      // المفتاح الأصلي لمنيو الباشا
-];
-const restaurantIndex = restaurantNames.indexOf(restaurantCurrent);
-const menuKey = restaurantMenuKeys[restaurantIndex];
-const data = (menuKey && restaurantMenus[menuKey]) || {
-    categories: [],
-    items: []
-};
+  const data = restaurantMenus[restaurantCurrent] || {categories:[],items:[]};
   const tabs = document.getElementById('restaurantCategories');tabs.replaceChildren();
   const categories = [['all','الكل'],...data.categories];
   categories.forEach(([id,label])=>{
@@ -4901,22 +5088,49 @@ const data = (menuKey && restaurantMenus[menuKey]) || {
   const items=document.getElementById('restaurantMenuItems');items.replaceChildren();
   const shown=data.items.filter(x=>(restaurantFilter==='all'||x.category===restaurantFilter)&&x.name.toLocaleLowerCase().includes(query));
   shown.forEach(product=>{
-    const line=document.createElement('div');line.className='restaurant-item';
+    const isRaad = restaurantCurrent === 'RAAD Resto Café';
+    const line=document.createElement('div');line.className='restaurant-item'+(isRaad?' raad-product-card':'')+(isRaad && product.category === 'sauces'?' raad-sauce-card':'');
     const info=document.createElement('div');info.className='restaurant-item-info';
     const name=document.createElement('strong');name.textContent=product.name;
-    const price=document.createElement('span');price.textContent=Number(product.price).toLocaleString('en-US')+' ل.ل';
-    info.append(name,price);
-    const add=document.createElement('button');add.type='button';add.className='restaurant-add';add.textContent='+';add.setAttribute('aria-label','إضافة '+product.name+' إلى السلة');
+    const description=document.createElement('small');description.className='restaurant-item-description';description.textContent=product.description || '';
+    info.append(name);
+    if (product.description) info.append(description);
+    const picture=document.createElement('img');picture.className='restaurant-item-photo';picture.src=product.image;
+    picture.alt=product.name;picture.loading='lazy';
+    picture.onerror=()=>{picture.removeAttribute('src');picture.classList.add('restaurant-photo-empty');picture.alt='';};
+    const add=document.createElement('button');add.type='button';add.className='restaurant-add';add.textContent='+';
+    add.setAttribute('aria-label','إضافة '+product.name+' إلى السلة');
+    if (product.price == null && !(isRaad && product.category === 'sauces')) add.style.display='none';
+    let addedTimer;
     add.addEventListener('click',()=>{
+      if (product.price == null && !(isRaad && product.category === 'sauces')) return;
       if (typeof window.yallaAddRestaurantProduct !== 'function') {
-        console.error('Shopping cart is not ready yet');
-        return;
+        console.error('Shopping cart is not ready yet');return;
       }
       window.yallaAddRestaurantProduct(product, restaurantCurrent);
       add.classList.add('added');add.textContent='✓';
-      window.setTimeout(()=>{if(add.isConnected){add.classList.remove('added');add.textContent='+';}},650);
+      window.clearTimeout(addedTimer);
+      addedTimer=window.setTimeout(()=>{if(add.isConnected){add.classList.remove('added');add.textContent='+';}},800);
     });
-    line.append(info,add);items.appendChild(line);
+    if (isRaad) {
+      const photoFrame=document.createElement('div');photoFrame.className='raad-photo-frame';photoFrame.append(picture);
+      if (product.price != null || product.category === 'sauces') {
+        const actions=document.createElement('div');actions.className='raad-product-actions'+(product.category === 'sauces'?' raad-sauce-actions':'');
+        if (product.price != null) {
+          const price=document.createElement('span');price.className='raad-product-price';
+          price.textContent=Number(product.price).toLocaleString('en-US')+' ل.ل';
+          actions.append(price);
+        }
+        actions.append(add);info.append(actions);
+      }
+      line.append(photoFrame,info);
+    } else {
+      if (product.price != null) {
+        const price=document.createElement('span');price.textContent=Number(product.price).toLocaleString('en-US')+' ل.ل';info.append(price);
+      }
+      line.append(picture,info,add);
+    }
+    items.appendChild(line);
   });
   if(!shown.length){const empty=document.createElement('p');empty.className='restaurant-empty';empty.textContent=data.items.length?'ما في أصناف مطابقة للبحث بهالقسم.':'المنيو لهيدا المطعم ما انضافت بعد. ابعتلي الأصناف والأسعار لنضيفها من دون تخمين.';items.appendChild(empty);}
 }
