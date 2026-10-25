@@ -744,7 +744,7 @@ gharibGrid.appendChild(card);
             price: 	243000 ,
             unit: "   1ك ",
             category: "food",
-             image: "images/Nestlé Nesquik Wafer.png",
+             image: "images/Al-Murouj Sliced ​​Olives 1kg.png",
             pictureClass: "cleaning-picture"
           },
         {
