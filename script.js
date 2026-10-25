@@ -376,15 +376,7 @@ gharibGrid.appendChild(card);
 
     // أضف كل منتج مرة واحدة فقط من هنا
     const marketProducts = [
-        {
-            id: 1,
-            name: "  خبز فاهيتا عيسى   ",
-            price: 99990,
-              unit: " ربطة  ",
-            category: "Bakery",
-            image: "images/Issa.png",
-            pictureClass: "milk-picture"
-        },
+
         {
             id: 2,
             name: "حليب لاكتو  ",
@@ -442,21 +434,13 @@ gharibGrid.appendChild(card);
         {
             id: 8,
             name: "بسكويت كريمة  ",
-            price: 99000,
+            price: 350000,
             unit: "320 غ ",
             category: "Snacks",
              image: "images/Cream biscuits 320g.png",
             pictureClass: "cleaning-picture"
           },
-            {
-            id: 9,
-            name: "قلوبات الرفاعي    ",
-            price: 225000,
-            unit: " ",
-            category: "Snacks",
-             image: "images/Al-Rifai Nuts.png",
-            pictureClass: "cleaning-picture"
-         },
+
            {
             id: 10,
             name: "  لوتس بيسكوف     ",
@@ -464,16 +448,6 @@ gharibGrid.appendChild(card);
             unit: " *8",
             category: "Snacks",
              image: "images/Lotus Biscoff.png",
-            pictureClass: "cleaning-picture"
-         },
-
-             {
-            id: 12,
-            name: "  معتوق شوفان +ميكس     ",
-            price: 	59940,
-            unit: "  ",
-            category: "food",
-             image: "images/Maatouk Oats + Mix.png",
             pictureClass: "cleaning-picture"
          },
       {
@@ -530,7 +504,7 @@ gharibGrid.appendChild(card);
              image: "images/National Gum.png",
             pictureClass: "cleaning-picture"
          },
- {
+ /*{
             id: 19,
             name: " مكاديميا     ",
             price: 		399960	 ,
@@ -538,7 +512,7 @@ gharibGrid.appendChild(card);
             category: "spices",
              image: "images/Macadamia.png",
             pictureClass: "cleaning-picture"
-         },
+         },*/
  {
             id: 20,
             name: " اوزمو هابي بسكويت     ",
@@ -647,15 +621,6 @@ gharibGrid.appendChild(card);
              image: "images/Slaves.png",
             pictureClass: "cleaning-picture"
          },
- {
-            id: 33,
-            name: " قهوة سالي",
-            price: 		319950 ,
-            unit: "  400غ",
-            category: "food",
-             image: "images/Sally.png",
-            pictureClass: "cleaning-picture"
-          },
  {
             id: 34,
             name: "علبة قرقش ",
@@ -767,7 +732,7 @@ gharibGrid.appendChild(card);
  {
             id: 46,
             name: "  	ربطة خبز ",
-            price: 84996 ,
+            price: 90000 ,
             unit: "   ",
             category: "Bakery",
              image: "images/pack of bread.png",
@@ -900,15 +865,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
         {
-            id: 62,
-            name: "  	بوظة السلطان  ",
-            price: 360000 ,
-            unit: " 1ك ",
-            category: "IceCream",
-             image: "images/Sultan Ice Cream.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
             id: 63,
             name: "  	قداحة ضو  ",
             price:	19980 ,
@@ -951,15 +907,6 @@ gharibGrid.appendChild(card);
             unit: "  2500غ ",
             category: "food",
              image: "images/Corn1.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-            id: 68,
-            name: "   قرقش شوكولا ",
-            price: 259920 ,
-            unit: "  علبة ",
-            category: "food",
-             image: "images/Qarqash Chocolate.png",
             pictureClass: "cleaning-picture"
         },
             {
@@ -1120,7 +1067,7 @@ gharibGrid.appendChild(card);
     {
             id: 80,
             name: "  خبز تنور مرقوق ",
-            price: 49950 ,
+            price: 90000 ,
             unit: "   ",
             category: "Bakery",
              image: "images/tandoor bread.png",
@@ -1336,7 +1283,7 @@ gharibGrid.appendChild(card);
 {
              id: 103,
             name: " دونات كريسبي",
-            price: 59994 ,
+            price: 50000 ,
             unit: "   ",
             category: "Snacks",
              image: "images/Krispy Donut.png",
@@ -1507,7 +1454,7 @@ gharibGrid.appendChild(card);
 {
              id: 122,
             name: " 	صندوق معتوق ساندويش كريمة ",
-            price: 427500,
+            price: 100000,
             unit: "  ",
             category: "Snacks",
              image: "images/Maatouk Cream.png",
@@ -1568,15 +1515,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 129,
-            name: " 	اوسلو كيك ريد لوف  ",
-            price: 20700 ,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Oslo Red Love Cake.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 130,
             name: " 	معالق بلاستيك ",
             price: 59994 ,
@@ -1633,7 +1571,7 @@ gharibGrid.appendChild(card);
 {
              id: 136,
             name: " 	زيت انجي ",
-            price: 	679950 ,
+            price: 	850000 ,
             unit: "    5 ليتر  ",
             category: "food",
             image: "images/Inji Oil.png",
@@ -1646,15 +1584,6 @@ gharibGrid.appendChild(card);
             unit: "      ",
             category: "Snacks",
             image: "images/Chupa Chups Lollipop.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 138,
-            name: " 	توست محمص شمسين",
-            price: 	108000 ,
-            unit: "      ",
-            category: "Bakery",
-            image: "images/Shamsin Toasted Bread (Toast).png",
             pictureClass: "cleaning-picture"
         },
 
@@ -1674,15 +1603,6 @@ gharibGrid.appendChild(card);
             unit: "  400غ  ",
             category: "food",
             image: "images/Regular Khodri Dates.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 141,
-            name: " 	  سكر  لوباس ",
-            price: 	409950 ,
-            unit: "  5ك ",
-            category: "food",
-            image: "images/Lubas sugar (5 kg).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2262,15 +2182,6 @@ gharibGrid.appendChild(card);
             image: "images/Quality Pickled Cucumbers 1050g.png",
             pictureClass: "cleaning-picture"
         },
-        {
-             id: 206,
-            name: "  حمص باليس فود  ",
-            price:	121500,
-            unit: "   900غ  ",
-            category: "food",
-            image: "images/Quality Pickled Cucumbers 1050g.png",
-            pictureClass: "cleaning-picture"
-        },
          {
              id: 207,
             name: "  اكوافينا  ",
@@ -2346,7 +2257,7 @@ gharibGrid.appendChild(card);
 {
              id: 215,
             name: "  	بيضة كيندر جوي",
-            price:	74970	,
+            price:	90000	,
             unit: "    ",
             category: "Snacks",
             image: "images/Kinder Joy Egg.png",
@@ -2739,24 +2650,6 @@ gharibGrid.appendChild(card);
             image: "images/Pril 3L + Der General 750ml.png",
             pictureClass: "cleaning-picture"
         },
-   {
-             id: 261,
-            name: "  	برسيل جيل",
-            price:	599940,
-            unit: " 5ك",
-            category: "cleaning",
-            image: "images/Persil Gel.png",
-            pictureClass: "cleaning-picture"
-        },
-  {
-             id: 262,
-            name: "  	برسيل جيل",
-            price:	599940,
-            unit: " 5ك",
-            category: "cleaning",
-            image: "images/Persil Gel.png",
-            pictureClass: "cleaning-picture"
-        },
   {
              id: 263,
             name: "  مربى فريز   مروج",
@@ -2814,7 +2707,7 @@ gharibGrid.appendChild(card);
 {
              id: 269,
             name: " حليب كانديا خالي الدسم",
-            price:		169992	,
+            price:		180000	,
             unit: " 1ل	",
             category: "dairy",
             image: "images/Candia Skimmed Milk.png",
@@ -2942,7 +2835,7 @@ gharibGrid.appendChild(card);
             name: " 	 ليبو  عائلي",
             price:	159993,
             unit: "  184غ ",
-            category: "drinks",
+            category: "cleaning",
             image: "images/Lipo 184g (Family Size).png",
             pictureClass: "cleaning-picture"
         },
@@ -2976,9 +2869,9 @@ gharibGrid.appendChild(card);
         {
              id: 287,
             name: " 	كري كري",
-            price:	54990,
+            price:	55000,
             unit: "	  	 200غ	",
-            category: "dairy",
+            category: "Snacks",
             image: "images/Kri Kri 200g.png",
             pictureClass: "cleaning-picture"
         },
