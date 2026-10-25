@@ -3061,7 +3061,7 @@ gharibGrid.appendChild(card);
             price:	160000,
             unit: "	 750م  ",
             category: "cleaning",
-            image: "images/X-Smart Conditioner",
+            image: "images/X-Smart Conditioner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3261,12 +3261,403 @@ gharibGrid.appendChild(card);
             category: "cleaning",
             image: "images/Savana soap (yellow).png",
             pictureClass: "cleaning-picture"
+        },
+{
+             id: 331,
+            name: " مسحوق غسيل لاتس ",
+            price:	1050000,
+            unit: "	4 كيلو ",
+            category: "cleaning",
+            image: "images/Lats laundry powder.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 332,
+            name: " برسيل ",
+            price:	900000,
+            unit: "	4 كيلو ",
+            category: "cleaning",
+            image: "images/Persil.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 333,
+            name: " بونكس  ",
+            price:	750000,
+            unit: "	4 كيلو ",
+            category: "cleaning",
+            image: "images/Bonux 4 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 334,
+            name: " بونكس  ",
+            price:	310000,
+            unit: "	1.5 ك   ",
+            category: "cleaning",
+            image: "images/Bonux 1.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 335,
+            name: " مدار  ",
+            price:	1370000,
+            unit: "	7 كيلو    ",
+            category: "cleaning",
+            image: "images/madar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 336,
+            name: " اوكسي  ",
+            price:	1530000,
+            unit: "	10 كيلو    ",
+            category: "cleaning",
+            image: "images/Oxy.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 337,
+            name: " اريال   ",
+            price:	990000,
+            unit: "	4 كيلو    ",
+            category: "cleaning",
+            image: "images/Ariel 4 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 338,
+            name: " حياة    ",
+            price:	1400000,
+            unit: "	9 كيلو    ",
+            category: "cleaning",
+            image: "images/Hayat 9 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 339,
+            name: " حياة    ",
+            price:	650000,
+            unit: "	4 كيلو    ",
+            category: "cleaning",
+            image: "images/4-Kilogram Life.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 340,
+            name: " افراح     ",
+            price:	1350000,
+            unit: "	8 كيلو    ",
+            category: "cleaning",
+            image: "images/Afrah 8 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 341,
+            name: " برسيل      ",
+            price:	1710000,
+            unit: "	10 كيلو    ",
+            category: "cleaning",
+            image: "images/Persil 10 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 342,
+            name: " انفنتي       ",
+            price:	750000,
+            unit: "	4 كيلو    ",
+            category: "cleaning",
+            image: "images/Infiniti 4K.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 343,
+            name: " بيروس        ",
+            price:	660000,
+            unit: "	6 كيلو    ",
+            category: "cleaning",
+            image: "images/Infiniti 4K.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 344,
+            name: " اريال         ",
+            price:	171000,
+            unit: "	10 كيلو    ",
+            category: "cleaning",
+            image: "images/Ariel 10 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 345,
+            name: " لاتس سائل          ",
+            price:	750000,
+            unit: "	2 كيلو    ",
+            category: "cleaning",
+            image: "images/Liquid Latex 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 346,
+            name: " لاتس سائل          ",
+            price:	1125000,
+            unit: "	5 ليتر  ",
+            category: "cleaning",
+            image: "images/Liquid Latex 5 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 347,
+            name: "   برسيل سائل          ",
+            price:	650000,
+            unit: "	5 كيلو  ",
+            category: "cleaning",
+            image: "images/Persil liquid 5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 348,
+            name: " سانيتا سائل       ",
+            price:	630000,
+            unit: "	5 كيلو  ",
+            category: "cleaning",
+            image: "images/Sanita liquid,.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 349,
+            name: "   ايبيزا سائل       ",
+            price:	300000,
+            unit: "	6 كيلو  ",
+            category: "cleaning",
+            image: "images/Ibiza liquid, 6 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 350,
+            name: "  اومو سائل",
+            price:	4250000,
+            unit: "	2.5 ليتر    ",
+            category: "cleaning",
+            image: "images/OMO liquid 2.5 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 351,
+            name: " حياة ",
+            price:	330000,
+            unit: "	3 ليتر    ",
+            category: "cleaning",
+            image: "images/Life 3 Liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 352,
+            name: " اريال سائل ",
+            price:	630000,
+            unit: "	5 كيلو    ",
+            category: "cleaning",
+            image: "images/Ariel liquid detergent 5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 353,
+            name: " ديمكس ",
+            price:	300000,
+            unit: "	3 ليتر     ",
+            category: "cleaning",
+            image: "images/Dymex.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 354,
+            name: " معطر غسيل كومفورت ",
+            price:	400000,
+            unit: "	3 ليتر     ",
+            category: "cleaning",
+            image: "images/Comfort Laundry Fragrance 3L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 355,
+            name: " معطر غسيل داوني",
+            price:	480000,
+            unit: "	3 ليتر     ",
+            category: "cleaning",
+            image: "images/Downy laundry scent booster.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 356,
+            name: " معطر سانيتا",
+            price:	470000,
+            unit: "	3 ليتر     ",
+            category: "cleaning",
+            image: "images/Sanita perfume.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 357,
+            name: " داوني مركز",
+            price:	570000,
+            unit: "	1.5 ليتر     ",
+            category: "cleaning",
+            image: "images/Downy concentrate 1.5 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 358,
+            name: " معطر كومفورت",
+            price:	340000,
+            unit: "	2 ليتر     ",
+            category: "cleaning",
+            image: "images/Comfort perfume.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 359,
+            name: " بريل  سائل جلي  ",
+            price:	120000,
+            unit: "	650 مل      ",
+            category: "cleaning",
+            image: "images/Pril Dishwashing Liquid.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 360,
+            name: " بريل  سائل جلي  ",
+            price:	250000,
+            unit: "	1.25 ليتر      ",
+            category: "cleaning",
+            image: "images/Pril dishwashing liquid 1.25 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 361,
+            name: " فيري  ",
+            price:	320000,
+            unit: "	800 مل      ",
+            category: "cleaning",
+            image: "images/Fairy 800 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 362,
+            name: " فيري جامبو  ",
+            price:	400000,
+            unit: "	      ",
+            category: "cleaning",
+            image: "images/Very Jumbo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 363,
+            name: " سائل جلي كرمل ",
+            price:	100000,
+            unit: "	  مل 650    ",
+            category: "cleaning",
+            image: "images/Karmel Dishwashing Liquid 650 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 364,
+            name: " سائل جلي افراح",
+            price:	100000,
+            unit: "	  عرض مع سفنجة جلي   ",
+            category: "cleaning",
+            image: "images/Afrah Dishwashing Liquid.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 365,
+            name: " سائل جلي ديمكس",
+            price:	170000,
+            unit: "	  1.5 ليتر   ",
+            category: "cleaning",
+            image: "images/Dimex dishwashing liquid 1.5 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 366,
+            name: " سائل جلي ديمكس",
+            price:	850000,
+            unit: "	  700 مل   ",
+            category: "cleaning",
+            image: "images/Dimex Dishwashing Liquid 700.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 367,
+            name: "معجون مدهش للجلي",
+            price:	300000,
+            unit: "	  1600غ  ",
+            category: "cleaning",
+            image: "images/Amazing Dishwashing Paste.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 368,
+            name: "    سائل جلي لاتس",
+            price:	130000,
+            unit: "	   1 ليتر   ",
+            category: "cleaning",
+            image: "images/Lats Dishwashing Liquid.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 369,
+            name: "    سائل جلي وزير ",
+            price:	350000,
+            unit: "	   3 ليتر   ",
+            category: "cleaning",
+            image: "images/Wazir dishwashing liquid, 3 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 370,
+            name: " بريل اصلي ",
+            price:	600000,
+            unit: "	   3 ليتر   ",
+            category: "cleaning",
+            image: "images/Original Pril, 3 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 371,
+            name: " ديمكس سائل جلي",
+            price:	340000,
+            unit: "	   3.7 ليتر   ",
+            category: "cleaning",
+            image: "images/Dimex Dishwashing Liquid 3.7 Liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 372,
+            name: " منظفات حياة مع سطل",
+            price:	900000,
+            unit: "	   ",
+            category: "cleaning",
+            image: "images/Hayat cleaning supplies with a bucket.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 373,
+            name: " يس متعدد الاستعمالات ",
+            price:	145000,
+            unit: "	   ",
+            category: "cleaning",
+            image: "images/Multi-purpose.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 374,
+            name: " لاتس      ",
+            price:	130000,
+            unit: "	300غ   ",
+            category: "cleaning",
+            image: "images/Lats 300g.png",
+            pictureClass: "cleaning-picture"
         }
-
-
-
-
-
     ];
 
     let activeMarketFilter = "all";
