@@ -2920,3 +2920,14 @@ select {
         height: 98px !important;
     }
 }
+
+/* أداء القوائم الكبيرة: لا ترسم البطاقات البعيدة عن الشاشة */
+.market-products-grid > .market-product,
+.gharib-products-grid > .gharib-product-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 215px;
+}
+.market-product-picture img, .gharib-product-image img, .library-product-picture img {
+  max-width: 100%;
+  object-fit: contain;
+}
