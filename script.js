@@ -424,15 +424,7 @@ gharibGrid.appendChild(card);
             image: "images/White Pepper 100g.png",
             pictureClass: "rice-picture"
         },
-        {
-            id: 7,
-            name: "نانا مكسي زهري  ",
-            price: 69993,
-            unit: " مربع*10",
-          category: "cleaning",
-           image: "images/Nana pink square maxi dress.png",
-            pictureClass: "juice-picture"
-        },
+
         {
             id: 8,
             name: "بسكويت كريمة  ",
@@ -452,24 +444,6 @@ gharibGrid.appendChild(card);
              image: "images/Lotus Biscoff.png",
             pictureClass: "cleaning-picture"
          },
-      {
-            id: 13,
-            name: "  برسيل سوري مسحوق للغسيل    ",
-            price: 	720000,
-            unit: " 5ك ",
-            category: "cleaning",
-             image: "images/Persil Syrian Laundry Powder 5kg.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 14,
-            name: "  برايفت ماكسي    ",
-            price: 		69993,
-            unit: "  *8 ",
-            category: "cleaning",
-             image: "images/Private Maxi.png",
-            pictureClass: "cleaning-picture"
-          },
  {
             id: 15,
             name: " شاي النحلة    ",
@@ -506,15 +480,6 @@ gharibGrid.appendChild(card);
              image: "images/National Gum.png",
             pictureClass: "cleaning-picture"
          },
- /*{
-            id: 19,
-            name: " مكاديميا     ",
-            price: 		399960	 ,
-            unit: "  500غ ",
-            category: "spices",
-             image: "images/Macadamia.png",
-            pictureClass: "cleaning-picture"
-         },*/
  {
             id: 20,
             name: " اوزمو هابي بسكويت     ",
@@ -531,87 +496,6 @@ gharibGrid.appendChild(card);
             unit: " 1ك",
             category: "dairy",
              image: "images/Liban Lait Milk.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 22,
-            name: " اكياس تغليف سجاد    ",
-            price: 		99000	 ,
-            unit: "  ",
-            category: "cleaning",
-             image: "images/bags.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 23,
-            name: " اجاكس   ",
-            price: 		199998	 ,
-            unit: " 1.25ليتر ",
-            category: "cleaning",
-             image: "images/Ajax.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 24,
-            name: " زيت سليم   ",
-            price: 		830000	 ,
-            unit: "4 ليتر",
-            category: "food",
-             image: "images/Slim Oil.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 25,
-            name: " نسكافيه غولد نجار  ",
-            price: 		589995	 ,
-            unit: " 200غ ",
-            category: "food",
-             image: "images/Nescafé Gold Najjar.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 26,
-            name: " دي يو اكس ",
-            price: 		171000	 ,
-            unit: " 150مل",
-            category: "cleaning",
-             image: "images/AXE.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 27,
-            name: " دانيال مع هيل ",
-            price: 		630000 ,
-            unit: " 400غ ",
-            category: "food",
-             image: "images/Daniel.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 28,
-            name: " شامبو برت بلاس",
-            price: 		225000 ,
-            unit: "  400مل",
-            category: "cleaning",
-             image: "images/Pert Plus.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 29,
-            name: " ظرف تورابيكا كابتشينو ",
-            price: 		19980 ,
-            unit: "   ",
-            category: "food",
-             image: "images/Torabica cappuccino.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 30,
-            name: " كبش قرنفل حب ",
-            price: 		162000 ,
-            unit: " 100غ",
-            category: "spices",
-             image: "images/Whole Cloves.png",
             pictureClass: "cleaning-picture"
          },
  {
@@ -642,15 +526,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
          },
  {
-            id: 36,
-            name: "    شفاطة ماجيك مع راس متحرك  ",
-            price: 450000,
-            unit: "  ",
-            category: "cleaning",
-             image: "images/Magic.png",
-            pictureClass: "cleaning-picture"
-          },
- {
             id: 37,
             name: "    اندومي كاري دجاج ",
             price: 24930,
@@ -669,15 +544,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
           },
  {
-            id: 39,
-            name: "   مسحوق الغسيل حياة",
-            price: 619992,
-            unit: " 4ك",
-            category: "cleaning",
-             image: "images/Life washing powder.png",
-            pictureClass: "cleaning-picture"
-        },
- {
             id: 40,
             name: "  باكمايا خميرة فورية ",
             price: 90000,
@@ -686,15 +552,6 @@ gharibGrid.appendChild(card);
              image: "images/Pakmaya Instant Yeast.png",
             pictureClass: "cleaning-picture"
          },
- {
-            id: 41,
-            name: "  اكس سمارت سائل يدين  ",
-            price: 214200,
-            unit: "   4 ليتر ",
-            category: "cleaning",
-             image: "images/X-Smart Hand Soap.png",
-            pictureClass: "cleaning-picture"
-          },
  {
             id: 42,
             name: "  لمبة توفيلر ",
@@ -785,24 +642,6 @@ gharibGrid.appendChild(card);
              image: "images/Tropicana Slice.png",
             pictureClass: "cleaning-picture"
          },
-  {
-            id: 52,
-            name: " سائل غسيل سانيتا ",
-            price: 630000 ,
-            unit: " 5ك ",
-            category: "cleaning",
-             image: "images/Sanita washing liquid.png",
-            pictureClass: "cleaning-picture"
-         },
-  {
-            id: 53,
-            name: " شامبو نورا ",
-            price: 199980 ,
-            unit: " 1250 م",
-            category: "cleaning",
-             image: "images/Nora Shampoo.png",
-            pictureClass: "cleaning-picture"
-        },
 {
             id: 54,
             name: " دف ميلكا اوريو",
@@ -831,24 +670,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-            id: 57,
-            name: "   لزيق جرح    ",
-            price: 90000 ,
-            unit: " 100 حبة ",
-            category: "cleaning",
-             image: "images/Bandages.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-            id: 59,
-            name: "  بطارية انرجيزر   ",
-            price: 49500 ,
-            unit: "  ",
-            category: "Electrical",
-             image: "images/Energizer Battery.png",
-            pictureClass: "cleaning-picture"
-        },
-{
             id: 60,
             name: "  ديمة سوفتي  ",
             price: 34999 ,
@@ -866,42 +687,6 @@ gharibGrid.appendChild(card);
              image: "images/President Cheese.png",
             pictureClass: "cleaning-picture"
         },
-        {
-            id: 63,
-            name: "  	قداحة ضو  ",
-            price:	19980 ,
-            unit: "  ",
-            category: "Electrical",
-             image: "images/Lighter.png",
-            pictureClass: "cleaning-picture"
-        },
-          {
-            id: 64,
-            name: "  اكياس نفايات اسود بيرلا  ",
-            price: 149994 ,
-            unit: " 20* ",
-            category: "cleaning",
-             image: "images/Perla Black.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-            id: 65,
-            name: "  جنرال معطر حمامات  ",
-            price: 157500 ,
-            unit: "  2+1 ",
-            category: "cleaning",
-             image: "images/General Bathroom.png",
-            pictureClass: "cleaning-picture"
-        },
-          {
-            id: 66,
-            name: " لمبة برم ",
-            price: 180000 ,
-            unit: "   30 W ",
-            category: "Electrical",
-             image: "images/LED Bulb 30W.png",
-            pictureClass: "cleaning-picture"
-        },
     {
             id: 67,
             name: "  ذرة  ",
@@ -909,15 +694,6 @@ gharibGrid.appendChild(card);
             unit: "  2500غ ",
             category: "food",
              image: "images/Corn1.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-            id: 69,
-            name: "  انفنتي سائل غسيل ",
-            price: 360000 ,
-            unit: "   3 لتر ",
-            category: "cleaning",
-             image: "images/Infinity Laundry Detergent.png",
             pictureClass: "cleaning-picture"
         },
             {
@@ -936,15 +712,6 @@ gharibGrid.appendChild(card);
             unit: "  50ك ",
             category: "food",
              image: "images/Flour.png",
-            pictureClass: "cleaning-picture"
-        },
-                {
-            id: 72,
-            name: "  	مكنة حلاقة بيك نسائي",
-            price:	135000,
-            unit: "  5+1",
-            category: "cleaning",
-             image: "images/Women’s Razor.png",
             pictureClass: "cleaning-picture"
         },
                 {
@@ -1010,16 +777,6 @@ gharibGrid.appendChild(card);
              image: "images/Rinda Juice.png",
             pictureClass: "cleaning-picture"
         },
-    
-        {
-            id: 80,
-            name: "  فرشاة اسنان اطفال ",
-            price: 81000 ,
-            unit: "   ",
-            category: "cleaning",
-             image: "images/Children's toothbrush.png",
-            pictureClass: "cleaning-picture"
-        },
     {
             id: 81,
             name: "  بيتزوللو لازانيا ",
@@ -1046,24 +803,6 @@ gharibGrid.appendChild(card);
             unit: "  550غ",
             category: "dairy",
              image: "images/Turkish Mayonnaise.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 78,
-            name: "  صابون بالموليف ",
-            price: 59994 ,
-            unit: "  90غ",
-            category: "cleaning",
-             image: "images/Palmolive Soap.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 79,
-            name: "  كولونيا ",
-            price: 119970 ,
-            unit: "  125مل",
-            category: "cleaning",
-             image: "images/Cologne.png",
             pictureClass: "cleaning-picture"
         },
     {
@@ -1102,15 +841,6 @@ gharibGrid.appendChild(card);
              image: "images/Yurdum Tomato.png",
             pictureClass: "cleaning-picture"
         },
-       {
-            id: 84,
-            name: "  شامبو اكس سمارت  ",
-            price: 157500 ,
-            unit: "  750 مل ",
-            category: "cleaning",
-             image: "images/X-Smart Shampoo.png",
-            pictureClass: "cleaning-picture"
-        },
            {
             id: 85,
             name: "  كاتشاب اكسترا  عصارة ",
@@ -1118,24 +848,6 @@ gharibGrid.appendChild(card);
             unit: "  800غ",
             category: "food",
              image: "images/Extra Ketchup.png",
-            pictureClass: "cleaning-picture"
-        },
-               {
-            id: 85,
-            name: "  شامبو برت بلاس",
-            price:	289998 ,
-            unit: " 600مل",
-            category: "cleaning",
-             image: "images/Pert Plus.png",
-            pictureClass: "cleaning-picture"
-        },
-          {
-            id: 86,
-            name: "  شامبو برت بلاس",
-            price:	289998 ,
-            unit: " 600مل",
-            category: "cleaning",
-             image: "images/Pert Plus.png",
             pictureClass: "cleaning-picture"
         },
           {
@@ -1174,24 +886,6 @@ gharibGrid.appendChild(card);
              image: "images/Lipton Tea.png",
             pictureClass: "cleaning-picture"
         },
-  {
-             id: 91,
-            name: " 	برايفت ماكسي بوكيت   ",
-            price:  78750,
-            unit: "  *8 ",
-            category: "cleaning",
-             image: "images/Private Maxi.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 92,
-            name: " السفير محارم  ",
-            price:  31500,
-            unit: " 100غ",
-            category: "cleaning",
-             image: "images/Safeer Tissues.png",
-            pictureClass: "cleaning-picture"
-        },
  {
              id: 93,
             name: " ريماس محاشي ",
@@ -1217,15 +911,6 @@ gharibGrid.appendChild(card);
             unit: "  ",
             category: "Bakery",
              image: "images/Markook bread.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 96,
-            name: " 	كومفورت منعم للملابس",
-            price:  349992,
-            unit: " 2 ليتر ",
-            category: "cleaning",
-             image: "images/Comfort Fabric.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -1292,15 +977,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 105,
-            name: " سيف مقطع ",
-            price: 40500 ,
-            unit: "  *12 ",
-            category: "cleaning",
-             image: "images/Scouring Pad.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 106,
             name: " 	ظرف حليب ديليش",
             price: 	15750 ,
@@ -1325,24 +1001,6 @@ gharibGrid.appendChild(card);
             unit: "    ",
             category: "Snacks",
              image: "images/Al-Bani.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 109,
-            name: " 	 فيتال اكياس تفريز سحاب",
-            price: 81000 ,
-            unit: "   *18  ",
-            category: "cleaning",
-             image: "images/Freezing.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 110,
-            name: " 	 صابون تي شو+ديتول غالون",
-            price:202500 ,
-            unit: "   4 ليتر  ",
-            category: "cleaning",
-             image: "images/T-Show + Dettol Soap.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -1427,15 +1085,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 120,
-            name: " شامبو السادا ",
-            price: 239994,
-            unit: " 750مل",
-            category: "cleaning",
-             image: "images/Al-Sada.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 121,
             name: " بيغ ام ميغا  بندق  ",
             price: 15750,
@@ -1505,15 +1154,6 @@ gharibGrid.appendChild(card);
             unit: " *1ك	  ",
             category: "food",
             image: "images/Istanbuli Baladi.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 130,
-            name: " 	معالق بلاستيك ",
-            price: 59994 ,
-            unit: "  *50  ",
-            category: "cleaning",
-            image: "images/Plastic Spoons.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -1661,79 +1301,6 @@ gharibGrid.appendChild(card);
             image: "images/Darina Juice Sachet.png",
             pictureClass: "cleaning-picture"
         },
-
-{
-             id: 149,
-            name: "  	صابون جيف يدين  ",
-            price: 24993 ,
-            unit: "  76غ ",
-            category: "cleaning",
-            image: "images/Cif Hand Soap.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 150,
-            name: "  	الفيف  دريم لونغ ",
-            price:349992,
-            unit: "  400 مل",
-            category: "cleaning",
-            image: "images/Elvive Dream Long.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 151,
-            name: "  	كيس بالون ",
-            price:99990,
-            unit: "  *100",
-            category: "cleaning",
-            image: "images/Bag of balloons.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 152,
-            name: "  		فرشاة اسنان اورال ب سوفت",
-            price:49995,
-            unit: "   ",
-            category: "cleaning",
-            image: "images/Oral-B Soft Toothbrush.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 153,
-            name: "  بالون مصران",
-            price:49950,
-            unit: "   ",
-            category: "cleaning",
-            image: "images/Balloon  erpentine).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 154,
-            name: "  تمر خضري فلت",
-            price:239994,
-            unit: "  1ك ",
-            category: "food",
-            image: "images/Khudri Dates (loose).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 155,
-            name: "  زيت الوردة دوار ",
-            price:519930,
-            unit: "  5 ليتر",
-            category: "food",
-            image: "images/Al-Warda Sunflower Oil.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 156,
-            name: "  كعك اكسترا ريداني ",
-            price:189990,
-            unit: "  800غ ",
-            category: "Bakery",
-            image: "images/Extra Ridani Cakes.png",
-            pictureClass: "cleaning-picture"
-        },
 {
              id: 157,
             name: " علبةاولكر بيسكريم ",
@@ -1860,24 +1427,6 @@ gharibGrid.appendChild(card);
             image: "images/Damac Board.png",
             pictureClass: "cleaning-picture"
         },
-{
-             id: 171,
-            name: " 	بهار مغربية ",
-            price:59940	,
-            unit: "  100   ",
-            category: "spices",
-            image: "images/Morocco.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 172,
-            name: " 		محارم معطرة غود لايف",
-            price:74970		,
-            unit: "      ",
-            category: "cleaning",
-            image: "images/Morocco.png",
-            pictureClass: "cleaning-picture"
-        },
             {
              id: 173,
             name: " 			موزوريلا فرسانا ",
@@ -1951,15 +1500,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
             {
-             id: 181,
-            name: " 	مكنة حلاقة فينيس",
-            price:180000	,
-            unit: "  1ك ",
-            category: "cleaning",
-            image: "images/Venus Razor.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
              id: 182,
             name: " 	 مكدوس مرطبان",
             price:	289980	,
@@ -2004,15 +1544,6 @@ gharibGrid.appendChild(card);
             image: "images/Z-Cola.png",
             pictureClass: "cleaning-picture"
         },
-   {
-             id: 187,
-            name: "  بن حموي اكسترا هال",
-            price:	959994	,
-            unit: " 450غ",
-            category: "food",
-            image: "images/Bin Hamwi Extra Hall.png",
-            pictureClass: "cleaning-picture"
-        },
            {
              id: 188,
             name: "  	لازانيا ريجيا ",
@@ -2040,33 +1571,7 @@ gharibGrid.appendChild(card);
             image: "images/Candia Semi-Skimmed.png",
             pictureClass: "cleaning-picture"
         },
-                    {
-             id: 191,
-            name: " فاتيكا شامبو",
-            price:199998		,
-            unit: " 400+132مل",
-            category: "cleaning",
-            image: "images/Vatika Shampoo 400+132ml.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 192,
-            name: " دوف غو فريش ",
-            price:211500		,
-            unit: "  ",
-            category: "cleaning",
-            image: "images/Dove Go Fresh.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 193,
-            name: " دوف غو فريش ",
-            price:439999		,
-            unit: "  900غ ",
-            category: "food",
-            image: "images/Al-Qalaa’jiya Tahini.png",
-            pictureClass: "cleaning-picture"
-        },
+
 {
              id: 194,
             name: " فول شتورة لاند ",
@@ -2193,33 +1698,6 @@ gharibGrid.appendChild(card);
             image: "images/Al-Yamama Rose Water.png",
             pictureClass: "cleaning-picture"
         },
-    {
-             id: 209,
-            name: "   فرشاة اسنان هولدنت",
-            price:	45000	,
-            unit: "    ",
-            category: "cleaning",
-            image: "images/Holdent Toothbrush.png",
-            pictureClass: "cleaning-picture"
-        },
-  {
-             id: 210,
-            name: "  علبة شفر استرا ",
-            price:	29997	,
-            unit: "  ا*5  ",
-            category: "cleaning",
-            image: "images/Razor pack.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 211,
-            name: "  اولويز دوبل مكسي ",
-            price:	171000	,
-            unit: "    ",
-            category: "cleaning",
-            image: "images/اولويز دوبل مكسي.png",
-            pictureClass: "cleaning-picture"
-        },
 {
              id: 212,
             name: "  كلاشي قضامة محلى ",
@@ -2275,15 +1753,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 218,
-            name: "   الترا دو الفحم الاسود ",
-            price:	429993	,
-            unit: " 600 م  ",
-            category: "cleaning",
-            image: "images/Ultra Doux Black Charcoal.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 219,
             name: "   حليب دانو ",
             price:		439920	,
@@ -2301,33 +1770,7 @@ gharibGrid.appendChild(card);
             image: "images/New Park Flavored Milk.png",
             pictureClass: "cleaning-picture"
         },
-{
-             id: 221,
-            name: "  شاور بيزلاين",
-            price:135000	,
-            unit: " 500 مل ",
-            category: "cleaning",
-            image: "images/Beesline Shower Gel 500 ml.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 223,
-            name: "   ماليزيا ديو للرجال ",
-            price:199998,
-            unit: " 150مل",
-            category: "cleaning",
-            image: "images/Malaysia Deo for Men.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 224,
-            name: " بريل جامبو",
-            price:229950,
-            unit: " 1.25ليتر",
-            category: "cleaning",
-            image: "images/Pril Jumbo.png",
-            pictureClass: "cleaning-picture"
-        },
+
 {
              id: 225,
             name: " بلسم حجاب كوزمال",
@@ -2347,15 +1790,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 227,
-            name: " 	شامبو الفيف",
-            price:342000,
-            unit: " 370مل ",
-            category: "cleaning",
-            image: "images/Elvive Shampoo.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 228,
             name: "  سمنة روابي",
             price:2070000,
@@ -2371,24 +1805,6 @@ gharibGrid.appendChild(card);
             unit: "5ك",
             category: "food",
             image: "images/Doga Vermicelli.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 230,
-            name: " شفرات exacta 3 للرجال",
-            price:352800,
-            unit: " *4",
-            category: "cleaning",
-            image: "images/Exacta 3 Razors for Men.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 231,
-            name: "  شفر استور",
-            price:139950,
-            unit: " *6",
-            category: "cleaning",
-            image: "images/Shafar Store.png",
             pictureClass: "cleaning-picture"
         },
              {
@@ -2425,15 +1841,6 @@ gharibGrid.appendChild(card);
             unit: " 250 غ",
             category: "Snacks",
             image: "images/Choco Prince.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-             id: 235,
-            name: " 	فلاش اصلي   ",
-            price:209970,
-            unit: " 1ليتر",
-            category: "cleaning",
-            image: "images/Flash (Original).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2499,24 +1906,6 @@ gharibGrid.appendChild(card);
             image: "images/بهار.png",
             pictureClass: "cleaning-picture"
         },
-             {
-             id: 243,
-            name: "  جافيل ديمكس غالون",
-            price:219996,
-            unit: " 3.750لتر",
-            category: "cleaning",
-            image: "images/Javel (Bleach) D-Mix, Gallon.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 244,
-            name: "  ماجيك مكنسة مع عصا",
-            price:299970,
-            unit: "  ",
-            category: "cleaning",
-            image: "images/Magic Broom with Handle.png",
-            pictureClass: "cleaning-picture"
-        },
 {
              id: 245,
             name: "  خل تفاح الجودة",
@@ -2524,33 +1913,6 @@ gharibGrid.appendChild(card);
             unit: " 500مل ",
             category: "food",
             image: "images/Apple Cider Vinegar (Quality).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 246,
-            name: "  بيرلا المنيوم رول 25ft",
-            price:79920,
-            unit: "  ",
-            category: "cleaning",
-            image: "images/Perla Aluminum Foil 25ft.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 247,
-            name: "  فيليدا اسفنج جلي غليتزي",
-            price:125010,
-            unit: " *3 ",
-            category: "cleaning",
-            image: "images/Vileda Glitzi Dishwashing Sponge.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 248,
-            name: "  نيفيا ديو",
-            price:270000,
-            unit: "   ",
-            category: "cleaning",
-            image: "images/Nivea Deo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2632,15 +1994,6 @@ gharibGrid.appendChild(card);
             unit: "  660غ	 ",
             category: "food",
             image: "images/Yamama Tomato Paste.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 260,
-            name: "  بريل 3ليتر +در جنرال",
-            price:	450000,
-            unit: " 750مل ",
-            category: "cleaning",
-            image: "images/Pril 3L + Der General 750ml.png",
             pictureClass: "cleaning-picture"
         },
   {
@@ -2743,60 +2096,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 274,
-            name: "  حموي مع هال  اكسترا	",
-            price:	399960	,
-            unit: "  180غ",
-            category: "food",
-            image: "images/Hamwi Classic 180g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 275,
-            name: "  حموي موكا ",
-            price:	630000	,
-            unit: "  450غ",
-            category: "food",
-            image: "images/Hamawi Mocha 450g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 276,
-            name: "  حموي موكا ",
-            price:	299970	,
-            unit: "  180غ",
-            category: "food",
-            image: "images/Hamawi Mocha 180g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 277,
-            name: "  حموي سائل  ",
-            price:	299970	,
-            unit: "  1ليتر",
-            category: "food",
-            image: "images/Hamawi Liquid 1L.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 278,
-            name: "  حموي كلاسيك   ",
-            price:	359910	,
-            unit: "  180غ",
-            category: "food",
-            image: "images/Hamwi Classic 180g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 279,
-            name: "  	نسكافي اوريجينال  ",
-            price:		319950	,
-            unit: "   *25",
-            category: "food",
-            image: "images/Nescafé Original.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 280,
             name: "  بيغ بابول علبة ",
             price:	117000	,
@@ -2806,30 +2105,12 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 281,
-            name: " 	صابونة النور",
-            price:	49950	,
-            unit: "   ",
-            category: "cleaning",
-            image: "images/Al-Nour Soap.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 282,
             name: " 	 توت+جلاب الخواجة",
             price:	306000	,
             unit: "   ",
             category: "drinks",
             image: "images/Al-Khawaja Mulberry.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 283,
-            name: " 	 ليبو  عائلي",
-            price:	159993,
-            unit: "  184غ ",
-            category: "cleaning",
-            image: "images/Lipo 184g (Family Size).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2875,33 +2156,6 @@ gharibGrid.appendChild(card);
             unit: "	  	 4+1	",
             category: "Snacks",
             image: "images/Twix.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 289,
-            name: " 	 تمر سقعي ",
-            price:	300600,
-            unit: "	  	 1ك	",
-            category: "food",
-            image: "images/Saq'i Dates.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 290,
-            name: " 	 قطوف تمر خضري اكسترا   ",
-            price:	347000,
-            unit: "	  	 900غ",
-            category: "food",
-            image: "images/Qutouf Extra Khodri Dates.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 291,
-            name: " 	محلب   ",
-            price:	190000,
-            unit: "	  	 100غ",
-            category: "spices",
-            image: "images/Mahlab.png",
             pictureClass: "cleaning-picture"
         },
  {
@@ -2968,51 +2222,6 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 299,
-            name: " 	محارم معطرة نامبر وان",
-            price:	70000,
-            unit: "	  *120  ",
-            category: "cleaning",
-            image: "images/Number One Scented Wet Wipes.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 300,
-            name: " حفاضات باربي",
-            price:	175000,
-            unit: "	    ",
-            category: "cleaning",
-            image: "images/Barbie Diapers.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 301,
-            name: " 	لزيق سريع التيكو  ",
-            price:	30000,
-            unit: "	    ",
-            category: "cleaning",
-            image: "images/Tico Quick-Adhesive.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 302,
-            name: " 	حفاضات لولو ",
-            price:	380000,
-            unit: "	    ",
-            category: "cleaning",
-            image: "images/Lulu Diapers.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 303,
-            name: " 	كبايات بلاستيك",
-            price:	45000,
-            unit: "	  *50  ",
-            category: "cleaning",
-            image: "images/Plastic Cups.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 304,
             name: " 	بودرة الزهرة",
             price:	115000,
@@ -3022,75 +2231,12 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 305,
-            name: " 	فيري جانبو  ",
-            price:	380000,
-            unit: "	   1.25 لتر  ",
-            category: "cleaning",
-            image: "images/Fairy (Jumbo size).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 306,
-            name: " 	جافيل تي شو ",
-            price:	150000,
-            unit: "	  4ليتر  ",
-            category: "cleaning",
-            image: "images/T-Show Bleach.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 307,
-            name: " 	 	صابون سافانا موف",
-            price:	25000,
-            unit: "	   ",
-            category: "cleaning",
-            image: "images/Savana Soap (Mauve).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 308,
-            name: " 	بلسم اكس سمارت ",
-            price:	160000,
-            unit: "	 750م  ",
-            category: "cleaning",
-            image: "images/X-Smart Conditioner.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 309,
-            name: " 	دياموند المنيوم للحفظ",
-            price:	450000,
-            unit: "	  ",
-            category: "cleaning",
-            image: "images/Diamond Aluminum Foil.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 310,
-            name: " 	محارم معطرة كومفورت",
-            price:	115000,
-            unit: "	*120  ",
-            category: "cleaning",
-            image: "images/Comfort Scented Tissues.png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 311,
             name: " 	 فاتيكا بلسم",
             price:	150000,
             unit: "	150 مل ",
             category: "cleaning",
             image: "images/Vatika Conditioner.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 312,
-            name: " 		شامبو شولدرز",
-            price:	320000,
-            unit: "	400 مل ",
-            category: "cleaning",
-            image: "images/Head & Shoulders Shampoo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3112,165 +2258,12 @@ gharibGrid.appendChild(card);
             pictureClass: "cleaning-picture"
         },
 {
-             id: 314,
-            name: " 			لزيق صوبيا فضي ",
-            price:	45000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Silver-wrapped Sobia.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 315,
-            name: " 	اولويز دوبل مكسي سميكة",
-            price:	180000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Always Double Maxi (Thick).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 316,
-            name: " 		قطن بلاستيك",
-            price:	90000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Plastic Cotton Swabs.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 317,
-            name: "  كولغيت مكس وايت ",
-            price:	120000,
-            unit: "	150غ	 ",
-            category: "cleaning",
-            image: "images/Colgate Max White.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 318,
-            name: " شوال تواليت وايف ابيض ",
-            price:	270000,
-            unit: "	*12 ",
-            category: "cleaning",
-            image: "images/Toilet paper (pack).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 319,
-            name: "  ديمكس معطر",
-            price:	80000,
-            unit: "	800مل ",
-            category: "cleaning",
-            image: "images/Dimex air freshener.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 320,
-            name: "   	شفاطة كوبرا طويلة",
-            price:	70000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Cobra Long Straws.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 321,
-            name: "   صابون ايفلان",
-            price:	55000,
-            unit: "	قطعة ",
-            category: "cleaning",
-            image: "images/Iflan soap.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 322,
-            name: "   	شامبو دوف",
-            price:	420000,
-            unit: "	600 مل ",
-            category: "cleaning",
-            image: "images/Dove Shampoo (600ml).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 323,
-            name: "   سفنج جلي مع سيف",
-            price:	80000,
-            unit: "	*3",
-            category: "cleaning",
-            image: "images/Dish sponges with scouring pad (pack of 3).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 324,
-            name: "  	كبايات كرتون",
-            price:	40000,
-            unit: "	*3",
-            category: "cleaning",
-            image: "images/Paper cups (pack of 3).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 325,
-            name: "  ايزي ديمكس",
-            price:	90000,
-            unit: "	650 مل",
-            category: "cleaning",
-            image: "images/Easy Dimex 650ml.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 326,
-            name: "  	شقف ميكروفايبر",
-            price:	110000,
-            unit: "	قطعة ",
-            category: "cleaning",
-            image: "images/Microfiber Cloth.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 327,
-            name: "  	شقف ميكروفايبر",
-            price:	110000,
-            unit: "	قطعة ",
-            category: "cleaning",
-            image: "images/Lighters (pack, with light).png",
-            pictureClass: "cleaning-picture"
-        },
-{
              id: 328,
             name: "  	شامبو سانسيلك",
             price:	200000,
             unit: "	350مل ",
             category: "cleaning",
             image: "images/Sunsilk shampoo.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 344,
-            name: "  	بلسم سانسيلك  ",
-            price:	270000,
-            unit: "	350مل ",
-            category: "cleaning",
-            image: "images/Sunsilk Conditioner.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 329,
-            name: "  	كولغيت احمر",
-            price:	120000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Colgate (red).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 330,
-            name: "  صابون سافانا اصفر",
-            price:	25000,
-            unit: "	 ",
-            category: "cleaning",
-            image: "images/Savana soap (yellow).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4458,7 +3451,7 @@ gharibGrid.appendChild(card);
             price:	420000,
             unit: " 600 مل",
             category: "cleaning",
-            image: "images/Head & Shoulders Shampoo 1000ml.png",
+            image: "images/dove.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4467,7 +3460,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: " 400 مل   ",
             category: "cleaning",
-            image: "images/dove.png",
+            image: "images/Elvive Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -4584,7 +3577,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: " 400 مل   ",
             category: "cleaning",
-            image: "images/Ultra Doux Kids Shampoo 400ml.png",
+            image: "images/Al-Sada Baby Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4593,7 +3586,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: "  400 مل   ",
             category: "cleaning",
-            image: "images/Al-Sada Baby Shampoo 400ml.png",
+            image: "images/Herbal Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4937,7 +3930,837 @@ gharibGrid.appendChild(card);
             category: "household",
             image: "images/Lets Air Freshener.png",
             pictureClass: "cleaning-picture"
+        },
+{
+             id: 516,
+            name: "  هاكر طارد حشرات  ",
+            price:	70000,
+            unit: "   ",
+            category: "household",
+            image: "images/Insect Repellent Hacker.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 517,
+            name: "  هاكر قاتل الحشرات",
+            price:	225000,
+            unit: "  400 مل ",
+            category: "household",
+            image: "images/Hacker Insect Killer 400 ml.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 518,
+            name: " قاتل الحشرات هاكر ",
+            price:	335000,
+            unit: " 750 مل   ",
+            category: "household",
+            image: "images/Hacker Insect Killer 750 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 519,
+            name: "  فرشاية اسنان اورال",
+            price:	70000,
+            unit: "   ",
+            category: "household",
+            image: "images/Oral-B toothbrush.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 520,
+            name: " معجون اسنان كرست",
+            price:	110000,
+            unit: "    ",
+            category: "household",
+            image: "images/Crest toothpaste.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 521,
+            name: "  معجون اسنان اطفال كولغيت",
+            price:	90000,
+            unit: "   ",
+            category: "household",
+            image: "images/Colgate children's toothpaste.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 522,
+            name: " معجون اسنان اكوا فريش",
+            price:	120000,
+            unit: "    ",
+            category: "household",
+            image: "images/Aquafresh toothpaste.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 523,
+            name: "  معجون اسنان كولغيت",
+            price:	120000,
+            unit: "   ",
+            category: "household",
+            image: "images/Colgate toothpaste.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 524,
+            name: " معجون اسنان سيغنال",
+            price:	400000,
+            unit: "    ",
+            category: "household",
+            image: "images/Signal toothpaste.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 525,
+            name: "  معجون اسنان سانسوداين",
+            price:	270000,
+            unit: "   ",
+            category: "household",
+            image: "images/Sensodyne toothpaste.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 526,
+            name: " مناشف بيرلا",
+            price:	45000,
+            unit: "   200 غ ",
+            category: "household",
+            image: "images/Perla towels 200 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 527,
+            name: "  محارم ناعمة جيبسي",
+            price:	190000,
+            unit: " 300 منديل   ",
+            category: "household",
+            image: "images/Gypsy soft tissues (300 tissues).png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 528,
+            name: " محارم كينغ",
+            price:	45000,
+            unit: "   200 غ ",
+            category: "household",
+            image: "images/King tissues (200 grams).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 529,
+            name: "  محارم لومكس تواليت",
+            price:	550000,
+            unit: " 4 رول   ",
+            category: "household",
+            image: "images/Lumex Toilet Paper (4-roll pack).png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 530,
+            name: " محارم كينغ",
+            price:	90000,
+            unit: "   400 غ ",
+            category: "household",
+            image: "images/King Tissues 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 531,
+            name: "  رول مطبخ",
+            price:	120000,
+            unit: "    ",
+            category: "household",
+            image: "images/Kitchen roll.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 532,
+            name: " اولويز ماكسي",
+            price:	320000,
+            unit: "   ",
+            category: "household",
+            image: "images/Always Maxi.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 533,
+            name: "  اولويز ماكسي ليلي",
+            price:	300000,
+            unit: "    ",
+            category: "household",
+            image: "images/Always Maxi Night.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 534,
+            name: " اولويز 8 طويل  ",
+            price:	120000,
+            unit: "   ",
+            category: "household",
+            image: "images/Always 8 Long.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 535,
+            name: "  نانا ماكسي ",
+            price:	110000,
+            unit: " 18 فوطة    ",
+            category: "household",
+            image: "images/Nana Maxi 18 pads.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 536,
+            name: " نانا ماكسي ",
+            price:	140000,
+            unit: "  9 فوطة ",
+            category: "household",
+            image: "images/Nana Maxi 9 pads.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 537,
+            name: "  ريلاكس ",
+            price:	220000,
+            unit: "   ",
+            category: "household",
+            image: "images/Relax.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 538,
+            name: "  فريش داي   ",
+            price:	400000,
+            unit: "   ",
+            category: "household",
+            image: "images/Fresh Day.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 539,
+            name: "  برايفت سوبر ",
+            price:	230000,
+            unit: "   ",
+            category: "household",
+            image: "images/Private Super.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 540,
+            name: "  برايفت ليلي  ",
+            price:	240000,
+            unit: "   ",
+            category: "household",
+            image: "images/Private Lily.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 541,
+            name: "  برايفت  10 + 20  مجاني",
+            price:	200000,
+            unit: "   ",
+            category: "household",
+            image: "images/Private 20+10 Free.png",
+            pictureClass: "cleaning-picture"
+        }, 
+{
+             id: 542,
+            name: "  جل شعر السادا  ",
+            price:	360000,
+            unit: " 1000 مل  ",
+            category: "household",
+            image: "images/Sada Hair Gel with 1000ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 544,
+            name: "  جل شعر السادا  ",
+            price:	60000,
+            unit: " 100 مل  ",
+            category: "household",
+            image: "images/Sada Hair Gel with 1000ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 545,
+            name: "  Perfume elegance ",
+            price:	200000,
+            unit: " 300 مل  ",
+            category: "household",
+            image: "images/Perfume elegance 300ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 546,
+            name: "  Elegance body splash ",
+            price:	210000,
+            unit: " 300 مل  ",
+            category: "household",
+            image: "images/Elegance body splash 300ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 547,
+            name: "  مزيل طلاء اظافر السادا ",
+            price:	70000,
+            unit: " 200 مل  ",
+            category: "household",
+            image: "images/Sada Nail Polish Remover 200ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 548,
+            name: " سبراي لفك تشابك الشعر السادا ",
+            price:	170000,
+            unit: " 120 مل  ",
+            category: "household",
+            image: "images/Sada Hair Detangling Spray 120ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 549,
+            name: "  Wax شعر السادا",
+            price:	110000,
+            unit: "   ",
+            category: "household",
+            image: "images/Sada Hair Wax.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 550,
+            name: " موس شعر اليغانس  ",
+            price:	630000,
+            unit: " 500 مل  ",
+            category: "household",
+            image: "images/Elegance Hair Mousse 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 551,
+            name: "  مثبت شعر اليغانس ",
+            price:	345000,
+            unit: "   ",
+            category: "household",
+            image: "images/Elegance Hairspray.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 552,
+            name: " بودرة جونسون ",
+            price:	270000,
+            unit: " 200 مل  ",
+            category: "household",
+            image: "images/Johnson's Powder 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 553,
+            name: "  كليب ",
+            price:	220000,
+            unit: "   ",
+            category: "household",
+            image: "images/Clip.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 554,
+            name: " فازلين ",
+            price:	230000,
+            unit: "  ",
+            category: "household",
+            image: "images/Vaseline.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 555,
+            name: "  كولونيا اطفال ",
+            price:	140000,
+            unit: "300 مل   ",
+            category: "household",
+            image: "images/Children's Cologne.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 556,
+            name: " سبيرتو السادا ",
+            price:	90000,
+            unit: " 250 مل ",
+            category: "household",
+            image: "images/Alsada Alcohol 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 557,
+            name: "  هالك صراصير ",
+            price:	50000,
+            unit: "   ",
+            category: "household",
+            image: "images/Cockroach killer.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 558,
+            name: " نيفيا كريم",
+            price:	120000,
+            unit: "  ",
+            category: "household",
+            image: "images/Nivea cream.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 559,
+            name: " Labello",
+            price:	180000,
+            unit: "   ",
+            category: "household",
+            image: "images/Labello.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 560,
+            name: " فازلين لوشن  ",
+            price:	270000,
+            unit: " 400 مل ",
+            category: "household",
+            image: "images/Vaseline Lotion 400ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 561,
+            name: " سبيرتو السادا ",
+            price:	200000,
+            unit: "  1000 مل ",
+            category: "household",
+            image: "images/Al-Saada Rubbing Alcohol 1000ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 562,
+            name: " كليب صغير     ",
+            price:	120000,
+            unit: "  ",
+            category: "household",
+            image: "images/Small clip.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 563,
+            name: " حفاضات وي وي عادي ",
+            price:	630000,
+            unit: "  مقياس من1الى 6",
+            category: "household",
+            image: "images/Wee Wee Standard Diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 564,
+            name: "حفاضات وي وي حجم اقتصادي     ",
+            price:	845000,
+            unit: " مقياس من1الى 6 ",
+            category: "household",
+            image: "images/Wee Wee Diapers – Economy Size.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 565,
+            name: " 	حفاضات لولو ",
+            price:	380000,
+            unit: "	  مقياس من1الى 6  ",
+            category: "cleaning",
+            image: "images/Lulu Diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 566,
+            name: " حفاضات غيزمو ",
+            price:	270000,
+            unit: " قياس من1الى7",
+            category: "household",
+            image: "images/Gizmo Diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 567,
+            name: " بيبي امل  ",
+            price:	380000,
+            unit: "	  مقياس من1الى 6  ",
+            category: "cleaning",
+            image: "images/Baby Amal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 568,
+            name: " حفاضات تيدي  ",
+            price:	180000,
+            unit: " مقياس من1الى 6 ",
+            category: "household",
+            image: "images/Teddy Diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 569,
+            name: " حفاضات باربي ",
+            price:	175000,
+            unit: "	  مقياس من1الى 6  ",
+            category: "cleaning",
+            image: "images/Barbie diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 570,
+            name: " كرتونة هابيز     ",
+            price:	2160000,
+            unit: "  ",
+            category: "household",
+            image: "images/Huggies carton.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 571,
+            name: "   حفاضات بيبي كبير  ",
+            price:	630000,
+            unit: "	   ",
+            category: "cleaning",
+            image: "images/Large baby diapers.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 572,
+            name: " كباية كرتون  ",
+            price:	60000,
+            unit: " 6 اوز ",
+            category: "household",
+            image: "images/6 oz paper cup.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 573,
+            name: "  كبايات بلاستيك",
+            price:	750000,
+            unit: "100 حبة",
+            category: "cleaning",
+            image: "images/Plastic cups (100 count).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 574,
+            name: " كباية كرتون  ",
+            price:	90000,
+            unit: " 9 اوز ",
+            category: "household",
+            image: "images/9 oz paper cup.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 575,
+            name: "  كباية كرتون",
+            price:	45000,
+            unit: "4 اوز   ",
+            category: "cleaning",
+            image: "images/4 oz paper cup.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 576,
+            name: " فنجان قهوة بلاستيك    ",
+            price:	50000,
+            unit: " 100 حبة   ",
+            category: "household",
+            image: "images/Plastic coffee cups.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 577,
+            name: "    اصابع تشعيل فحم  ",
+            price:	150000,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Charcoal-lighting sticks.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 578,
+            name: " فحم اركيلة مسدس  ",
+            price:	380000,
+            unit: "   1 كيلو    ",
+            category: "household",
+            image: "images/Hookah Charcoal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 579,
+            name: "   فحم شوي مميز  ",
+            price:	270000,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Premium Grilling Charcoal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 580,
+            name: " فحم شوي عالماشي      ",
+            price:	420000,
+            unit: "       ",
+            category: "household",
+            image: "images/Quick-light charcoal for grilling.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 581,
+            name: "   فحم اركيلة افريقي      ",
+            price:	740000,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/African hookah charcoal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 582,
+            name: " فحم شوي افريقي     ",
+            price:	410000,
+            unit: "       ",
+            category: "household",
+            image: "images/African charcoal for grilling.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 583,
+            name: "   شوك او معالق بلاستيك    ",
+            price:	60000,
+            unit: "   ",
+            category: "cleaning",
+            image: "images/Plastic forks or spoons.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 584,
+            name: " صحن بلاستيك    ",
+            price:	60000 ,
+            unit: "  7 انش     ",
+            category: "household",
+            image: "images/7-inch plastic plate.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 585,
+            name: "  صحن بلاستيك ",
+            price:	90000,
+            unit: "  9 انش   ",
+            category: "cleaning",
+            image: "images/9-inch plastic plate.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 586,
+            name: " صحن غميق بلاستيك      ",
+            price:	300000 ,
+            unit: "     ",
+            category: "household",
+            image: "images/Deep plastic bowl.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 587,
+            name: "  كاسة مع غطا    ",
+            price:	450000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Cup with a lid.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 588,
+            name: " ورق المينيوم بيرلا  ",
+            price:	270000 ,
+            unit: "  750 غ   ",
+            category: "household",
+            image: "images/Perla Aluminum Foil 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 589,
+            name: "  ورق نايلون لاصق بيرلا ",
+            price:	230000,
+            unit: "   700 غ  ",
+            category: "cleaning",
+            image: "images/Perla Cling Film 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 590,
+            name: " ورق المينيوم بيرلا  ",
+            price:	80000 ,
+            unit: "  7.6  متر ",
+            category: "household",
+            image: "images/Perla aluminum foil 7.6m.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 591,
+            name: "  ورق نايلون لاصق بيرلا ",
+            price:	60000,
+            unit: "     0.3*15 متر  ",
+            category: "cleaning",
+            image: "images/Perla adhesive film 15m x 0.3m.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 592,
+            name: " سيف نيغرو ",
+            price:	180000 ,
+            unit: "  7.6  متر ",
+            category: "household",
+            image: "images/Negro Sword.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 593,
+            name: "  سيف ستاليس اوكس",
+            price:	80000,
+            unit: "   15 غ ",
+            category: "cleaning",
+            image: "images/Stainless Steel Sword (15g).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 594,
+            name: " ليف جلي سويت",
+            price:	40000 ,
+            unit: "   ",
+            category: "household",
+            image: "images/Live Jelly Sweet.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 595,
+            name: "  ليف جلي ماجيك ",
+            price:	50000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Live Jelly Magic.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 596,
+            name: " ليفة حمام كف   ",
+            price:	100000 ,
+            unit: "   ",
+            category: "household",
+            image: "images/Bath mitt.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 597,
+            name: "  ملاقط خشب ",
+            price:	60000,
+            unit: "  20 ملقط   ",
+            category: "cleaning",
+            image: "images/Wooden tongs.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 598,
+            name: " ملاقط بلاستيك باج        ",
+            price:	90000 ,
+            unit: "   ",
+            category: "household",
+            image: "images/Plastic bag clips.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 599,
+            name: "  سوفت لازالة الشعر    ",
+            price:	45000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Soft, for hair removal.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 600,
+            name: " مفرش سفرة    ",
+            price:	90000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Table cover.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 601,
+            name: "  اكياس تفريز مع سحاب  ",
+            price:	60000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Parchment paper.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 602,
+            name: " ورق زبدة",
+            price:	120000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Freezer bags with a zipper.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 603,
+            name: " اكياس ساندويش  ",
+            price:	70000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Sandwich bags.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 604,
+            name: " سنيتا اركيلة بيرلا",
+            price:	100000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Sunita Arkeela Perla.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 605,
+            name: " سيخ لحمة    ",
+            price:	45000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Meat skewer.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 606,
+            name: " سنيتا    ",
+            price:	200000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Sanita.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 607,
+            name: " ورق زبدة رول       ",
+            price:	130000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Parchment paper roll.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 608,
+            name: " اكياس فرن     ",
+            price:	45000,
+            unit: "    ",
+            category: "cleaning",
+            image: "images/Oven bags.png",
+            pictureClass: "cleaning-picture"
         }
+
+
 
 
 
