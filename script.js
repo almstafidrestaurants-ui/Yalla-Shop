@@ -172,14 +172,14 @@ if (moreCategoriesButton) {
             name: "فخاد  ",
             price: "220000",
             unit: "1ك",
-            image: "images/Thighs.png"
+            image: "images/poultry/Thighs.png"
         },
 
         {
             name: "فخاد  ",
             price: "1000000",
             unit: "5ك",
-            image: "images/Thighs.png"
+            image: "images/poultry/Thighs.png"
         },
         {
             name: "جوانح  ",
@@ -191,31 +191,31 @@ if (moreCategoriesButton) {
             name: "سفاين   ",
             price: "600000",
             unit: "1ك",
-            image: "images/Safayen.png"
+            image: "images/poultry/Safayen.png"
         },
         {
             name: "  طاووق",
             price: "700000",
             unit: "1ك",
-            image: "images/Raw tawook.png"
+            image: "images/poultry/Raw tawook.png"
         },
         {
             name: "سودة  ",
             price: "320000",
             unit: "1ك",
-            image: "images/Gizzards.png"
+            image: "images/poultry/Gizzards.png"
         },
         {
             name: "قوانص  ",
             price: "150000",
             unit: "1ك",
-            image: "images/Black-hearted.png"
+            image: "images/poultry/Black-hearted.png"
         },
         {
             name: "فروج كامل   ",
             price: "250000",
             unit: "1ك",
-            image: "images/chicken.png"
+            image: "images/poultry/chicken.png"
         }
     ];
 
@@ -406,1871 +406,596 @@ gharibGrid.appendChild(card);
     const marketProducts = [
   {
             id: 1,
-            name: "حليب لاكتو  ",
-            price: 419994,
-            unit: " 750غ  ",
-            category: "dairy",
-            image: "images/Lacto milk.png",
+            name: "نجار بدون هال     ",
+            price: 600000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Najjar (without cardamom) 400g.png",
             pictureClass: "chips-picture"
         },
-        {
+          {
             id: 2,
-            name: "حليب لاكتو  ",
-            price: 419994,
-            unit: " 750غ  ",
-            category: "dairy",
-            image: "images/Lacto milk.png",
+            name: "نجار مع هال         ",
+            price: 670000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Najjar (with cardamom) 400g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id:3,
+            name: "دومينغو          ",
+            price: 520000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Domingo 400g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 4,
+            name: "ستار كافيه             ",
+            price: 570000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Star Cafe 400g.png",
             pictureClass: "chips-picture"
         },
         {
-            id: 3,
-            name: "مرتديلا تغذية بقر  ",
-            price: 139995 ,
-            unit: " 340غ  ",
-            category: "food",
-            image: "images/Beef Mortadella 340g.png",
-            pictureClass: "tomato-picture"
+            id:5,
+            name: "كاريوكا           ",
+            price: 590000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Carioca 400g.png",
+            pictureClass: "chips-picture"
         },
-        {
-            id: 4,
-           name: "حلاوة دعبول سادة  ",
-            price: 299970 ,
-            unit: "    800غ ",
-            category: "food",
-            image: "images/Da'bool Plain Halva 800g.png",
-            pictureClass: "banana-picture"
-        },
-        {
-            id: 5,
-            name: "فانسي رز مصري      ",
-            price: 389997 ,
-            unit: "    5ك ",
-            category: "food",
-            image: "images/Fancy Egyptian Rice 5kg.png",
-            pictureClass: "eggs-picture"
-        },
-        {
+          {
             id: 6,
-            name: "بهار ابيض  ",
-            price: 59940 ,
-            unit: "100غ",
-            category: "spices",
-            image: "images/White Pepper 100g.png",
-            pictureClass: "rice-picture"
+            name: "  دانيال بدون هال             ",
+            price: 535000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Daniel (without cardamom) 400g.png",
+            pictureClass: "chips-picture"
         },
-
-        {
+{
+            id:7,
+            name: "دانيال  مع هال           ",
+            price: 630000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Daniel (with cardamom) 400g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 8,
-            name: "بسكويت كريمة  ",
-            price: 350000,
-            unit: "320 غ ",
-            category: "Snacks",
-             image: "images/Cream biscuits 320g.png",
-            pictureClass: "cleaning-picture"
-          },
-
-           {
+            name: "  سوبريمو  ",
+            price: 500000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Supremo 400g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:9,
+            name: "عدنان    ",
+            price: 820000,
+            unit: " 500 غ  ",
+            category: "coffee",
+            image: "images/coffee/Adnan 500g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 10,
-            name: "  لوتس بيسكوف     ",
-            price: 119997,
-            unit: " *8",
-            category: "Snacks",
-             image: "images/Lotus Biscoff.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 15,
-            name: " شاي النحلة    ",
-            price: 		900000,
-            unit: "  1000غ ",
-            category: "food",
-             image: "images/Bee Tea.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: "  عدنان مع هال  ",
+            price: 860000,
+            unit: " 500 غ  ",
+            category: "coffee",
+            image: "images/coffee/Adnan (with cardamom) 500g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:11,
+            name: "بست كافيه    ",
+            price: 510000,
+            unit: " 400 غ  ",
+            category: "coffee",
+            image: "images/coffee/Best Cafe 400g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 12,
+            name: "  معتوق مع هال ",
+            price: 630000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Maatouk (with cardamom) 450g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:13,
+            name: "حموي سادة بيور      ",
+            price: 690000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Best Cafe 400g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 14,
+            name: "  حموي غامق مع اكسترا هال",
+            price: 810000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi (dark, with extra cardamom) 450g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:15,
+            name: "حموي كلاسيك مع هال          ",
+            price: 760000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi (classic, with cardamom) 450g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 16,
-            name: " زبيب    ",
-            price: 		104994	 ,
-            unit: "   200غ",
-            category: "Snacks",
-             image: "images/raisins.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 17,
-            name: " جوزة الطيب    ",
-            price: 		1620000	 ,
-            unit: "  1ك",
-            category: "spices",
-             image: "images/nutmeg.png",
-            pictureClass: "cleaning-picture"
+            name: "  حموي اكسترا هال ",
+            price: 960000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi (extra cardamom) 450g.png",
+            pictureClass: "chips-picture"
         },
- {
+{
+            id:17,
+            name: "  نجار  ",
+            price: 290000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Najjar 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 18,
-            name: " غوم وطني      ",
-            price: 		319950	 ,
-            unit: "  1ك",
-            category: "Snacks",
-             image: "images/National Gum.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: "  نجار مع هال     ",
+            price: 300000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Najjar (with cardamom) 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:19,
+            name: "  ستار كافيه  ",
+            price: 275000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Star Cafe 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 20,
-            name: " اوزمو هابي بسكويت     ",
-            price: 		29997	 ,
-            unit: "  37.5غ",
-            category: "Snacks",
-             image: "images/Ozmo Happy Biscuits.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 21,
-            name: " لبن ليبان ليه     ",
-            price: 		189900	 ,
-            unit: " 1ك",
-            category: "dairy",
-             image: "images/Liban Lait Milk.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: " كاريوكا   ",
+            price: 260000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Carioca 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:21,
+            name: "  دانيال بدون هال ",
+            price: 270000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Daniel (without cardamom) 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 22,
+            name: " ريو    ",
+            price: 250000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Rio 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:23,
+            name: "  سوبريمو",
+            price: 245000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Supremo 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 24,
+            name: " بن برازيل    ",
+            price: 250000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Brazil Coffee 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:25,
+            name: "  الداعوق ",
+            price: 245000,
+            unit: " 200 غ  ",
+            category: "coffee",
+            image: "images/coffee/Al-Daouk 200g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 26,
+            name: " زيدان       ",
+            price: 195000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Zaidan 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:27,
+            name: "  بالما  ",
+            price: 165000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Palma 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 28,
+            name: " بست كافيه        ",
+            price: 230000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Best Café 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:29,
+            name: "  معتوق   ",
+            price: 270000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Maatouk 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 30,
+            name: " معتوق مع هال          ",
+            price: 315000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Maatouk with Cardamom 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:31,
+            name: "  حموي كلاسيك مع هال   ",
+            price: 360000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi Classic with Cardamom 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 32,
-            name: " عبيد حبة كبيرة",
-            price: 		329940 ,
-            unit: " 1ك",
-            category: "Snacks",
-             image: "images/Slaves.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: " حموي  ",
+            price: 305000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:33,
+            name: "  حموي غامق مع هال  ",
+            price: 320000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Hamwi Dark with Cardamom 180g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 34,
-            name: "علبة قرقش ",
-            price: 	309960 ,
-            unit: "  40 حبة",
-            category: "Snacks",
-             image: "images/Qarqash Box.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 35,
-            name: "تاج بسمتي مع 3علب تونا   ",
-            price: 1215000,
-            unit: "  4.5ك",
-            category: "food",
-             image: "images/Taj Basmati.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 37,
-            name: "    اندومي كاري دجاج ",
-            price: 24930,
-            unit: " 75غ ",
-            category: "food",
-             image: "images/Indomie Chicken Curry.png",
-            pictureClass: "cleaning-picture"
-          },
- {
+            name: " دومينغو   ",
+            price: 250000,
+            unit: " 180 غ  ",
+            category: "coffee",
+            image: "images/coffee/Domingo 180g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:35,
+            name: "  بن كابتن اسبريسو ",
+            price: 1080000,
+            unit: " 1 كيلو ",
+            category: "coffee",
+            image: "images/coffee/Captain Espresso Coffee.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 36,
+            name: " باريستا مبيض   ",
+            price: 270000,
+            unit: " 350 غ  ",
+            category: "coffee",
+            image: "images/coffee/Barista Bleach.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:37,
+            name: "  باريستا fat free ",
+            price: 380000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Barista Fat-Free.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 38,
-            name: "   لوتس *50حبة",
-            price: 399996,
-            unit: " 312غ",
-            category: "Snacks",
-             image: "images/Lotus 50 units.png",
-            pictureClass: "cleaning-picture"
-          },
- {
+            name: " كوفي مايت     ",
+            price: 250000,
+            unit: " 450 غ  ",
+            category: "coffee",
+            image: "images/coffee/Coffee-Mate 450g.png",
+            pictureClass: "chips-picture"
+        },
+        {
+            id:39,
+            name: " كوفي مايت",
+            price: 450000,
+            unit: "   1 كيلو ",
+            category: "coffee",
+            image: "images/coffee/Coffee-Mate 1 kg.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 40,
-            name: "  باكمايا خميرة فورية ",
-            price: 90000,
-            unit: " 125غ",
-            category: "food",
-             image: "images/Pakmaya Instant Yeast.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: "   نسكافيه 2in1     ",
+            price: 480000,
+            unit: "   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé 2-in-1.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:41,
+            name: "   نسكافيه كلاسيك 3in 1 ",
+            price: 420000,
+            unit: "    ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Classic 3-in-1.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 42,
-            name: "  لمبة توفيلر ",
-            price: 225000,
-            unit: "  40 وات",
-            category: "Electrical",
-             image: "images/Tofiler bulb.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 43,
-            name: "  مرتديلا هنية  ",
-            price: 74970,
-            unit: "  340غ",
-            category: "food",
-             image: "images/Hania Mortadella.png",
-            pictureClass: "cleaning-picture"
-         },
- {
+            name: "  باريستا نسكافيه 2in1   ",
+            price: 290000,
+            unit: "   ",
+            category: "coffee",
+            image: "images/coffee/Barista Nescafe 2-in-1.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:43,
+            name: "  باريستا 3in1 ",
+            price: 320000,
+            unit: "    ",
+            category: "coffee",
+            image: "images/coffee/Barista 3-in-1.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 44,
-            name: "  	نسلة نسكويك غوفريت ",
-            price: 34992,
+            name: "  تورابيكا كابتشينو 20 + 2  ",
+            price: 400000,
             unit: "   ",
-            category: "Snacks",
-             image: "images/Nestlé Nesquik Wafer.png",
-            pictureClass: "cleaning-picture"
-          },
- {
-            id: 45,
-            name: "  	جبنة حلوة",
-            price: 450000 ,
-            unit: " 1ك  ",
-            category: "dairy",
-             image: "images/Sweet cheese.png",
-            pictureClass: "cleaning-picture"
-          },
- {
+            category: "coffee",
+            image: "images/coffee/Torabika Cappuccino 20+2.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:45,
+            name: "  متى  ",
+            price: 120000,
+            unit: "    ",
+            category: "coffee",
+            image: "images/coffee/Mate.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 46,
-            name: "  	ربطة خبز ",
-            price: 90000 ,
-            unit: "   ",
-            category: "Bakery",
-             image: "images/pack of bread.png",
-            pictureClass: "cleaning-picture"
-         },
- {
-            id: 47,
-            name: "  	زيتون مقطع الجودة ",
-            price: 	243000 ,
-            unit: "   1ك ",
-            category: "food",
-             image: "images/Al-Murouj Sliced ​​Olives 1kg.png",
-            pictureClass: "cleaning-picture"
-          },
-        {
+            name: "  نسكافيه تشيبو ",
+            price: 620000,
+            unit: "200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Tchibo Coffee 200g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:47,
+            name: "  نسكافيه غولد  ",
+            price: 800000,
+            unit: "  200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Gold 200g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 48,
-            name: "  	كعك	 ",
-            price: 	74997 ,
-            unit: "    ",
-            category: "Bakery",
-             image: "images/Ka'ak.png",
-            pictureClass: "cleaning-picture"
-          },
-            {
-            id: 49,
-            name: "  		بهار حلو ناعم	 ",
-            price: 	38160 ,
-            unit: "  25غ  ",
-            category: "spices",
-             image: "images/Fine allspice.png",
-            pictureClass: "cleaning-picture"
-         },
-         {
+            name: "  نجار غولد    ",
+            price: 600000,
+            unit: "190 غ   ",
+            category: "coffee",
+            image: "images/coffee/Najjar Gold 190g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:49,
+            name: "  نسكافيه باريستا ",
+            price: 625000,
+            unit: "  200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Barista 200g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 50,
-            name: "  	بيغ ام وايفر مغطس مشكل ",
-            price: 	14940 ,
-            unit: "    ",
-            category: "Snacks",
-             image: "images/Big M-Ever.png",
-            pictureClass: "cleaning-picture"
-         },
-       {
-            id: 51,
-            name: "  	تروبيكانا سلايس",
-            price: 99990 ,
-            unit: "  1ليتر ",
-            category: "drinks",
-             image: "images/Tropicana Slice.png",
-            pictureClass: "cleaning-picture"
-         },
+            name: "  ماتينال   ",
+            price: 560000,
+            unit: "200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Matinal 200g.png",
+            pictureClass: "chips-picture"
+        },
 {
+            id:51,
+            name: " نجار غولد ",
+            price: 330000,
+            unit: "  95 غ   ",
+            category: "coffee",
+            image: "images/coffee/Najjar Gold 95g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 52,
+            name: "  باريستا كلاسيك   ",
+            price: 520000,
+            unit: "200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Barista Classic 200g.png",
+            pictureClass: "chips-picture"
+        },
+{
+            id:53,
+            name: " باريستا decaf",
+            price: 470000,
+            unit: "  95 غ   ",
+            category: "coffee",
+            image: "images/coffee/Barista Decaf 95g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 54,
-            name: " دف ميلكا اوريو",
-            price: 85500 ,
-            unit: "  ",
-            category: "Snacks",
-             image: "images/Milka Oreo bar.png",
-            pictureClass: "cleaning-picture"
-         },
-{
+            name: " نسكافيه كلاسيك  باريستا  ",
+            price: 330000,
+            unit: "95 غ   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Classic 95g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 55,
-            name: " مرتديلا سلوى",
-            price: 180000 ,
-            unit: " 800غ ",
-            category: "food",
-             image: "images/Salwa Mortadella.png",
-            pictureClass: "cleaning-picture"
-          },
-{
+            name: " نسكافيه نجار احمر ",
+            price: 270000,
+            unit: "95 غ   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Najjar Red 95g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 56,
-            name: "   كيري    ",
-            price: 180000 ,
-            unit: " 4*2 ",
-            category: "dairy",
-             image: "images/Karry.png",
-            pictureClass: "cleaning-picture"
+            name: "نسكافيه بريك ",
+            price: 120000,
+            unit: "50 غ   ",
+            category: "coffee",
+            image: "images/coffee/Nescafé Break 50g.png",
+            pictureClass: "chips-picture"
         },
 {
+            id: 57,
+            name: " شراب شوكولا بوليو",
+            price: 450000,
+            unit: "450 غ   ",
+            category: "coffee",
+            image: "images/coffee/Polio Chocolate Syrup 450g.png",
+            pictureClass: "chips-picture"
+        },
+          {
+            id: 58,
+            name: "بوليو شراب شوكولا   ",
+            price: 30000,
+            unit: "ظرف   ",
+            category: "coffee",
+            image: "images/coffee/Polio Chocolate Syrup (sachet).png",
+            pictureClass: "chips-picture"
+        },
+{
+            id: 59,
+            name: " كاستر دومر شوكولا ",
+            price: 300000,
+            unit: "300 غ   ",
+            category: "coffee",
+            image: "images/coffee/Domo Chocolate Custard 300g.png",
+            pictureClass: "chips-picture"
+        },
+          {
             id: 60,
-            name: "  ديمة سوفتي  ",
-            price: 34999 ,
-            unit: "  ",
-            category: "Snacks",
-             image: "images/Dima Softi.png",
-            pictureClass: "cleaning-picture"
+            name: "كاستر دومو فانيل       ",
+            price: 185000,
+            unit: "300 غ    ",
+            category: "coffee",
+            image: "images/coffee/Domo Vanilla Custard 300g.png",
+            pictureClass: "chips-picture"
         },
-        {
+{
             id: 61,
-            name: "  جبنة بريزيدون  ",
-            price: 132300 ,
-            unit: " *16 ",
-            category: "dairy",
-             image: "images/President Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 67,
-            name: "  ذرة  ",
-            price: 343980 ,
-            unit: "  2500غ ",
-            category: "food",
-             image: "images/Corn1.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-            id: 70,
-            name: "  وايف اب ",
-            price: 39960 ,
-            unit: " 40غ ",
-            category: "Snacks",
-             image: "images/Wipe Up.png",
-            pictureClass: "cleaning-picture"
-        },
-                {
-            id: 71,
-            name: "  	شوال طحين ",
-            price:1980000 ,
-            unit: "  50ك ",
-            category: "food",
-             image: "images/Flour.png",
-            pictureClass: "cleaning-picture"
-        },
-                {
-            id: 73,
-            name: "  	قضامة فلت ",
-            price: 58500 ,
-            unit: "  200 غ",
-            category: "Snacks",
-             image: "images/Chickpeas.png",
-            pictureClass: "cleaning-picture"
-        },
-                {
-            id: 74,
-            name: "  فلقة مياه نسلة",
-            price: 169992 ,
-            unit: "  0.33 لتر  ",
-            category: "drinks",
-             image: "images/Nestlé Pure.png",
-            pictureClass: "cleaning-picture"
-        },
-         {
-            id: 75,
-            name: "  منتوس اي سي علكة ",
-            price: 45000 ,
-            unit: "  *8 ",
-            category: "Snacks",
-             image: "images/Mentos Ice Gum.png",
-            pictureClass: "cleaning-picture"
-        },
-       {
-            id: 76,
-            name: "  بازيلا مع جزر ",
-            price: 159300 ,
-            unit: "  400 غ ",
-            category: "Snacks",
-             image: "images/Peas with carrots.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 77,
-            name: "  بلاك غولد سمن نباتي ممتاز",
-            price: 139500 ,
-            unit: "  700مل",
-            category: "food",
-             image: "images/Black Gold.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 78,
-            name: "  كيك اولكر ",
-            price: 119970 ,
-            unit: "  160غ",
-            category: "Snacks",
-             image: "images/Ülker Cake.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 79,
-            name: "  عصير ريندا ",
-            price: 79992 ,
-            unit: "  1.25ليتر",
-            category: "drinks",
-             image: "images/Rinda Juice.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 81,
-            name: "  بيتزوللو لازانيا ",
-            price: 169992 ,
-            unit: "   ",
-            category: "food",
-             image: "images/Pizzallo lasagna.png",
-            pictureClass: "cleaning-picture"
-        },
-
-    {
-            id: 76,
-            name: "  نسكافيه ماتينال	 ",
-            price: 569970 ,
-            unit: "  200 غ ",
-            category: "food",
-             image: "images/Nescafé Matinal.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 77,
-            name: "  مايونيز تركي",
-            price: 109800 ,
-            unit: "  550غ",
-            category: "dairy",
-             image: "images/Turkish Mayonnaise.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 80,
-            name: "  خبز تنور مرقوق ",
-            price: 90000 ,
-            unit: "   ",
-            category: "Bakery",
-             image: "images/tandoor bread.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 81,
-            name: "  سامون	",
-            price: 74997 ,
-            unit: "   ",
-            category: "Bakery",
-             image: "images/Samoun.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 82,
-            name: "  ذرة ديروني 	",
-            price: 114993 ,
-            unit: "  340غ ",
-            category: "food",
-             image: "images/Corn.png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-            id: 83,
-            name: "  صلصة البندورة يوردوم	",
-            price: 180000 ,
-            unit: "  830غ",
-            category: "food",
-             image: "images/Yurdum Tomato.png",
-            pictureClass: "cleaning-picture"
-        },
-           {
-            id: 85,
-            name: "  كاتشاب اكسترا  عصارة ",
-            price: 189999 ,
-            unit: "  800غ",
-            category: "food",
-             image: "images/Extra Ketchup.png",
-            pictureClass: "cleaning-picture"
+            name: " كاستر دومر شوكولا ",
+            price: 135000,
+            unit: "200 غ   ",
+            category: "coffee",
+            image: "images/coffee/Domo Chocolate Custard 200g.png",
+            pictureClass: "chips-picture"
         },
           {
-            id: 87,
-            name: " فانيليا دومو ",
-            price:	69993 ,
-            unit: " 28 غ تنك",
-            category: "food",
-             image: "images/Domo Vanilla.png",
-            pictureClass: "cleaning-picture"
-        },
-          {
-            id: 88,
-            name: " لمبة  ",
-            price:	99000 ,
-            unit: "  13 واط ",
-            category: "Electrical",
-             image: "images/13W Light Bulb.png",
-            pictureClass: "cleaning-picture"
-        },
-      {
-            id: 89,
-            name: " بونبون مينت  ",
-            price:	14940 ,
-            unit: "   ",
-            category: "Snacks",
-             image: "images/Mint Bonbon.png",
-            pictureClass: "cleaning-picture"
-        },
-      {
-            id: 90,
-            name: " 	شاي ليبتون ",
-            price:	249999 ,
-            unit: " 100ظرف  ",
-            category: "food",
-             image: "images/Lipton Tea.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 93,
-            name: " ريماس محاشي ",
-            price:  19980 ,
-            unit: " 40غ",
-            category: "Snacks",
-             image: "images/Rimas.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 94,
-            name: " سميدس ",
-            price:  630000 ,
-            unit: " 900غ",
-            category: "dairy",
-             image: "images/Smedes.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 95,
-            name: " خبز مرقوق ",
-            price:  79920 ,
-            unit: "  ",
-            category: "Bakery",
-             image: "images/Markook bread.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 97,
-            name: " 	كراكي مالح ",
-            price:  29970 ,
-            unit: " 2 ليتر ",
-            category: "Snacks",
-             image: "images/Salty Crackers.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 98,
-            name: " 	شعيرية راميتو ",
-            price:  112500 ,
-            unit: "  750غ",
-            category: "food",
-             image: "images/Ramito vermicelli.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 99,
-            name: " 	كادبري  ",
-            price:  441000 ,
-            unit: "  500غ ",
-            category: "Snacks",
-             image: "images/Cadbury.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 100,
-            name: " 		سائل جلي كرمل   ",
-            price:  109620 ,
-            unit: "  1100مل",
-            category: "Snacks",
-             image: "images/Karmel.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 101,
-            name: " برغل ابيض طراد  ",
-            price:  385830 ,
-            unit: "  5ك",
-            category: "food",
-             image: "images/White Bulgur.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 102,
-            name: " قداحة خفيف ",
-            price: 14940 ,
-            unit: "   ",
-            category: "Electrical",
-             image: "images/Lighter.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 103,
-            name: " دونات كريسبي",
-            price: 50000 ,
-            unit: "   ",
-            category: "Snacks",
-             image: "images/Krispy Donut.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 106,
-            name: " 	ظرف حليب ديليش",
-            price: 	15750 ,
-            unit: "    ",
-            category: "dairy",
-             image: "images/Delish Milk Sachet.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 107,
-            name: " 	مايونيز جيرسي ",
-            price: 	585000 ,
-            unit: "  3.785ليتر  ",
-            category: "dairy",
-             image: "images/Jersey Mayonnaise.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 108,
-            name: " 	البني رول",
-            price: 	69993 ,
-            unit: "    ",
-            category: "Snacks",
-             image: "images/Al-Bani.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 111,
-            name: " 	دبي بوظة كويين",
-            price: 119970 ,
-            unit: "      ",
-            category: "IceCream",
-             image: "images/Dubai Queen Ice Cream.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 112,
-            name: " 	جبنة موزيريلا بوك	 ",
-            price: 1099980 ,
-            unit: "   1800غ ",
-            category: "dairy",
-             image: "images/Puck Mozzarella Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 113,
-            name: " 	 شطة",
-            price: 180000 ,
-            unit: "   800غ  ",
-            category: "food",
-             image: "images/Freezing.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 114,
-            name: " 	 مستر جوسي ",
-            price: 79920 ,
-            unit: "  1 ليتر ",
-            category: "drinks",
-             image: "images/Mr. Juicy.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 115,
-            name: " 	 بيض كبير",
-            price: 219960,
-            unit: "    ",
-            category: "food",
-             image: "images/Large Eggs.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 116,
-            name: " 	  خردل ميا ",
-            price: 90000 ,
-            unit: "  260 غ",
-            category: "food",
-             image: "images/Mustard.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 117,
-            name: " نيو بارك جبنة مطبوخة ",
-            price: 139950 ,
-            unit: " 300 غ",
-            category: "dairy",
-             image: "images/New Park.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 118,
-            name: " مالتيزرس ",
-            price: 90000 ,
-            unit: " 37غ",
-            category: "Snacks",
-             image: "images/Maltesers.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 119,
-            name: " بهار فاهيتا ",
-            price: 79920 ,
-            unit: " 100 غ",
-            category: "spices",
-             image: "images/Fajita Seasoning.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 121,
-            name: " بيغ ام ميغا  بندق  ",
-            price: 15750,
-            unit: "  ",
-            category: "Snacks",
-             image: "images/Big M.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 122,
-            name: " 	صندوق معتوق ساندويش كريمة ",
+            id: 62,
+            name: "كاستر دومو فانيل       ",
             price: 100000,
-            unit: "  ",
-            category: "Snacks",
-             image: "images/Maatouk Cream.png",
-            pictureClass: "cleaning-picture"
+            unit: "200 غ    ",
+            category: "coffee",
+            image: "images/coffee/Domo Vanilla Custard 200g.png",
+            pictureClass: "chips-picture"
         },
 {
-             id: 123,
-            name: " 	حلاوة سرور",
-            price: 405000,
-            unit: " 1ك ",
-            category: "food",
-             image: "images/Surour Halawa.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 124,
-            name: " 	وانتد بوبس كارمل",
-            price: 24930,
-            unit: "  28غ",
-            category: "Snacks",
-            image: "images/Wanted.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 125,
-            name: " 	قرقش	",
-            price: 39960,
-            unit: "   ",
-            category: "Snacks",
-            image: "images/Qarqash.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 126,
-            name: " 	منتوس رول	",
-            price: 36000 ,
-            unit: "   ",
-            category: "Snacks",
-            image: "images/Mentos Roll.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 127,
-            name: " 	صندوق مستر جوسي   ",
-            price: 429993 ,
-            unit: " *30	  ",
-            category: "drinks",
-            image: "images/Mr. Juicy (Box.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 128,
-            name: " 	اسطنبولي بلدي  ",
-            price: 450000 ,
-            unit: " *1ك	  ",
-            category: "food",
-            image: "images/Istanbuli Baladi.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 131,
-            name: " 	ام اند ام ",
-            price: 69993 ,
-            unit: "     ",
-            category: "Snacks",
-            image: "images/M&M's.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 132,
-            name: " 	مرتديلا الراعي ",
-            price: 124992 ,
-            unit: "   200غ   ",
-            category: "food",
-            image: "images/Al-Ra'i Mortadella.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 133,
-            name: " 	يانسون ناعم",
-            price: 38160 ,
-            unit: "      ",
-            category: "spices",
-            image: "images/Fennel (Ground or Coarse).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 134,
-            name: " 	براوني كيك هازلنت  ",
-            price: 59994 ,
-            unit: "   40غ   ",
-            category: "Snacks",
-            image: "images/Hazelnut Brownie Cake.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 135,
-            name: " 	 لوز مدخن الرئيف ",
-            price: 	34920 ,
-            unit: "      ",
-            category: "Snacks",
-            image: "images/Al-Ra'if Smoked Almonds.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 136,
-            name: " 	زيت انجي ",
-            price: 	850000 ,
-            unit: "    5 ليتر  ",
-            category: "food",
-            image: "images/Inji Oil.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 137,
-            name: " 	مصاصة تشوبا تشوبس ",
-            price: 	9540 ,
-            unit: "      ",
-            category: "Snacks",
-            image: "images/Chupa Chups Lollipop.png",
-            pictureClass: "cleaning-picture"
-        },
-
-{
-             id: 139,
-            name: " 	شومر ناعم او خشن",
-            price: 	59940 ,
-            unit: "   100غ   ",
-            category: "spices",
-            image: "images/Fennel (Ground or Coarse).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 140,
-            name: " 	تمر خضري عادي ",
-            price: 	99900 ,
-            unit: "  400غ  ",
-            category: "food",
-            image: "images/Regular Khodri Dates.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 142,
-            name: " 	 زعتر اسرتي",
-            price: 	189000 ,
-            unit: "  1ك",
-            category: "food",
-            image: "images/Usrati Thyme (Za'atar).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 143,
-            name: " 	 سكر نبات الجودة  ",
-            price: 	99900 ,
-            unit: "  200 غ ",
-            category: "food",
-            image: "images/nabat sugar.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 144,
-            name: " 	 مرطبان زجاج ",
-            price: 39996 ,
-            unit: "  1ك",
-            category: "food",
-            image: "images/Glass Jar (1 kg).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 145,
-            name: " 	سكر ناعم الفيحاء ",
-            price: 90000 ,
-            unit: "  900غ ",
-            category: "food",
-            image: "images/Al-Fayhaa Fine Sugar.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 146,
-            name: " 	هيستيريا شوكولا",
-            price: 	19980 ,
-            unit: "   ",
-            category: "Snacks",
-            image: "images/Hysteria Chocolate.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 147,
-            name: " 	رز مصري زين ",
-            price: 399960 ,
-            unit: "  5ك",
-            category: "food",
-            image: "images/Zein Egyptian Rice (5 kg).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 148,
-            name: " 	 ظرف عصير دارينا",
-            price: 19980 ,
-            unit: "   ",
-            category: "drinks",
-            image: "images/Darina Juice Sachet.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 157,
-            name: " علبةاولكر بيسكريم ",
-            price:855000,
-            unit: "  *18 ",
-            category: "Snacks",
-            image: "images/Ülker Bisrem Box.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 158,
-            name: "  البني بار كيك",
-            price:59994,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Al-Bani.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 159,
-            name: "  برينس ",
-            price:74970,
-            unit: " 80غ   ",
-            category: "Snacks",
-            image: "images/Prince.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 160,
-            name: "  اوزمو فان ",
-            price:60750,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Osmo Fan.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 161,
-            name: "  عجينة بصمة",
-            price:244998,
-            unit: "  800غ  ",
-            category: "Bakery",
-            image: "images/Basma Dough.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 162,
-            name: "  عجينة الاوزي فوزي",
-            price:117999,
-            unit: "    ",
-            category: "Bakery",
-            image: "images/Fawzi Ouzi Dough.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 163,
-            name: " شيش برك فوزي",
-            price:126000,
-            unit: "    ",
-            category: "Bakery",
-            image: "images/Fawzi Shish Barak.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 164,
-            name: " 	التاج شطة حارة",
-            price:45000,
-            unit: "    ",
-            category: "food",
-            image: "images/Al-Taj Hot Sauce.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 165,
-            name: " 	اوريو",
-            price:74970,
-            unit: "   102غ	  ",
-            category: "Snacks",
-            image: "images/Oreo.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 166,
-            name: " 	عجينة بيتزا فوزي",
-            price:153999,
-            unit: "     ",
-            category: "Bakery",
-            image: "images/Fawzi Pizza Dough.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 167,
-            name: " 	رقائق طويلة",
-            price:180000,
-            unit: "     ",
-            category: "Bakery",
-            image: "images/Long Chips.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 168,
-            name: " 	رقائق لف",
-            price:135000	,
-            unit: "     ",
-            category: "Bakery",
-            image: "images/Wrappers.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 169,
-            name: " 	شوربة ماجي ",
-            price:180000	,
-            unit: "  عرض   ",
-            category: "food",
-            image: "images/Maggi Soup.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 170,
-            name: " 	لوح داماك",
-            price:74970	,
-            unit: "     ",
-            category: "Snacks",
-            image: "images/Damac Board.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-             id: 173,
-            name: " 			موزوريلا فرسانا ",
-            price: 114930	,
-            unit: "  200غ    ",
-            category: "dairy",
-            image: "images/Farsana Mozzarella.png",
-            pictureClass: "cleaning-picture"
-        },
-                    {
-             id: 174,
-            name: " ديروني خردل",
-            price: 148500	,
-            unit: "   8 اونز   ",
-            category: "food",
-            image: "images/Deroni Mustard 8 oz.png",
-            pictureClass: "cleaning-picture"
-        },
-                            {
-             id: 175,
-            name: "  ديروني رز ايطالي جامبو  ",
-            price:180000	,
-            unit: "   900غ  ",
-            category: "food",
-            image: "images/Deroni Italian Rice (Jumbo).png",
-            pictureClass: "cleaning-picture"
-        },
-                                    {
-             id: 176,
-            name: "  عكاوي بلدي ",
-            price:699993	,
-            unit: "  1ك ",
-            category: "dairy",
-            image: "images/Baladi Akawi Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 177,
-            name: "  جبنة فيتا",
-            price:349920	,
-            unit: "  1ك ",
-            category: "dairy",
-            image: "images/Feta Cheese.png",
-            pictureClass: "cleaning-picture"
+            id: 63,
+            name: " كاكاو دومر ",
+            price: 360000,
+            unit: "100 غ   ",
+            category: "coffee",
+            image: "images/coffee/Domo Cocoa 100g.png",
+            pictureClass: "chips-picture"
         },
           {
-             id: 178,
-            name: "  جبنة نابلسي",
-            price:540000	,
-            unit: "  1ك ",
-            category: "dairy",
-            image: "images/Nabulsi Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-                  {
-             id: 179,
-            name: " 	جبنة مسنرة",
-            price:324990	,
-            unit: "  1ك ",
-            category: "dairy",
-            image: "images/Musanara Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-             id: 180,
-            name: " 	 زيتون بلدي ",
-            price:299970	,
-            unit: "  1ك ",
-            category: "food",
-            image: "images/Local Olives.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-             id: 182,
-            name: " 	 مكدوس مرطبان",
-            price:	289980	,
-            unit: "  ",
-            category: "food",
-            image: "images/Makdous (jar).png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-             id: 183,
-            name: " 	ملح ملوك",
-            price:	9990	,
-            unit: " 700غ ",
-            category: "food",
-            image: "images/Kings Salt.png",
-            pictureClass: "cleaning-picture"
-        },
-            {
-             id: 184,
-            name: " 	سميد سفرتي",
-            price:	84960	,
-            unit: "  ",
-            category: "food",
-            image: "images/Safrati Semolina.png",
-            pictureClass: "cleaning-picture"
-        },
-                    {
-             id: 185,
-            name: " 	كيك سابليه ",
-            price:	19980	,
-            unit: "  ",
-            category: "Snacks",
-            image: "images/Sablé Cake.png",
-            pictureClass: "cleaning-picture"
-        },
-   {
-             id: 186,
-            name: " 	زي كولا",
-            price:	29970	,
-            unit: " 250 مل ",
-            category: "drinks",
-            image: "images/Z-Cola.png",
-            pictureClass: "cleaning-picture"
-        },
-           {
-             id: 188,
-            name: "  	لازانيا ريجيا ",
-            price:	229950	,
-            unit: " ",
-            category: "food",
-            image: "images/Lasagna Reggia.png",
-            pictureClass: "cleaning-picture"
-        },
-                   {
-             id: 189,
-            name: "  		المراعي جبنة مطبوخة",
-            price:	260100	,
-            unit: " 1ك ",
-            category: "dairy",
-            image: "images/Almarai Processed Cheese.png",
-            pictureClass: "cleaning-picture"
-        },
-                          {
-             id: 190,
-            name: "  		 حليب كانديا نصف دسم ",
-            price:	164997		,
-            unit: " 1ليتر",
-            category: "dairy",
-            image: "images/Candia Semi-Skimmed.png",
-            pictureClass: "cleaning-picture"
-        },
-
-{
-             id: 194,
-            name: " فول شتورة لاند ",
-            price:37800		,
-            unit: "   400 غ",
-            category: "food",
-            image: "images/Shtoura Land Fava.png",
-            pictureClass: "cleaning-picture"
+            id: 64,
+            name: "دومو هوت شوكو           ",
+            price: 40000,
+            unit: "ظرف    ",
+            category: "coffee",
+            image: "images/coffee/Domo Hot Choco (sachet).png",
+            pictureClass: "chips-picture"
         },
 {
-             id: 195,
-            name: "  كوفري ميلكا ",
-            price:16020,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Milka Bar.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 196,
-            name: "   دير عمار دارك كبير   ",
-            price:19998,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Deir Ammar Dark Chocolate.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 197,
-            name: "   	مياه نستلة كبير  ",
-            price:	39996,
-            unit: "    2ليتر  ",
-            category: "drinks",
-            image: "images/Nestlé Water (Large).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 198,
-            name: "   	شعيرية بيليلا مكسر ",
-            price:	45000,
-            unit: "     500غ ",
-            category: "food",
-            image: "images/Belila Broken Vermicelli 500g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 199,
-            name: "    تونا بلان سوليه",
-            price:	135000,
-            unit: "     ",
-            category: "food",
-            image: "images/Plein Soleil Tuna.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 200,
-            name: "   حمص مطحون شتورة لاند ",
-            price:	49950,
-            unit: "   380 غ   ",
-            category: "food",
-            image: "images/Shtoura Land Ground Chickpeas 380g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 201,
-            name: "   سكر ديروني ",
-            price:	74997	,
-            unit: "  900غ  ",
-            category: "food",
-            image: "images/Derouni Sugar.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 202,
-            name: "  	ابو راشد بسمتي ",
-            price:		169992	,
-            unit: "   800 غ ",
-            category: "food",
-            image: "images/Abu Rashid Basmati.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 203,
-            name: "  		تيك فايف تيفاني",
-            price:	14999,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Tiffany Take Five.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 204,
-            name: "   كعك مطحون",
-            price:	69930,
-            unit: "  500غ    ",
-            category: "food",
-            image: "images/Breadcrumbs.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 205,
-            name: "   	كبيس خيار الجودة   ",
-            price:	216000,
-            unit: "   1050 غ   ",
-            category: "food",
-            image: "images/Quality Pickled Cucumbers 1050g.png",
-            pictureClass: "cleaning-picture"
-        },
-         {
-             id: 207,
-            name: "  اكوافينا  ",
-            price:	19980,
-            unit: "   600 مل ",
-            category: "drinks",
-            image: "images/wate.png",
-            pictureClass: "cleaning-picture"
-        },
-     {
-             id: 208,
-            name: "  ماء ورد اليمامة ",
-            price:	166500,
-            unit: "    750 مل ",
-            category: "food",
-            image: "images/Al-Yamama Rose Water.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 212,
-            name: "  كلاشي قضامة محلى ",
-            price:	199980	,
-            unit: "  300 غ  ",
-            category: "Snacks",
-            image: "images/Sweetened Roasted Chickpeas (Qadama).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 213,
-            name: "  	منتوس نانو",
-            price:	90000	,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Mentos Nano.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 214,
-            name: "  باريلا صدف صغير",
-            price:	112500	,
-            unit: " 500غ   ",
-            category: "food",
-            image: "images/Barilla Small Shells (Conchiglie).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 215,
-            name: "  	بيضة كيندر جوي",
-            price:	90000	,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Kinder Joy Egg.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 216,
-            name: "  	ذرة ديروني مع ملعقة",
-            price:	94950	,
-            unit: "  185غ  ",
-            category: "Snacks",
-            image: "images/Derouni Corn (with spoon).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 217,
-            name: "  تونة تريفا",
-            price:	49500	,
-            unit: "   ",
-            category: "food",
-            image: "images/Tuna Riva.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 219,
-            name: "   حليب دانو ",
-            price:		439920	,
-            unit: " 750غ ",
-            category: "dairy",
-            image: "images/Dano Milk 750g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 220,
-            name: "  نيو بارك حليب منكه",
-            price:		24930	,
-            unit: "  ",
-            category: "dairy",
-            image: "images/New Park Flavored Milk.png",
-            pictureClass: "cleaning-picture"
-        },
-
+            id: 65,
+            name: "  دومو هوت شوكو لايت ",
+            price: 40000,
+            unit: "ظرف    ",
+            category: "coffee",
+            image: "images/coffee/Domo Hot Choco Light (sachet).png",
+            pictureClass: "chips-picture"
+        },         
 {
              id: 225,
             name: " بلسم حجاب كوزمال",
             price:220000,
             unit: "  400 مل",
             category: "cleaning",
-            image: "images/Cosmal Hijab Conditioner.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 226,
-            name: " ذرة بوشار باليس فود",
-            price:99000,
-            unit: " 900غ ",
-            category: "food",
-            image: "images/Palis Food Popcorn Kernels.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 228,
-            name: "  سمنة روابي",
-            price:2070000,
-            unit: "12ك",
-            category: "food",
-            image: "images/Rawabi Ghee.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 229,
-            name: "   شعيرية دوغا",
-            price:299970,
-            unit: "5ك",
-            category: "food",
-            image: "images/Doga Vermicelli.png",
-            pictureClass: "cleaning-picture"
-        },
-             {
-             id: 232,
-            name: "  	شوكو لارت",
-            price:39960	,
-            unit: "  ",
-            category: "Snacks",
-            image: "images/Choco Lart.png",
-            pictureClass: "cleaning-picture"
-        },
-                     {
-             id: 232,
-            name: "  	شاي ديروني",
-            price:309960,
-            unit: " 400غ ",
-            category: "food",
-            image: "images/Derouni Tea.png",
-            pictureClass: "cleaning-picture"
-        },
-                             {
-             id: 233,
-            name: "  	اندومي دجاج وجبة البلد",
-            price:679950,
-            unit: " *40",
-            category: "food",
-            image: "images/Indomie Chicken (Wajbat Al-Balad).png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 234,
-            name: " شوكو برينس",
-            price:108000,
-            unit: " 250 غ",
-            category: "Snacks",
-            image: "images/Choco Prince.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 236,
-            name: " 	علبة عصير دارينا  ",
-            price:199980,
-            unit: "  ",
-            category: "drinks",
-            image: "images/Darina Juice Carton.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 237,
-            name: " 	كيندر كونتري ",
-            price:59994,
-            unit: "  ",
-            category: "Snacks",
-            image: "images/Kinder Country.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 238,
-            name: " 		ديروني ارز بسمتي",
-            price:169920,
-            unit: " 800 غ ",
-            category: "food",
-            image: "images/Derouni Basmati Rice.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 239,
-            name: " 		تاكز حار",
-            price:124920,
-            unit: "  113 غ ",
-            category: "Snacks",
-            image: "images/Spicy Tacos.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 240,
-            name: " بازيلا سادة",
-            price:45000,
-            unit: "  400غ",
-            category: "food",
-            image: "images/Plain Peas 400g.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 241,
-            name: " مرتديلا الاسرة بقر",
-            price:73620,
-            unit: " 340غ",
-            category: "food",
-            image: "images/Al-Usra Beef Mortadella.png",
-            pictureClass: "cleaning-picture"
-        },
-             {
-             id: 242,
-            name: " بهار دجاج",
-            price:59940,
-            unit: " 100 غ",
-            category: "spices",
-            image: "images/بهار.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 245,
-            name: "  خل تفاح الجودة",
-            price:109980,
-            unit: " 500مل ",
-            category: "food",
-            image: "images/Apple Cider Vinegar (Quality).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 249,
-            name: "  	المراعي الدمشقية",
-            price:119700	,
-            unit: "  *16 ",
-            category: "food",
-            image: "images/(Al-Marai Al-Dimashqiya).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 250,
-            name: "  	سردين اصفر",
-            price:42300	,
-            unit: "    ",
-            category: "food",
-            image: "images/Yellow Sardines.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 251,
-            name: "  	منتوس 3D",
-            price:29970	,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Mentos 3D.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 252,
-            name: "  	تيفاني اوتسفيل شوفان",
-            price:31320	,
-            unit: "    ",
-            category: "Snacks",
-            image: "images/Tiffany Oatsville Oats.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 253,
-            name: "  	 شوال سكر",
-            price:2970000,
-            unit: "  50ك  ",
-            category: "food",
-            image: "images/Sack of Sugar.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 254,
-            name: "  	 هاجدو جبنة مطبوخة",
-            price:202500,
-            unit: "  400غ ",
-            category: "dairy",
-            image: "images/Hajdu Processed Cheese 400g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 255,
-            name: "  	 برينغليز كبير",
-            price:199980,
-            unit: "  100غ",
-            category: "Snacks",
-            image: "images/Large Pringles.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 255,
-            name: "  كعك مدور فتاح",
-            price:	99990,
-            unit: "   ",
-            category: "Bakery",
-            image: "images/Round Ka'ak (Bread Rings).png",
-            pictureClass: "cleaning-picture"
-        },
-    {
-             id: 259,
-            name: "   رب بندورة يمامة",
-            price:	166500,
-            unit: "  660غ	 ",
-            category: "food",
-            image: "images/Yamama Tomato Paste.png",
-            pictureClass: "cleaning-picture"
-        },
-  {
-             id: 263,
-            name: "  مربى فريز   مروج",
-            price:	234000,
-            unit: " 800غ",
-            category: "food",
-            image: "images/Murouj Strawberry Jam.png",
-            pictureClass: "cleaning-picture"
-        },
-  {
-             id: 264,
-            name: "  مربى التين  مروج",
-            price:	234000,
-            unit: " 800غ",
-            category: "food",
-            image: "images/Murooj Preserved Figs.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 265,
-            name: "  تين معقود  مروج",
-            price:	288000,
-            unit: " 800غ",
-            category: "food",
-            image: "images/Murooj Preserved Figs.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 266,
-            name: "   دبس خروب بلدي  مروج",
-            price:	261000,
-            unit: " 1ك",
-            category: "food",
-            image: "images/Murouj Local Carob Molasses.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 267,
-            name: "   زيتون مقطع المروج",
-            price:	309600	,
-            unit: " 1ك",
-            category: "food",
-            image: "images/Al-Murouj Sliced ​​Olives 1kg.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 268,
-            name: " نيو بارك جبنة قشطية",
-            price:		 163800	,
-            unit: " عرض	",
-            category: "dairy",
-            image: "images/New Park Cream Cheese (Special Offer).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 269,
-            name: " حليب كانديا خالي الدسم",
-            price:		180000	,
-            unit: " 1ل	",
-            category: "dairy",
-            image: "images/Candia Skimmed Milk.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 270,
-            name: "  زبدة لورباك",
-            price:	259992	,
-            unit: "  200غ",
-            category: "dairy",
-            image: "images/Lurpak Butter 200g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 271,
-            name: "  	أصابع جبنة",
-            price:	180000	,
-            unit: "  *15",
-            category: "dairy",
-            image: "images/Cheese Sticks.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 272,
-            name: "  برك جبنة",
-            price:	180000	,
-            unit: "  *15",
-            category: "dairy",
-            image: "images/Cheese Borek.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 273,
-            name: "  علبة قرقش  وايفر",
-            price:	180000	,
-            unit: "  *24",
-            category: "Snacks",
-            image: "images/Qarqash Wafer Box (24 count).png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 280,
-            name: "  بيغ بابول علبة ",
-            price:	117000	,
-            unit: "   ",
-            category: "Snacks",
-            image: "images/Big Babol Box.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 282,
-            name: " 	 توت+جلاب الخواجة",
-            price:	306000	,
-            unit: "   ",
-            category: "drinks",
-            image: "images/Al-Khawaja Mulberry.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 284,
-            name: " 	 بيسكولاتا ستار",
-            price:	54990,
-            unit: "   ",
-            category: "Snacks",
-            image: "images/Biscolata Star.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 285,
-            name: " 	نشا ",
-            price:	49950,
-            unit: " 500غ  ",
-            category: "Bakery",
-            image: "images/Starch 500g.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 286,
-            name: " 	بزر ابيض ",
-            price:		249930,
-            unit: "	 500غ ",
-            category: "Snacks",
-            image: "images/White seeds 500g.png",
-            pictureClass: "cleaning-picture"
-        },
-        {
-             id: 287,
-            name: " 	كري كري",
-            price:	55000,
-            unit: "	  	 200غ	",
-            category: "Snacks",
-            image: "images/Kri Kri 200g.png",
-            pictureClass: "cleaning-picture"
-        },
-           {
-             id: 288,
-            name: " 	تويكس ",
-            price:	216000,
-            unit: "	  	 4+1	",
-            category: "Snacks",
-            image: "images/Twix.png",
-            pictureClass: "cleaning-picture"
-        },
- {
-             id: 292,
-            name: " 	زيت زيتون الكورة    ",
-            price:	200000,
-            unit: "	  	0.5ل",
-            category: "food",
-            image: "images/Koura Olive Oil.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 293,
-            name: " 	كاجو مملح    ",
-            price:	1400000,
-            unit: "	  	1ك",
-            category: "Snacks",
-            image: "images/Salted Cashews.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 294,
-            name: " 	سمسم    ",
-            price:	70000,
-            unit: "	  	200غ",
-            category: "spices",
-            image: "images/Sesame.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 295,
-            name: " 	عيران كانديا    ",
-            price:	150000,
-            unit: "	  	 1 ليتر",
-            category: "dairy",
-            image: "images/Eran Kandia.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 296,
-            name: " 	زيت غندور   ",
-            price:	650000,
-            unit: "	  	  5 ليتر",
-            category: "food",
-            image: "images/Ghandour Oil.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 297,
-            name: " 	توتي فروتي  ",
-            price:	40000,
-            unit: "	  	  ",
-            category: "Snacks",
-            image: "images/Tutti Frutti.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 298,
-            name: " 	كورن فلاكس ",
-            price:	470000,
-            unit: "	  1ك +250 غ مجاني	  ",
-            category: "Snacks",
-            image: "images/Corn Flakes.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 304,
-            name: " 	بودرة الزهرة",
-            price:	115000,
-            unit: "	    ",
-            category: "cleaning",
-            image: "images/Cauliflower Powder.png",
-            pictureClass: "cleaning-picture"
-        },
-{
-             id: 311,
-            name: " 	 فاتيكا بلسم",
-            price:	150000,
-            unit: "	150 مل ",
-            category: "cleaning",
-            image: "images/Vatika Conditioner.png",
+            image: "images/cleaning/Cosmal Hijab Conditioner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2279,7 +1004,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "	9W",
             category: "Electrical",
-            image: "images/9W Light Bulb.png",
+            image: "images/cleaning/9W Light Bulb.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -2288,7 +1013,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "	48W",
             category: "Electrical",
-            image: "images/48W Light Bulb.png",
+            image: "images/cleaning/48W Light Bulb.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2297,7 +1022,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "	350مل ",
             category: "cleaning",
-            image: "images/Sunsilk shampoo.png",
+            image: "images/cleaning/Sunsilk shampoo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2306,7 +1031,7 @@ gharibGrid.appendChild(card);
             price:	1050000,
             unit: "	4 كيلو ",
             category: "cleaning",
-            image: "images/Lats laundry powder.png",
+            image: "images/cleaning/Lats laundry powder.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2315,7 +1040,7 @@ gharibGrid.appendChild(card);
             price:	900000,
             unit: "	4 كيلو ",
             category: "cleaning",
-            image: "images/Persil.png",
+            image: "images/cleaning/Persil.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2324,7 +1049,7 @@ gharibGrid.appendChild(card);
             price:	750000,
             unit: "	4 كيلو ",
             category: "cleaning",
-            image: "images/Bonux 4 kg.png",
+            image: "images/cleaning/Bonux 4 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2333,7 +1058,7 @@ gharibGrid.appendChild(card);
             price:	310000,
             unit: "	1.5 ك   ",
             category: "cleaning",
-            image: "images/Bonux 1.5 kg.png",
+            image: "images/cleaning/Bonux 1.5 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2342,7 +1067,7 @@ gharibGrid.appendChild(card);
             price:	1370000,
             unit: "	7 كيلو    ",
             category: "cleaning",
-            image: "images/madar.png",
+            image: "images/cleaning/madar.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2351,7 +1076,7 @@ gharibGrid.appendChild(card);
             price:	1530000,
             unit: "	10 كيلو    ",
             category: "cleaning",
-            image: "images/Oxy.png",
+            image: "images/cleaning/Oxy.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2360,7 +1085,7 @@ gharibGrid.appendChild(card);
             price:	990000,
             unit: "	4 كيلو    ",
             category: "cleaning",
-            image: "images/Ariel 4 kg.png",
+            image: "images/cleaning/Ariel 4 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2369,7 +1094,7 @@ gharibGrid.appendChild(card);
             price:	1400000,
             unit: "	9 كيلو    ",
             category: "cleaning",
-            image: "images/Hayat 9 kg.png",
+            image: "images/cleaning/Hayat 9 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2378,7 +1103,7 @@ gharibGrid.appendChild(card);
             price:	650000,
             unit: "	4 كيلو    ",
             category: "cleaning",
-            image: "images/4-Kilogram Life.png",
+            image: "images/cleaning/4-Kilogram Life.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2387,7 +1112,7 @@ gharibGrid.appendChild(card);
             price:	1350000,
             unit: "	8 كيلو    ",
             category: "cleaning",
-            image: "images/Afrah 8 kg.png",
+            image: "images/cleaning/Afrah 8 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2396,7 +1121,7 @@ gharibGrid.appendChild(card);
             price:	1710000,
             unit: "	10 كيلو    ",
             category: "cleaning",
-            image: "images/Persil 10 kg.png",
+            image: "images/cleaning/Persil 10 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2405,7 +1130,7 @@ gharibGrid.appendChild(card);
             price:	750000,
             unit: "	4 كيلو    ",
             category: "cleaning",
-            image: "images/Infiniti 4K.png",
+            image: "images/cleaning/Infiniti 4K.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2414,7 +1139,7 @@ gharibGrid.appendChild(card);
             price:	660000,
             unit: "	6 كيلو    ",
             category: "cleaning",
-            image: "images/Infiniti 4K.png",
+            image: "images/cleaning/peros.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2423,7 +1148,7 @@ gharibGrid.appendChild(card);
             price:	171000,
             unit: "	10 كيلو    ",
             category: "cleaning",
-            image: "images/Ariel 10 kg.png",
+            image: "images/cleaning/Ariel 10 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2432,7 +1157,7 @@ gharibGrid.appendChild(card);
             price:	750000,
             unit: "	2 كيلو    ",
             category: "cleaning",
-            image: "images/Liquid Latex 2 kg.png",
+            image: "images/cleaning/Liquid Latex 2 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2441,7 +1166,7 @@ gharibGrid.appendChild(card);
             price:	1125000,
             unit: "	5 ليتر  ",
             category: "cleaning",
-            image: "images/Liquid Latex 5 liters.png",
+            image: "images/cleaning/Liquid Latex 5 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2450,7 +1175,7 @@ gharibGrid.appendChild(card);
             price:	650000,
             unit: "	5 كيلو  ",
             category: "cleaning",
-            image: "images/Persil liquid 5 kg.png",
+            image: "images/cleaning/Persil liquid 5 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2459,7 +1184,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: "	5 كيلو  ",
             category: "cleaning",
-            image: "images/Sanita liquid,.png",
+            image: "images/cleaning/Sanita liquid,.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2468,16 +1193,16 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "	6 كيلو  ",
             category: "cleaning",
-            image: "images/Ibiza liquid, 6 kg.png",
+            image: "images/cleaning/Ibiza liquid, 6 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
              id: 350,
             name: "  اومو سائل",
-            price:	4250000,
+            price:	425000,
             unit: "	2.5 ليتر    ",
             category: "cleaning",
-            image: "images/OMO liquid 2.5 liters.png",
+            image: "images/cleaning/OMO liquid 2.5 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2486,7 +1211,7 @@ gharibGrid.appendChild(card);
             price:	330000,
             unit: "	3 ليتر    ",
             category: "cleaning",
-            image: "images/Life 3 Liters.png",
+            image: "images/cleaning/Life 3 Liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2495,7 +1220,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: "	5 كيلو    ",
             category: "cleaning",
-            image: "images/Ariel liquid detergent 5 kg.png",
+            image: "images/cleaning/Ariel liquid detergent 5 kg.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2504,7 +1229,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "	3 ليتر     ",
             category: "cleaning",
-            image: "images/Dymex.png",
+            image: "images/cleaning/Dymex.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2513,7 +1238,7 @@ gharibGrid.appendChild(card);
             price:	400000,
             unit: "	3 ليتر     ",
             category: "cleaning",
-            image: "images/Comfort Laundry Fragrance 3L.png",
+            image: "images/cleaning/Comfort Laundry Fragrance 3L.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2522,7 +1247,7 @@ gharibGrid.appendChild(card);
             price:	480000,
             unit: "	3 ليتر     ",
             category: "cleaning",
-            image: "images/Downy laundry scent booster.png",
+            image: "images/cleaning/Downy laundry scent booster.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2531,7 +1256,7 @@ gharibGrid.appendChild(card);
             price:	470000,
             unit: "	3 ليتر     ",
             category: "cleaning",
-            image: "images/Sanita perfume.png",
+            image: "images/cleaning/Sanita perfume.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2540,7 +1265,7 @@ gharibGrid.appendChild(card);
             price:	570000,
             unit: "	1.5 ليتر     ",
             category: "cleaning",
-            image: "images/Downy concentrate 1.5 liters.png",
+            image: "images/cleaning/Downy concentrate 1.5 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2549,7 +1274,7 @@ gharibGrid.appendChild(card);
             price:	340000,
             unit: "	2 ليتر     ",
             category: "cleaning",
-            image: "images/Comfort perfume.png",
+            image: "images/cleaning/Comfort perfume.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2558,7 +1283,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "	650 مل      ",
             category: "cleaning",
-            image: "images/Pril Dishwashing Liquid.png",
+            image: "images/cleaning/Pril Dishwashing Liquid.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2567,7 +1292,7 @@ gharibGrid.appendChild(card);
             price:	250000,
             unit: "	1.25 ليتر      ",
             category: "cleaning",
-            image: "images/Pril dishwashing liquid 1.25 liters.png",
+            image: "images/cleaning/Pril dishwashing liquid 1.25 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2576,7 +1301,7 @@ gharibGrid.appendChild(card);
             price:	320000,
             unit: "	800 مل      ",
             category: "cleaning",
-            image: "images/Fairy 800 ml.png",
+            image: "images/cleaning/Fairy 800 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2585,7 +1310,7 @@ gharibGrid.appendChild(card);
             price:	400000,
             unit: "	      ",
             category: "cleaning",
-            image: "images/Very Jumbo.png",
+            image: "images/cleaning/Very Jumbo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2594,7 +1319,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "	  مل 650    ",
             category: "cleaning",
-            image: "images/Karmel Dishwashing Liquid 650 ml.png",
+            image: "images/cleaning/Karmel Dishwashing Liquid 650 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2603,7 +1328,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "	  عرض مع سفنجة جلي   ",
             category: "cleaning",
-            image: "images/Afrah Dishwashing Liquid.png",
+            image: "images/cleaning/Afrah Dishwashing Liquid.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2612,7 +1337,7 @@ gharibGrid.appendChild(card);
             price:	170000,
             unit: "	  1.5 ليتر   ",
             category: "cleaning",
-            image: "images/Dimex dishwashing liquid 1.5 liters.png",
+            image: "images/cleaning/Dimex dishwashing liquid 1.5 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2621,7 +1346,7 @@ gharibGrid.appendChild(card);
             price:	850000,
             unit: "	  700 مل   ",
             category: "cleaning",
-            image: "images/Dimex Dishwashing Liquid 700.png",
+            image: "images/cleaning/Dimex Dishwashing Liquid 700.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2630,7 +1355,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "	  1600غ  ",
             category: "cleaning",
-            image: "images/Amazing Dishwashing Paste.png",
+            image: "images/cleaning/Amazing Dishwashing Paste.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2639,7 +1364,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "	   1 ليتر   ",
             category: "cleaning",
-            image: "images/Lats Dishwashing Liquid.png",
+            image: "images/cleaning/Lats Dishwashing Liquid.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2648,7 +1373,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: "	   3 ليتر   ",
             category: "cleaning",
-            image: "images/Wazir dishwashing liquid, 3 liters.png",
+            image: "images/cleaning/Wazir dishwashing liquid, 3 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2657,7 +1382,7 @@ gharibGrid.appendChild(card);
             price:	600000,
             unit: "	   3 ليتر   ",
             category: "cleaning",
-            image: "images/Original Pril, 3 liters.png",
+            image: "images/cleaning/Original Pril, 3 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2666,7 +1391,7 @@ gharibGrid.appendChild(card);
             price:	340000,
             unit: "	   3.7 ليتر   ",
             category: "cleaning",
-            image: "images/Dimex Dishwashing Liquid 3.7 Liters.png",
+            image: "images/cleaning/Dimex Dishwashing Liquid 3.7 Liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2675,7 +1400,7 @@ gharibGrid.appendChild(card);
             price:	900000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Hayat cleaning supplies with a bucket.png",
+            image: "images/cleaning/Hayat cleaning supplies with a bucket.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2684,7 +1409,7 @@ gharibGrid.appendChild(card);
             price:	145000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Multi-purpose.png",
+            image: "images/cleaning/Multi-purpose.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2693,7 +1418,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "	300غ   ",
             category: "cleaning",
-            image: "images/Lats 300g.png",
+            image: "images/cleaning/Lats 300g.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2702,7 +1427,7 @@ gharibGrid.appendChild(card);
             price:	85000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Giggles scented wet wipes.png",
+            image: "images/cleaning/Giggles scented wet wipes.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2711,7 +1436,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Wipes Wee Wee.png",
+            image: "images/cleaning/Wipes Wee Wee.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2720,7 +1445,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Wipes King.png",
+            image: "images/cleaning/Wipes King.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2729,7 +1454,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Habeez Water Wipes.png",
+            image: "images/cleaning/Habeez Water Wipes.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2738,7 +1463,7 @@ gharibGrid.appendChild(card);
             price:	170000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Habeez Wipes.png",
+            image: "images/cleaning/Habeez Wipes.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2747,7 +1472,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Al-Sada Water Wipes.png",
+            image: "images/cleaning/Al-Sada Water Wipes.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2756,7 +1481,7 @@ gharibGrid.appendChild(card);
             price:	155000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Gypsy Wipes.png",
+            image: "images/cleaning/Gypsy Wipes.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2765,7 +1490,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Wedding Whitener (Brightener).png",
+            image: "images/cleaning/Wedding Whitener (Brightener).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2774,7 +1499,7 @@ gharibGrid.appendChild(card);
             price:	30000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Indigo (Nila).png",
+            image: "images/cleaning/Indigo (Nila).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2783,7 +1508,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "	 1 ليتر   ",
             category: "cleaning",
-            image: "images/Germex Cleaner and Sanitizer, 1 Liter.png",
+            image: "images/cleaning/Germex Cleaner and Sanitizer, 1 Liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2792,7 +1517,7 @@ gharibGrid.appendChild(card);
             price:	320000,
             unit: "	2 ليتر   ",
             category: "cleaning",
-            image: "images/Germex Cleaner and Sanitizer, 2 Liters.png",
+            image: "images/cleaning/Germex Cleaner and Sanitizer, 2 Liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2801,7 +1526,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: "	4 ليتر   ",
             category: "cleaning",
-            image: "images/Germex cleaner and disinfectant, 4 liters.png",
+            image: "images/cleaning/Germex cleaner and disinfectant, 4 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2810,7 +1535,7 @@ gharibGrid.appendChild(card);
             price:	950000,
             unit: "	500 مل   ",
             category: "cleaning",
-            image: "images/Ferol disinfectant, 500 ml.png",
+            image: "images/cleaning/Ferol disinfectant, 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2819,7 +1544,7 @@ gharibGrid.appendChild(card);
             price:	280000,
             unit: "	500 مل   ",
             category: "cleaning",
-            image: "images/Dettol 500 ml.png",
+            image: "images/cleaning/Dettol 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2828,7 +1553,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "	1.5 ليتر   ",
             category: "cleaning",
-            image: "images/Ajax 1.25 liters.png",
+            image: "images/cleaning/Ajax 1.25 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2837,7 +1562,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "	800 مل   ",
             category: "cleaning",
-            image: "images/Karmel Cleaner 800 ml.png",
+            image: "images/cleaning/Karmel Cleaner 800 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2846,7 +1571,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "	750 مل   ",
             category: "cleaning",
-            image: "images/Deer General 750 ml.png",
+            image: "images/cleaning/Deer General 750 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2855,7 +1580,7 @@ gharibGrid.appendChild(card);
             price:	330000,
             unit: "	3 ليتر    ",
             category: "cleaning",
-            image: "images/General 3-liter cleaner.png",
+            image: "images/cleaning/General 3-liter cleaner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2864,7 +1589,7 @@ gharibGrid.appendChild(card);
             price:	315000,
             unit: "	3 ليتر    ",
             category: "cleaning",
-            image: "images/Sanita 3-liter surface cleaner.png",
+            image: "images/cleaning/Sanita 3-liter surface cleaner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2873,7 +1598,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "	2.7 ليتر    ",
             category: "cleaning",
-            image: "images/Dimex All-Purpose Cleaner.png",
+            image: "images/cleaning/Dimex All-Purpose Cleaner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2882,7 +1607,7 @@ gharibGrid.appendChild(card);
             price:	290000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Finish Dishwasher Tablets (48 count).png",
+            image: "images/cleaning/Finish Dishwasher Tablets (48 count).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2891,7 +1616,7 @@ gharibGrid.appendChild(card);
             price:	460000,
             unit: "  500 مل  ",
             category: "cleaning",
-            image: "images/Somat Dishwasher Rinse Aid 500 ml.png",
+            image: "images/cleaning/Somat Dishwasher Rinse Aid 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2900,7 +1625,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Lats Stain Remover.png",
+            image: "images/cleaning/Lats Stain Remover.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2909,7 +1634,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Harpic Toilet Cleaner.png",
+            image: "images/cleaning/Harpic Toilet Cleaner.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2918,7 +1643,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "cleaning",
-            image: "images/WWC Toilet Freshener.png",
+            image: "images/cleaning/WWC Toilet Freshener.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2927,7 +1652,7 @@ gharibGrid.appendChild(card);
             price:	40000,
             unit: "  60 مل ",
             category: "cleaning",
-            image: "images/Pure Hand Sanitizer.png",
+            image: "images/cleaning/Pure Hand Sanitizer.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2936,7 +1661,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Perla Pink Trash Bags.png",
+            image: "images/cleaning/Perla Pink Trash Bags.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2945,7 +1670,7 @@ gharibGrid.appendChild(card);
             price:	150000,
             unit: "   ",
             category: "household",
-            image: "images/Black Perla waste bags.png",
+            image: "images/cleaning/Black Perla waste bags.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2954,7 +1679,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "   ",
             category: "household",
-            image: "images/Perla Blue Trash Bags.png",
+            image: "images/cleaning/Perla Blue Trash Bags.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2963,7 +1688,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: "   ",
             category: "household",
-            image: "images/Black Trash Bags with Drawstring.png",
+            image: "images/cleaning/Black Trash Bags with Drawstring.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2972,7 +1697,7 @@ gharibGrid.appendChild(card);
             price:	450000,
             unit: "   ",
             category: "household",
-            image: "images/Pink trash bags with a drawstring.png",
+            image: "images/cleaning/Pink trash bags with a drawstring.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2981,7 +1706,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: "   ",
             category: "household",
-            image: "images/Blue trash bags with a drawstring.png",
+            image: "images/cleaning/Blue trash bags with a drawstring.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2990,7 +1715,7 @@ gharibGrid.appendChild(card);
             price:	370000,
             unit: "   ",
             category: "household",
-            image: "images/Black medical gloves.png",
+            image: "images/cleaning/Black medical gloves.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -2999,7 +1724,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: "   ",
             category: "household",
-            image: "images/Blue medical gloves.png",
+            image: "images/cleaning/Blue medical gloves.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3008,7 +1733,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: "   ",
             category: "household",
-            image: "images/Arabic Shaver.png",
+            image: "images/cleaning/Arabic Shaver.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3017,7 +1742,7 @@ gharibGrid.appendChild(card);
             price:	140000,
             unit: "   ",
             category: "household",
-            image: "images/Astor coded.png",
+            image: "images/cleaning/Astor coded.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3026,7 +1751,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "   ",
             category: "household",
-            image: "images/Gelatin blade.png",
+            image: "images/cleaning/Gelatin blade.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3035,7 +1760,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "   ",
             category: "household",
-            image: "images/Women's Gillette Razor.png",
+            image: "images/cleaning/Women's Gillette Razor.png",
             pictureClass: "cleaning-picture"
         },
        {
@@ -3044,7 +1769,7 @@ gharibGrid.appendChild(card);
             price:	594000,
             unit: "   ",
             category: "household",
-            image: "images/Astra razor blade pack.png",
+            image: "images/cleaning/Astra razor blade pack.png",
             pictureClass: "cleaning-picture"
         }, 
      {
@@ -3053,7 +1778,7 @@ gharibGrid.appendChild(card);
             price:	540000,
             unit: "   ",
             category: "household",
-            image: "images/Astra razor blade packش.png",
+            image: "images/cleaning/Astra razor blade packش.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3062,7 +1787,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "   ",
             category: "household",
-            image: "images/Ghada Shaving Paste.png",
+            image: "images/cleaning/Ghada Shaving Paste.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3071,7 +1796,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "   ",
             category: "household",
-            image: "images/Gillette Shaving Foam.png",
+            image: "images/cleaning/Gillette Shaving Foam.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3080,7 +1805,7 @@ gharibGrid.appendChild(card);
             price:	105000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/Odex Color.png",
+            image: "images/cleaning/Odex Color.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3089,7 +1814,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/Odex Blue 1 Liter.png",
+            image: "images/cleaning/Odex Blue 1 Liter.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3098,7 +1823,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/La Croix Bleach, 1 liter.png",
+            image: "images/cleaning/La Croix Bleach, 1 liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3107,7 +1832,7 @@ gharibGrid.appendChild(card);
             price:	140000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/Clorox Cleaner and Disinfectant, 1 Liter.png",
+            image: "images/cleaning/Clorox Cleaner and Disinfectant, 1 Liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3116,7 +1841,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/Dimex bleach, 1 liter.png",
+            image: "images/cleaning/Dimex bleach, 1 liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3125,7 +1850,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: " 1 ليتر   ",
             category: "cleaning",
-            image: "images/Carmel sterilizer and disinfectant, 1 liter.png",
+            image: "images/cleaning/Carmel sterilizer and disinfectant, 1 liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3134,7 +1859,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: " 3.5 ليتر   ",
             category: "cleaning",
-            image: "images/Lacroix 3.8 litres.png",
+            image: "images/cleaning/Lacroix 3.8 litres.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3143,7 +1868,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "3 ليتر   ",
             category: "cleaning",
-            image: "images/Javel Dimex 3 liters.png",
+            image: "images/cleaning/Javel Dimex 3 liters.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3152,7 +1877,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "4 ليتر   ",
             category: "cleaning",
-            image: "images/Audex 4 Liter.png",
+            image: "images/cleaning/Audex 4 Liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3161,7 +1886,7 @@ gharibGrid.appendChild(card);
             price:	30000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Jif soap.png",
+            image: "images/cleaning/Jif soap.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3170,7 +1895,7 @@ gharibGrid.appendChild(card);
             price:	80000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Dove soap.png",
+            image: "images/cleaning/Dove soap.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3179,7 +1904,7 @@ gharibGrid.appendChild(card);
             price:	550000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Dettol soap.png",
+            image: "images/cleaning/Dettol soap.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3188,7 +1913,7 @@ gharibGrid.appendChild(card);
             price:	850000,
             unit: "  5 حبات  ",
             category: "cleaning",
-            image: "images/Al-Wazir soap (pack of 5).png",
+            image: "images/cleaning/Al-Wazir soap (pack of 5).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3197,7 +1922,7 @@ gharibGrid.appendChild(card);
             price:	700000,
             unit: "  5 حبات  ",
             category: "cleaning",
-            image: "images/Lux soap.png",
+            image: "images/cleaning/Lux soap.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3206,7 +1931,7 @@ gharibGrid.appendChild(card);
             price:	150000,
             unit: "  250 مل    ",
             category: "cleaning",
-            image: "images/Dettol liquid soap 250 ml.png",
+            image: "images/cleaning/Dettol liquid soap 250 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3215,7 +1940,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "  500 مل    ",
             category: "cleaning",
-            image: "images/Ibiza liquid soap 500 ml.png",
+            image: "images/cleaning/Ibiza liquid soap 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3224,7 +1949,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "  500 مل    ",
             category: "cleaning",
-            image: "images/Lux Liquid Soap 500 ml.png",
+            image: "images/cleaning/Lux Liquid Soap 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3233,7 +1958,7 @@ gharibGrid.appendChild(card);
             price:	75000,
             unit: "  500 مل    ",
             category: "cleaning",
-            image: "images/Al-Sada Liquid Soap 500 ml.png",
+            image: "images/cleaning/Al-Sada Liquid Soap 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3242,7 +1967,7 @@ gharibGrid.appendChild(card);
             price:	260000,
             unit: "  200 مل    ",
             category: "cleaning",
-            image: "images/Rexona Deodorant 200 ml.png",
+            image: "images/cleaning/Rexona Deodorant 200 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3251,7 +1976,7 @@ gharibGrid.appendChild(card);
             price:	240000,
             unit: "    ليتر 3.75    ",
             category: "cleaning",
-            image: "images/Liquid Soap (Plain) – 1 Gallon.png",
+            image: "images/cleaning/Liquid Soap (Plain) – 1 Gallon.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3260,7 +1985,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "    150 مل   ",
             category: "cleaning",
-            image: "images/Nivea Deodorant 150 ml.png",
+            image: "images/cleaning/Nivea Deodorant 150 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3269,7 +1994,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "    150 مل   ",
             category: "cleaning",
-            image: "images/Adidas Deodorant 150 ml.png",
+            image: "images/cleaning/Adidas Deodorant 150 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3278,7 +2003,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "      ",
             category: "cleaning",
-            image: "images/Nivea Roll-on.png",
+            image: "images/cleaning/Nivea Roll-on.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3287,7 +2012,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "  200 مل    ",
             category: "cleaning",
-            image: "images/Elvive Conditioner 200 ml.png",
+            image: "images/cleaning/Elvive Conditioner 200 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3296,7 +2021,7 @@ gharibGrid.appendChild(card);
             price:	275000,
             unit: "   200 مل    ",
             category: "cleaning",
-            image: "images/Ultra Doux Conditioner 200 ml.png",
+            image: "images/cleaning/Ultra Doux Conditioner 200 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3305,7 +2030,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "  400 مل    ",
             category: "cleaning",
-            image: "images/Tresédy Conditioner 400ml.png",
+            image: "images/cleaning/Tresédy Conditioner 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3314,7 +2039,7 @@ gharibGrid.appendChild(card);
             price:	340000,
             unit: "   350 مل    ",
             category: "cleaning",
-            image: "images/Dove Conditioner 350ml.png",
+            image: "images/cleaning/Dove Conditioner 350ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3323,7 +2048,7 @@ gharibGrid.appendChild(card);
             price:	250000,
             unit: "  500 مل    ",
             category: "cleaning",
-            image: "images/Cosmaline Conditioner 500 ml.png",
+            image: "images/cleaning/Cosmaline Conditioner 500 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3332,7 +2057,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: "   500 مل    ",
             category: "cleaning",
-            image: "images/Pantene Conditioner 500 ml.png",
+            image: "images/cleaning/Pantene Conditioner 500 ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3341,7 +2066,7 @@ gharibGrid.appendChild(card);
             price:	170000,
             unit: "  1 ليتر   ",
             category: "cleaning",
-            image: "images/Ibiza Conditioner 1 Liter.png",
+            image: "images/cleaning/Ibiza Conditioner 1 Liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3350,7 +2075,7 @@ gharibGrid.appendChild(card);
             price:	340000,
             unit: "   275 مل    ",
             category: "cleaning",
-            image: "images/Pantene Oil Replacement 275 ml.png",
+            image: "images/cleaning/Pantene Oil Replacement 275 ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3359,7 +2084,7 @@ gharibGrid.appendChild(card);
             price:	260000,
             unit: "  300 مل  ",
             category: "cleaning",
-            image: "images/Johnson’s Oil 300 ml.png",
+            image: "images/cleaning/Johnson’s Oil 300 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3368,7 +2093,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "   700 مل    ",
             category: "cleaning",
-            image: "images/Lux Shower Gel 700 ml.png",
+            image: "images/cleaning/Lux Shower Gel 700 ml.png",
             pictureClass: "cleaning-picture"
         },
                 {
@@ -3377,7 +2102,7 @@ gharibGrid.appendChild(card);
             price:	207000,
             unit: "  1 ليتر ",
             category: "cleaning",
-            image: "images/Malaysian shower gel, 1 liter.png",
+            image: "images/cleaning/Malaysian shower gel, 1 liter.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3386,7 +2111,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "      ",
             category: "cleaning",
-            image: "images/Clip shower gel.png",
+            image: "images/cleaning/Clip shower gel.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3395,7 +2120,7 @@ gharibGrid.appendChild(card);
             price:	430000,
             unit: " 400 مل",
             category: "cleaning",
-            image: "images/Clip Body Lotion 400 ml.png",
+            image: "images/cleaning/Clip Body Lotion 400 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3404,7 +2129,7 @@ gharibGrid.appendChild(card);
             price:	260000,
             unit: "  1.85 ليتر    ",
             category: "cleaning",
-            image: "images/Al-Sada Conditioner 1.85 liters.png",
+            image: "images/cleaning/Al-Sada Conditioner 1.85 liters.png",
             pictureClass: "cleaning-picture"
         },
             {
@@ -3413,7 +2138,7 @@ gharibGrid.appendChild(card);
             price:	150000,
             unit: " 400 مل",
             category: "cleaning",
-            image: "images/Johnson’s Baby Shampoo.png",
+            image: "images/cleaning/Johnson’s Baby Shampoo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3422,7 +2147,7 @@ gharibGrid.appendChild(card);
             price:	280000,
             unit: " 750 مل   ",
             category: "cleaning",
-            image: "images/Johnson’s Baby Shampoo 750ml.png",
+            image: "images/cleaning/Johnson’s Baby Shampoo 750ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3431,7 +2156,7 @@ gharibGrid.appendChild(card);
             price:	570000,
             unit: " 900 مل",
             category: "cleaning",
-            image: "images/Clear Shampoo 900ml.png",
+            image: "images/cleaning/Clear Shampoo 900ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3440,7 +2165,7 @@ gharibGrid.appendChild(card);
             price:	520000,
             unit: " 1000 مل   ",
             category: "cleaning",
-            image: "images/Sunsilk Shampoo 1000ml.png",
+            image: "images/cleaning/Sunsilk Shampoo 1000ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3449,7 +2174,7 @@ gharibGrid.appendChild(card);
             price:	687000,
             unit: " 1000 مل",
             category: "cleaning",
-            image: "images/Dove Shampoo 1000ml.png",
+            image: "images/cleaning/Dove Shampoo 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3458,7 +2183,7 @@ gharibGrid.appendChild(card);
             price:	720000,
             unit: " 1000 مل   ",
             category: "cleaning",
-            image: "images/Pantene Shampoo 1000ml.png",
+            image: "images/cleaning/Pantene Shampoo 1000ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3467,16 +2192,16 @@ gharibGrid.appendChild(card);
             price:	740000,
             unit: " 1000 مل",
             category: "cleaning",
-            image: "images/Head & Shoulders Shampoo 1000ml.png",
+            image: "images/cleaning/Head & Shoulders Shampoo 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
              id: 462,
             name: "  شامبو الفيف",
-            price:	45000,
+            price:	450000,
             unit: " 600 مل   ",
             category: "cleaning",
-            image: "images/Elvive Shampoo 600ml.png",
+            image: "images/cleaning/Elvive Shampoo 600ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3485,7 +2210,7 @@ gharibGrid.appendChild(card);
             price:	420000,
             unit: " 600 مل",
             category: "cleaning",
-            image: "images/dove.png",
+            image: "images/cleaning/dove.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3494,7 +2219,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: " 400 مل   ",
             category: "cleaning",
-            image: "images/Elvive Shampoo 400ml.png",
+            image: "images/cleaning/Elvive Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3503,7 +2228,7 @@ gharibGrid.appendChild(card);
             price:	410000,
             unit: " 500 مل",
             category: "cleaning",
-            image: "images/Head & Shoulders 500ml.png",
+            image: "images/cleaning/Head & Shoulders 500ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3512,7 +2237,7 @@ gharibGrid.appendChild(card);
             price:	330000,
             unit: " 350 مل   ",
             category: "cleaning",
-            image: "images/Head & Shoulders Shampoo 350ml.png",
+            image: "images/cleaning/Head & Shoulders Shampoo 350ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3521,7 +2246,7 @@ gharibGrid.appendChild(card);
             price:	330000,
             unit: " 400 مل",
             category: "cleaning",
-            image: "images/Pantene Shampoo 400ml.png",
+            image: "images/cleaning/Pantene Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3530,7 +2255,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Tresemme Shampoo.png",
+            image: "images/cleaning/Tresemme Shampoo.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3539,7 +2264,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Hijab Shampoo.png",
+            image: "images/cleaning/Hijab Shampoo.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3548,7 +2273,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "  350 مل   ",
             category: "cleaning",
-            image: "images/Sunsilk shampoo 350ml.png",
+            image: "images/cleaning/Sunsilk shampoo 350ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3557,7 +2282,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: " 420 مل   ",
             category: "cleaning",
-            image: "images/Hair dye shampoo 420ml.png",
+            image: "images/cleaning/Hair dye shampoo 420ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3566,7 +2291,7 @@ gharibGrid.appendChild(card);
             price:	260000,
             unit: "  400 مل   ",
             category: "cleaning",
-            image: "images/Clear shampoo 400ml.png",
+            image: "images/cleaning/Clear shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3575,7 +2300,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: " 600 مل   ",
             category: "cleaning",
-            image: "images/Clear shampoo 400ml.png",
+            image: "images/cleaning/Clear shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3584,7 +2309,7 @@ gharibGrid.appendChild(card);
             price:	225000,
             unit: "  400 مل   ",
             category: "cleaning",
-            image: "images/vatika.png",
+            image: "images/cleaning/vatika.png",
             pictureClass: "cleaning-picture"
         },
         {
@@ -3593,7 +2318,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: " 400 مل   ",
             category: "cleaning",
-            image: "images/Ultra Doux Kids Shampoo 400ml.png",
+            image: "images/cleaning/Ultra Doux Kids Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3602,7 +2327,7 @@ gharibGrid.appendChild(card);
             price:	350000,
             unit: "  400 مل   ",
             category: "cleaning",
-            image: "images/Ultra Doux Shampoo 400ml.png",
+            image: "images/cleaning/Ultra Doux Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3611,7 +2336,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: " 400 مل   ",
             category: "cleaning",
-            image: "images/Al-Sada Baby Shampoo 400ml.png",
+            image: "images/cleaning/Al-Sada Baby Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3620,7 +2345,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: "  400 مل   ",
             category: "cleaning",
-            image: "images/Herbal Shampoo 400ml.png",
+            image: "images/cleaning/Herbal Shampoo 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3629,7 +2354,7 @@ gharibGrid.appendChild(card);
             price:	290000,
             unit: " 600 مل   ",
             category: "cleaning",
-            image: "images/Pert Plus Shampoo 600ml.png",
+            image: "images/cleaning/Pert Plus Shampoo 600ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3638,7 +2363,7 @@ gharibGrid.appendChild(card);
             price:	125000,
             unit: "  650 مل   ",
             category: "cleaning",
-            image: "images/Ibiza Shampoo 650ml.png",
+            image: "images/cleaning/Ibiza Shampoo 650ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3647,7 +2372,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Elegance Shampoo with Shower Gel.png",
+            image: "images/cleaning/Elegance Shampoo with Shower Gel.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3656,7 +2381,7 @@ gharibGrid.appendChild(card);
             price:	240000,
             unit: "  750 مل   ",
             category: "cleaning",
-            image: "images/Elegance Shampoo 750ml.png",
+            image: "images/cleaning/Elegance Shampoo 750ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3665,7 +2390,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "  500 مل   ",
             category: "cleaning",
-            image: "images/Cosmaline Shampoo 500ml.png",
+            image: "images/cleaning/Cosmaline Shampoo 500ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3674,7 +2399,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: "  1000 مل   ",
             category: "cleaning",
-            image: "images/Al-Sada Hair Gel 1000ml.png",
+            image: "images/cleaning/Al-Sada Hair Gel 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3683,7 +2408,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "  250 مل   ",
             category: "cleaning",
-            image: "images/Al-Sada Hair Gel 250ml.png",
+            image: "images/cleaning/Al-Sada Hair Gel 250ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3692,7 +2417,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "  100 مل   ",
             category: "cleaning",
-            image: "images/Al-Sada Hair Gel 100ml.png",
+            image: "images/cleaning/Al-Sada Hair Gel 100ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3701,7 +2426,7 @@ gharibGrid.appendChild(card);
             price:	140000,
             unit: "  125 مل   ",
             category: "cleaning",
-            image: "images/777 Cologne 125ml.png",
+            image: "images/cleaning/777 Cologne 125ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3710,7 +2435,7 @@ gharibGrid.appendChild(card);
             price:	250000,
             unit: "  280 مل   ",
             category: "cleaning",
-            image: "images/777 Cologne 280ml.png",
+            image: "images/cleaning/777 Cologne 280ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3719,7 +2444,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: "   ",
             category: "household",
-            image: "images/Floor mop.png",
+            image: "images/cleaning/Floor mop.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3728,7 +2453,7 @@ gharibGrid.appendChild(card);
             price:	56000,
             unit: "   ",
             category: "household",
-            image: "images/Kitchen towels.png",
+            image: "images/cleaning/Kitchen towels.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3737,7 +2462,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "   ",
             category: "household",
-            image: "images/Magic cotton floor mop.png",
+            image: "images/cleaning/Magic cotton floor mop.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3746,7 +2471,7 @@ gharibGrid.appendChild(card);
             price:	75000,
             unit: "   ",
             category: "household",
-            image: "images/Microfiber floor mop.png",
+            image: "images/cleaning/Microfiber floor mop.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3755,7 +2480,7 @@ gharibGrid.appendChild(card);
             price:	80000,
             unit: "   ",
             category: "household",
-            image: "images/Magic Clean Viscose.png",
+            image: "images/cleaning/Magic Clean Viscose.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3764,7 +2489,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "   ",
             category: "household",
-            image: "images/Vileda 3+1 Sponges.png",
+            image: "images/cleaning/Vileda 3+1 Sponges.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3773,7 +2498,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Idex Towels.png",
+            image: "images/cleaning/Idex Towels.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3782,7 +2507,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Oxi Glass Towels.png",
+            image: "images/cleaning/Oxi Glass Towels.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3791,7 +2516,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "   ",
             category: "household",
-            image: "images/OKS Microfiber Towel.png",
+            image: "images/cleaning/OKS Microfiber Towel.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3800,7 +2525,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "   ",
             category: "household",
-            image: "images/Workers' Gloves.png",
+            image: "images/cleaning/Workers' Gloves.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3809,7 +2534,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Malaysian-style mop.png",
+            image: "images/cleaning/Malaysian-style mop.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3818,7 +2543,7 @@ gharibGrid.appendChild(card);
             price:	450000,
             unit: "   ",
             category: "household",
-            image: "images/Adjustable magic mop.png",
+            image: "images/cleaning/Adjustable magic mop.png",
             pictureClass: "cleaning-picture"
         },
        {
@@ -3827,7 +2552,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: "   ",
             category: "household",
-            image: "images/Silicone squeegee.png",
+            image: "images/cleaning/Silicone squeegee.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3836,7 +2561,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: "   ",
             category: "household",
-            image: "images/Long Cobra suction tool.png",
+            image: "images/cleaning/Long Cobra suction tool.png",
             pictureClass: "cleaning-picture"
         }, 
      {
@@ -3845,7 +2570,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "   ",
             category: "household",
-            image: "images/Cobra short suction cup.png",
+            image: "images/cleaning/Cobra short suction cup.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3854,7 +2579,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Oxy suction cup.png",
+            image: "images/cleaning/Oxy suction cup.png",
             pictureClass: "cleaning-picture"
         }, 
  {
@@ -3863,7 +2588,7 @@ gharibGrid.appendChild(card);
             price:	80000,
             unit: "   ",
             category: "household",
-            image: "images/Iron rod.png",
+            image: "images/cleaning/Iron rod.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3872,7 +2597,7 @@ gharibGrid.appendChild(card);
             price:	40000,
             unit: "   ",
             category: "household",
-            image: "images/Wooden stick.png",
+            image: "images/cleaning/Wooden stick.png",
             pictureClass: "cleaning-picture"
         }, 
  {
@@ -3881,7 +2606,7 @@ gharibGrid.appendChild(card);
             price:	125000,
             unit: "   ",
             category: "household",
-            image: "images/Soft broom.png",
+            image: "images/cleaning/Soft broom.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3890,7 +2615,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: "   ",
             category: "household",
-            image: "images/Coarse nylon broom.png",
+            image: "images/cleaning/Coarse Nylon Broom.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3899,7 +2624,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "   ",
             category: "household",
-            image: "images/Glass or sink suction cup.png",
+            image: "images/cleaning/Glass or sink suction cup.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3908,7 +2633,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "   ",
             category: "household",
-            image: "images/Metal dustpan.png",
+            image: "images/cleaning/Metal dustpan.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3917,7 +2642,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: "   ",
             category: "household",
-            image: "images/Soft broom 2.png",
+            image: "images/cleaning/Soft broom 2.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3926,7 +2651,7 @@ gharibGrid.appendChild(card);
             price:	150000,
             unit: "   ",
             category: "household",
-            image: "images/Broom with hose.png",
+            image: "images/cleaning/Broom with hose.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3935,7 +2660,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "   ",
             category: "household",
-            image: "images/Carpet brush.png",
+            image: "images/cleaning/Carpet brush.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3944,7 +2669,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "   ",
             category: "household",
-            image: "images/Air freshener.png",
+            image: "images/cleaning/Air freshener.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3953,7 +2678,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "   ",
             category: "household",
-            image: "images/Nasamat Air Freshener Machine.png",
+            image: "images/cleaning/Nasamat Air Freshener Machine.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3962,7 +2687,7 @@ gharibGrid.appendChild(card);
             price:	230000,
             unit: "   ",
             category: "household",
-            image: "images/Lets Air Freshener.png",
+            image: "images/cleaning/Lets Air Freshener.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3971,7 +2696,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: "   ",
             category: "household",
-            image: "images/Insect Repellent Hacker.png",
+            image: "images/cleaning/Insect Repellent Hacker.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3980,7 +2705,7 @@ gharibGrid.appendChild(card);
             price:	225000,
             unit: "  400 مل ",
             category: "household",
-            image: "images/Hacker Insect Killer 400 ml.png",
+            image: "images/cleaning/Hacker Insect Killer 400 ml.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -3989,7 +2714,7 @@ gharibGrid.appendChild(card);
             price:	335000,
             unit: " 750 مل   ",
             category: "household",
-            image: "images/Hacker Insect Killer 750 ml.png",
+            image: "images/cleaning/Hacker Insect Killer 750 ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -3998,7 +2723,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: "   ",
             category: "household",
-            image: "images/Oral-B toothbrush.png",
+            image: "images/cleaning/Oral-B toothbrush.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4007,7 +2732,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: "    ",
             category: "household",
-            image: "images/Crest toothpaste.png",
+            image: "images/cleaning/Crest toothpaste.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4016,7 +2741,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   ",
             category: "household",
-            image: "images/Colgate children's toothpaste.png",
+            image: "images/cleaning/Colgate children's toothpaste.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4025,7 +2750,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "    ",
             category: "household",
-            image: "images/Aquafresh toothpaste.png",
+            image: "images/cleaning/Aquafresh toothpaste.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4034,7 +2759,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "   ",
             category: "household",
-            image: "images/Colgate toothpaste.png",
+            image: "images/cleaning/Colgate toothpaste.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4043,7 +2768,7 @@ gharibGrid.appendChild(card);
             price:	400000,
             unit: "    ",
             category: "household",
-            image: "images/Signal toothpaste.png",
+            image: "images/cleaning/Signal toothpaste.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4052,7 +2777,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "   ",
             category: "household",
-            image: "images/Sensodyne toothpaste.png",
+            image: "images/cleaning/Sensodyne toothpaste.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4061,7 +2786,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "   200 غ ",
             category: "household",
-            image: "images/Perla towels 200 grams.png",
+            image: "images/cleaning/Perla towels 200 grams.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4070,7 +2795,7 @@ gharibGrid.appendChild(card);
             price:	190000,
             unit: " 300 منديل   ",
             category: "household",
-            image: "images/Gypsy soft tissues (300 tissues).png",
+            image: "images/cleaning/Gypsy soft tissues (300 tissues).png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4079,7 +2804,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "   200 غ ",
             category: "household",
-            image: "images/King tissues (200 grams).png",
+            image: "images/cleaning/King tissues (200 grams).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4088,7 +2813,7 @@ gharibGrid.appendChild(card);
             price:	550000,
             unit: " 4 رول   ",
             category: "household",
-            image: "images/Lumex Toilet Paper (4-roll pack).png",
+            image: "images/cleaning/Lumex Toilet Paper (4-roll pack).png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4097,7 +2822,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "   400 غ ",
             category: "household",
-            image: "images/King Tissues 400g.png",
+            image: "images/cleaning/King Tissues 400g.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4106,7 +2831,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "    ",
             category: "household",
-            image: "images/Kitchen roll.png",
+            image: "images/cleaning/Kitchen roll.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4115,7 +2840,7 @@ gharibGrid.appendChild(card);
             price:	320000,
             unit: "   ",
             category: "household",
-            image: "images/Always Maxi.png",
+            image: "images/cleaning/Always Maxi.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4124,7 +2849,7 @@ gharibGrid.appendChild(card);
             price:	300000,
             unit: "    ",
             category: "household",
-            image: "images/Always Maxi Night.png",
+            image: "images/cleaning/Always Maxi Night.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4133,7 +2858,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "   ",
             category: "household",
-            image: "images/Always 8 Long.png",
+            image: "images/cleaning/Always 8 Long.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4142,7 +2867,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: " 18 فوطة    ",
             category: "household",
-            image: "images/Nana Maxi 18 pads.png",
+            image: "images/cleaning/Nana Maxi 18 pads.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4151,7 +2876,7 @@ gharibGrid.appendChild(card);
             price:	140000,
             unit: "  9 فوطة ",
             category: "household",
-            image: "images/Nana Maxi 9 pads.png",
+            image: "images/cleaning/Nana Maxi 9 pads.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4160,7 +2885,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "   ",
             category: "household",
-            image: "images/Relax.png",
+            image: "images/cleaning/Relax.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4169,7 +2894,7 @@ gharibGrid.appendChild(card);
             price:	400000,
             unit: "   ",
             category: "household",
-            image: "images/Fresh Day.png",
+            image: "images/cleaning/Fresh Day.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4178,7 +2903,7 @@ gharibGrid.appendChild(card);
             price:	230000,
             unit: "   ",
             category: "household",
-            image: "images/Private Super.png",
+            image: "images/cleaning/Private Super.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4187,7 +2912,7 @@ gharibGrid.appendChild(card);
             price:	240000,
             unit: "   ",
             category: "household",
-            image: "images/Private Lily.png",
+            image: "images/cleaning/Private Lily.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4196,7 +2921,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "   ",
             category: "household",
-            image: "images/Private 20+10 Free.png",
+            image: "images/cleaning/Private 20+10 Free.png",
             pictureClass: "cleaning-picture"
         }, 
 {
@@ -4205,7 +2930,7 @@ gharibGrid.appendChild(card);
             price:	360000,
             unit: " 1000 مل  ",
             category: "household",
-            image: "images/Sada Hair Gel with 1000ml.png",
+            image: "images/cleaning/Sada Hair Gel with 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4214,7 +2939,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: " 100 مل  ",
             category: "household",
-            image: "images/Sada Hair Gel with 1000ml.png",
+            image: "images/cleaning/Sada Hair Gel with 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4223,7 +2948,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: " 300 مل  ",
             category: "household",
-            image: "images/Perfume elegance 300ml.png",
+            image: "images/cleaning/Perfume elegance 300ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4232,7 +2957,7 @@ gharibGrid.appendChild(card);
             price:	210000,
             unit: " 300 مل  ",
             category: "household",
-            image: "images/Elegance body splash 300ml.png",
+            image: "images/cleaning/Elegance body splash 300ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4241,7 +2966,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: " 200 مل  ",
             category: "household",
-            image: "images/Sada Nail Polish Remover 200ml.png",
+            image: "images/cleaning/Sada Nail Polish Remover 200ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4250,7 +2975,7 @@ gharibGrid.appendChild(card);
             price:	170000,
             unit: " 120 مل  ",
             category: "household",
-            image: "images/Sada Hair Detangling Spray 120ml.png",
+            image: "images/cleaning/Sada Hair Detangling Spray 120ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4259,7 +2984,7 @@ gharibGrid.appendChild(card);
             price:	110000,
             unit: "   ",
             category: "household",
-            image: "images/Sada Hair Wax.png",
+            image: "images/cleaning/Sada Hair Wax.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4268,7 +2993,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: " 500 مل  ",
             category: "household",
-            image: "images/Elegance Hair Mousse 500ml.png",
+            image: "images/cleaning/Elegance Hair Mousse 500ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4277,7 +3002,7 @@ gharibGrid.appendChild(card);
             price:	345000,
             unit: "   ",
             category: "household",
-            image: "images/Elegance Hairspray.png",
+            image: "images/cleaning/Elegance Hairspray.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4286,7 +3011,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: " 200 مل  ",
             category: "household",
-            image: "images/Johnson's Powder 200g.png",
+            image: "images/cleaning/Johnson's Powder 200g.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4295,7 +3020,7 @@ gharibGrid.appendChild(card);
             price:	220000,
             unit: "   ",
             category: "household",
-            image: "images/Clip.png",
+            image: "images/cleaning/Clip.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4304,7 +3029,7 @@ gharibGrid.appendChild(card);
             price:	230000,
             unit: "  ",
             category: "household",
-            image: "images/Vaseline.png",
+            image: "images/cleaning/Vaseline.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4313,7 +3038,7 @@ gharibGrid.appendChild(card);
             price:	140000,
             unit: "300 مل   ",
             category: "household",
-            image: "images/Children's Cologne.png",
+            image: "images/cleaning/Children's Cologne.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4322,7 +3047,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: " 250 مل ",
             category: "household",
-            image: "images/Alsada Alcohol 250ml.png",
+            image: "images/cleaning/Alsada Alcohol 250ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4331,7 +3056,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: "   ",
             category: "household",
-            image: "images/Cockroach killer.png",
+            image: "images/cleaning/Cockroach killer.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4340,7 +3065,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "  ",
             category: "household",
-            image: "images/Nivea cream.png",
+            image: "images/cleaning/Nivea cream.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4349,7 +3074,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: "   ",
             category: "household",
-            image: "images/Labello.png",
+            image: "images/cleaning/Labello.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4358,7 +3083,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: " 400 مل ",
             category: "household",
-            image: "images/Vaseline Lotion 400ml.png",
+            image: "images/cleaning/Vaseline Lotion 400ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4367,7 +3092,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "  1000 مل ",
             category: "household",
-            image: "images/Al-Saada Rubbing Alcohol 1000ml.png",
+            image: "images/cleaning/Al-Saada Rubbing Alcohol 1000ml.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4376,7 +3101,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "  ",
             category: "household",
-            image: "images/Small clip.png",
+            image: "images/cleaning/Small clip.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4385,7 +3110,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: "  مقياس من1الى 6",
             category: "household",
-            image: "images/Wee Wee Standard Diapers.png",
+            image: "images/cleaning/Wee Wee Standard Diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4394,7 +3119,7 @@ gharibGrid.appendChild(card);
             price:	845000,
             unit: " مقياس من1الى 6 ",
             category: "household",
-            image: "images/Wee Wee Diapers – Economy Size.png",
+            image: "images/cleaning/Wee Wee Diapers – Economy Size.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4403,7 +3128,7 @@ gharibGrid.appendChild(card);
             price:	380000,
             unit: "	  مقياس من1الى 6  ",
             category: "cleaning",
-            image: "images/Lulu Diapers.png",
+            image: "images/cleaning/Lulu Diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4412,7 +3137,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: " قياس من1الى7",
             category: "household",
-            image: "images/Gizmo Diapers.png",
+            image: "images/cleaning/Gizmo Diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4421,7 +3146,7 @@ gharibGrid.appendChild(card);
             price:	380000,
             unit: "	  مقياس من1الى 6  ",
             category: "cleaning",
-            image: "images/Baby Amal.png",
+            image: "images/cleaning/Baby Amal.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4430,7 +3155,7 @@ gharibGrid.appendChild(card);
             price:	180000,
             unit: " مقياس من1الى 6 ",
             category: "household",
-            image: "images/Teddy Diapers.png",
+            image: "images/cleaning/Teddy Diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4439,7 +3164,7 @@ gharibGrid.appendChild(card);
             price:	175000,
             unit: "	  مقياس من1الى 6  ",
             category: "cleaning",
-            image: "images/Barbie diapers.png",
+            image: "images/cleaning/Barbie Diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4448,7 +3173,7 @@ gharibGrid.appendChild(card);
             price:	2160000,
             unit: "  ",
             category: "household",
-            image: "images/Huggies carton.png",
+            image: "images/cleaning/Huggies carton.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4457,7 +3182,7 @@ gharibGrid.appendChild(card);
             price:	630000,
             unit: "	   ",
             category: "cleaning",
-            image: "images/Large baby diapers.png",
+            image: "images/cleaning/Large baby diapers.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4466,7 +3191,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: " 6 اوز ",
             category: "household",
-            image: "images/6 oz paper cup.png",
+            image: "images/cleaning/6 oz paper cup.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4475,7 +3200,7 @@ gharibGrid.appendChild(card);
             price:	750000,
             unit: "100 حبة",
             category: "cleaning",
-            image: "images/Plastic cups (100 count).png",
+            image: "images/cleaning/Plastic cups (100 count).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4484,7 +3209,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: " 9 اوز ",
             category: "household",
-            image: "images/9 oz paper cup.png",
+            image: "images/cleaning/9 oz paper cup.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4493,7 +3218,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "4 اوز   ",
             category: "cleaning",
-            image: "images/4 oz paper cup.png",
+            image: "images/cleaning/4 oz paper cup.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4502,7 +3227,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: " 100 حبة   ",
             category: "household",
-            image: "images/Plastic coffee cups.png",
+            image: "images/cleaning/Plastic coffee cups.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4511,7 +3236,7 @@ gharibGrid.appendChild(card);
             price:	150000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Charcoal-lighting sticks.png",
+            image: "images/cleaning/Charcoal-lighting sticks.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4520,7 +3245,7 @@ gharibGrid.appendChild(card);
             price:	380000,
             unit: "   1 كيلو    ",
             category: "household",
-            image: "images/Hookah Charcoal.png",
+            image: "images/cleaning/Hookah Charcoal.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4529,7 +3254,7 @@ gharibGrid.appendChild(card);
             price:	270000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Premium Grilling Charcoal.png",
+            image: "images/cleaning/Premium Grilling Charcoal.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4538,7 +3263,7 @@ gharibGrid.appendChild(card);
             price:	420000,
             unit: "       ",
             category: "household",
-            image: "images/Quick-light charcoal for grilling.png",
+            image: "images/cleaning/Quick-light charcoal for grilling.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4547,7 +3272,7 @@ gharibGrid.appendChild(card);
             price:	740000,
             unit: "   ",
             category: "cleaning",
-            image: "images/African hookah charcoal.png",
+            image: "images/cleaning/African hookah charcoal.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4556,7 +3281,7 @@ gharibGrid.appendChild(card);
             price:	410000,
             unit: "       ",
             category: "household",
-            image: "images/African charcoal for grilling.png",
+            image: "images/cleaning/African charcoal for grilling.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4565,7 +3290,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "   ",
             category: "cleaning",
-            image: "images/Plastic forks or spoons.png",
+            image: "images/cleaning/Plastic forks or spoons.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4574,7 +3299,7 @@ gharibGrid.appendChild(card);
             price:	60000 ,
             unit: "  7 انش     ",
             category: "household",
-            image: "images/7-inch plastic plate.png",
+            image: "images/cleaning/7-inch plastic plate.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4583,7 +3308,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "  9 انش   ",
             category: "cleaning",
-            image: "images/9-inch plastic plate.png",
+            image: "images/cleaning/9-inch plastic plate.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4592,7 +3317,7 @@ gharibGrid.appendChild(card);
             price:	300000 ,
             unit: "     ",
             category: "household",
-            image: "images/Deep plastic bowl.png",
+            image: "images/cleaning/Deep plastic bowl.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4601,7 +3326,7 @@ gharibGrid.appendChild(card);
             price:	450000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Cup with a lid.png",
+            image: "images/cleaning/Cup with a lid.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4610,7 +3335,7 @@ gharibGrid.appendChild(card);
             price:	270000 ,
             unit: "  750 غ   ",
             category: "household",
-            image: "images/Perla Aluminum Foil 750g.png",
+            image: "images/cleaning/Perla Aluminum Foil 750g.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4619,7 +3344,7 @@ gharibGrid.appendChild(card);
             price:	230000,
             unit: "   700 غ  ",
             category: "cleaning",
-            image: "images/Perla Cling Film 700g.png",
+            image: "images/cleaning/Perla Cling Film 700g.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4628,7 +3353,7 @@ gharibGrid.appendChild(card);
             price:	80000 ,
             unit: "  7.6  متر ",
             category: "household",
-            image: "images/Perla aluminum foil 7.6m.png",
+            image: "images/cleaning/Perla aluminum foil 7.6m.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4637,7 +3362,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "     0.3*15 متر  ",
             category: "cleaning",
-            image: "images/Perla adhesive film 15m x 0.3m.png",
+            image: "images/cleaning/Perla adhesive film 15m x 0.3m.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4646,7 +3371,7 @@ gharibGrid.appendChild(card);
             price:	180000 ,
             unit: "  7.6  متر ",
             category: "household",
-            image: "images/Negro Sword.png",
+            image: "images/cleaning/Negro Sword.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4655,7 +3380,7 @@ gharibGrid.appendChild(card);
             price:	80000,
             unit: "   15 غ ",
             category: "cleaning",
-            image: "images/Stainless Steel Sword (15g).png",
+            image: "images/cleaning/Stainless Steel Sword (15g).png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4664,7 +3389,7 @@ gharibGrid.appendChild(card);
             price:	40000 ,
             unit: "   ",
             category: "household",
-            image: "images/Live Jelly Sweet.png",
+            image: "images/cleaning/Live Jelly Sweet.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4673,7 +3398,7 @@ gharibGrid.appendChild(card);
             price:	50000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Live Jelly Magic.png",
+            image: "images/cleaning/Live Jelly Magic.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4682,7 +3407,7 @@ gharibGrid.appendChild(card);
             price:	100000 ,
             unit: "   ",
             category: "household",
-            image: "images/Bath mitt.png",
+            image: "images/cleaning/Bath mitt.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4691,7 +3416,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "  20 ملقط   ",
             category: "cleaning",
-            image: "images/Wooden tongs.png",
+            image: "images/cleaning/Wooden tongs.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4700,7 +3425,7 @@ gharibGrid.appendChild(card);
             price:	90000 ,
             unit: "   ",
             category: "household",
-            image: "images/Plastic bag clips.png",
+            image: "images/cleaning/Plastic bag clips.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4709,7 +3434,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Soft, for hair removal.png",
+            image: "images/cleaning/Soft, for hair removal.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4718,7 +3443,7 @@ gharibGrid.appendChild(card);
             price:	90000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Table cover.png",
+            image: "images/cleaning/Table cover.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4727,7 +3452,7 @@ gharibGrid.appendChild(card);
             price:	60000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Parchment paper.png",
+            image: "images/cleaning/Parchment paper.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4736,7 +3461,7 @@ gharibGrid.appendChild(card);
             price:	120000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Freezer bags with a zipper.png",
+            image: "images/cleaning/Freezer bags with a zipper.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4745,7 +3470,7 @@ gharibGrid.appendChild(card);
             price:	70000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Sandwich bags.png",
+            image: "images/cleaning/Sandwich bags.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4754,7 +3479,7 @@ gharibGrid.appendChild(card);
             price:	100000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Sunita Arkeela Perla.png",
+            image: "images/cleaning/Sunita Arkeela Perla.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4763,7 +3488,7 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Meat skewer.png",
+            image: "images/cleaning/Meat skewer.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4772,7 +3497,7 @@ gharibGrid.appendChild(card);
             price:	200000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Sanita.png",
+            image: "images/cleaning/Sanita.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4781,7 +3506,7 @@ gharibGrid.appendChild(card);
             price:	130000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Parchment paper roll.png",
+            image: "images/cleaning/Parchment paper roll.png",
             pictureClass: "cleaning-picture"
         },
 {
@@ -4790,12 +3515,414 @@ gharibGrid.appendChild(card);
             price:	45000,
             unit: "    ",
             category: "cleaning",
-            image: "images/Oven bags.png",
+            image: "images/cleaning/Oven bags.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 609,
+            name: "   شاي ليبتون     ",
+            price:	230000,
+            unit: " 100 ظرف   ",
+            category: "food",
+            image: "images/foodstuffs/Lipton tea, 100 bags.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 610,
+            name: " شاي ليبتون       ",
+            price:	70000,
+            unit: "  25 ظرف  ",
+            category: "food",
+            image: "images/foodstuffs/Lipton tea, 25 bags.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 611,
+            name: "   شاي رأس الحصان       ",
+            price:	200000,
+            unit: " 140 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Horse Head Tea 140g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 612,
+            name: "   شاي رأس الحصان       ",
+            price:	460000,
+            unit: "  350 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Horse Head Tea 350g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 613,
+            name: "   شاي رأس الحصان       ",
+            price:	890000,
+            unit: " 700 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Horse Head Tea 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 614,
+            name: "  شاي الوزة   ",
+            price:	130000,
+            unit: "  50 ظرف ",
+            category: "food",
+            image: "images/foodstuffs/Al-Wazza Tea (50 sachets).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 615,
+            name: "   امين باش زنجبيل بالعسل    ",
+            price:	80000,
+            unit: " 12 ظرف  ",
+            category: "food",
+            image: "images/foodstuffs/Amin Bash Ginger with Honey.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 616,
+            name: "  العطارة زهورات مشكلة   ",
+            price:	80000,
+            unit: "  20 ظرف ",
+            category: "food",
+            image: "images/foodstuffs/Al-Attara Assorted Herbal Blend (20 sachets).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 617,
+            name: "   سحلب دومو   ",
+            price:	250000,
+            unit: "   ظرف  ",
+            category: "food",
+            image: "images/foodstuffs/Domo Sahlab sachet.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 618,
+            name: "  جيلي دومو نباتي 1+5 مجانا  ",
+            price:	360000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Domo Vegetarian Jelly (5+1 free).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 619,
+            name: "   سيريلاك   ",
+            price:	120000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Cerelac.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 620,
+            name: "  جيلي دومو نباتي 1+5 مجانا  ",
+            price:	280000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Jelly Domo 5+1 free.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 621,
+            name: "   امريكانا بيتي فور   ",
+            price:	800000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Americana Petit Fours 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 622,
+            name: "  رز سام ",
+            price:	100000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Sami Rice 1.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 623,
+            name: "   بسكوت غندور  ",
+            price:	270000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Gandour biscuits.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 624,
+            name: "  شراب دارينا",
+            price:	20000,
+            unit: "  ظرف ",
+            category: "food",
+            image: "images/foodstuffs/Darina drink mix (sachet).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 625,
+            name: "  كورن فلاكس ",
+            price:	630000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Corn Flakes 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 626,
+            name: "  بوبينز  ",
+            price:	400000,
+            unit: "  500 غ ",
+            category: "food",
+            image: "images/foodstuffs/Poppins 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 627,
+            name: "  نيدو  ",
+            price:	1620000,
+            unit: "  2250 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Nido 2,250 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 628,
+            name: "  نيدو   ",
+            price:	780000,
+            unit: "  900 غ ",
+            category: "food",
+            image: "images/foodstuffs/Nido 900 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 629,
+            name: "  حليب دانو  ",
+            price:	420000,
+            unit: "  750 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Dano milk 750 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 630,
+            name: "  حليب كليو   ",
+            price:	560000,
+            unit: "  900 غ ",
+            category: "food",
+            image: "images/foodstuffs/Clio milk 900 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 631,
+            name: "  حليب لاكتو   ",
+            price:	420000,
+            unit: "  750 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Lacto milk 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 632,
+            name: "  حليب كليم    ",
+            price:	1170000,
+            unit: "  2 كيلو",
+            category: "food",
+            image: "images/foodstuffs/KLIM milk 2kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 633,
+            name: "  معكرونة ريجيا   ",
+            price:	100000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Regia pasta.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 634,
+            name: "  لازانيا ريجيا   ",
+            price:	250000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Regia Lasagna.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 635,
+            name: "   معكرونة باريلا طويلة  ",
+            price:	120000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Barilla long pasta.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 636,
+            name: "  فوتوتشيني ريجيا  ",
+            price:	150000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Fettuccine Regia.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 637,
+            name: "   جبنة سميدس ",
+            price:	1040000,
+            unit: " 105 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Barilla long pasta.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 638,
+            name: "  فوتوتشيني ريجيا  ",
+            price:	150000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Fettuccine Regia.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 639,
+            name: "   جبنة سميدس ",
+            price:	1040000,
+            unit: " 105 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Smedes Cheese 105 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 640,
+            name: "  جبنة سميدس ",
+            price:	650000,
+            unit: " 900 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Smedes Cheese 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 641,
+            name: "   جبنة سميدس ",
+            price:	290000,
+            unit: " 400 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Smedes Cheese 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 642,
+            name: "  جبنة la vache quirit   ",
+            price:	130000,
+            unit: " 8 قطع ",
+            category: "food",
+            image: "images/foodstuffs/La Vache Qui Rit cheese, 8 pieces.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 643,
+            name: "     جبنة la vache quirit ",
+            price:	260000,
+            unit: " ١٦ قطعة  ",
+            category: "food",
+            image: "images/foodstuffs/La Vache Qui Rit cheese, 16 pieces.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 644,
+            name: "     جبنة la vache quirit ",
+            price:	375000,
+            unit: " 24 قطعة  ",
+            category: "food",
+            image: "images/foodstuffs/La Vache Quirit cheese, 24 pieces.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 645,
+            name: "   بيكون سامبلي",
+            price:	55000,
+            unit: " 8 قطع    ",
+            category: "food",
+            image: "images/foodstuffs/Becon Sample 8 pieces.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 646,
+            name: "   بيكون  ",
+            price:	130000,
+            unit: " 8 قطعة  ",
+            category: "food",
+            image: "images/foodstuffs/8 amulets.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 647,
+            name: "  بيكون    ",
+            price:	260000,
+            unit: " 16 قطعة    ",
+            category: "food",
+            image: "images/foodstuffs/16 amulets.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 648,
+            name: "   بيكون  ",
+            price:	370000,
+            unit: " 24 قطعة  ",
+            category: "food",
+            image: "images/foodstuffs/It will be 24.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 649,
+            name: "  بيكون    ",
+            price:	480000,
+            unit: " 32 قطعة    ",
+            category: "food",
+            image: "images/foodstuffs/It will be 32.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 650,
+            name: "   جبنة بيلا  ",
+            price:	50000,
+            unit: " 8 قطع  ",
+            category: "food",
+            image: "images/foodstuffs/Bella cheese (8 pieces).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 651,
+            name: "  كيري    ",
+            price:	130000,
+            unit: " 6 قطع    ",
+            category: "food",
+            image: "images/foodstuffs/Kiri cheese (6 pieces).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 652,
+            name: "  كيري ",
+            price:	180000,
+            unit: " 12 قطعة  ",
+            category: "food",
+            image: "images/foodstuffs/Kiri 12 pieces.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 653,
+            name: "  كيري    ",
+            price:	500000,
+            unit: " 400 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Kiri 400 grams.png",
             pictureClass: "cleaning-picture"
         }
-
-
-
 
 
 
@@ -5458,7 +4585,7 @@ function createYallaWhatsAppInvoice({
             price: 140000,
             unit: " 1ك",
             category: "fruit",
-            image: "images/apples.png",
+            image: "images/fruit/apples.png",
          },
         {
             id: 1002,
@@ -5466,7 +4593,7 @@ function createYallaWhatsAppInvoice({
             price: 120000,
             unit: "1ك",
             category: "fruit",
-            image: "images/banana.png",
+            image: "images/fruit/banana.png",
         },
         {
             id: 1003,
@@ -5474,7 +4601,7 @@ function createYallaWhatsAppInvoice({
             price: 100000,
             unit: "1ك",
             category: "vegetable",
-   image: "images/Cowpeas.png",
+   image: "images/fruit/Cowpeas.png",
         },
         {
             id: 1004,
@@ -5482,7 +4609,7 @@ function createYallaWhatsAppInvoice({
             price:600000,
             unit: "1ك",
             category: "vegetable",
-                image: "images/tomato.png",
+                image: "images/fruit/tomato.png",
         },
         {
             id: 1005,
@@ -5490,7 +4617,7 @@ function createYallaWhatsAppInvoice({
             price: 80000,
             unit: "1ك",
             category: "vegetable",
-            image: "images/Bell pepper.png",
+            image: "images/fruit/Bell pepper.png",
         },
         {
             id: 1006,
@@ -5498,7 +4625,7 @@ function createYallaWhatsAppInvoice({
             price: 80000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/sour.png",
+             image: "images/fruit/sour.png",
         },
                 {
             id: 1007,
@@ -5514,7 +4641,7 @@ function createYallaWhatsAppInvoice({
             price: 80000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/option.png",
+             image: "images/fruit/option.png",
         },
                 {
             id: 1009,
@@ -5522,7 +4649,7 @@ function createYallaWhatsAppInvoice({
             price: 130000,
             unit: "1ك",
             category: "fruit",
-             image: "images/Manga.png",
+             image: "images/fruit/Manga.png",
         },
               {
             id: 1010,
@@ -5530,7 +4657,7 @@ function createYallaWhatsAppInvoice({
             price: 60000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/Cauliflower.png",
+             image: "images/fruit/Cauliflower.png",
         },
               {
             id: 1011,
@@ -5538,7 +4665,7 @@ function createYallaWhatsAppInvoice({
             price: 30000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/cabbage.png",
+             image: "images/fruit/cabbage.png",
         },
               {
             id: 1012,
@@ -5546,7 +4673,7 @@ function createYallaWhatsAppInvoice({
             price: 120000,
             unit: "1ك",
             category: "fruit",
-             image: "images/grapes.png",
+             image: "images/fruit/grapes.png",
         },
               {
             id: 1013,
@@ -5554,7 +4681,7 @@ function createYallaWhatsAppInvoice({
             price: 150000,
             unit: "1ك",
             category: "fruit",
-             image: "images/Avoca.png",
+             image: "images/fruit/Avoca.png",
         },
               {
             id: 1014,
@@ -5562,7 +4689,7 @@ function createYallaWhatsAppInvoice({
             price: 100000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/carrot.png",
+             image: "images/fruit/carrot.png",
         },
               {
             id: 1015,
@@ -5570,7 +4697,7 @@ function createYallaWhatsAppInvoice({
             price: 300000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/garlic.png",
+             image: "images/fruit/garlic.png",
         },
          {
             id: 1016,
@@ -5578,7 +4705,7 @@ function createYallaWhatsAppInvoice({
             price: 60000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/onion.png",
+             image: "images/fruit/onion.png",
         },
               {
             id: 1017,
@@ -5594,7 +4721,7 @@ function createYallaWhatsAppInvoice({
             price:  70000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/eggplant.png",
+             image: "images/fruit/eggplant.png",
         }
     ];
 
@@ -5770,7 +4897,7 @@ const butcherProducts = [
         price: 1700000,
         unit: "1ك",
         category: "grill",
-        image: "images/Meat pies (Sfiha).png"
+        image: "images/grill/Meat pies (Sfiha).png"
     },
     {
         id: 2002,
@@ -5778,7 +4905,7 @@ const butcherProducts = [
         price: 1800000,
         unit: "1ك",
         category: "grill",
-        image: "images/Mixed Grill.png"
+        image: "images/grill/Mixed Grill.png"
     },
     {
         id: 2003,
@@ -5786,7 +4913,7 @@ const butcherProducts = [
         price: 1800000,
         unit: "1ك",
         category: "raw",
-        image: "images/Lamb.png"
+        image: "images/grill/Lamb.png"
     },
     {
         id: 2004,
@@ -5794,7 +4921,7 @@ const butcherProducts = [
         price: 1300000,
         unit: "1ك",
         category: "raw",
-        image: "images/beef.png"
+        image: "images/grill/beef.png"
     },
         {
         id: 2005,
@@ -5802,7 +4929,7 @@ const butcherProducts = [
         price: 1200000,
         unit: " مع سرفيس 1ك",
         category: "grill",
-        image: "images/Grilled Tawook.png"
+        image: "images/grill/Grilled Tawook.png"
     },
             {
         id: 2006,
@@ -5810,7 +4937,7 @@ const butcherProducts = [
         price: 1800000,
         unit: " مع سرفيس 1ك",
         category: "grill",
-        image: "images/Grilled Kofta.png"
+        image: "images/grill/Grilled Kofta.png"
     },
                 {
         id: 2007,
@@ -5818,7 +4945,7 @@ const butcherProducts = [
         price: 1200000,
         unit: "    1ك",
         category: "grill",
-        image: "images/Grilled sausages.png"
+        image: "images/grill/Grilled sausages.png"
     },
                     {
         id: 2008,
@@ -5826,7 +4953,7 @@ const butcherProducts = [
         price: 1000000,
         unit: "    1ك",
         category: "raw",
-        image: "images/Raw sausage.png"
+        image: "images/grill/Raw sausage.png"
     },
                         {
         id: 2009,
@@ -5834,7 +4961,7 @@ const butcherProducts = [
         price: 1350000,
         unit: "    1ك",
         category: "raw",
-        image: "images/Makanek.png"
+        image: "images/grill/Makanek.png"
     }
 ];
 
@@ -6017,7 +5144,7 @@ function renderGlobalSearch() {
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
     globalSearchResults.innerHTML = `
         ${sections.map(card => `<button type="button" class="global-search-row" data-section="${escapeHTML(card.dataset.category)}"><strong>📁 ${escapeHTML(card.dataset.category)}</strong><small>قسم</small></button>`).join("")}
-        ${products.map(p => `<button type="button" class="global-search-row" data-section="${escapeHTML(p.section)}" data-product-id="${escapeHTML(p.id ?? "")}" data-search-index="${escapeHTML(p.searchIndex ?? "")}">
+        ${products.map(p => `<button type="button" class="global-search-row" data-section="${escapeHTML(p.section)}" data-product-id="${escapeHTML(p.id ?? "")}" data-search-index="${escapeHTML(p.searchIndex ?? "")}" data-search-image="${escapeHTML(p.image ?? "")}" data-search-name="${escapeHTML(p.name ?? "")}">
             <span class="global-search-thumb">${p.image ? `<img src="${escapeHTML(p.image)}" alt="" loading="lazy">` : escapeHTML(p.emoji || "🛍️")}</span>
             <span class="global-search-info"><strong>${escapeHTML(p.name)}</strong><small>${escapeHTML(p.section)} · ${escapeHTML(p.unit || "")}</small></span>
             <b>${escapeHTML(p.price)} ل.ل</b>
@@ -6027,7 +5154,7 @@ function renderGlobalSearch() {
 }
 searchInput.addEventListener("input", renderGlobalSearch);
 // الانتقال مباشرة إلى بطاقة المنتج من نتائج البحث
-function focusSearchedProduct(section, productId, searchIndex) {
+function focusSearchedProduct(section, productId, searchIndex, expectedImage, expectedName) {
     let grid;
     if (section === "سوبر ماركت") {
         activeMarketFilter = "all";
@@ -6056,6 +5183,8 @@ function focusSearchedProduct(section, productId, searchIndex) {
         grid = butcherProductsGrid;
     } else if (section === "دواجن") {
         gharibShowAll = true;
+        const poultrySearch = document.getElementById("poultryProductSearch");
+        if (poultrySearch) poultrySearch.value = "";
         renderGharibProducts();
         grid = gharibGrid;
     }
@@ -6063,23 +5192,25 @@ function focusSearchedProduct(section, productId, searchIndex) {
     const selector = section === "دواجن"
         ? `.gharib-product-card:nth-child(${Number(searchIndex) + 1})`
         : `[data-product-id="${String(productId).replace(/[^0-9]/g, "")}"]`;
-    // ننتظر ظهور الشاشة واكتمال رسم البطاقات
+    // Find the exact card, then scroll its real scrolling ancestor into view.
+    const findTarget = () => {
+        const cards = Array.from(grid.querySelectorAll(".market-product, .gharib-product-card"));
+        if (section === "دواجن") return cards[Number(searchIndex)] || null;
+                const candidates = cards.filter(card => card.dataset.productId === String(productId));
+        return candidates.find(card => expectedImage && card.querySelector("img")?.getAttribute("src") === expectedImage)
+            || candidates.find(card => expectedName && card.querySelector("h3")?.textContent.trim() === expectedName.trim())
+            || candidates[0] || null;
+    };
     setTimeout(() => {
-        const target = grid.querySelector(selector);
+        const target = findTarget();
         if (!target) return;
-        const scrollArea = target.closest(".market-products-scroll");
-        if (scrollArea) {
-            const targetRect = target.getBoundingClientRect();
-            const areaRect = scrollArea.getBoundingClientRect();
-            scrollArea.scrollTo({top: scrollArea.scrollTop + targetRect.top - areaRect.top - 65, behavior: "smooth"});
-        } else {
-            target.scrollIntoView({behavior: "smooth", block: "center"});
-        }
+        // ScrollIntoView handles nested scrolling containers (including ys-section-scroll).
+        target.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
         target.classList.remove("search-product-highlight");
         void target.offsetWidth;
         target.classList.add("search-product-highlight");
         setTimeout(() => target.classList.remove("search-product-highlight"), 2400);
-    }, 180);
+    }, 350);
 }
 
 globalSearchResults.addEventListener("click", event => {
@@ -6094,7 +5225,7 @@ globalSearchResults.addEventListener("click", event => {
     searchInput.blur();
     if (card) card.click();
     if (productId !== undefined || searchIndex !== undefined) {
-        focusSearchedProduct(section, productId, searchIndex);
+        focusSearchedProduct(section, productId, searchIndex, item.dataset.searchImage, item.dataset.searchName);
     }
 });
 
@@ -6223,9 +5354,35 @@ renderButcherProducts();
     renderMarketProducts();
     // عرض أقسام الصفحة الرئيسية من بيانات المنتجات الأصلية، بدون نسخ بيانات أو تغيير المودالات.
     (function buildYallaShowcase(){
-      const food = marketProducts.filter(x=>['food','dairy','Snacks','Bakery'].includes(x.category) && x.image).slice(0,12);
-      const orbit=document.getElementById('ysFoodOrbit');
-      if(orbit) orbit.innerHTML=food.map((x,i)=>`<article class="ys-orbit-card" style="--i:${i}"><div class="ys-img"><img src="${x.image}" alt="" loading="lazy" decoding="async"></div><strong>${x.name}</strong><small>${Number(x.price).toLocaleString('en-US')} ل.ل</small><button class="ys-fav-toggle" type="button" data-fav-id="market-${x.id}" data-fav-name="${x.name.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" data-fav-img="${x.image}" data-fav-price="${x.price}" data-fav-category="سوبر ماركت" aria-label="أضف للمفضلة">♡</button></article>`).join('');
+      // منتجات تنظيف مختارة من كتالوج المتجر الفعلي، مع أسعارها وصورها الأصلية.
+      const cleaningFeatured = marketProducts.filter(x => x.category === 'cleaning' && x.image).slice(0, 12);
+      const orbit = document.getElementById('ysFoodOrbit');
+      const cleanEscape = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      if (orbit && cleaningFeatured.length) {
+        const card = (x,i) => `<article class="ys-orbit-card ys-clean-card" style="--i:${i}"><button class="ys-clean-open" type="button" data-open-category="منظفات" aria-label="عرض ${cleanEscape(x.name)} في قسم المنظفات"><span class="ys-img"><img src="${cleanEscape(x.image)}" alt="${cleanEscape(x.name)}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('ys-img-fallback')"></span><strong>${cleanEscape(x.name)}</strong><small>${Number(x.price).toLocaleString('en-US')} ل.ل</small><span class="ys-clean-cta">عرض المنتج ←</span></button><button class="ys-fav-toggle" type="button" data-fav-id="market-${x.id}" data-fav-name="${cleanEscape(x.name)}" data-fav-img="${cleanEscape(x.image)}" data-fav-price="${x.price}" data-fav-category="منظفات" aria-label="أضف للمفضلة">♡</button></article>`;
+        orbit.innerHTML = [...cleaningFeatured, ...cleaningFeatured].map(card).join('');
+        orbit.classList.add('ys-clean-marquee');
+        const pause = () => orbit.classList.add('ys-paused');
+        const resume = () => orbit.classList.remove('ys-paused');
+        orbit.addEventListener('pointerenter', pause);
+        orbit.addEventListener('pointerleave', resume);
+        orbit.addEventListener('focusin', pause);
+        orbit.addEventListener('focusout', resume);
+        let previousTime = 0;
+        let pausedUntil = 0;
+        orbit.addEventListener('touchstart', () => { pausedUntil = performance.now() + 5000; }, {passive:true});
+        orbit.addEventListener('wheel', () => { pausedUntil = performance.now() + 3500; }, {passive:true});
+        function animateCleaning(time) {
+          if (previousTime && !document.hidden && !orbit.classList.contains('ys-paused') && time > pausedUntil && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            orbit.scrollLeft -= Math.min((time - previousTime) * 0.025, 2);
+            const halfway = orbit.scrollWidth / 2;
+            if (Math.abs(orbit.scrollLeft) >= halfway - 2) orbit.scrollLeft += halfway;
+          }
+          previousTime = time;
+          requestAnimationFrame(animateCleaning);
+        }
+        requestAnimationFrame(animateCleaning);
+      }
       // قسمان مستقلان: شرائط تلقائية مبنية من بيانات المنتجات الفعلية.
       const escShow=(v)=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
       function showcaseCard(p,i,category,type){
@@ -6352,6 +5509,76 @@ renderButcherProducts();
             proTrack.scrollTo({left: atEnd ? 0 : next, behavior:'smooth'});
         }, 4200);
     }
+
+    // مجموعات الاحتياجات: منتجات حقيقية من مصفوفات المتجر الأصلية
+    const needsScreen = document.getElementById('ysNeedsScreen');
+    const needsGrid = document.getElementById('ysNeedsGrid');
+    const needsTitle = document.getElementById('ysNeedsTitle');
+    const needsCount = document.getElementById('ysNeedsCount');
+    const needsGroups = {
+      pantry: {title:'مونة البيت', entries:[...marketProducts.filter(p=>['food','drinks','Bakery','dairy','spices','Snacks','IceCream'].includes(p.category)).map(p=>({p,source:'market'}))]},
+      cooking: {title:'طبخة اليوم', entries:[...vegetablesProducts.map(p=>({p,source:'vegetables'})),...butcherProducts.map(p=>({p,source:'butcher'})),...gharibProducts.map(p=>({p,source:'gharib'})),...marketProducts.filter(p=>p.category==='spices').map(p=>({p,source:'market'}))]},
+      breakfast: {title:'فطور وقهوة', entries:marketProducts.filter(p=>['coffee','Bakery','dairy','drinks'].includes(p.category)).map(p=>({p,source:'market'}))}
+    };
+    const escNeed = value => String(value??'').replace(/[&<>"']/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    function closeNeeds(){needsScreen.hidden=true;home.classList.remove('market-open');}
+    let currentNeedsEntries = [];
+    const needsSearchInput = document.getElementById('ysNeedsSearchInput');
+    const needsEmpty = document.getElementById('ysNeedsEmpty');
+    function renderNeedsProducts(){
+      const query = needsSearchInput.value.trim().toLocaleLowerCase();
+      const entries = currentNeedsEntries.filter(({p})=>String(p.name||'').toLocaleLowerCase().includes(query));
+      needsCount.textContent=entries.length+' منتجات';
+      needsEmpty.hidden=entries.length>0;
+      needsGrid.replaceChildren();
+      entries.forEach(({p,source},i)=>{
+        const card=document.createElement('article');card.className='market-product';
+        const picture=document.createElement('div');picture.className='market-product-picture '+(p.pictureClass||'');
+        const image=document.createElement('img');image.src=p.image||'';image.alt=p.name||'';image.loading='lazy';image.decoding='async';
+        picture.append(image);
+        const title=document.createElement('h3');title.textContent=p.name||'';
+        const unit=document.createElement('p');unit.className='market-product-unit';unit.textContent=p.unit||'';
+        const bottom=document.createElement('div');bottom.className='market-product-bottom';
+        const price=document.createElement('strong');price.textContent=p.price==null?'السعر عند الطلب':Number(p.price).toLocaleString('en-US')+' ل.ل';
+        const add=document.createElement('button');add.className='market-add';add.type='button';add.textContent='+';add.setAttribute('aria-label','إضافة '+(p.name||'')+' للسلة');
+        add.addEventListener('click',()=>{
+          const id='needs-'+source+'-'+(p.id??p.name??i);
+          const found=marketCart.find(x=>x.id===id);
+          if(found)found.quantity++;
+          else marketCart.push({id,name:(p.name||'').trim(),price:Number(p.price)||0,priceUndetermined:p.price==null,unit:p.unit||'',image:p.image||'',quantity:1});
+          updateMarketCart();showAddToCartToast();
+        });
+        bottom.append(price,add);card.append(picture,title,unit,bottom);needsGrid.append(card);
+      });
+    }
+    function openNeeds(key){
+      const group=needsGroups[key];if(!group)return;
+      needsTitle.textContent=group.title;
+      const banner = document.getElementById('ysNeedsBanner');
+      const subtitle = document.getElementById('ysNeedsSubtitle');
+      const bannerData = {
+        pantry: {image:'images/background/Mortar background.webp', subtitle:'كل المواد الغذائية اللي بتحتاجها ببيتك'},
+        cooking: {image:"images/background/Cooking background.webp", subtitle:'مكونات طيبة لطبخة اليوم'},
+        breakfast: {image:'images/background/Today’s Background.webp', subtitle:'كل شي لفطور صباحك وقهوتك'}
+      };
+      const selectedBanner = bannerData[key];
+      if (banner && selectedBanner) banner.style.backgroundImage = `linear-gradient(0deg,rgba(0,24,59,.78),rgba(0,24,59,.06) 70%),url(${JSON.stringify(selectedBanner.image)})`;
+      if (subtitle && selectedBanner) subtitle.textContent = selectedBanner.subtitle;
+      document.getElementById('ysNeedsBrowseLabel').textContent='تصفّح '+group.title;
+      needsSearchInput.value='';
+      document.getElementById('ysNeedsSearchWrap').hidden=true;
+      currentNeedsEntries=group.entries;
+      renderNeedsProducts();
+      needsScreen.hidden=false;home.classList.add('market-open');
+      needsScreen.querySelector('.ys-needs-scroll').scrollTop=0;
+    }
+    document.getElementById('ysNeedsSearchButton')?.addEventListener('click',()=>{
+      const wrap=document.getElementById('ysNeedsSearchWrap');wrap.hidden=!wrap.hidden;
+      if(!wrap.hidden)needsSearchInput.focus();else{needsSearchInput.value='';renderNeedsProducts();}
+    });
+    needsSearchInput?.addEventListener('input',renderNeedsProducts);
+    document.querySelectorAll('[data-need]').forEach(b=>b.addEventListener('click',()=>openNeeds(b.dataset.need)));
+    // الرجوع لهذه الصفحات يتم من زر الرجوع بالموبايل أو المتصفح.
     document.querySelectorAll('[data-pro-category]').forEach(btn => btn.addEventListener('click', () => {
         const category = btn.dataset.proCategory;
         document.querySelectorAll('.category-card').forEach(card => { if (card.dataset.category === category) card.click(); });
@@ -7138,7 +6365,7 @@ document.addEventListener('DOMContentLoaded', () => {
  document.getElementById('referenceOffersAll')?.addEventListener('click',()=>jump('سوبر ماركت'));
  document.getElementById('referenceMenuButton')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
  document.getElementById('referenceHeartButton')?.addEventListener('click',()=>document.getElementById('proFeaturedSection')?.scrollIntoView({behavior:'smooth'}));
- document.querySelector('.bottom-nav .nav-item[data-page="الأقسام"]')?.addEventListener('click',()=>{document.getElementById('homeScreen')?.removeAttribute('hidden');document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'});});
+ // فتح الأقسام من الشريط السفلي يتم عبر مودال كل الأقسام أدناه.
  
 });
 
@@ -7323,7 +6550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tile.append(img,title,arrow);
     tile.addEventListener('click', () => {
       modal.hidden = true;
-      if (history.state?.ysAllCategories) history.replaceState({ysCategoryPickerClosed:true}, '', location.href);
+      history.replaceState({ysCategoryPickerClosed:true}, '', location.href);
       card.click();
     });
     grid.append(tile);
@@ -7337,14 +6564,119 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   function openModal() {
     if (!modal.hidden) return;
+    // Clear stale category navigation so returning from the picker never opens an old category.
+    history.replaceState({ysHome:true}, '', location.href);
     modal.hidden = false;
     history.pushState({ysAllCategories:true}, '', location.href);
     modal.scrollTop = 0;
   }
   opener.addEventListener('click', openModal);
+  document.querySelector('.bottom-nav .nav-item[data-page="الأقسام"]')?.addEventListener('click', openModal);
   document.getElementById('showAllButton')?.addEventListener('click', openModal);
   document.getElementById('referenceExplore')?.addEventListener('click', openModal);
-  back.addEventListener('click', () => { if (history.state?.ysAllCategories) history.back(); else modal.hidden = true; });
+  back.addEventListener('click', () => {
+    modal.hidden = true;
+    history.replaceState({ysHome:true}, '', location.href);
+    document.querySelectorAll('.bottom-nav .nav-item').forEach(nav => nav.classList.toggle('active', nav.dataset.page === 'الرئيسية'));
+    document.getElementById('homeScreen')?.classList.remove('market-open');
+  });
   window.addEventListener('popstate', () => { modal.hidden = true; });
   document.querySelector('.bottom-nav [data-page="الرئيسية"]')?.addEventListener('click', () => { modal.hidden = true; }, true);
+});
+
+
+// شريط المكتبة: صور المنتجات الأصلية فقط، حركة تلقائية وتوقف عند التفاعل.
+document.addEventListener('DOMContentLoaded', () => {
+  const viewport = document.getElementById('ysStationeryWindow');
+  const track = document.getElementById('ysStationeryTrack');
+  const allButton = document.getElementById('ysStationeryViewAll');
+  if (!viewport || !track) return;
+
+  // تنويع الأدوات: قلم، دفتر، ألوان، مسطرة، مقلمة، أدوات هندسة، وغيرها.
+  const selections = [
+    ['library-001.png', 'قلم'],
+    ['library-009.png', 'دفتر'],
+    ['library-010.png', 'ألوان'],
+    ['library-015.png', 'مسطرة'],
+    ['library-018.png', 'مقلمة'],
+    ['library-025.png', 'أقلام تلوين'],
+    ['library-026.png', 'آلة حاسبة'],
+    ['library-033.png', 'ألوان رسم'],
+    ['library-044.png', 'مقلمة مدرسية'],
+    ['library-050.png', 'قلم حبر'],
+    ['library-066.png', 'دفتر رسم'],
+    ['library-077.png', 'علبة هندسة']
+  ];
+  const openLibrary = () => {
+    const card = document.querySelector('#categoriesGrid .category-card[data-category="مكتبة"]');
+    if (card) card.click();
+  };
+  allButton?.addEventListener('click', openLibrary);
+  const buildTile = ([file, description]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'ys-stationery-tile';
+    button.setAttribute('aria-label', 'افتح المكتبة: ' + description);
+    const img = document.createElement('img');
+    img.src = 'images/library/' + file;
+    img.alt = description;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    button.append(img);
+    button.addEventListener('click', openLibrary);
+    return button;
+  };
+  // نسختان متطابقتان تسمحان بدوران الشريط دون فراغ عند نهاية المنتجات.
+  selections.forEach(item => track.append(buildTile(item)));
+  selections.forEach(item => track.append(buildTile(item)));
+
+  let paused = false;
+  let userPauseUntil = 0;
+  let lastTime = 0;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const pauseBriefly = () => { userPauseUntil = performance.now() + 3500; };
+  viewport.addEventListener('pointerenter', () => { paused = true; });
+  viewport.addEventListener('pointerleave', () => { paused = false; pauseBriefly(); });
+  viewport.addEventListener('pointerdown', pauseBriefly);
+  viewport.addEventListener('touchstart', pauseBriefly, {passive:true});
+  viewport.addEventListener('wheel', pauseBriefly, {passive:true});
+  viewport.addEventListener('focusin', () => { paused = true; });
+  viewport.addEventListener('focusout', () => { paused = false; });
+  viewport.addEventListener('scroll', () => { /* Keep native swipe and keyboard scrolling available. */ }, {passive:true});
+  function animate(now) {
+    const delta = lastTime ? Math.min(now - lastTime, 60) : 0;
+    lastTime = now;
+    if (!reduceMotion.matches && !document.hidden && !paused && now > userPauseUntil && viewport.getClientRects().length) {
+      const half = track.scrollWidth / 2;
+      if (half > 0) {
+        viewport.scrollLeft += delta * 0.065;
+        if (viewport.scrollLeft >= half) viewport.scrollLeft -= half;
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+});
+
+// Support device/browser Back for the three "شو ناقص بيتك اليوم" pages.
+document.addEventListener('DOMContentLoaded', () => {
+  const needs = document.getElementById('ysNeedsScreen');
+  const home = document.getElementById('homeScreen');
+  if (!needs) return;
+  let tracked = false;
+  new MutationObserver(() => {
+    if (!needs.hidden && !tracked) {
+      tracked = true;
+      history.pushState({ysNeeds: true}, '', location.href);
+    } else if (needs.hidden) {
+      tracked = false;
+    }
+  }).observe(needs, {attributes:true, attributeFilter:['hidden']});
+  window.addEventListener('popstate', () => {
+    if (!needs.hidden) {
+      needs.hidden = true;
+      home?.classList.remove('market-open');
+    }
+    tracked = false;
+  });
 });

@@ -4378,7 +4378,7 @@ align-items: flex-end!important;
 .coffee-cup-icon{font-size:38px;line-height:1}
 .coffee-category-intro strong{font-size:16px;font-weight:900}
 .coffee-category-intro p{font-size:11px;line-height:1.7;margin-top:3px;color:#815a3b}
-.market-filter[data-filter="coffee"].active{background:#795038;color:#fff;border-color:#795038}
+.market-filter[data-filter="coffee"].active{background:#0753bd;color:#fff;border-color:#0753bd}
 
 /* صور الأقسام: البانر والشريط والمنتجات يتحركون مع بعض */
 .home-screen .supermarket-screen {overflow:hidden!important;display:flex!important;flex-direction:column!important}
@@ -4586,3 +4586,86 @@ transform: rotate(-135deg);
 #ysCategoriesModal .ys-premium-search {
     transform: translateY(14px) !important;
 }
+/* Yalla Shop — شريط المنظفات الاحترافي */
+#homeScreen .ys-clean-marquee{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:none;scrollbar-width:none;padding:12px 4px 22px;scroll-behavior:auto;direction:rtl;touch-action:pan-x}
+#homeScreen .ys-clean-marquee .ys-clean-card{flex:0 0 138px;min-height:205px;padding:9px 8px 12px;border-radius:18px;background:linear-gradient(145deg,#fff,#f2f8ff);border:1px solid #dceafa;box-shadow:0 7px 20px rgba(7,83,189,.10);animation:none;transition:transform .25s,box-shadow .25s}
+#homeScreen .ys-clean-marquee .ys-clean-card:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(7,83,189,.18)}
+#homeScreen .ys-clean-open{display:flex;flex-direction:column;align-items:center;width:100%;border:0;background:transparent;cursor:pointer;color:inherit;padding:0;font:inherit;text-align:center}
+#homeScreen .ys-clean-open .ys-img{width:108px;height:105px;border-radius:14px;background:#eaf5ff;border:0;box-shadow:none;margin:0 auto 9px}
+#homeScreen .ys-clean-open .ys-img img{width:95%;height:95%;object-fit:contain}
+#homeScreen .ys-clean-open .ys-img-fallback:after{content:'🧼';font-size:45px}
+#homeScreen .ys-clean-open strong{font-size:11px;min-height:35px;line-height:1.55}
+#homeScreen .ys-clean-open small{font-size:11px;color:#0753bd;margin:4px 0 7px}
+#homeScreen .ys-clean-cta{background:linear-gradient(120deg,#0753bd,#0088ed);color:white;border-radius:9px;padding:7px 10px;font-size:10px;font-weight:800;width:100%}
+#homeScreen .ys-clean-marquee .ys-fav-toggle{z-index:2}
+@media(prefers-reduced-motion:reduce){#homeScreen .ys-clean-marquee .ys-clean-card{transition:none}}
+
+
+/* شريط أدوات المكتبة - بطاقات صور فقط */
+#homeScreen .ys-stationery-section{margin:12px 0 26px;padding:0 10px;direction:rtl;overflow:hidden}
+#homeScreen .ys-stationery-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:13px}
+#homeScreen .ys-stationery-heading h2{margin:0;font-size:16px;line-height:1.5;font-weight:900;color:#102d57;letter-spacing:-.4px}
+#homeScreen .ys-stationery-heading button{border:0;background:none;color:#0753bd;font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer;padding:6px 0 6px 6px}
+#homeScreen .ys-stationery-window{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x;direction:ltr;scroll-behavior:auto;padding:4px 1px 13px;outline-offset:2px}
+#homeScreen .ys-stationery-window::-webkit-scrollbar{display:none}
+#homeScreen .ys-stationery-track{display:flex;gap:10px;width:max-content;direction:ltr;align-items:stretch}
+#homeScreen .ys-stationery-tile{display:block;flex:0 0 102px;width:102px;height:104px;padding:8px;border:1px solid #e5ecf7;border-radius:16px;background:linear-gradient(160deg,#fff,#f4f8ff);box-shadow:0 5px 13px rgba(10,58,120,.08);cursor:pointer;transition:transform .22s ease,box-shadow .22s ease;border-box:box-sizing}
+#homeScreen .ys-stationery-tile img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 3px rgba(24,48,75,.08));transition:transform .25s ease}
+#homeScreen .ys-stationery-tile:hover{transform:translateY(-3px);box-shadow:0 9px 18px rgba(10,58,120,.13)}
+#homeScreen .ys-stationery-tile:hover img{transform:scale(1.06)}
+#homeScreen .ys-stationery-tile:focus-visible{outline:2px solid #0753bd;outline-offset:3px}
+@media(max-width:360px){#homeScreen .ys-stationery-heading h2{font-size:14px}#homeScreen .ys-stationery-tile{flex-basis:90px;width:90px;height:94px}}
+@media(prefers-reduced-motion:reduce){#homeScreen .ys-stationery-tile,#homeScreen .ys-stationery-tile img{transition:none}}
+
+/* Compact continuously moving stationery ribbon */
+#homeScreen .ys-stationery-section{margin:8px 0 18px;padding:0 10px}
+#homeScreen .ys-stationery-heading{margin-bottom:8px}
+#homeScreen .ys-stationery-window{padding:2px 1px 8px}
+#homeScreen .ys-stationery-track{gap:7px}
+#homeScreen .ys-stationery-tile{flex:0 0 70px;width:70px;height:72px;padding:5px;border-radius:12px;box-shadow:0 3px 8px rgba(10,58,120,.07)}
+@media(max-width:360px){#homeScreen .ys-stationery-tile{flex-basis:65px;width:65px;height:67px}}
+
+/* صفحات احتياجات البيت */
+.ys-needs-screen{position:fixed;inset:0;margin:auto;width:100%;max-width:430px;height:100dvh;background:#fff;z-index:9000;direction:rtl;font-family:Cairo,Arial,sans-serif}
+.ys-needs-screen[hidden]{display:none!important}
+.ys-needs-header{display:flex;align-items:center;gap:15px;padding:18px 16px;background:linear-gradient(120deg,#0753bd,#087eea);color:white}
+.ys-needs-header button{border:0;background:#ffffff25;color:white;border-radius:12px;font-size:24px;width:40px;height:40px;cursor:pointer}
+.ys-needs-header h2{font-size:20px;margin:0}.ys-needs-header p{font-size:11px;margin:0;color:#e6f3ff}
+.ys-needs-scroll{height:calc(100% - 91px);overflow-y:auto;padding:15px 12px 95px}
+#ysNeedsCount{font-size:12px;color:#667b98;margin-bottom:12px}
+.ys-needs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ys-need-product{border:1px solid #dbe8fb;border-radius:16px;padding:9px;display:flex;flex-direction:column;gap:7px;min-width:0;background:#fff;box-shadow:0 3px 10px #12345a0b}
+.ys-need-product img{width:100%;height:130px;object-fit:contain;background:#f5f8fd;border-radius:12px}
+.ys-need-product strong{font-size:12px;line-height:1.6;min-height:38px}
+.ys-need-product small{font-size:10px;color:#8290a6}
+.ys-need-product b{font-size:12px;color:#0753bd;margin-top:auto}
+.ys-need-product button{border:0;border-radius:10px;background:#0753bd;color:white;font-size:12px;font-weight:800;padding:9px 3px;cursor:pointer}
+/* هيدر احتياجات البيت بصور مثل صفحة السوبر ماركت */
+.ys-needs-screen .ys-needs-banner{position:relative;min-height:168px;height:168px;background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate}
+.ys-needs-screen .ys-needs-banner-back{align-self:flex-start;margin:12px 14px;border:0;border-radius:12px;background:#0753bdc9;color:#fff;font-size:24px;font-weight:700;width:40px;height:40px;display:grid;place-items:center;cursor:pointer;position:relative;z-index:2}
+.ys-needs-screen .ys-needs-banner-caption{padding:0 18px 17px;text-shadow:0 2px 8px #0009;position:relative;z-index:1}
+.ys-needs-screen .ys-needs-banner-caption h2{font-size:23px;font-weight:900;line-height:1.4;margin:0;color:#fff}
+.ys-needs-screen .ys-needs-banner-caption p{font-size:12px;font-weight:600;color:#fff;margin:2px 0 0}
+.ys-needs-screen .ys-needs-scroll{height:calc(100% - 168px);overflow-y:auto;overscroll-behavior:contain}
+
+/* احتياجات البيت: نفس تصميم شاشة السوبر ماركت، بدون شريط التصنيفات */
+#ysNeedsScreen.ys-needs-screen{display:flex!important;flex-direction:column!important;overflow:hidden!important}
+#ysNeedsScreen.ys-needs-screen[hidden]{display:none!important}
+#ysNeedsScreen .ys-needs-scroll.ys-section-scroll{height:100%;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:0 0 90px!important;background:#f6f8fc}
+#ysNeedsScreen .ys-needs-banner.ys-section-banner{height:168px;min-height:168px;flex-shrink:0;background-position:center;background-size:cover}
+#ysNeedsScreen .ys-needs-banner-back{align-self:flex-start;margin:10px 14px 0;background:#0753bdc9}
+#ysNeedsScreen .ys-needs-banner-caption{padding:0 18px 17px}
+#ysNeedsScreen .ys-search-row{display:flex;min-height:52px}
+#ysNeedsScreen .market-search-wrap{padding:10px 14px;background:#fff}
+#ysNeedsScreen .market-products-scroll{height:auto!important;min-height:0!important;overflow:visible!important;flex:none!important;padding:15px 11px 25px}
+#ysNeedsScreen .market-products-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+#ysNeedsScreen .market-product{display:flex;flex-direction:column;border:1px solid #e8edf5;border-radius:15px;padding:8px;background:#fff}
+#ysNeedsScreen .market-product-picture{height:112px;margin-bottom:8px}
+#ysNeedsScreen .market-product-unit{margin-top:2px}
+#ysNeedsScreen .market-product-bottom{margin-top:auto;padding-top:9px}
+#ysNeedsScreen .market-no-products[hidden]{display:none!important}
+
+/* تثبيت عنوان احتياجات البيت أسفل صورة الهيدر مثل السوبر ماركت */
+#ysNeedsScreen .ys-needs-banner.ys-section-banner{position:relative!important;display:block!important}
+#ysNeedsScreen .ys-needs-banner-caption.ys-banner-title{position:absolute!important;top:auto!important;bottom:0!important;right:0!important;left:0!important;transform:none!important;margin:0!important;padding:0 18px 17px!important;text-align:right!important;z-index:3!important}
+#ysNeedsScreen .ys-needs-banner-caption h2,#ysNeedsScreen .ys-needs-banner-caption p{position:static!important;transform:none!important;text-align:right!important;margin-top:0!important}
