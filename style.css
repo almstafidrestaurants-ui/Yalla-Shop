@@ -4371,3 +4371,218 @@ align-items: flex-end!important;
   #homeScreen.home-screen .top-header .brand .brand-logo {width:33px !important;height:33px !important;flex-basis:33px !important;}
   #homeScreen.home-screen .top-header .brand-name strong {font-size:14px !important;}
 }
+
+/* قسم البن والقهوة داخل السوبر ماركت */
+.coffee-category-intro{display:flex;align-items:center;gap:13px;margin:14px 16px 0;padding:16px;border-radius:18px;background:linear-gradient(120deg,#fff4e5,#f7e4cb);border:1px solid #edd2af;color:#56351d}
+.coffee-category-intro[hidden]{display:none!important}
+.coffee-cup-icon{font-size:38px;line-height:1}
+.coffee-category-intro strong{font-size:16px;font-weight:900}
+.coffee-category-intro p{font-size:11px;line-height:1.7;margin-top:3px;color:#815a3b}
+.market-filter[data-filter="coffee"].active{background:#795038;color:#fff;border-color:#795038}
+
+/* صور الأقسام: البانر والشريط والمنتجات يتحركون مع بعض */
+.home-screen .supermarket-screen {overflow:hidden!important;display:flex!important;flex-direction:column!important}
+.home-screen .supermarket-screen[hidden]{display:none!important}
+.supermarket-screen .ys-section-scroll{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:75px;scrollbar-width:none}
+.ys-section-scroll::-webkit-scrollbar{display:none}
+.supermarket-screen .ys-section-banner{height:168px;min-height:168px;background-size:cover;background-position:center;position:relative;color:white;display:flex;flex-direction:column;justify-content:space-between}
+.supermarket-screen .ys-section-banner .market-header{flex:0 0 auto!important;height:60px;background:transparent!important;box-shadow:none!important;position:relative;z-index:2}
+.supermarket-screen .ys-banner-title{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:0 18px 17px;text-shadow:0 2px 8px #0009}
+.supermarket-screen .ys-banner-title strong{font-size:23px;font-weight:900;line-height:1.4}
+.supermarket-screen .ys-banner-title span{font-size:12px;font-weight:600}
+.supermarket-screen .ys-section-scroll>.market-categories{position:relative!important;z-index:1!important;overflow-x:auto!important;white-space:nowrap;flex-shrink:0}
+.supermarket-screen .ys-section-scroll>.market-products-scroll{height:auto!important;min-height:0!important;overflow:visible!important;flex:none!important;padding-bottom:20px!important}
+.supermarket-screen .ys-section-scroll>.coffee-category-intro{flex-shrink:0}
+.supermarket-screen .ys-section-scroll>.market-search-wrap{flex-shrink:0}
+
+/* Section banner: image scrolls away; search lives beneath it. */
+.supermarket-screen .ys-section-banner {height:168px;min-height:168px;justify-content:flex-end}
+.supermarket-screen .ys-search-row {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 16px;background:#fff;border-bottom:1px solid #edf1f7;color:#17365c;font-size:13px;font-weight:800;min-height:52px}
+.supermarket-screen .ys-search-row .market-search-icon {display:grid;place-items:center;width:38px;height:36px;border:1px solid #e0e9f6;border-radius:12px;background:#f3f7ff;color:#0753bd;cursor:pointer;font-size:24px}
+.supermarket-screen .ys-banner-title {padding:0 18px 18px}
+
+/* Fix restaurant cards collapsing after the section banner layout change */
+.restaurants-screen .ys-section-scroll > #restaurantList { display:flex; flex-direction:column; flex:0 0 auto!important; height:auto!important; min-height:125px!important; overflow:visible!important; padding:14px 12px 95px!important; }
+.restaurants-screen .ys-section-scroll > #restaurantList[hidden] { display:none!important; }
+.restaurants-screen .ys-section-scroll > #restaurantMenu:not([hidden]) { display:flex; flex:0 0 auto!important; height:auto!important; min-height:0; overflow:visible!important; }
+.restaurants-screen .ys-section-scroll #restaurantMenuItems { flex:0 0 auto!important; height:auto!important; overflow:visible!important; }
+
+/* Restaurant menu: scroll as part of the category page, below the banner. */
+.home-screen .restaurants-screen .ys-section-scroll {display:block!important;overflow-y:auto!important;overflow-x:hidden!important;}
+.home-screen .restaurants-screen .ys-section-scroll > #restaurantMenu:not([hidden]) {display:block!important;position:relative!important;height:auto!important;max-height:none!important;overflow:visible!important;}
+.home-screen .restaurants-screen .ys-section-scroll #restaurantCategories {display:flex!important;position:relative!important;overflow-x:auto!important;flex:none!important;}
+.home-screen .restaurants-screen .ys-section-scroll #restaurantMenuItems {display:flex!important;flex-direction:column!important;flex:none!important;height:auto!important;max-height:none!important;overflow:visible!important;padding-bottom:115px!important;}
+.home-screen .restaurants-screen .ys-section-scroll > #restaurantList:not([hidden]) {display:flex!important;height:auto!important;overflow:visible!important;}
+
+/* Restaurant menu navigation: show menu instead of restaurant card. */
+.home-screen .restaurants-screen .ys-section-scroll.restaurant-menu-open > #restaurantList {display:none!important;}
+.home-screen .restaurants-screen .ys-section-scroll.restaurant-menu-open > #restaurantMenu {display:block!important;position:relative!important;visibility:visible!important;opacity:1!important;height:auto!important;max-height:none!important;overflow:visible!important;}
+.home-screen .restaurants-screen .ys-section-scroll.restaurant-menu-open #restaurantCategories {display:flex!important;}
+.home-screen .restaurants-screen .ys-section-scroll.restaurant-menu-open #restaurantMenuItems {display:flex!important;flex-direction:column!important;height:auto!important;overflow:visible!important;}
+
+/* ============================================================
+   Yalla Shop / All categories — single scoped stylesheet.
+   Reference target: 390px mobile viewport. Other pages untouched.
+   ============================================================ */
+#ysCategoriesModal.ys-categories-modal {
+  position:fixed; inset:0; left:50%; right:auto; transform:translateX(-50%);
+  width:100%; max-width:430px; z-index:99999; box-sizing:border-box;
+  padding:0 12px 34px; background:#f4f8ff; overflow-x:hidden;
+  overflow-y:auto; overscroll-behavior:contain; direction:rtl;
+  scrollbar-width:none;
+}
+#ysCategoriesModal[hidden], #ysCategoriesModal .ys-premium-tile[hidden] {display:none!important}
+#ysCategoriesModal::-webkit-scrollbar {display:none}
+#ysCategoriesModal .ys-premium-header {
+  box-sizing:border-box; height:205px; min-height:0; margin:0 -12px 0;
+  padding:10px 18px 14px; border-radius:0 0 24px 24px;
+  background:#0876e5 url('images/categories-premium/header_blue.webp') center center/cover no-repeat;
+  color:#fff;
+}
+#ysCategoriesModal .ys-categories-modal-header {
+  height:58px; display:flex; justify-content:center; align-items:center;
+  position:relative; background:transparent;
+}
+#ysCategoriesModal .ys-categories-modal-header h2 {
+  margin:0; max-width:65%; font-size:clamp(22px,6.1vw,27px);
+  line-height:1.25; font-weight:900; white-space:nowrap; color:#fff;
+  text-align:center; text-shadow:0 2px 7px #07458b55;
+}
+#ysCategoriesModal .ys-categories-modal-header button {
+  position:absolute; left:0; right:auto; top:12px; width:43px; height:43px;
+  display:grid; place-items:center; border:0; border-radius:14px;
+  background:#ffffffd9; color:#0753bd; font-size:25px; line-height:1;
+  cursor:pointer; direction:ltr;
+}
+#ysCategoriesModal .ys-premium-header p {
+  margin:0 0 8px; text-align:center; font-size:11px;
+  font-weight:700; line-height:1.6; color:#fff;
+}
+#ysCategoriesModal .ys-premium-search {
+  display:flex; align-items:center; direction:rtl; box-sizing:border-box;
+  width:74%; height:35px;margin: 0 auto;; padding:0 14px;
+background: #ffffff; border-radius:28px; box-shadow:0 5px 15px #063b8122;
+}
+#ysCategoriesModal .ys-premium-search input {
+  flex:1; min-width:0; border:0; outline:0; background:transparent;
+  font:inherit; font-size:13px;  color: #142d70;
+}
+#ysCategoriesModal .ys-premium-search input::placeholder {
+    color: #142d70;
+}
+#ysCategoriesModal .ys-premium-search span {font-size:27px;color:#0756bc;line-height:1}
+#ysCategoriesModal .ys-categories-modal-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  direction:ltr; gap:10px; padding:0 0 28px;
+}
+#ysCategoriesModal .ys-premium-search svg {
+    color: #142d70;
+    stroke: #142d70;
+}
+#ysCategoriesModal .ys-premium-tile {
+  position:relative; isolation:isolate; box-sizing:border-box;
+  display:block; width:100%; height:auto; aspect-ratio:2.10/1;
+  min-width:0; min-height:0; margin:0; padding:0; overflow:hidden;
+  border:3px solid #fff; border-radius:19px; background:#e6f1ff;
+  box-shadow:0 4px 12px #193d6b1d; cursor:pointer;
+}
+#ysCategoriesModal .ys-premium-tile > img {
+  position:absolute; inset:0; width:100%; height:100%; display:block;
+  object-fit:cover; object-position:center; transform:scaleX(-1);
+  z-index:0; pointer-events:none;
+}
+#ysCategoriesModal .ys-premium-tile > strong {
+  position:absolute; left:9px; right:auto; top:10px; z-index:2;
+  width:49%; max-width:49%; margin:0; color:#08265c;
+  font-size:clamp(12px,3.3vw,14px); font-weight:900; line-height:1.25;
+  direction:rtl; text-align:left; overflow-wrap:normal; word-break:normal;
+  text-shadow:0 1px 3px #ffffffd9; pointer-events:none;
+}
+#ysCategoriesModal .ys-premium-tile > .ys-premium-arrow {
+  position:absolute; left:9px; right:auto; bottom:7px; top:auto;
+  display:grid; place-items:center; box-sizing:border-box;
+  width:27px; height:27px; border:2px solid #fff; border-radius:50%;
+  color:#fff; background:var(--tile-arrow,#075bd8); z-index:3;
+  font-family:Arial,sans-serif; font-size:20px; font-weight:600;
+  line-height:1; direction:ltr; transform:none; pointer-events:none;
+  box-shadow:0 2px 6px #112e4622;
+}
+#ysCategoriesModal .ys-premium-feature {
+  grid-column:1/-1; aspect-ratio:3.75/1; border-radius:23px;
+}
+#ysCategoriesModal .ys-premium-feature > strong {
+  left:7%; right:auto; top:19px; max-width:45%; width:45%;
+  font-size:clamp(18px,5vw,22px); line-height:1.3;
+}
+#ysCategoriesModal .ys-premium-feature > .ys-premium-arrow {
+  left:7%; bottom:10px; width:32px; height:32px; font-size:22px;
+}
+#ysCategoriesModal .ys-premium-tile[data-section="restaurants"] {--tile-arrow:#f58220}
+#ysCategoriesModal .ys-premium-tile[data-section="vegetables"] {--tile-arrow:#21954d}
+#ysCategoriesModal .ys-premium-tile[data-section="stationery"] {--tile-arrow:#176cf0}
+#ysCategoriesModal .ys-premium-tile[data-section="meat"] {--tile-arrow:#ef3d70}
+#ysCategoriesModal .ys-premium-tile[data-section="poultry"] {--tile-arrow:#ed8831}
+#ysCategoriesModal .ys-premium-tile[data-section="cleaning"] {--tile-arrow:#1681dd}
+#ysCategoriesModal .ys-premium-tile[data-section="sweets"] {--tile-arrow:#ef42a2}
+@media(max-width:350px) {
+  #ysCategoriesModal .ys-categories-modal-grid {gap:7px}
+  #ysCategoriesModal .ys-premium-tile > strong {left:7px;font-size:11px}
+  #ysCategoriesModal .ys-premium-tile > .ys-premium-arrow {left:7px;bottom:5px;width:24px;height:24px}
+}
+
+/* Only the requested fixes: keep the supermarket tile original size.
+   The Photoshop header artwork is shown without stretching. */
+/* Original Photoshop artwork, with a separate dark backing for the text and search. */
+#ysCategoriesModal .ys-premium-header {
+  height:160px;
+  background-size:cover;
+  background-color:#0876e5;
+  background-blend-mode:normal;
+  position:relative;
+  isolation:isolate;
+}
+#ysCategoriesModal .ys-premium-header::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(3,34,100,.48),rgba(3,34,100,.24));
+  pointer-events:none;
+  z-index:0;
+}
+#ysCategoriesModal .ys-premium-header > * {
+  position:relative;
+  z-index:1;
+}
+#ysCategoriesModal .ys-premium-search {
+  background:#fff;
+}
+#ysCategoriesModal .ys-premium-search input,
+#ysCategoriesModal .ys-premium-search input::placeholder {
+  color:#142d70;
+}
+#ysCategoriesModal .ys-premium-tile > .ys-premium-arrow {
+  font-size:0; direction:ltr; transform:none;
+}
+#ysCategoriesModal .ys-premium-tile > .ys-premium-arrow::after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+transform: rotate(-135deg);
+    margin-left: 2px;
+    margin-bottom: 4px;
+}
+/* تنزيل العنوان والوصف والبحث */
+#ysCategoriesModal .ys-categories-modal-header h2 {
+    transform: translateY(12px);
+}
+#ysCategoriesModal .ys-premium-header p {
+    transform: translateY(12px);
+}
+
+#ysCategoriesModal .ys-premium-search {
+    transform: translateY(14px) !important;
+}

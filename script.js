@@ -404,7 +404,15 @@ gharibGrid.appendChild(card);
 
     // أضف كل منتج مرة واحدة فقط من هنا
     const marketProducts = [
-
+  {
+            id: 1,
+            name: "حليب لاكتو  ",
+            price: 419994,
+            unit: " 750غ  ",
+            category: "dairy",
+            image: "images/Lacto milk.png",
+            pictureClass: "chips-picture"
+        },
         {
             id: 2,
             name: "حليب لاكتو  ",
@@ -4878,6 +4886,13 @@ gharibGrid.appendChild(card);
             filteredProducts.length + " منتجات";
 
         marketNoProducts.hidden = filteredProducts.length > 0;
+        const coffeeIntro = document.getElementById("coffeeCategoryIntro");
+        if (coffeeIntro) coffeeIntro.hidden = activeMarketFilter !== "coffee";
+        if (activeMarketFilter === "coffee" && filteredProducts.length === 0) {
+            marketNoProducts.textContent = query ? "ما لقينا قهوة مطابقة لبحثك." : "منتجات البن والقهوة رح تنضاف قريباً.";
+        } else {
+            marketNoProducts.textContent = "ما لقينا منتجات مطابقة لبحثك.";
+        }
     }
 
     // الضغط على أزرار الأقسام
@@ -6993,9 +7008,15 @@ function renderRestaurantView() {
   const list = document.getElementById('restaurantList');
   const menu = document.getElementById('restaurantMenu');
   const query = restaurantSearch.value.trim().toLocaleLowerCase();
-  document.getElementById('restaurantsHeader').textContent = restaurantCurrent || 'المطاعم';
+  const restaurantsHeader = document.getElementById('restaurantsHeader');
+  if (restaurantsHeader) restaurantsHeader.textContent = restaurantCurrent || 'المطاعم';
   list.hidden = Boolean(restaurantCurrent);
   menu.hidden = !restaurantCurrent;
+  // Keep the menu above the list and explicitly control its display.
+  list.style.setProperty('display', restaurantCurrent ? 'none' : 'flex', 'important');
+  menu.style.setProperty('display', restaurantCurrent ? 'block' : 'none', 'important');
+  const restaurantScroll = document.querySelector('#restaurantsScreen .ys-section-scroll');
+  if (restaurantScroll) restaurantScroll.classList.toggle('restaurant-menu-open', Boolean(restaurantCurrent));
   if (!restaurantCurrent) {
     list.replaceChildren();
     restaurantNames.filter(n => n.toLocaleLowerCase().includes(query)).forEach(name => {
@@ -7005,7 +7026,7 @@ function renderRestaurantView() {
       const label = document.createElement('strong'); label.textContent = name;
       const arrow = document.createElement('span'); arrow.className = 'restaurant-row-arrow'; arrow.textContent = '❮'; arrow.setAttribute('aria-hidden','true');
       button.append(photo,label,arrow);
-      button.addEventListener('click',()=>{restaurantCurrent=name;restaurantFilter='all';restaurantSearch.value='';renderRestaurantView();document.getElementById('restaurantMenuItems').scrollTop=0;});
+      button.addEventListener('click',()=>{restaurantCurrent=name;restaurantFilter='all';restaurantSearch.value='';renderRestaurantView();const sc=document.querySelector('#restaurantsScreen .ys-section-scroll');if(sc)sc.scrollTop=0;});
       list.appendChild(button);
     });
     if (!list.children.length) {const empty=document.createElement('p');empty.className='restaurant-empty';empty.textContent='ما لقينا مطعم بهالاسم.';list.appendChild(empty);}
@@ -7018,7 +7039,7 @@ function renderRestaurantView() {
   categories.forEach(([id,label])=>{
     const b=document.createElement('button');b.type='button';b.textContent=label;
     b.className='restaurant-tab'+(restaurantFilter===id?' active':'');
-    b.addEventListener('click',()=>{restaurantFilter=id;renderRestaurantView();document.getElementById('restaurantMenuItems').scrollTop=0;});tabs.appendChild(b);
+    b.addEventListener('click',()=>{restaurantFilter=id;renderRestaurantView();document.querySelector('#restaurantsScreen .ys-section-scroll')?.scrollTo({top:0,behavior:'instant'});});tabs.appendChild(b);
   });
   const items=document.getElementById('restaurantMenuItems');items.replaceChildren();
   const shown=data.items.filter(x=>(restaurantFilter==='all'||x.category===restaurantFilter)&&x.name.toLocaleLowerCase().includes(query));
@@ -7078,6 +7099,8 @@ document.getElementById('restaurantsSearchToggle').addEventListener('click',()=>
   if(!wrap.hidden)restaurantSearch.focus();else{restaurantSearch.value='';renderRestaurantView();}
 });
 restaurantSearch.addEventListener('input',renderRestaurantView);
+// Populate the restaurant list immediately, even before opening the section.
+renderRestaurantView();
 // سحب التصنيفات بالماوس، واللمس مدعوم عبر CSS overflow-x.
 (()=>{const bar=document.getElementById('restaurantCategories');let down=false,start=0,scroll=0,moved=false,block=false;
 bar.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;down=true;moved=false;start=e.clientX;scroll=bar.scrollLeft;});
@@ -7110,7 +7133,7 @@ bar.addEventListener('dragstart',e=>e.preventDefault());})();
 /* Reference homepage: real navigation through existing category buttons */
 document.addEventListener('DOMContentLoaded', () => {
  const jump = (name) => document.querySelector('.category-card[data-category="'+name+'"]')?.click();
- document.getElementById('referenceAllCategories')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
+ 
  document.getElementById('referenceExplore')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
  document.getElementById('referenceOffersAll')?.addEventListener('click',()=>jump('سوبر ماركت'));
  document.getElementById('referenceMenuButton')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
@@ -7160,4 +7183,168 @@ document.addEventListener('DOMContentLoaded',()=>{
 document.getElementById('ysHeaderMenu')?.addEventListener('click', function () {
   const section = document.getElementById('categoriesSection');
   if (section) section.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = {
+    supermarketScreen: ['سوبر ماركت', 'images/background/Supermarket background.webp'],
+    vegetablesScreen: ['خضرة وفواكه', 'images/background/Background of vegetables and fruits .webp'],
+    butcherScreen: ['الملحمة', 'images/background/Meat background.webp'],
+    cleaningScreen: ['المنظفات', 'images/background/Detergents Background.webp'],
+    poultryScreen: ['الدواجن', 'images/background/Poultry background.webp'],
+    libraryScreen: ['المكتبة', 'images/background/Library background.webp'],
+    restaurantsScreen: ['المطاعم', 'images/background/Restaurant background.webp']
+  };
+  Object.entries(sections).forEach(([id, [title, image]]) => {
+    const screen = document.getElementById(id);
+    if (!screen) return;
+    const header = screen.querySelector(':scope > .market-header');
+    if (!header) return;
+    const scroll = document.createElement('div');
+    scroll.className = 'ys-section-scroll';
+    const banner = document.createElement('div');
+    banner.className = 'ys-section-banner';
+    banner.style.backgroundImage = `linear-gradient(0deg, rgba(2,18,40,.74), rgba(2,18,40,.08) 72%), url("${image}")`;
+    const heading = document.createElement('div');
+    heading.className = 'ys-banner-title';
+    const name = document.createElement('strong');
+    name.textContent = title;
+    const subtitle = document.createElement('span');
+    subtitle.textContent = 'تسوّق منتجاتنا بكل سهولة';
+    heading.append(name, subtitle);
+    // Keep search outside the image, and remove the duplicate old title/back arrow.
+    const searchRow = document.createElement('div');
+    searchRow.className = 'ys-search-row';
+    const searchLabel = document.createElement('span');
+    searchLabel.textContent = 'تصفّح ' + title;
+    searchRow.append(searchLabel);
+    const searchButton = header.querySelector('.market-search-icon');
+    if (searchButton) {
+      searchButton.setAttribute('aria-label', 'بحث في ' + title);
+      searchRow.append(searchButton);
+    }
+    banner.append(heading);
+    const nodes = [...screen.children].filter(el => el !== scroll);
+    screen.append(scroll);
+    scroll.append(banner, searchRow);
+    nodes.forEach(el => { if(el !== header) scroll.append(el); });
+    header.remove();
+  });
+});
+
+// Android hardware/browser back: each opened category receives a history entry.
+// Closing via the device back button returns to the main shop, not out of the app.
+document.addEventListener('DOMContentLoaded', () => {
+  const ids = ['supermarketScreen','vegetablesScreen','butcherScreen','cleaningScreen','poultryScreen','libraryScreen','restaurantsScreen'];
+  const screens = ids.map(id => document.getElementById(id)).filter(Boolean);
+  let active = null;
+  let handlingPop = false;
+  const sync = () => {
+    if (handlingPop) return;
+    const opened = screens.find(el => !el.hidden);
+    if (opened && active !== opened.id) {
+      active = opened.id;
+      history.pushState({ysCategory: opened.id}, '', location.href);
+    } else if (!opened) active = null;
+  };
+  const observer = new MutationObserver(sync);
+  screens.forEach(el => observer.observe(el, {attributes:true, attributeFilter:['hidden']}));
+  window.addEventListener('popstate', () => {
+    handlingPop = true;
+    const opened = screens.find(el => !el.hidden);
+    if (opened) {
+      opened.hidden = true;
+      document.getElementById('homeScreen')?.classList.remove('market-open');
+      active = null;
+    }
+    // Restore a previous category if navigating forward.
+    const target = history.state?.ysCategory;
+    if (target && screens.some(el => el.id === target)) {
+      const el = document.getElementById(target);
+      if (el) { el.hidden = false; document.getElementById('homeScreen')?.classList.add('market-open'); active = target; }
+    }
+    queueMicrotask(() => { handlingPop = false; });
+  });
+  // Any remaining internal back controls should use the same history stack.
+  screens.forEach(screen => {
+    screen.querySelectorAll('.market-back').forEach(btn => btn.addEventListener('click', e => {
+      if (active === screen.id) { e.stopImmediatePropagation(); history.back(); }
+    }, true));
+  });
+});
+
+
+// زر الرئيسية: العودة إلى بداية الصفحة من أي قسم أو نافذة.
+document.addEventListener('DOMContentLoaded', function () {
+  const homeButton = document.querySelector('.bottom-nav .nav-item[data-page="الرئيسية"]');
+  if (!homeButton) return;
+  homeButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const home = document.getElementById('homeScreen');
+    if (!home) return;
+    home.hidden = false;
+    home.querySelectorAll('section.supermarket-screen').forEach(section => { section.hidden = true; });
+    ['supermarketScreen','vegetablesScreen','butcherScreen','cleaningScreen','poultryScreen','libraryScreen','restaurantsScreen','ysFavorites','yallaCartScreen'].forEach(id => {
+      const section = document.getElementById(id);
+      if (section) section.hidden = true;
+    });
+    home.classList.remove('market-open', 'ys-favorites-open');
+    document.querySelectorAll('.bottom-nav .nav-item').forEach(button => {
+      button.classList.toggle('active', button === homeButton);
+    });
+    home.querySelectorAll('.home-content').forEach(content => { content.scrollTop = 0; });
+    window.scrollTo(0, 0);
+  }, true);
+});
+
+
+// واجهة كل الأقسام: شبكة صور كبيرة مع رجوع الموبايل وسهم الرجوع.
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('ysCategoriesModal');
+  const grid = document.getElementById('ysCategoriesModalGrid');
+  const opener = document.getElementById('referenceAllCategories');
+  const back = document.getElementById('ysCategoriesBack');
+  if (!modal || !grid || !opener || !back) return;
+  const cards = [...document.querySelectorAll('#categoriesGrid .category-card[data-category]')];
+  const assets = 'images/categories-premium/';
+  const pictures = {'سوبر ماركت':'supermarket.webp','مطاعم':'restaurants.webp','خضرة وفواكه':'vegetables.webp','مكتبة':'stationery.webp','ملحمة':'meat.webp','دواجن':'poultry.webp','منظفات':'cleaning.webp','حلويات':'sweets.webp'};
+  const aliases = {'خضرة وفواكه':['خضرة وفواكه','خضار وفواكه'],'مطاعم':['مطاعم','مطعم'],'ملحمة':['ملحمة','لحوم'],'مكتبة':['مكتبة','قرطاسية'],'منظفات':['منظفات','المنظفات']};
+  const used = new Set();
+  function findCard(name) { return cards.find(c => (aliases[name] || [name]).includes(c.dataset.category)); }
+  function addTile(name, filename, card) {
+    if (!card || used.has(card)) return;
+    used.add(card);
+    const tile = document.createElement('button');
+    tile.type = 'button'; tile.className = 'ys-premium-tile' + (name === 'سوبر ماركت' ? ' ys-premium-feature' : '');
+    tile.dataset.search = name; tile.dataset.section = ({'سوبر ماركت':'supermarket','مطاعم':'restaurants','خضرة وفواكه':'vegetables','مكتبة':'stationery','ملحمة':'meat','دواجن':'poultry','منظفات':'cleaning','حلويات':'sweets'})[name] || 'other';
+    const img = document.createElement('img'); img.src = assets + filename; img.alt = ''; img.loading = 'lazy';
+    const title = document.createElement('strong'); title.textContent = name;
+    const arrow = document.createElement('span'); arrow.className='ys-premium-arrow'; arrow.textContent='→'; arrow.setAttribute('aria-hidden','true');
+    tile.append(img,title,arrow);
+    tile.addEventListener('click', () => {
+      modal.hidden = true;
+      if (history.state?.ysAllCategories) history.replaceState({ysCategoryPickerClosed:true}, '', location.href);
+      card.click();
+    });
+    grid.append(tile);
+  }
+  ['سوبر ماركت','مطاعم','خضرة وفواكه','مكتبة','ملحمة','دواجن','منظفات','حلويات'].forEach(name => addTile(name,pictures[name],findCard(name)));
+  cards.filter(card => !used.has(card)).forEach(card => addTile(card.dataset.category, 'other_categories.webp', card));
+  const search = document.getElementById('ysPremiumCategorySearch');
+  search?.addEventListener('input', () => {
+    const q = search.value.trim().toLocaleLowerCase('ar');
+    grid.querySelectorAll('.ys-premium-tile').forEach(tile => { tile.hidden = !tile.dataset.search.toLocaleLowerCase('ar').includes(q); });
+  });
+  function openModal() {
+    if (!modal.hidden) return;
+    modal.hidden = false;
+    history.pushState({ysAllCategories:true}, '', location.href);
+    modal.scrollTop = 0;
+  }
+  opener.addEventListener('click', openModal);
+  document.getElementById('showAllButton')?.addEventListener('click', openModal);
+  document.getElementById('referenceExplore')?.addEventListener('click', openModal);
+  back.addEventListener('click', () => { if (history.state?.ysAllCategories) history.back(); else modal.hidden = true; });
+  window.addEventListener('popstate', () => { modal.hidden = true; });
+  document.querySelector('.bottom-nav [data-page="الرئيسية"]')?.addEventListener('click', () => { modal.hidden = true; }, true);
 });

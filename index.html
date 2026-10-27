@@ -257,6 +257,7 @@
                 data-filter="all">الكل</button>
         <button type="button" class="market-filter"
                 data-filter="drinks">مشروبات</button>
+        <button type="button" class="market-filter" data-filter="coffee">☕ البن والقهوة</button>
         <button type="button" class="market-filter"
                 data-filter="Bakery">  مخبوزات وإفطار  </button>
         <button type="button" class="market-filter"
@@ -273,6 +274,11 @@
                                       <button type="button" class="market-filter"
                 data-filter="IceCream">المثلجات </button>
     </nav>
+
+    <div id="coffeeCategoryIntro" class="coffee-category-intro" hidden>
+        <div class="coffee-cup-icon">☕</div>
+        <div><strong>ركن البن والقهوة</strong><p>بن عربي، قهوة تركية، إسبريسو وقهوة سريعة التحضير</p></div>
+    </div>
 
     <!-- المنتجات -->
     <div class="market-products-scroll">
@@ -520,6 +526,13 @@
 </section>
 
 <section class="ys-favorites" id="ysFavorites" hidden aria-label="المفضلة"><header><button type="button" id="ysFavBack" aria-label="رجوع">→</button><h2>❤️ المفضلة</h2><span id="ysFavTotal"></span></header><div id="ysFavList" class="ys-fav-list"></div></section>
+
+<!-- نافذة جميع الأقسام -->
+<section id="ysCategoriesModal" class="ys-categories-modal" role="dialog" aria-modal="true" aria-label="كل الأقسام" hidden>
+  <div class="ys-premium-header"><header class="ys-categories-modal-header"><button type="button" id="ysCategoriesBack" dir="ltr" aria-label="رجوع">←</button><h2>كل الأقسام</h2></header><p>تسوّق كل احتياجاتك في مكان واحد</p><label class="ys-premium-search"><input id="ysPremiumCategorySearch" type="search" placeholder="ابحث عن قسم..." autocomplete="off"><span aria-hidden="true">⌕</span></label></div>
+  <div class="ys-categories-modal-grid" id="ysCategoriesModalGrid"></div>
+</section>
+
 <!-- القائمة السفلية -->
 <nav class="bottom-nav" aria-label="القائمة الرئيسية">
 
