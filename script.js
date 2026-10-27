@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }, 450);
             }, 250);
         }
-  }, 50);
+  }, 7);
 
     // البحث عن الأقسام
     const searchForm = document.getElementById("searchForm");
@@ -130,8 +130,11 @@ if (
     // أزرار البانر
     document.getElementById("shopNowButton")
         .addEventListener("click", function () {
-            document.getElementById("categoriesSection")
-                .scrollIntoView({ behavior: "smooth" });
+            const category = document.querySelector('.photo-hero .hero-copy')?.dataset.category;
+            const card = Array.from(document.querySelectorAll('#categoriesGrid .category-card'))
+                .find(el => el.dataset.category === category);
+            if (card) card.click();
+            else document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'});
         });
 
 const moreCategoriesButton =
@@ -336,6 +339,29 @@ gharibGrid.appendChild(card);
         bannerImages.forEach((img, i) => {
             img.classList.toggle("active", i === currentBanner);
         });
+        // نص مستقل لكل بانر، ويبقى قابلاً للتعديل من HTML/CSS.
+        const bannerInfo = [
+            {title:'حلّي يومك', second:'بألذ الحلويات', desc:'تشكيلة حلويات لكل مناسبة', category:'حلويات'},
+            {title:'عالم', second:'   الألوان والفن ', desc:'كل ما تحتاجه للدراسة', category:'مكتبة'},
+            {title:'انتعاش', second:'الطبيعة يومياً  ', desc:'خضرة وفواكه بجودة عالية', category:'خضرة وفواكه'},
+            {title:'بيت نظيف', second:'بكل سهولة', desc:'مستلزمات التنظيف لبيتك', category:'منظفات'}
+        ];
+        const info = bannerInfo[currentBanner];
+        const copy = document.querySelector('.photo-hero .hero-copy');
+        if (copy && info) {
+            const heading = copy.querySelector('h1');
+            const subtitle = copy.querySelector('p');
+            if (heading) {
+                heading.replaceChildren();
+                heading.append(document.createTextNode(info.title), document.createElement('br'));
+                const second = document.createElement('em'); second.textContent = info.second;
+                heading.append(second);
+            }
+            if (subtitle) subtitle.textContent = info.desc;
+            copy.dataset.category = info.category;
+        }
+        const hero = document.querySelector('.photo-hero');
+        if (hero) hero.classList.remove('reference-slide');
 
         bannerDots.forEach((dot, i) => {
             dot.classList.toggle("active", i === currentBanner);
@@ -348,8 +374,8 @@ gharibGrid.appendChild(card);
         if (bannerImages.length < 2) return;
 
         bannerTimer = setInterval(() => {
-            showBanner(currentBanner + 1);
-        }, 4000);
+            if (!document.hidden) showBanner(currentBanner + 1);
+        }, 4800);
     }
 
     bannerDots.forEach((dot, index) => {
@@ -6180,6 +6206,151 @@ renderButcherProducts();
 
     // إنشاء المنتجات عند تحميل الصفحة
     renderMarketProducts();
+    // عرض أقسام الصفحة الرئيسية من بيانات المنتجات الأصلية، بدون نسخ بيانات أو تغيير المودالات.
+    (function buildYallaShowcase(){
+      const food = marketProducts.filter(x=>['food','dairy','Snacks','Bakery'].includes(x.category) && x.image).slice(0,12);
+      const orbit=document.getElementById('ysFoodOrbit');
+      if(orbit) orbit.innerHTML=food.map((x,i)=>`<article class="ys-orbit-card" style="--i:${i}"><div class="ys-img"><img src="${x.image}" alt="" loading="lazy" decoding="async"></div><strong>${x.name}</strong><small>${Number(x.price).toLocaleString('en-US')} ل.ل</small><button class="ys-fav-toggle" type="button" data-fav-id="market-${x.id}" data-fav-name="${x.name.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" data-fav-img="${x.image}" data-fav-price="${x.price}" data-fav-category="سوبر ماركت" aria-label="أضف للمفضلة">♡</button></article>`).join('');
+      // قسمان مستقلان: شرائط تلقائية مبنية من بيانات المنتجات الفعلية.
+      const escShow=(v)=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+      function showcaseCard(p,i,category,type){
+        const id=type==='meat'?'butcher-'+p.id:'poultry-'+i;
+        const price=Number(p.price||0).toLocaleString('en-US');
+        return `<article class="ys-slide-card ys-slide-${type}"><button type="button" class="ys-slide-open" data-open-category="${category}" aria-label="تصفح ${escShow(p.name)}"><span class="ys-slide-photo"><img src="${escShow(p.image)}" alt="${escShow(p.name)}" loading="lazy" decoding="async" onerror="this.style.visibility='hidden'"></span><span class="ys-slide-name">${escShow(p.name)}</span><span class="ys-slide-unit">${escShow(p.unit||'')}</span><span class="ys-slide-price">${price} ل.ل</span><span class="ys-slide-cta">تسوّق الآن ←</span></button><button type="button" class="ys-fav-toggle ys-slide-heart" data-fav-id="${escShow(id)}" data-fav-name="${escShow(p.name)}" data-fav-img="${escShow(p.image)}" data-fav-price="${escShow(p.price)}" data-fav-category="${category}" aria-label="أضف للمفضلة">♡</button></article>`;
+      }
+      function setupShowcase(id,items,category,type){
+        const host=document.getElementById(id);
+        if(!host||!items.length)return;
+        const cards=items.map((p,i)=>showcaseCard(p,i,category,type)).join('');
+        // مجموعة واحدة فقط: السحب بيعرض كل المنتجات بدون تكرار.
+        host.innerHTML=`<div class="ys-auto-viewport ys-auto-${type}" tabindex="0" role="region" aria-label="منتجات ${category}، اسحب لاستعراض المنتجات"><div class="ys-auto-track">${cards}</div></div><p class="ys-scroll-hint">اسحب لتشوف المزيد <span aria-hidden="true">↔</span></p>`;
+        const viewport=host.querySelector('.ys-auto-viewport');
+        let dragging=false, moved=false, startX=0, startScroll=0, blockClick=false;
+        let playing=false, played=false, stopped=false, raf=0, startedAt=0;
+        const cancelIntro=()=>{stopped=true;playing=false;if(raf)cancelAnimationFrame(raf)};
+        // على الكمبيوتر: اسحب البطاقات بالماوس مثل السحب على الموبايل.
+        viewport.addEventListener('pointerdown',e=>{
+          if(e.pointerType==='mouse'&&e.button!==0)return;
+          cancelIntro();dragging=true;moved=false;startX=e.clientX;startScroll=viewport.scrollLeft;
+          if(e.pointerType==='mouse')viewport.setPointerCapture?.(e.pointerId);
+        });
+        viewport.addEventListener('pointermove',e=>{
+          if(!dragging||e.pointerType!=='mouse')return;
+          const dx=e.clientX-startX;
+          if(Math.abs(dx)>5)moved=true;
+          if(moved){viewport.scrollLeft=startScroll-dx;e.preventDefault()}
+        });
+        const release=()=>{if(!dragging)return;dragging=false;if(moved){blockClick=true;setTimeout(()=>blockClick=false,150)}};
+        viewport.addEventListener('pointerup',release);
+        viewport.addEventListener('pointercancel',release);
+        viewport.addEventListener('lostpointercapture',release);
+        viewport.addEventListener('click',e=>{if(blockClick){e.preventDefault();e.stopImmediatePropagation();blockClick=false}},true);
+        viewport.addEventListener('dragstart',e=>e.preventDefault());
+        viewport.addEventListener('touchstart',cancelIntro,{passive:true});
+        viewport.addEventListener('wheel',e=>{
+          if(Math.abs(e.deltaY)>Math.abs(e.deltaX)&&!e.ctrlKey){
+            // العجلة فوق الشريط تحرك المنتجات أفقياً، وباقي الصفحة تضل قابلة للتمرير.
+            const max=viewport.scrollWidth-viewport.clientWidth;
+            const next=Math.max(0,Math.min(max,viewport.scrollLeft+e.deltaY));
+            if(next!==viewport.scrollLeft){cancelIntro();e.preventDefault();viewport.scrollLeft=next}
+          }else if(e.deltaX){cancelIntro()}
+        },{passive:false});
+        viewport.addEventListener('keydown',e=>{
+          if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
+            cancelIntro();e.preventDefault();viewport.scrollBy({left:e.key==='ArrowRight'?150:-150,behavior:'smooth'});
+          }
+        });
+        // مرة واحدة فقط: عند وصول القسم للشاشة يمشي الشريط لحاله، يبطئ ثم يوقف.
+        const startIntro=()=>{
+          if(played||stopped||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+          played=true;playing=true;
+          const max=viewport.scrollWidth-viewport.clientWidth;
+          const distance=Math.min(max, type==='meat'?205:165);
+          if(distance<12)return;
+          const initial=viewport.scrollLeft;
+          const duration=2100;
+          const step=t=>{
+            if(!playing||document.hidden)return;
+            if(!startedAt)startedAt=t;
+            const progress=Math.min((t-startedAt)/duration,1);
+            viewport.scrollLeft=initial+distance*(1-Math.pow(1-progress,3));
+            if(progress<1)raf=requestAnimationFrame(step);else playing=false;
+          };
+          raf=requestAnimationFrame(step);
+        };
+        if('IntersectionObserver' in window){
+          const observer=new IntersectionObserver(entries=>{
+            if(entries.some(e=>e.isIntersecting)){observer.disconnect();setTimeout(startIntro,220)}
+          },{threshold:.35});
+          observer.observe(host);
+        }else startIntro();
+      }
+      setupShowcase('ysMeatFeature',butcherProducts.filter(x=>x.image).slice(0,10),'ملحمة','meat');
+      setupShowcase('ysPoultryFeature',gharibProducts.filter(x=>x.image).slice(0,10),'دواجن','poultry');
+      const offers=document.getElementById('ysOffers');
+      const offerItems=[['خضرة وفواكه','images/green.jpg','خضرة وفواكه'],['مكتبة','images/library.jpg','مستلزمات المدرسة'],['منظفات','images/Cleaning.jpg','كل شي للنظافة'],['حلويات','images/Sweets.jpg','أطيب الحلويات']];
+      if(offers)offers.innerHTML=offerItems.map(([cat,img,title])=>`<button type="button" data-open-category="${cat}"><img src="${img}" loading="lazy" alt=""><strong>${title}</strong><span>اكتشف القسم ←</span></button>`).join('');
+    })();
+    // تجربة الصفحة الرئيسية الاحترافية — من دون تعديل نظام السلة أو المنتجات
+    const proTrack = document.getElementById('proFeaturedTrack');
+    if (proTrack) {
+        const picks = marketProducts.filter(p => p.image && p.name && Number.isFinite(Number(p.price)) && p.category !== 'Vegetables' && p.category !== 'cleaning').slice(0, 10);
+        const fragment = document.createDocumentFragment();
+        picks.forEach((p, index) => {
+            const card = document.createElement('article');
+            card.className = 'pro-feature-card';
+            const picture = document.createElement('div'); picture.className = 'pro-feature-picture';
+            const img = document.createElement('img'); img.src = p.image; img.alt = p.name.trim(); img.width = 94; img.height = 94;
+            img.loading = index < 2 ? 'eager' : 'lazy'; img.decoding = 'async';
+            img.onerror = () => { img.style.display = 'none'; picture.classList.add('image-unavailable'); };
+            picture.append(img);
+            const name = document.createElement('h3'); name.textContent = p.name.trim();
+            const unit = document.createElement('small'); unit.textContent = p.unit || '';
+            const price = document.createElement('strong'); price.textContent = Number(p.price).toLocaleString('en-US') + ' ل.ل';
+            const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = 'عرض المنتج';
+            btn.setAttribute('aria-label', 'عرض ' + p.name.trim());
+            btn.addEventListener('click', () => {
+                document.querySelector('.category-card[data-category="سوبر ماركت"]')?.click();
+                const search = document.getElementById('marketProductSearch');
+                if (search) { search.value = p.name.trim(); search.dispatchEvent(new Event('input', {bubbles:true})); }
+            });
+            const meta = document.createElement('div'); meta.className = 'next-price-row';
+            meta.append(price, btn);
+            card.append(picture, name, unit, meta); fragment.append(card);
+        });
+        proTrack.append(fragment);
+        // حركة تلقائية خفيفة للمنتجات، تتوقف عند التفاعل أو إخفاء الصفحة
+        let paused = false;
+        const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        proTrack.addEventListener('pointerenter', () => { paused = true; });
+        proTrack.addEventListener('pointerleave', () => { paused = false; });
+        proTrack.addEventListener('touchstart', () => { paused = true; }, {passive:true});
+        proTrack.addEventListener('touchend', () => { window.setTimeout(() => { paused = false; }, 4500); }, {passive:true});
+        if (motionOK && picks.length > 3) window.setInterval(() => {
+            const home = document.querySelector('.home-content');
+            if (paused || document.hidden || !home || home.offsetParent === null || !proTrack.offsetWidth) return;
+            const step = proTrack.querySelector('.pro-feature-card')?.getBoundingClientRect().width + 11 || 156;
+            const max = proTrack.scrollWidth - proTrack.clientWidth;
+            if (max < 20) return;
+            const next = proTrack.scrollLeft + (getComputedStyle(proTrack).direction === 'rtl' ? -step : step);
+            const atEnd = Math.abs(proTrack.scrollLeft) >= max - step * .4;
+            proTrack.scrollTo({left: atEnd ? 0 : next, behavior:'smooth'});
+        }, 4200);
+    }
+    document.querySelectorAll('[data-pro-category]').forEach(btn => btn.addEventListener('click', () => {
+        const category = btn.dataset.proCategory;
+        document.querySelectorAll('.category-card').forEach(card => { if (card.dataset.category === category) card.click(); });
+    }));
+    document.getElementById('proViewMarket')?.addEventListener('click', () => document.querySelector('.category-card[data-category="سوبر ماركت"]')?.click());
+    document.getElementById('proExplore')?.addEventListener('click', () => document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth',block:'start'}));
+    const revealItems = document.querySelectorAll('.pro-reveal, .categories-grid .category-card');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('pro-visible'); observer.unobserve(entry.target); }
+        }), {root: document.querySelector('.home-content'), threshold: 0.06});
+        revealItems.forEach(el => observer.observe(el));
+    } else revealItems.forEach(el => el.classList.add('pro-visible'));
+
 
 
 });
@@ -6935,3 +7106,58 @@ bar.addEventListener('dragstart',e=>e.preventDefault());})();
   });
   observer.observe(document.documentElement, {childList:true,subtree:true});
 })();
+
+/* Reference homepage: real navigation through existing category buttons */
+document.addEventListener('DOMContentLoaded', () => {
+ const jump = (name) => document.querySelector('.category-card[data-category="'+name+'"]')?.click();
+ document.getElementById('referenceAllCategories')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
+ document.getElementById('referenceExplore')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
+ document.getElementById('referenceOffersAll')?.addEventListener('click',()=>jump('سوبر ماركت'));
+ document.getElementById('referenceMenuButton')?.addEventListener('click',()=>document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'}));
+ document.getElementById('referenceHeartButton')?.addEventListener('click',()=>document.getElementById('proFeaturedSection')?.scrollIntoView({behavior:'smooth'}));
+ document.querySelector('.bottom-nav .nav-item[data-page="الأقسام"]')?.addEventListener('click',()=>{document.getElementById('homeScreen')?.removeAttribute('hidden');document.getElementById('categoriesSection')?.scrollIntoView({behavior:'smooth'});});
+ 
+});
+
+document.addEventListener('DOMContentLoaded',()=>{document.querySelector('.photo-hero')?.classList.remove('reference-slide');});
+
+// المفضلة: تخزين محلي، قلوب للمنتجات الموجودة، وشاشة مستقلة بدلاً من التوصيل.
+document.addEventListener('DOMContentLoaded',()=>{
+ const KEY='yallashop_favorites_v1';let favorites={};
+ try{favorites=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){favorites={}}
+ const favScreen=document.getElementById('ysFavorites'),list=document.getElementById('ysFavList');
+ const esc=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(favorites))}catch(e){};refresh()};
+ function refresh(){
+   const count=Object.keys(favorites).length,el=document.getElementById('ysFavCount');
+   if(el){el.textContent=count;el.hidden=!count}
+   document.querySelectorAll('.ys-fav-toggle').forEach(b=>{let on=!!favorites[b.dataset.favId];b.textContent=on?'♥':'♡';b.classList.toggle('is-favorite',on);b.setAttribute('aria-pressed',String(on))});
+   if(list){list.innerHTML=Object.entries(favorites).map(([id,x])=>`<article class="ys-fav-card"><img src="${esc(x.image)}" alt="" loading="lazy"><div><strong>${esc(x.name)}</strong><small>${x.price?Number(x.price).toLocaleString('en-US')+' ل.ل':''}</small><button type="button" data-open-category="${esc(x.category)}">افتح القسم ←</button></div><button type="button" class="ys-fav-remove" data-remove-fav="${esc(id)}" aria-label="إزالة من المفضلة">♥</button></article>`).join('')||'<p class="ys-empty">لسّا ما ضفت شي للمفضلة ❤️<br>إضغط على القلب جنب أي منتج بتحبّه.</p>'}
+   document.getElementById('ysFavTotal').textContent=count+' منتجات';
+ }
+ function closeFav(){favScreen.hidden=true;document.getElementById('homeScreen')?.classList.remove('ys-favorites-open')}
+ function openFav(){document.querySelectorAll('#homeScreen > section.supermarket-screen').forEach(s=>s.hidden=true);document.getElementById('homeScreen')?.classList.remove('market-open');favScreen.hidden=false;document.getElementById('homeScreen')?.classList.add('ys-favorites-open');refresh()}
+ document.getElementById('ysFavBack')?.addEventListener('click',closeFav);
+ document.querySelector('.bottom-nav [data-page="المفضلة"]')?.addEventListener('click',openFav);
+ document.querySelector('.bottom-nav [data-page="الرئيسية"]')?.addEventListener('click',closeFav);
+ document.addEventListener('click',e=>{
+  const heart=e.target.closest('.ys-fav-toggle');
+  if(heart){e.preventDefault();e.stopPropagation();const id=heart.dataset.favId;if(favorites[id])delete favorites[id];else favorites[id]={name:heart.dataset.favName,image:heart.dataset.favImg,price:heart.dataset.favPrice,category:heart.dataset.favCategory};save();return}
+  const remove=e.target.closest('[data-remove-fav]');if(remove){delete favorites[remove.dataset.removeFav];save();return}
+  const open=e.target.closest('[data-open-category]');if(open){closeFav();document.querySelector('.category-card[data-category="'+open.dataset.openCategory+'"]')?.click()}
+ });
+ // أزرار القلوب تُضاف للمنتجات فور عرضها، بما فيها المنتجات المحمّلة ديناميكياً.
+ const selectors=['.market-product','.gharib-product-card','.library-product-card','.restaurant-product-card','.cleaning-product-card','.vegetables-product-card','.butcher-product-card','.pro-product-card'];
+ const addHearts=root=>{for(const selector of selectors){const cards=[...(root.matches?.(selector)?[root]:[]),...(root.querySelectorAll?.(selector)||[])];for(const card of cards){if(card.querySelector('.ys-fav-toggle'))continue;const img=card.querySelector('img'),name=card.dataset.name||card.querySelector('h3')?.textContent?.trim();if(!name)continue;const id=selector+'-'+(card.dataset.productId||img?.getAttribute('src')||name);const b=document.createElement('button');b.type='button';b.className='ys-fav-toggle ys-fav-floating';b.dataset.favId=id;b.dataset.favName=name;b.dataset.favImg=img?.getAttribute('src')||'';b.dataset.favPrice=(card.querySelector('.market-product-bottom strong, .gharib-product-price')?.textContent||'').replace(/[^0-9.]/g,'');b.dataset.favCategory=card.closest('#supermarketScreen')?'سوبر ماركت':card.closest('#vegetablesScreen')?'خضرة وفواكه':card.closest('#butcherScreen')?'ملحمة':card.closest('#poultryScreen')?'دواجن':card.closest('#libraryScreen')?'مكتبة':card.closest('#cleaningScreen')?'منظفات':'سوبر ماركت';b.setAttribute('aria-label','إضافة للمفضلة');card.appendChild(b);b.textContent=favorites[id]?'♥':'♡';b.classList.toggle('is-favorite',!!favorites[id]);}}};
+ addHearts(document.body);
+ const observer=new MutationObserver(records=>{for(const r of records)for(const n of r.addedNodes)if(n.nodeType===1&&!n.closest?.('#ysFavList'))addHearts(n)});
+ observer.observe(document.body,{childList:true,subtree:true});refresh();
+ const reveal=new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('ys-visible');reveal.unobserve(x.target)}}),{threshold:.08});
+ document.querySelectorAll('.ys-section-head,.ys-meat-feature,.ys-poultry-feature,.ys-offers').forEach(el=>{el.classList.add('ys-visible')});
+});
+
+// Menu icon in compact home header: open the existing categories area.
+document.getElementById('ysHeaderMenu')?.addEventListener('click', function () {
+  const section = document.getElementById('categoriesSection');
+  if (section) section.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+});

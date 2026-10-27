@@ -188,7 +188,7 @@ select {
 .brand-name {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+   align-items: flex-end;
     gap: 0px;
     color: white;
     
@@ -2930,4 +2930,1444 @@ select {
 .market-product-picture img, .gharib-product-image img, .library-product-picture img {
   max-width: 100%;
   object-fit: contain;
+}
+
+/* YALLA SHOP PRO — modern homepage enhancements */
+.home-screen .home-content {scroll-behavior:smooth; overscroll-behavior-y:contain;}
+.pro-welcome{margin:12px 0 14px;padding:16px 17px;border-radius:20px;background:linear-gradient(120deg,#f1f7ff,#e8f6ff 70%,#fff);border:1px solid #e1edff;display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;overflow:hidden}
+.pro-welcome:before{content:'';position:absolute;width:110px;height:110px;border-radius:50%;background:#d3eaff;left:-38px;top:-55px;opacity:.6}
+.pro-welcome h2{font-size:18px;color:#0b2b62;line-height:1.5;margin:4px 0;font-weight:900}.pro-welcome p{font-size:10px;color:#59708c;line-height:1.8}.pro-eyebrow{font-size:10px;color:#0864d7;font-weight:800}.pro-welcome-icon{font-size:44px;filter:drop-shadow(0 6px 7px #0753bd30);animation:proFloat 3.5s ease-in-out infinite}
+.pro-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 20px}.pro-benefits>div{border:1px solid #e8effa;background:#fff;border-radius:14px;min-width:0;text-align:center;padding:10px 3px;box-shadow:0 4px 16px #123c7810}.pro-benefits span{display:block;font-size:22px}.pro-benefits strong{display:block;color:#123d7c;font-size:10px}.pro-benefits small{display:block;font-size:9px;color:#8592a6}
+.pro-shortcuts{margin:0 0 20px}.pro-section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px;gap:8px}.pro-section-title small{font-size:10px;color:#7d8da5}.pro-section-title h2{font-size:17px;font-weight:900;color:#0b2b62}.pro-section-title>button{border:0;background:#eaf3ff;color:#0753bd;border-radius:20px;padding:7px 12px;font-size:11px;font-weight:800;cursor:pointer}
+.pro-shortcuts-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.pro-shortcuts-row button{background:#fff;border:1px solid #e8edf7;border-radius:14px;padding:10px 2px;color:#16376b;font-size:10px;font-weight:800;cursor:pointer;box-shadow:0 4px 12px #102b5610;transition:transform .2s,box-shadow .2s}.pro-shortcuts-row button span{display:block;font-size:25px;margin-bottom:4px}.pro-shortcuts-row button:active{transform:scale(.94)}
+.pro-featured{margin:22px 0}.pro-featured-track{display:flex;gap:11px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:3px 2px 12px}.pro-featured-track::-webkit-scrollbar{display:none}.pro-feature-card{flex:0 0 145px;scroll-snap-align:start;background:white;border:1px solid #e6edf7;border-radius:17px;padding:10px;box-shadow:0 5px 16px #16386b12;display:flex;flex-direction:column;gap:4px}.pro-feature-picture{height:100px;border-radius:12px;background:#f5f9ff;display:grid;place-items:center;overflow:hidden;font-size:34px}.pro-feature-picture img{width:94px;height:94px;object-fit:contain}.pro-feature-card h3{font-size:11px;color:#17325e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pro-feature-card small{font-size:9px;color:#8794a6;min-height:13px}.pro-feature-card strong{font-size:12px;color:#0753bd}.pro-feature-card button{margin-top:5px;background:#0753bd;color:#fff;border:0;border-radius:9px;padding:7px;font-size:10px;font-weight:800;cursor:pointer}
+.pro-outro{display:flex;align-items:center;gap:10px;padding:14px;margin:4px 0 25px;background:linear-gradient(110deg,#0a58c5,#067edc);border-radius:17px;color:#fff}.pro-outro>span{font-size:30px}.pro-outro>div{flex:1}.pro-outro strong{font-size:12px}.pro-outro p{font-size:9px;color:#e0efff}.pro-outro button{background:#fff;color:#0753bd;border:0;border-radius:20px;padding:7px 11px;font-size:10px;font-weight:800}
+.pro-reveal,.categories-grid .category-card{opacity:0;transform:translateY(15px);transition:opacity .5s ease,transform .5s ease}.pro-reveal.pro-visible,.categories-grid .category-card.pro-visible{opacity:1;transform:translateY(0)}.categories-grid .category-card:nth-child(3n+2){transition-delay:60ms}.categories-grid .category-card:nth-child(3n){transition-delay:110ms}
+.hero-banner{box-shadow:0 12px 25px #0753bd25}.hero-banner .hero-copy{animation:proSlide .65s ease both}.shop-button{transition:transform .2s,box-shadow .2s}.shop-button:active{transform:scale(.95)}
+@keyframes proFloat{50%{transform:translateY(-6px) rotate(-4deg)}}@keyframes proSlide{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.pro-reveal,.categories-grid .category-card{opacity:1;transform:none;transition:none}.pro-welcome-icon,.hero-banner .hero-copy{animation:none}html{scroll-behavior:auto}}
+
+/* Yalla Shop Studio — واجهة متجر نظيفة، بدون أقسام مكررة */
+.home-content{background:#fff}
+.home-content .hero-banner{margin-top:15px;border-radius:19px;overflow:hidden;box-shadow:0 10px 25px rgba(14,66,132,.12)}
+.home-content .slider-dots{margin-top:11px;margin-bottom:24px}
+.home-content .categories-section{margin-top:12px}
+.home-content .section-heading{margin-bottom:15px}
+.home-content .section-heading h2,.home-content .pro-section-title h2{font-size:18px;letter-spacing:-.35px;font-weight:800;color:#10294e}
+.home-content .categories-grid{gap:10px}
+.home-content .category-card{box-shadow:0 3px 13px rgba(25,62,110,.055);border:1px solid #e9eef6;border-radius:15px;transition:transform .22s ease,box-shadow .22s ease}
+.home-content .category-card:active{transform:scale(.975)}
+.home-content .pro-featured{margin:28px 0 28px}
+.home-content .pro-featured-track{gap:11px;padding-bottom:16px;overscroll-behavior-inline:contain}
+.home-content .pro-feature-card{border:1px solid #edf1f7;box-shadow:0 5px 18px rgba(15,50,96,.075);border-radius:16px;flex-basis:146px}
+.home-content .pro-feature-picture{background:#f8fafc}
+.home-content .pro-feature-card button{background:#0959c5;border-radius:9px}
+.home-content .pro-section-title>button{background:transparent;color:#0862d3;padding:6px 2px}
+.home-content .pro-feature-picture.image-unavailable{background:#f3f6fa}
+@media(prefers-reduced-motion:reduce){.home-content .category-card{transition:none}}
+
+
+/* YALLA SHOP EDITORIAL — image-led categories, no duplicate navigation */
+.home-content #categoriesSection {margin-top:14px;}
+.home-content #categoriesSection .section-heading {margin-bottom:14px;}
+.home-content #categoriesGrid.category-editorial {
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;direction:rtl;align-items:stretch;
+}
+.home-content #categoriesGrid.category-editorial .category-card {
+  grid-column:span 2 !important;position:relative;display:block;height:126px;min-height:0;
+  padding:0;border:0;border-radius:17px;overflow:hidden;background:#edf4fb;
+  box-shadow:0 5px 16px rgba(13,47,88,.11);isolation:isolate;
+  text-align:right;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,opacity .5s ease;
+}
+.home-content #categoriesGrid.category-editorial .category-card.category-spotlight {
+  grid-column:span 3 !important;height:168px;border-radius:20px;
+}
+.home-content #categoriesGrid.category-editorial .category-card .category-picture,
+.home-screen .home-content #categoriesGrid.category-editorial .category-card.wide-card .category-picture {
+  display:block;position:absolute;inset:0;width:100%;height:100% !important;aspect-ratio:auto !important;
+  border-radius:0;overflow:hidden;background:#eaf3fb;
+}
+.home-content #categoriesGrid.category-editorial .category-picture img {
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+  transition:transform .55s cubic-bezier(.2,.8,.2,1);filter:saturate(1.05);
+}
+.home-content #categoriesGrid.category-editorial .category-card::after {
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,transparent 30%,rgba(4,18,39,.18) 51%,rgba(4,18,39,.84) 100%);
+}
+.home-content #categoriesGrid.category-editorial .category-card > span {
+  position:absolute;z-index:2;bottom:0;right:0;left:0;width:auto;min-height:0;
+  display:flex;justify-content:flex-start;align-items:flex-end;padding:24px 11px 12px;
+  color:white;background:transparent;border:0;border-radius:0;
+  font-size:12px;font-weight:850;line-height:1.3;text-align:right;
+  text-shadow:0 1px 5px rgba(0,0,0,.28);
+}
+.home-content #categoriesGrid.category-editorial .category-card.category-spotlight > span {
+  font-size:15px;padding:26px 14px 15px;
+}
+.home-content #categoriesGrid.category-editorial .category-card.category-spotlight::before {
+  content:"↗";position:absolute;z-index:3;top:11px;left:11px;display:grid;place-items:center;
+  width:27px;height:27px;border-radius:50%;background:rgba(255,255,255,.94);
+  color:#095ac5;font-size:16px;font-weight:700;direction:ltr;
+}
+@media(hover:hover){
+ .home-content #categoriesGrid.category-editorial .category-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(13,47,88,.2)}
+ .home-content #categoriesGrid.category-editorial .category-card:hover img{transform:scale(1.06)}
+}
+.home-content #categoriesGrid.category-editorial .category-card:active {transform:scale(.97)}
+.home-content #categoriesGrid.category-editorial .category-card[hidden]{display:none !important}
+@media(max-width:350px){
+ .home-content #categoriesGrid.category-editorial{gap:7px}
+ .home-content #categoriesGrid.category-editorial .category-card{height:113px;border-radius:13px}
+ .home-content #categoriesGrid.category-editorial .category-card.category-spotlight{height:148px;border-radius:15px}
+ .home-content #categoriesGrid.category-editorial .category-card > span{font-size:11px;padding:20px 7px 9px}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-content #categoriesGrid.category-editorial .category-card,
+ .home-content #categoriesGrid.category-editorial .category-picture img{transition:none !important}
+}
+
+/* Yalla Shop Premium 2026 — cohesive editorial mobile storefront */
+.home-screen .home-content{background:#fff;padding-bottom:30px}
+.home-screen .home-content .hero-banner{margin-top:13px;border-radius:16px;box-shadow:0 9px 23px #113b6e19}
+.home-screen .home-content .slider-dots{margin-top:10px;margin-bottom:14px}
+.premium-trust{display:flex;align-items:center;justify-content:space-between;gap:0;border:1px solid #e8edf4;background:linear-gradient(180deg,#fff,#f8fbff);border-radius:13px;margin:0 0 23px;padding:12px 5px;box-shadow:0 3px 12px #14375e08}
+.premium-trust span{display:flex;align-items:center;justify-content:center;gap:4px;flex:1;color:#38516f;font-size:9px;font-weight:800;white-space:nowrap}
+.premium-trust span+span{border-right:1px solid #e5edf6}
+.premium-trust svg{width:17px;height:17px;color:#0863cf;flex:none}
+.home-content #categoriesSection{margin-top:0}
+.home-content #categoriesSection .section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:13px}
+.premium-kicker{font-size:10px;font-weight:700;color:#64809d;display:block;margin-bottom:3px}
+.home-content #categoriesSection .section-heading h2{font-size:19px;letter-spacing:-.5px;color:#102c53;margin:0}
+.home-content #categoriesSection .section-heading h2:after{display:none}
+.home-content #categoriesGrid.category-premium{grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;direction:rtl}
+.home-content #categoriesGrid.category-premium .category-card{grid-column:span 2!important;height:115px;min-width:0;border-radius:15px;box-shadow:0 3px 12px #102b4c13;border:1px solid #e8edf4;background:#eef4fa;overflow:hidden}
+.home-content #categoriesGrid.category-premium .category-card.premium-hero-category{grid-column:span 3!important;height:145px;border-radius:17px}
+.home-content #categoriesGrid.category-premium .category-card .category-picture{inset:0;position:absolute;width:100%;height:100%!important}
+.home-content #categoriesGrid.category-premium .category-picture img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.06)}
+.home-content #categoriesGrid.category-premium .category-card:after{background:linear-gradient(180deg,transparent 35%,#07182c0d 48%,#061b36cf 100%)}
+.home-content #categoriesGrid.category-premium .category-card>span{font-size:12px;padding:22px 9px 10px;letter-spacing:0;text-shadow:0 1px 4px #0006}
+.home-content #categoriesGrid.category-premium .category-card.premium-hero-category>span{font-size:15px;padding:30px 13px 13px}
+.home-content #categoriesGrid.category-premium .category-card.premium-hero-category:before{content:'↗';width:25px;height:25px;top:10px;left:10px;box-shadow:0 2px 9px #0002}
+.home-content #categoriesGrid.category-premium .category-card:focus-visible{outline:3px solid #2085ed;outline-offset:2px}
+.home-content .pro-featured{margin:26px 0 14px}
+.home-content .pro-featured .pro-section-title{margin-bottom:13px}
+.home-content .pro-featured .pro-section-title h2{font-size:19px;letter-spacing:-.45px;color:#102c53}
+.home-content .pro-featured .pro-section-title small{font-size:10px;color:#64809d}
+.home-content .pro-featured-track{gap:9px;padding:2px 2px 14px;scroll-padding-inline:2px}
+.home-content .pro-feature-card{flex:0 0 134px;min-height:222px;border-radius:15px;padding:9px;gap:5px;box-shadow:0 3px 12px #173b6410;border:1px solid #e7edf4}
+.home-content .pro-feature-picture{height:112px;background:#f7f9fc;border-radius:10px}
+.home-content .pro-feature-picture img{width:94px;height:94px;object-fit:contain}
+.home-content .pro-feature-card h3{font-size:11px;line-height:1.45;font-weight:800;color:#142d50}
+.home-content .pro-feature-card small{min-height:12px;font-size:9px}
+.home-content .pro-feature-card strong{font-size:12px;font-weight:900;color:#0757c6;direction:rtl}
+.home-content .pro-feature-card button{margin-top:auto;padding:9px 5px;border-radius:9px;background:#095bc8;font-size:10px;transition:background .2s}
+.home-content .pro-feature-card button:active{background:#073e91}
+.home-content .pro-section-title>button{font-size:11px;font-weight:800;color:#075fcf}
+@media(max-width:350px){.premium-trust{padding:10px 2px}.premium-trust span{font-size:8px;gap:2px}.premium-trust svg{width:15px;height:15px}.home-content #categoriesGrid.category-premium{gap:7px}.home-content #categoriesGrid.category-premium .category-card{height:104px}.home-content #categoriesGrid.category-premium .category-card.premium-hero-category{height:134px}}
+@media(prefers-reduced-motion:reduce){.home-content #categoriesGrid.category-premium .category-card,.home-content #categoriesGrid.category-premium .category-card img{transition:none!important}}
+
+/* YALLA SHOP NEXT — full homepage visual refresh, isolated from internal screens */
+.home-screen {background:#f6f9ff}
+.home-screen .top-header {background:linear-gradient(115deg,#003eaa 0%,#086de2 78%,#0584ec 100%)!important;box-shadow:none!important}
+.home-screen .search-settings {background:linear-gradient(180deg,#0875e6 0%,#e8f4ff 100%)!important;padding-bottom:13px!important}
+.home-screen .home-content {background:linear-gradient(180deg,#e8f4ff 0,#fff 215px)!important;padding-bottom:36px!important}
+.home-screen .hero-banner {margin-top:9px!important;border-radius:23px!important;min-height:174px!important;box-shadow:0 15px 30px #064ca72a!important;border:1px solid #ffffff80}
+.home-screen .hero-banner .hero-copy h1{font-size:22px!important;line-height:1.35!important;letter-spacing:-.6px}
+.home-screen .hero-banner .hero-copy p{font-size:10px!important}
+.home-screen .hero-banner .shop-button{border-radius:24px!important;font-weight:800!important}
+.home-screen .slider-dots{margin-top:10px!important;margin-bottom:16px!important}
+.home-screen .premium-trust{border:0!important;box-shadow:none!important;background:#fff!important;border-radius:16px!important;padding:12px 5px!important;margin-bottom:23px!important}
+.home-screen .premium-trust span{font-size:10px!important}
+.home-screen #categoriesSection{margin-top:0!important}
+.home-screen #categoriesSection .section-heading{margin-bottom:12px!important}
+.home-screen .premium-kicker{color:#4681c5!important}
+.home-screen #categoriesGrid.next-categories{
+ display:flex!important;gap:11px!important;overflow-x:auto!important;scroll-snap-type:x proximity;
+ padding:3px 1px 12px!important;scrollbar-width:none;direction:rtl!important;
+}
+.home-screen #categoriesGrid.next-categories::-webkit-scrollbar{display:none}
+.home-screen #categoriesGrid.next-categories .category-card,
+.home-screen #categoriesGrid.next-categories .category-card.category-spotlight{
+ flex:0 0 90px!important;grid-column:auto!important;width:90px!important;height:auto!important;min-height:0!important;
+ display:flex!important;flex-direction:column!important;align-items:center!important;gap:7px!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;
+ padding:0!important;overflow:visible!important;isolation:auto!important;text-align:center!important;
+ opacity:1!important;transform:none!important;
+}
+.home-screen #categoriesGrid.next-categories .category-card:before,
+.home-screen #categoriesGrid.next-categories .category-card:after{display:none!important}
+.home-screen #categoriesGrid.next-categories .category-card .category-picture,
+.home-screen #categoriesGrid.next-categories .category-card.wide-card .category-picture{
+ position:relative!important;inset:auto!important;width:88px!important;height:88px!important;aspect-ratio:1!important;
+ border-radius:23px!important;overflow:hidden!important;background:#f2f6fd!important;
+ box-shadow:0 5px 14px #0a39751b!important;border:2px solid #fff!important;
+}
+.home-screen #categoriesGrid.next-categories .category-card .category-picture img{
+ width:100%!important;height:100%!important;object-fit:cover!important;filter:none!important;
+}
+.home-screen #categoriesGrid.next-categories .category-card>span,
+.home-screen #categoriesGrid.next-categories .category-card.category-spotlight>span{
+ position:static!important;display:block!important;padding:0!important;background:none!important;
+ color:#163760!important;font-size:11px!important;font-weight:850!important;text-shadow:none!important;
+ width:100%!important;text-align:center!important;line-height:1.45!important;
+}
+.home-screen #categoriesGrid.next-categories .category-card:active .category-picture{transform:scale(.95)}
+.home-screen .pro-featured{margin:18px 0 26px!important}
+.home-screen .pro-featured .pro-section-title{margin-bottom:12px!important}
+.home-screen .pro-featured-track{gap:10px!important;padding:3px 1px 16px!important}
+.home-screen .pro-feature-card{
+ flex:0 0 139px!important;min-width:0!important;border-radius:18px!important;
+ border:1px solid #eaf0f9!important;padding:9px!important;gap:5px!important;
+ box-shadow:0 6px 20px #092e6d12!important;background:#fff!important;
+}
+.home-screen .pro-feature-picture{height:115px!important;border-radius:13px!important;background:#f8fbff!important}
+.home-screen .pro-feature-picture img{height:102px!important;width:102px!important;object-fit:contain!important}
+.home-screen .pro-feature-card h3{font-size:11px!important;font-weight:800!important;min-height:16px!important}
+.home-screen .pro-feature-card small{font-size:10px!important;color:#8997aa!important}
+.home-screen .next-price-row{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-top:auto;direction:rtl}
+.home-screen .next-price-row strong{font-size:12px!important;color:#e12b38!important;white-space:nowrap}
+.home-screen .next-price-row button{margin:0!important;width:29px;height:29px;padding:0!important;border-radius:50%!important;background:#075fe3!important;color:white;font-size:21px!important;font-weight:500!important;line-height:1!important;flex-shrink:0;box-shadow:0 3px 8px #065edb30}
+.bottom-nav{background:#ffffffed!important;border-top:1px solid #e7eef8!important;box-shadow:0 -6px 24px #0a35621a!important;backdrop-filter:blur(12px)}
+.bottom-nav .nav-item.active{color:#075fe3!important}
+@media(max-width:380px){.home-screen #categoriesGrid.next-categories .category-card,.home-screen #categoriesGrid.next-categories .category-card.category-spotlight{flex-basis:83px!important;width:83px!important}.home-screen #categoriesGrid.next-categories .category-card .category-picture{width:81px!important;height:81px!important}}
+@media(prefers-reduced-motion:reduce){.home-screen #categoriesGrid.next-categories{scroll-behavior:auto}}
+
+/* MATCH REFERENCE: one continuous rich cobalt-blue atmosphere behind header,
+   search and hero (instead of the washed-out white/blue strip). */
+#homeScreen.home-screen{
+ background:linear-gradient(180deg,#00378f 0px,#0753b6 90px,#0979df 175px,#e8f3ff 325px,#fff 445px)!important;
+}
+#homeScreen.home-screen .top-header{
+ background:linear-gradient(120deg,#003b9c,#005bc5 65%,#006be0)!important;
+ box-shadow:none!important;
+}
+#homeScreen.home-screen .search-settings{
+ background:transparent!important;
+ padding-top:7px!important;
+ padding-bottom:8px!important;
+}
+#homeScreen.home-screen .search-box{
+ background:#fff!important;
+ border-radius:17px!important;
+ box-shadow:0 6px 17px #001c6240!important;
+ border:1px solid #ffffffc7!important;
+}
+#homeScreen.home-screen .home-content{
+ background:transparent!important;
+ padding-top:0!important;
+}
+#homeScreen.home-screen .hero-banner{
+ margin-top:9px!important;
+ box-shadow:0 14px 32px #002b7c55!important;
+ border:1px solid #ffffff38!important;
+}
+#homeScreen.home-screen .slider-dots{
+ margin-top:9px!important;
+ margin-bottom:12px!important;
+}
+
+/* REFERENCE HOME DESIGN — screenshot-inspired, overrides previous experiments */
+#homeScreen.home-screen{background:#fff!important;color:#092b63!important}
+#homeScreen .top-header{background:linear-gradient(125deg,#06439d 0%,#0064c8 72%,#087be7 100%)!important;box-shadow:none!important}
+#homeScreen .top-row{min-height:73px!important;align-items:center!important}
+#homeScreen .brand-name strong{font-size:20px!important;letter-spacing:-.6px!important;color:#fff!important}
+#homeScreen .brand-name span{font-size:11px!important}
+#homeScreen .brand-logo{width:51px!important;height:51px!important;object-fit:contain!important}
+#homeScreen .reference-header-actions{display:flex;align-items:center;gap:10px}
+#homeScreen .reference-header-button{background:none;border:0;color:white;font-size:28px;font-weight:400;cursor:pointer;padding:4px}
+#homeScreen .search-settings{background:linear-gradient(180deg,#0670d5,#b9e2ff)!important;padding:0 12px 14px!important}
+#homeScreen .search-box{background:#fff!important;border-radius:22px!important;min-height:53px!important;border:0!important;box-shadow:0 6px 17px #06489429!important}
+#homeScreen .home-content{background:#fff!important;padding:14px 12px 95px!important}
+#homeScreen .reference-hidden-hero{display:none!important}
+#homeScreen #categoriesSection{margin:0 0 20px!important}
+#homeScreen #categoriesSection .section-heading{display:none!important}
+#homeScreen #categoriesGrid.reference-categories{
+ display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ gap:17px 7px!important;overflow:visible!important;scroll-snap-type:none!important;
+ padding:0!important;direction:rtl!important;
+}
+#homeScreen #categoriesGrid.reference-categories .category-card,
+#homeScreen #categoriesGrid.reference-categories .category-card.category-spotlight,
+#homeScreen #categoriesGrid.reference-categories .reference-all-categories{
+ width:100%!important;min-width:0!important;height:auto!important;min-height:0!important;
+ display:flex!important;flex-direction:column!important;align-items:center!important;
+ gap:6px!important;position:relative!important;padding:0!important;margin:0!important;
+ background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;
+ transform:none!important;opacity:1!important;overflow:visible!important;
+}
+#homeScreen #categoriesGrid.reference-categories .category-card:before,
+#homeScreen #categoriesGrid.reference-categories .category-card:after{display:none!important}
+#homeScreen #categoriesGrid.reference-categories .category-card .category-picture{
+ position:relative!important;inset:auto!important;width:min(100%,88px)!important;
+ height:auto!important;aspect-ratio:1!important;border-radius:50%!important;
+ border:2px solid #c9e9ff!important;background:#f0faff!important;
+ overflow:hidden!important;box-shadow:0 2px 7px #0b5eb21c!important;
+}
+#homeScreen #categoriesGrid.reference-categories .category-card .category-picture img{
+ width:100%!important;height:100%!important;object-fit:cover!important;filter:none!important
+}
+#homeScreen #categoriesGrid.reference-categories .category-card>span{
+ display:block!important;position:static!important;width:100%!important;
+ color:#092d64!important;text-shadow:none!important;background:none!important;
+ font-size:11px!important;font-weight:850!important;line-height:1.4!important;
+ text-align:center!important;padding:0!important;white-space:normal!important;
+}
+#homeScreen #categoriesGrid.reference-categories .reference-all-categories{color:#092d64!important;font-weight:850!important;font-family:inherit!important;font-size:11px!important;line-height:1.4!important}
+#homeScreen .reference-all-icon{display:grid;place-items:center;background:linear-gradient(135deg,#0063c6,#087fe6);border-radius:27px;color:#fff;font-size:44px;width:min(100%,88px);aspect-ratio:1;box-shadow:0 3px 10px #005fc63b}
+#homeScreen .reference-benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#eaf5ff;border-radius:22px;padding:12px 6px;margin:18px 0 23px;gap:2px}
+#homeScreen .reference-benefits span{font-size:9px;font-weight:750;line-height:1.7;text-align:center;color:#0b3979}
+#homeScreen .reference-benefits b{display:block;color:#076ed9;font-size:23px;line-height:1.2}
+#homeScreen .reference-section-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;gap:10px}
+#homeScreen .reference-section-heading h2{font-size:18px;font-weight:900;color:#092a60;margin:0}
+#homeScreen .reference-section-heading button{background:transparent;border:0;color:#0878e9;font-weight:800;font-family:inherit;font-size:11px;white-space:nowrap}
+#homeScreen .reference-curated{margin:0 0 23px}
+#homeScreen .reference-curated-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+#homeScreen .reference-curated-grid button{min-width:0;background:#f8fcff;border:1px solid #cce9ff;border-radius:16px;padding:5px 5px 9px;overflow:hidden;font-family:inherit;color:#0a316a}
+#homeScreen .reference-curated-grid img{width:100%;height:87px;object-fit:cover;border-radius:11px;display:block}
+#homeScreen .reference-curated-grid strong{font-size:11px;display:block;margin-top:7px;font-weight:850}
+#homeScreen .pro-featured{margin:0 0 25px!important}
+#homeScreen .pro-featured .pro-section-title{margin-bottom:11px!important}
+#homeScreen .pro-featured .pro-section-title h2{font-size:19px!important;color:#092a60!important;font-weight:900!important}
+#homeScreen .pro-featured-track{gap:9px!important;padding:2px 0 12px!important}
+#homeScreen .pro-feature-card{flex:0 0 137px!important;min-height:0!important;padding:7px!important;gap:3px!important;border:1px solid #cce8fb!important;border-radius:14px!important;box-shadow:none!important;background:#fff!important}
+#homeScreen .pro-feature-picture{height:104px!important;background:#fff!important;border-radius:10px!important}
+#homeScreen .pro-feature-picture img{width:96px!important;height:96px!important;object-fit:contain!important}
+#homeScreen .pro-feature-card h3{font-size:11px!important;line-height:1.4!important;font-weight:850!important}
+#homeScreen .pro-feature-card small{font-size:9px!important;color:#7788a2!important}
+#homeScreen .next-price-row{display:flex!important;flex-direction:column!important;gap:6px!important;align-items:stretch!important;margin-top:5px!important}
+#homeScreen .next-price-row strong{font-size:12px!important;color:#073c9c!important;text-align:right!important}
+#homeScreen .next-price-row button{width:100%!important;height:30px!important;border-radius:9px!important;font-size:10px!important;font-weight:800!important;background:linear-gradient(90deg,#0071d6,#008bf0)!important;color:#fff!important}
+#homeScreen .reference-offers{margin:4px 0 16px}
+#homeScreen .reference-offers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#homeScreen .reference-offers-grid button{height:92px;position:relative;overflow:hidden;border:0;border-radius:14px;padding:0;background:#e5f2ff;color:white}
+#homeScreen .reference-offers-grid img{width:100%;height:100%;object-fit:cover}
+#homeScreen .reference-offers-grid span{position:absolute;bottom:0;right:0;left:0;padding:15px 3px 5px;background:linear-gradient(transparent,#0055aeea);color:#fff;font-size:10px;font-weight:850}
+.bottom-nav{display:flex!important;justify-content:space-around!important;gap:0!important;background:#fff!important;border:0!important;border-radius:19px 19px 0 0!important;box-shadow:0 -4px 22px #154e8c17!important}
+.bottom-nav .nav-item{min-width:0!important;flex:1!important;padding:7px 0!important}
+.bottom-nav .nav-item span:last-child{font-size:10px!important}
+.bottom-nav .reference-nav-glyph{font-size:23px!important;line-height:26px!important;color:#0c3d85}
+@media(min-width:600px){#homeScreen #categoriesGrid.reference-categories{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
+@media(max-width:350px){#homeScreen #categoriesGrid.reference-categories{gap:14px 4px!important}#homeScreen #categoriesGrid.reference-categories .category-card>span{font-size:10px!important}#homeScreen .reference-curated-grid img{height:72px}#homeScreen .reference-benefits span{font-size:8px}}
+
+/* Reference image 2026-10-26: top hero above search, continuous blue atmosphere */
+#homeScreen.home-screen{background:#fff!important}
+#homeScreen.home-screen .top-header{background:linear-gradient(115deg,#08429d,#087ee4)!important}
+#homeScreen.home-screen .top-row{height:67px!important;min-height:67px!important}
+#homeScreen.home-screen .reference-top-hero{position:relative;background:linear-gradient(180deg,#0d7ee4,#caeaff);padding:4px 12px 11px}
+#homeScreen.home-screen .reference-top-hero img{width:100%;height:auto;aspect-ratio:775/221;display:block;object-fit:fill;border-radius:17px;box-shadow:0 7px 17px #03499229}
+#homeScreen.home-screen .reference-top-hero button{position:absolute;inset:0;border:0;background:transparent;cursor:pointer}
+#homeScreen.home-screen .search-settings{background:linear-gradient(180deg,#c8e7ff 0%,#f5fbff 100%)!important;padding:3px 12px 13px!important}
+#homeScreen.home-screen .home-content{padding-top:9px!important;background:linear-gradient(180deg,#f6fbff,#fff 175px)!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px 6px!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card .category-picture{width:min(100%,69px)!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-icon{width:min(100%,69px);border-radius:19px}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card>span{font-size:10px!important}
+#homeScreen.home-screen .reference-all-categories{font-size:10px!important}
+#homeScreen.home-screen .reference-benefits{margin-top:18px!important}
+#homeScreen.home-screen .reference-header-button{font-size:26px!important}
+#homeScreen.home-screen .reference-curated-grid img{height:92px!important}
+#homeScreen.home-screen .reference-offers-grid button{height:95px!important}
+#homeScreen.home-screen .pro-featured-track{scroll-snap-type:x mandatory}
+#homeScreen.home-screen .pro-feature-card{scroll-snap-align:start}
+@media(max-width:390px){#homeScreen.home-screen #categoriesGrid.reference-categories{gap:12px 4px!important}#homeScreen.home-screen #categoriesGrid.reference-categories .category-card .category-picture{width:min(100%,64px)!important}#homeScreen.home-screen .reference-curated-grid img{height:78px!important}}
+
+/* Requested order: HEADER > SEARCH > ROTATING IMAGE BANNER > CATEGORIES */
+#homeScreen.home-screen .search-settings{background:linear-gradient(180deg,#0062c5 0%,#e4f3ff 100%)!important;padding:7px 12px 12px!important}
+#homeScreen.home-screen .home-content{background:#fff!important;padding-top:0!important}
+#homeScreen.home-screen .hero-banner{display:flex!important;position:relative!important;margin:0 0 18px!important;height:148px!important;min-height:148px!important;max-height:148px!important;border-radius:19px!important;overflow:hidden!important;background:#0756c4!important;border:0!important;box-shadow:0 8px 18px #003e7d24!important}
+#homeScreen.home-screen .hero-banner .hero-copy{z-index:2!important;position:relative!important;max-width:53%!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding:13px!important}
+#homeScreen.home-screen .hero-banner .hero-copy h1{font-size:18px!important;line-height:1.3!important;margin:0 0 5px!important;color:#fff!important}
+#homeScreen.home-screen .hero-banner .hero-copy p{font-size:9px!important;color:#fff!important;margin:0 0 9px!important}
+#homeScreen.home-screen .hero-banner .shop-button{font-size:10px!important;min-height:29px!important;border-radius:25px!important;align-self:flex-start!important}
+#homeScreen.home-screen .hero-banner .hero-art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+#homeScreen.home-screen .hero-banner .banner-image{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;opacity:0!important;transition:opacity .6s ease!important}
+#homeScreen.home-screen .hero-banner .banner-image.active{opacity:1!important}
+#homeScreen.home-screen .slider-dots{display:none!important}
+#homeScreen.home-screen #categoriesSection{margin-top:0!important}
+@media(max-width:380px){#homeScreen.home-screen .hero-banner{height:139px!important;min-height:139px!important;max-height:139px!important}}
+
+/* FINAL POLISH: balanced layout, safe banner text and subtle motion */
+#homeScreen.home-screen .top-header{background:linear-gradient(115deg,#07479f,#076ad1)!important}
+#homeScreen.home-screen .top-row{height:60px!important;min-height:60px!important;padding-top:5px!important;padding-bottom:5px!important}
+#homeScreen.home-screen .brand{min-width:0!important;align-items:center!important}
+#homeScreen.home-screen .brand-logo{width:43px!important;height:43px!important;flex-shrink:0!important}
+#homeScreen.home-screen .brand-name{display:flex!important;flex-direction:column!important;justify-content:center!important;line-height:1.15!important}
+#homeScreen.home-screen .brand-name strong{font-size:17px!important;line-height:1.25!important;white-space:nowrap!important}
+#homeScreen.home-screen .brand-name span{font-size:10px!important;line-height:1.2!important}
+#homeScreen.home-screen .reference-header-actions{gap:7px!important;flex-shrink:0!important}
+#homeScreen.home-screen .reference-header-button{font-size:22px!important;line-height:1!important;padding:5px!important}
+#homeScreen.home-screen .search-settings{background:linear-gradient(180deg,#0870d2 0%,#edf7ff 100%)!important;padding:9px 13px 11px!important}
+#homeScreen.home-screen .search-box{min-height:46px!important;border-radius:16px!important;box-shadow:0 5px 13px #073b8e20!important}
+#homeScreen.home-screen .home-content{padding:0 14px 100px!important;background:#fff!important}
+#homeScreen.home-screen .hero-banner{
+ position:relative!important;display:block!important;width:100%!important;
+ height:145px!important;min-height:145px!important;max-height:145px!important;
+ margin:3px 0 18px!important;border-radius:17px!important;
+ overflow:hidden!important;background:#0865c9!important;
+ isolation:isolate!important;box-shadow:0 8px 18px #043d861d!important;
+}
+#homeScreen.home-screen .hero-banner .hero-art{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ z-index:0!important;overflow:hidden!important;
+}
+#homeScreen.home-screen .hero-banner .banner-image{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;opacity:0!important;
+ transition:opacity .75s ease-in-out!important;filter:none!important;transform:none!important;
+}
+#homeScreen.home-screen .hero-banner .banner-image.active{opacity:1!important}
+#homeScreen.home-screen .hero-banner .hero-copy{
+ position:absolute!important;inset:0 auto 0 0!important;z-index:2!important;
+ width:52%!important;max-width:52%!important;min-width:0!important;
+ display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+ justify-content:center!important;gap:5px!important;padding:13px 9px 13px 13px!important;
+ background:linear-gradient(90deg,rgba(1,45,126,.66),rgba(1,65,143,.14))!important;
+ box-sizing:border-box!important;pointer-events:none!important;
+}
+#homeScreen.home-screen .hero-banner .hero-copy h1{
+ font-size:clamp(15px,4.3vw,20px)!important;line-height:1.28!important;
+ margin:0!important;color:white!important;font-weight:900!important;
+ text-shadow:0 2px 5px #002d6759!important;white-space:normal!important;
+}
+#homeScreen.home-screen .hero-banner .hero-copy p{
+ font-size:9px!important;line-height:1.3!important;color:white!important;
+ margin:0 0 2px!important;opacity:.96!important;
+}
+#homeScreen.home-screen .hero-banner .hero-copy .shop-button{
+ pointer-events:auto!important;display:inline-flex!important;align-items:center!important;
+ justify-content:center!important;gap:5px!important;align-self:flex-start!important;
+ background:#fff!important;color:#0756c1!important;border:0!important;
+ border-radius:24px!important;min-height:28px!important;padding:5px 11px!important;
+ font-size:10px!important;font-weight:850!important;box-shadow:0 3px 9px #00275e29!important;
+}
+#homeScreen.home-screen .slider-dots{display:none!important}
+#homeScreen.home-screen #categoriesSection{margin:0 0 19px!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories{
+ display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+ column-gap:5px!important;row-gap:16px!important;align-items:start!important;
+ padding:0!important;overflow:visible!important;
+}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card,
+#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-categories{
+ gap:6px!important;min-width:0!important;min-height:0!important;overflow:visible!important;
+}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card .category-picture{
+ width:min(100%,67px)!important;aspect-ratio:1!important;border:2px solid #d4eaff!important;
+ border-radius:50%!important;box-shadow:0 3px 9px #09559b16!important;
+ transition:transform .24s ease,box-shadow .24s ease!important;
+}
+#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-icon{
+ width:min(100%,67px)!important;border-radius:20px!important;aspect-ratio:1!important;
+}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card>span,
+#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-categories{
+ font-size:10px!important;line-height:1.35!important;font-weight:850!important;
+}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card:active .category-picture{
+ transform:scale(.94)!important;
+}
+#homeScreen.home-screen .reference-benefits{
+ margin:15px 0 24px!important;padding:12px 4px!important;
+ border-radius:18px!important;background:#eaf5ff!important;
+}
+#homeScreen.home-screen .reference-benefits span{font-size:9px!important;line-height:1.55!important}
+#homeScreen.home-screen .reference-benefits b{font-size:20px!important;margin-bottom:4px!important}
+#homeScreen.home-screen .reference-curated{margin-bottom:25px!important}
+#homeScreen.home-screen .reference-section-heading h2,
+#homeScreen.home-screen .pro-featured .pro-section-title h2{font-size:17px!important}
+#homeScreen.home-screen .reference-curated-grid{gap:8px!important}
+#homeScreen.home-screen .reference-curated-grid button{
+ border-radius:14px!important;padding:5px 5px 8px!important;
+ background:#f7fbff!important;transition:transform .2s ease,box-shadow .2s ease!important;
+}
+#homeScreen.home-screen .reference-curated-grid button:active{transform:scale(.97)!important}
+#homeScreen.home-screen .reference-curated-grid img{height:83px!important;border-radius:10px!important}
+#homeScreen.home-screen .reference-curated-grid strong{font-size:10px!important;margin-top:6px!important}
+#homeScreen.home-screen .pro-feature-card{transition:transform .22s ease,box-shadow .22s ease!important}
+#homeScreen.home-screen .pro-feature-card:active{transform:scale(.98)!important}
+#homeScreen.home-screen .reference-offers-grid button{transition:transform .22s ease!important}
+#homeScreen.home-screen .reference-offers-grid button:active{transform:scale(.97)!important}
+.bottom-nav{padding-bottom:env(safe-area-inset-bottom,0px)!important;z-index:100!important}
+@media(max-width:360px){
+ #homeScreen.home-screen .home-content{padding-left:10px!important;padding-right:10px!important}
+ #homeScreen.home-screen #categoriesGrid.reference-categories{column-gap:3px!important}
+ #homeScreen.home-screen #categoriesGrid.reference-categories .category-card .category-picture,
+ #homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-icon{width:min(100%,60px)!important}
+ #homeScreen.home-screen .hero-banner{height:135px!important;min-height:135px!important;max-height:135px!important}
+ #homeScreen.home-screen .hero-banner .hero-copy h1{font-size:15px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #homeScreen.home-screen .hero-banner .banner-image,
+ #homeScreen.home-screen .category-picture,
+ #homeScreen.home-screen .pro-feature-card{transition:none!important;animation:none!important}
+}
+
+/* PHOTO HERO — requested order: header, full-width imagery, search, categories */
+#homeScreen.home-screen .top-header{background:linear-gradient(110deg,#073e91,#086bd1)!important}
+#homeScreen.home-screen .home-content{background:#fff!important;padding:0 13px 100px!important}
+#homeScreen.home-screen .photo-hero{
+ display:block!important;position:relative!important;isolation:isolate!important;
+ margin:0 -13px!important;width:calc(100% + 26px)!important;
+ height:clamp(180px,54vw,242px)!important;min-height:0!important;max-height:none!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ overflow:hidden!important;background:#06469d!important;
+}
+#homeScreen.home-screen .photo-hero .hero-art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
+#homeScreen.home-screen .photo-hero .banner-image{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;opacity:0!important;
+ transform:scale(1.025)!important;filter:none!important;
+ transition:opacity .9s ease-in-out,transform 5.5s ease-out!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image.active{opacity:1!important;transform:scale(1)!important}
+#homeScreen.home-screen .photo-hero:after{
+ content:"";position:absolute;inset:0;z-index:1;
+ background:linear-gradient(90deg,rgba(1,29,70,.68) 0%,rgba(2,39,87,.38) 43%,transparent 78%);
+ pointer-events:none;
+}
+#homeScreen.home-screen .photo-hero .hero-copy{
+ position:absolute!important;z-index:2!important;left:0!important;right:auto!important;
+ top:0!important;bottom:0!important;width:56%!important;max-width:56%!important;
+ background:transparent!important;display:flex!important;flex-direction:column!important;
+ justify-content:center!important;align-items:flex-start!important;
+ padding:14px 12px 14px 17px!important;gap:5px!important;pointer-events:none!important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy h1{
+ color:#fff!important;font-size:clamp(19px,5.1vw,25px)!important;line-height:1.3!important;
+ font-weight:900!important;margin:0!important;text-shadow:0 2px 8px #001e4850!important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy p{color:#fff!important;font-size:10px!important;margin:0 0 6px!important}
+#homeScreen.home-screen .photo-hero .shop-button{
+ pointer-events:auto!important;background:#fff!important;color:#0654ba!important;
+ border-radius:28px!important;min-height:32px!important;font-size:11px!important;
+ padding:7px 15px!important;font-weight:850!important;
+}
+#homeScreen.home-screen .photo-hero.reference-slide .hero-copy{opacity:0!important;pointer-events:none!important}
+#homeScreen.home-screen .photo-hero.reference-slide:after{opacity:0!important}
+#homeScreen.home-screen .search-settings{
+ background:linear-gradient(180deg,#d7eeff,#fff)!important;
+ padding:10px 13px 13px!important;margin:0 -13px 0!important;
+}
+#homeScreen.home-screen .search-box{
+ background:#fff!important;min-height:46px!important;border-radius:22px!important;
+ box-shadow:0 5px 16px #063b8120!important;
+}
+#homeScreen.home-screen #categoriesSection{margin-top:8px!important}
+#homeScreen.home-screen .slider-dots{display:none!important}
+@media(prefers-reduced-motion:reduce){
+ #homeScreen.home-screen .photo-hero .banner-image{transition:none!important;transform:none!important}
+}
+
+/* CRITICAL FIX: previous absolute-positioned search was covering the hero.
+   Keep header fixed by existing app layout; hero and search flow vertically. */
+#homeScreen.home-screen .home-content{
+ position:absolute!important;top:60px!important;bottom:64px!important;left:0!important;right:0!important;
+ height:auto!important;overflow-y:auto!important;overflow-x:hidden!important;
+ display:block!important;padding:0 13px 95px!important;background:#fff!important;
+}
+#homeScreen.home-screen .photo-hero{
+ position:relative!important;display:block!important;clear:both!important;
+ height:185px!important;min-height:185px!important;max-height:185px!important;
+ margin:0 -13px!important;width:calc(100% + 26px)!important;
+ overflow:hidden!important;border-radius:0!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image{
+ object-fit:cover!important;object-position:center!important;
+ visibility:hidden!important;opacity:0!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image.active{visibility:visible!important;opacity:1!important}
+#homeScreen.home-screen .photo-hero.reference-slide .hero-copy{opacity:1!important;pointer-events:none!important}
+#homeScreen.home-screen .photo-hero.reference-slide:after{opacity:1!important}
+#homeScreen.home-screen .search-settings{
+ position:relative!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;
+ z-index:4!important;display:block!important;clear:both!important;
+ width:calc(100% + 26px)!important;margin:0 -13px 0!important;
+ padding:11px 13px 13px!important;background:linear-gradient(180deg,#d9efff,#fff)!important;
+}
+#homeScreen.home-screen .search-box{position:relative!important;margin:0!important;width:100%!important}
+#homeScreen.home-screen #categoriesSection{clear:both!important;margin-top:10px!important}
+#homeScreen.home-screen .photo-hero .hero-copy{width:55%!important;max-width:55%!important}
+#homeScreen.home-screen .photo-hero .hero-copy h1{font-size:20px!important}
+@media(max-width:370px){#homeScreen.home-screen .photo-hero{height:168px!important;min-height:168px!important;max-height:168px!important}}
+
+/* Reference photo banner: full bleed, clean search below, no duplicate text */
+#homeScreen.home-screen .home-content{padding:0 13px 100px!important;background:#fff!important}
+#homeScreen.home-screen .photo-hero{
+ display:block!important;position:relative!important;isolation:isolate!important;
+ margin:0 -13px!important;width:calc(100% + 26px)!important;
+ height:clamp(170px,49vw,205px)!important;min-height:0!important;max-height:none!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ background:#064f9e!important;overflow:hidden!important;
+}
+#homeScreen.home-screen .photo-hero .hero-art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
+#homeScreen.home-screen .photo-hero .banner-image{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;opacity:0!important;
+ transform:none!important;filter:none!important;
+ transition:opacity .9s ease-in-out!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image.active{opacity:1!important}
+#homeScreen.home-screen .photo-hero .hero-copy{display:none!important}
+#homeScreen.home-screen .photo-hero:after{display:none!important}
+#homeScreen.home-screen .search-settings{
+ position:relative!important;z-index:3!important;top:auto!important;left:auto!important;
+ right:auto!important;bottom:auto!important;transform:none!important;
+ margin:0 -13px!important;width:calc(100% + 26px)!important;
+ background:linear-gradient(180deg,#d6edff,#fff)!important;
+ padding:9px 13px 12px!important;box-sizing:border-box!important;
+}
+#homeScreen.home-screen .search-box{position:relative!important;margin:0!important;width:100%!important;border-radius:24px!important;min-height:48px!important}
+#homeScreen.home-screen #categoriesSection{margin-top:12px!important}
+#homeScreen.home-screen .slider-dots{display:none!important}
+@media(prefers-reduced-motion:reduce){#homeScreen.home-screen .photo-hero .banner-image{transition:none!important}}
+
+/* Transparent logo-and-bell overlay on the photographic hero */
+#homeScreen.home-screen .home-content{position:relative!important;padding-top:0!important}
+#homeScreen.home-screen .top-header{
+ position:absolute!important;top:0!important;left:-13px!important;right:-13px!important;
+ width:calc(100% + 26px)!important;height:67px!important;min-height:0!important;
+ z-index:30!important;background:linear-gradient(180deg,rgba(0,22,32,.53),transparent)!important;
+ box-shadow:none!important;border:0!important;pointer-events:none!important;
+}
+#homeScreen.home-screen .top-header .top-row{
+ width:100%!important;height:63px!important;min-height:63px!important;
+ display:flex!important;justify-content:space-between!important;align-items:center!important;
+ padding:8px 18px!important;box-sizing:border-box!important;pointer-events:auto!important;
+}
+#homeScreen.home-screen .top-header .brand{display:flex!important;align-items:center!important;gap:6px!important}
+#homeScreen.home-screen .top-header .brand-logo{width:39px!important;height:39px!important;object-fit:contain!important}
+#homeScreen.home-screen .top-header .brand-name strong{font-size:16px!important;color:white!important;text-shadow:0 1px 5px #002a4e!important}
+#homeScreen.home-screen .top-header .brand-name span{color:white!important;font-size:9px!important}
+#homeScreen.home-screen .top-header .reference-header-actions{display:flex!important;align-items:center!important}
+#homeScreen.home-screen .top-header #notificationButton{
+ display:grid!important;place-items:center!important;width:37px!important;height:37px!important;
+ color:#fff!important;background:rgba(1,37,67,.23)!important;
+ border:1px solid #ffffff78!important;border-radius:50%!important;
+}
+#homeScreen.home-screen .photo-hero{
+ height:clamp(192px,57vw,230px)!important;min-height:0!important;max-height:none!important;
+ margin-top:0!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image{object-position:center center!important}
+#homeScreen.home-screen .search-settings{padding-top:9px!important}
+
+/* Remove the legacy 105px reserved header space. Photo starts at screen top. */
+#homeScreen.home-screen > .home-content{top:0!important;right:0!important;left:0!important;margin-top:0!important;padding-top:0!important;scroll-padding-top:0!important;}
+#homeScreen.home-screen .photo-hero{margin-top:0!important;}
+#homeScreen.home-screen .top-header{top:0!important;}
+
+/* ===== Yalla Shop | floating search on photo hero (Oct 2026) ===== */
+/* Full-bleed photo, soft shading, logo and bell at the top, search at the bottom. */
+#homeScreen.home-screen .photo-hero {
+  height:clamp(220px,69vw,275px)!important;
+  min-height:0!important;max-height:none!important;
+  margin-top:0!important;
+  background:#0753bd!important;
+}
+#homeScreen.home-screen .photo-hero .banner-image {
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:brightness(.89) saturate(.98)!important;
+  transition:opacity 1s ease-in-out!important;
+}
+#homeScreen.home-screen .photo-hero::after {
+  content:""!important;display:block!important;
+  position:absolute!important;inset:0!important;z-index:2!important;
+  background:linear-gradient(180deg,rgba(0,20,47,.34) 0%,rgba(0,29,64,.06) 44%,rgba(0,24,58,.20) 100%)!important;
+  pointer-events:none!important;
+}
+#homeScreen.home-screen .top-header {
+  background:linear-gradient(180deg,rgba(0,21,49,.26),transparent)!important;
+}
+#homeScreen.home-screen .search-settings {
+  position:relative!important;
+  z-index:35!important;
+  margin:-73px -13px 0!important;
+  width:calc(100% + 26px)!important;
+  padding:0 16px 17px!important;
+  background:transparent!important;
+  clear:none!important;
+  pointer-events:none!important;
+}
+#homeScreen.home-screen .search-settings .search-box {
+  position:relative!important;
+  width:100%!important;
+  min-height:51px!important;
+  margin:0!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  border-radius:28px!important;
+  background:rgba(255,255,255,.97)!important;
+  box-shadow:0 7px 22px rgba(0,29,68,.22)!important;
+  pointer-events:auto!important;
+  transition:box-shadow .2s ease,transform .2s ease!important;
+}
+#homeScreen.home-screen .search-settings .search-box:focus-within {
+  box-shadow:0 8px 26px rgba(0,71,169,.3)!important;
+  transform:translateY(-1px)!important;
+}
+#homeScreen.home-screen .search-settings .global-search-results {
+  pointer-events:auto!important;
+}
+#homeScreen.home-screen #categoriesSection {
+  position:relative!important;
+  z-index:1!important;
+  margin-top:0!important;
+  padding-top:15px!important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy{display:none!important}
+#homeScreen.home-screen .slider-dots{display:none!important}
+@media(max-width:360px){
+  #homeScreen.home-screen .photo-hero{height:220px!important}
+  #homeScreen.home-screen .search-settings{margin-top:-69px!important;padding-bottom:15px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #homeScreen.home-screen .photo-hero .banner-image,
+  #homeScreen.home-screen .search-settings .search-box{transition:none!important}
+}
+
+/* PREMIUM MOCKUP TRANSLATION — intentionally last to override legacy layers */
+#homeScreen.home-screen .home-content{position:relative!important;padding:0 12px 100px!important;background:#fff!important;overflow:visible!important}
+#homeScreen.home-screen .top-header{position:absolute!important;top:0!important;left:-12px!important;right:-12px!important;width:calc(100% + 24px)!important;height:67px!important;min-height:0!important;z-index:50!important;background:linear-gradient(180deg,#00366c99,transparent)!important;border:0!important;box-shadow:none!important;pointer-events:none!important}
+#homeScreen.home-screen .top-header .top-row{display:flex!important;align-items:center!important;justify-content:space-between!important;height:64px!important;padding:9px 18px!important;pointer-events:auto!important}
+#homeScreen.home-screen .top-header .brand-logo{width:43px!important;height:43px!important}
+#homeScreen.home-screen .top-header .brand-name strong{font-size:17px!important;color:#fff!important;text-shadow:0 2px 7px #012b61!important}
+#homeScreen.home-screen .top-header .brand-name span{font-size:10px!important;color:#fff!important}
+#homeScreen.home-screen .top-header #notificationButton{width:39px!important;height:39px!important;border:1px solid #ffffffb3!important;border-radius:50%!important;background:#ffffff30!important;color:#fff!important;backdrop-filter:blur(8px)!important}
+#homeScreen.home-screen .photo-hero{position:relative!important;display:block!important;margin:0 -12px!important;width:calc(100% + 24px)!important;height:clamp(275px,77vw,345px)!important;min-height:0!important;max-height:none!important;border-radius:0 0 23px 23px!important;overflow:hidden!important;box-shadow:0 9px 20px #064b8726!important;isolation:isolate!important;background:#0754b1!important}
+#homeScreen.home-screen .photo-hero .hero-art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important}
+#homeScreen.home-screen .photo-hero .banner-image{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;opacity:0!important;transform:scale(1.025)!important;filter:none!important;transition:opacity .85s ease,transform 5s ease!important}
+#homeScreen.home-screen .photo-hero .banner-image.active{opacity:1!important;transform:scale(1)!important}
+#homeScreen.home-screen .photo-hero:after{content:''!important;display:block!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(90deg,#002d7d80 0%,#00408033 49%,transparent 83%)!important;pointer-events:none!important}
+#homeScreen.home-screen .photo-hero .hero-copy{display:flex!important;position:absolute!important;left:0!important;top:63px!important;bottom:60px!important;right:auto!important;z-index:2!important;width:58%!important;max-width:58%!important;min-width:0!important;box-sizing:border-box!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:6px!important;padding:8px 8px 8px 19px!important;background:transparent!important;opacity:1!important;pointer-events:none!important}
+#homeScreen.home-screen .photo-hero .hero-copy h1{font-size:clamp(23px,6.1vw,29px)!important;font-weight:900!important;line-height:1.22!important;color:#fff!important;margin:0!important;white-space:normal!important;text-shadow:0 2px 7px #00265c80!important}
+#homeScreen.home-screen .photo-hero .hero-copy h1 em{font-style:normal!important;color:#8ee6ff!important}
+#homeScreen.home-screen .photo-hero .hero-copy p{font-size:11px!important;color:#fff!important;margin:0 0 6px!important;line-height:1.4!important}
+#homeScreen.home-screen .photo-hero .shop-button{pointer-events:auto!important;align-self:flex-start!important;background:#fff!important;color:#0062cb!important;border:0!important;border-radius:999px!important;font-weight:850!important;font-size:12px!important;padding:9px 14px!important;min-height:34px!important;box-shadow:0 5px 13px #003a8040!important;transition:transform .2s ease!important}
+#homeScreen.home-screen .photo-hero .shop-button:active{transform:scale(.95)!important}
+#homeScreen.home-screen .search-settings{position:relative!important;z-index:10!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;transform:none!important;box-sizing:border-box!important;width:100%!important;margin:-59px 0 0!important;padding:0 3px 18px!important;background:transparent!important;box-shadow:none!important}
+#homeScreen.home-screen .search-box{position:relative!important;width:100%!important;min-height:52px!important;margin:0!important;background:#fffffff0!important;backdrop-filter:blur(12px)!important;border:1px solid #ffffffed!important;border-radius:999px!important;box-shadow:0 7px 18px #023e7d2c!important}
+#homeScreen.home-screen #categoriesSection{margin:6px 0 20px!important;padding:0!important}
+#homeScreen.home-screen #categoriesSection>.section-heading{display:none!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:15px 5px!important;direction:rtl!important;padding:0!important;align-items:start!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card,#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-categories{min-width:0!important;gap:6px!important;font-size:10px!important;font-weight:850!important;line-height:1.3!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-picture{width:min(100%,68px)!important;aspect-ratio:1!important;border-radius:50%!important;border:3px solid #d3eaff!important;box-shadow:0 4px 11px #0069b91f!important;transition:transform .23s ease!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .category-card:active .category-picture{transform:scale(.93)!important}
+#homeScreen.home-screen #categoriesGrid.reference-categories .reference-all-icon{width:min(100%,68px)!important;aspect-ratio:1!important;border-radius:21px!important;background:linear-gradient(145deg,#0048bb,#078ff4)!important;color:#fff!important;box-shadow:0 5px 14px #0053b332!important}
+#homeScreen.home-screen .reference-benefits{margin:15px 0 24px!important;border-radius:21px!important;background:linear-gradient(110deg,#e4f3ff,#f0f8ff)!important;padding:16px 4px!important;box-shadow:none!important}
+#homeScreen.home-screen .reference-benefits span{font-size:9px!important;line-height:1.55!important}
+#homeScreen.home-screen .reference-benefits b{font-size:20px!important;margin-bottom:4px!important;color:#0073df!important}
+#homeScreen.home-screen .slider-dots{display:none!important}
+.bottom-nav{border-radius:19px 19px 0 0!important;box-shadow:0 -7px 23px #02336b13!important;z-index:100!important;padding-bottom:env(safe-area-inset-bottom,0px)!important}
+@media(max-width:360px){#homeScreen.home-screen .photo-hero{height:285px!important}#homeScreen.home-screen .photo-hero .hero-copy h1{font-size:22px!important}#homeScreen.home-screen .home-content{padding-left:9px!important;padding-right:9px!important}#homeScreen.home-screen .photo-hero{margin-left:-9px!important;margin-right:-9px!important;width:calc(100% + 18px)!important}}
+@media(prefers-reduced-motion:reduce){#homeScreen.home-screen .photo-hero .banner-image,#homeScreen.home-screen .photo-hero .shop-button{transition:none!important;transform:none!important}}
+
+/* Yalla Shop — balanced brand mark, October 2026 */
+#homeScreen.home-screen .top-header .top-row {
+    padding: 10px 18px !important;
+    height: 70px !important;
+}
+#homeScreen.home-screen .top-header .brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-width: 0;
+}
+#homeScreen.home-screen .top-header .brand-logo {
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 48px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 5px rgba(0,29,80,.25));
+}
+#homeScreen.home-screen .top-header .brand-name {
+    display: flex !important;
+    flex-direction: column !important;
+align-items: flex-end!important;
+    justify-content: center !important;
+    gap: 1px !important;
+    line-height: 1.1 !important;
+    white-space: nowrap;
+}
+#homeScreen.home-screen .top-header .brand-name strong {
+    display: block !important;
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    font-weight: 900 !important;
+    letter-spacing: -.35px;
+}
+#homeScreen.home-screen .top-header .brand-name span {
+    display: block !important;
+    position: static !important;
+    top: auto !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    font-weight: 800 !important;
+}
+@media (max-width: 360px) {
+    #homeScreen.home-screen .top-header .brand-logo {
+        width: 43px !important; height: 43px !important; flex-basis: 43px !important;
+    }
+    #homeScreen.home-screen .top-header .brand-name strong {font-size: 16px !important;}
+    #homeScreen.home-screen .top-header .brand-name span {font-size: 10px !important;}
+}
+
+
+/* Yalla Shop — final restrained polish: branding, photo clarity and motion */
+#homeScreen.home-screen .top-header .brand-name strong{font-size:20px!important;line-height:1.12!important;letter-spacing:-.45px!important;text-shadow:0 2px 8px rgba(0,29,75,.38)!important}
+#homeScreen.home-screen .top-header .brand-name span{font-size:11px!important;line-height:1.2!important;text-shadow:0 1px 5px rgba(0,29,75,.45)!important}
+#homeScreen.home-screen .top-header .brand{gap:7px!important}
+#homeScreen.home-screen .photo-hero .banner-image{filter:brightness(.97) saturate(1.035)!important;transform:scale(1.045)!important;transition:opacity 1.05s ease-in-out,transform 5.1s ease-out!important;will-change:opacity!important}
+#homeScreen.home-screen .photo-hero .banner-image.active{opacity:1!important;transform:scale(1)!important}
+#homeScreen.home-screen .photo-hero:after{background:linear-gradient(90deg,rgba(0,35,91,.34) 0%,rgba(0,40,95,.12) 46%,transparent 78%),linear-gradient(180deg,rgba(0,19,50,.17),transparent 36%,rgba(0,23,55,.10) 100%)!important}
+#homeScreen.home-screen .top-header{background:linear-gradient(180deg,rgba(0,24,61,.20),transparent)!important}
+@media(max-width:360px){#homeScreen.home-screen .top-header .brand-name strong{font-size:18px!important}#homeScreen.home-screen .top-header .brand-name span{font-size:10px!important}}
+@media(prefers-reduced-motion:reduce){#homeScreen.home-screen .photo-hero .banner-image,#homeScreen.home-screen .photo-hero .banner-image.active{transition:none!important;transform:none!important}}
+
+
+/* Hero typography refinement — text anchored consistently to image's left side */
+#homeScreen.home-screen .photo-hero .hero-copy {
+  left: 0 !important;
+  right: auto !important;
+  top: 70px !important;
+  bottom: 64px !important;
+  width: 57% !important;
+  max-width: 57% !important;
+  padding: 10px 8px 10px 20px !important;
+  direction: ltr !important;
+  text-align: left !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 7px !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy h1 {
+  width: 100% !important;
+  max-width: 205px !important;
+  margin: 0 !important;
+  font-size: clamp(20px, 5.6vw, 24px) !important;
+  line-height: 1.28 !important;
+  font-weight: 850 !important;
+  letter-spacing: 0 !important;
+  direction: rtl !important;
+  text-align: left !important;
+  color: #fff !important;
+  text-shadow: 0 2px 9px rgba(0,25,68,.46) !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy h1 em {
+  color: #e3f7ff !important;
+  font-style: normal !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy p {
+  width: 100% !important;
+  margin: 0 0 5px !important;
+  direction: rtl !important;
+  text-align: left !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  line-height: 1.5 !important;
+  color: #f1f8ff !important;
+  text-shadow: 0 1px 5px rgba(0,25,68,.55) !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy .shop-button {
+  align-self: flex-start !important;
+  margin: 0 !important;
+  font-size: 11px !important;
+  min-height: 32px !important;
+  padding: 8px 13px !important;
+}
+#homeScreen.home-screen .photo-hero:after {
+  background: linear-gradient(90deg,rgba(0,27,76,.65) 0%,rgba(0,42,103,.32) 38%,transparent 73%),linear-gradient(180deg,rgba(0,19,50,.16),transparent 36%,rgba(0,23,55,.09) 100%) !important;
+}
+@media (max-width: 360px) {
+  #homeScreen.home-screen .photo-hero .hero-copy {padding-left: 16px !important; width: 60% !important; max-width: 60% !important;}
+  #homeScreen.home-screen .photo-hero .hero-copy h1 {font-size: 20px !important;}
+  #homeScreen.home-screen .photo-hero .hero-copy p {font-size: 10px !important;}
+}
+
+/* Yalla Shop — أقسام متحركة ومفضلة */
+#homeScreen .ys-showcase{padding:4px 0 28px;direction:rtl}
+#homeScreen .ys-section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:25px 0 14px;opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+#homeScreen .ys-section-head.ys-visible,.ys-meat-row.ys-visible,.ys-offers.ys-visible{opacity:1;transform:none}
+#homeScreen .ys-section-head small{color:#3280c9;font-size:10px;font-weight:800}
+#homeScreen .ys-section-head h2{color:#0a3268;font-size:18px;font-weight:900;margin:0}
+#homeScreen .ys-section-head button{border:0;background:none;color:#0861d4;font-size:11px;font-weight:800;white-space:nowrap}
+#homeScreen .ys-orbit{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:7px 2px 17px;direction:rtl}
+#homeScreen .ys-orbit::-webkit-scrollbar{display:none}
+#homeScreen .ys-orbit-card{position:relative;flex:0 0 118px;scroll-snap-align:center;text-align:center;background:linear-gradient(160deg,#f4faff,#fff);border:1px solid #e2edfb;border-radius:20px;padding:12px 7px 10px;box-shadow:0 6px 15px #0753bd0b;animation:ysFloat 4s ease-in-out infinite;animation-delay:calc(var(--i)*-.25s)}
+#homeScreen .ys-orbit-card .ys-img{width:88px;height:88px;margin:0 auto 7px;border-radius:50%;background:#e9f6ff;display:grid;place-items:center;overflow:hidden;border:3px solid #fff;box-shadow:0 3px 12px #0753bd22}
+#homeScreen .ys-orbit-card img{width:84%;height:84%;object-fit:contain;transition:transform .4s}
+#homeScreen .ys-orbit-card:hover img{transform:rotate(10deg) scale(1.08)}
+#homeScreen .ys-orbit-card strong{display:block;color:#17385e;font-size:10px;line-height:1.6;min-height:32px}
+#homeScreen .ys-orbit-card small{font-size:9px;color:#0861d4;font-weight:800}
+#homeScreen .ys-meat-row{display:grid;grid-template-columns:1fr 1fr;gap:11px;opacity:0;transform:translateY(14px);transition:.5s}
+#homeScreen .ys-meat-card{height:160px;position:relative;border:0;overflow:hidden;border-radius:20px;text-align:right;background:#153b5d;box-shadow:0 7px 18px #122d4c22}
+#homeScreen .ys-meat-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+#homeScreen .ys-meat-card:active img{transform:scale(1.1)}
+#homeScreen .ys-meat-card:after{content:'';position:absolute;inset:25% 0 0;background:linear-gradient(transparent,#092541dc)}
+#homeScreen .ys-meat-card span{position:absolute;bottom:13px;right:12px;z-index:1;color:white;font-weight:900;font-size:14px}
+#homeScreen .ys-meat-card b{display:block;font-size:10px;font-weight:700;margin-top:5px}
+#homeScreen .ys-offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;opacity:0;transform:translateY(14px);transition:.5s}
+#homeScreen .ys-offers button{display:flex;flex-direction:column;align-items:stretch;border:1px solid #e2edfb;background:#fff;border-radius:17px;padding:6px;overflow:hidden;text-align:right;box-shadow:0 4px 12px #0753bd0b}
+#homeScreen .ys-offers img{width:100%;height:105px;object-fit:cover;border-radius:12px}
+#homeScreen .ys-offers strong{font-size:12px;color:#17385e;padding:6px 5px 0}
+#homeScreen .ys-offers span{font-size:10px;color:#0861d4;padding:2px 5px 5px}
+.ys-fav-toggle{display:grid;place-items:center;width:30px;height:30px;border:1px solid #e5eaf4;border-radius:50%;background:#fff;color:#9aafc6;font-family:Arial,sans-serif;font-size:23px;line-height:1;cursor:pointer;box-shadow:0 2px 9px #0001;z-index:4}
+.ys-fav-toggle.is-favorite{color:#ef4165;background:#fff2f5;animation:ysPop .25s ease}
+.ys-orbit-card .ys-fav-toggle{position:absolute;top:6px;left:6px;width:27px;height:27px;font-size:20px}
+.ys-fav-floating{position:absolute!important;top:7px!important;left:7px!important;right:auto!important}
+.market-product,.gharib-product-card,.library-product-card,.restaurant-product-card,.cleaning-product-card,.vegetables-product-card,.butcher-product-card{position:relative}
+.ys-favorites{position:absolute;inset:0 0 58px;background:#f8fbff;z-index:80;overflow-y:auto;direction:rtl;padding:0 14px 25px}
+.ys-favorites[hidden]{display:none!important}
+.ys-favorites header{position:sticky;top:0;display:flex;align-items:center;gap:15px;padding:14px 0;background:#f8fbff;z-index:2}
+.ys-favorites header button{background:#e8f3ff;border:0;border-radius:12px;padding:6px 13px;color:#0753bd;font-size:20px}
+.ys-favorites h2{font-size:20px;color:#083e82;flex:1}.ys-favorites header span{font-size:11px;color:#7c8798}
+.ys-fav-list{display:grid;gap:10px}.ys-fav-card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e7eff9;border-radius:17px;padding:10px}
+.ys-fav-card img{width:74px;height:74px;object-fit:contain;background:#eff8ff;border-radius:12px}
+.ys-fav-card>div{flex:1;min-width:0}.ys-fav-card strong{display:block;font-size:12px}.ys-fav-card small{display:block;color:#0753bd;font-size:11px}
+.ys-fav-card div button{border:0;background:none;color:#0753bd;font-size:11px;padding:6px 0}.ys-fav-remove{border:0;background:#fff0f4;color:#e43c61;border-radius:50%;width:34px;height:34px;font-size:20px}
+.ys-empty{text-align:center;padding:75px 10px;color:#7c8798;font-size:14px;line-height:2}
+.ys-fav-count{font-style:normal;color:#f04b6b;font-size:9px}
+@keyframes ysFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes ysPop{50%{transform:scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.ys-orbit-card{animation:none!important}.ys-section-head,.ys-meat-row,.ys-offers{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* FIX 2026-10-27: restore vertical mouse-wheel and touch scrolling on homepage.
+   Previous premium rules made home-content overflow:visible inside a fixed,
+   overflow:hidden app, trapping all content below the viewport. */
+#homeScreen.home-screen > .home-content {
+  position: absolute !important;
+  inset: 0 0 64px 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  padding-bottom: 90px !important;
+}
+
+/* Home sections refresh — scroll without visible gutter or blank reveal gaps */
+#homeScreen.home-screen > .home-content{scrollbar-width:none!important;-ms-overflow-style:none!important;overflow-y:auto!important;overflow-x:hidden!important}
+#homeScreen.home-screen > .home-content::-webkit-scrollbar{display:none!important;width:0!important}
+#homeScreen .ys-showcase{padding-bottom:30px!important}
+#homeScreen .ys-section-head,#homeScreen .ys-offers,#homeScreen .ys-meat-feature,#homeScreen .ys-poultry-feature{opacity:1!important;transform:none!important;visibility:visible!important}
+#homeScreen .ys-section-head{margin:23px 0 12px!important}
+#homeScreen .ys-meat-feature,#homeScreen .ys-poultry-feature{width:100%;min-height:0;margin:0 0 8px}
+#homeScreen .ys-meat-banner{position:relative;display:block;width:100%;height:178px;overflow:hidden;border:0;border-radius:21px;padding:0;background:#392022;text-align:right;cursor:pointer;box-shadow:0 9px 25px #3a1e2420}
+#homeScreen .ys-meat-banner>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s}
+#homeScreen .ys-meat-banner:hover>img{transform:scale(1.06)}
+#homeScreen .ys-banner-shade{position:absolute;inset:0;background:linear-gradient(270deg,rgba(46,12,18,.91),rgba(54,17,23,.53) 52%,transparent 100%)}
+#homeScreen .ys-banner-copy{position:absolute;right:17px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:flex-start;gap:8px;color:#fff}
+#homeScreen .ys-banner-copy small{font-size:10px;color:#ffd7ca;font-weight:800}
+#homeScreen .ys-banner-copy strong{font-size:21px;font-weight:900;line-height:1.3}
+#homeScreen .ys-banner-copy em{font-size:11px;font-style:normal;font-weight:800;background:#fff;color:#8d2835;border-radius:25px;padding:9px 13px}
+#homeScreen .ys-poultry-banner{display:flex;direction:ltr;align-items:center;gap:12px;width:100%;min-height:158px;border:1px solid #f4dcbf;border-radius:22px;padding:12px;background:linear-gradient(125deg,#fff8ed,#fffdf8);box-shadow:0 8px 22px #aa722112;text-align:right;cursor:pointer;overflow:hidden}
+#homeScreen .ys-poultry-photo{flex:0 0 45%;height:137px;overflow:hidden;border-radius:17px;background:#fff0db}
+#homeScreen .ys-poultry-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+#homeScreen .ys-poultry-banner:hover img{transform:scale(1.07)}
+#homeScreen .ys-poultry-copy{flex:1;min-width:0;direction:rtl;display:flex;flex-direction:column;align-items:flex-start;gap:8px;color:#603c18}
+#homeScreen .ys-poultry-copy small{color:#bb772b;font-size:10px;font-weight:800}
+#homeScreen .ys-poultry-copy strong{font-size:18px;line-height:1.3;font-weight:900}
+#homeScreen .ys-poultry-copy>span{font-size:10px;color:#926e49}
+#homeScreen .ys-poultry-copy em{font-style:normal;background:#ed9e39;color:#fff;border-radius:25px;padding:9px 12px;font-size:10px;font-weight:800}
+@media(prefers-reduced-motion:reduce){#homeScreen .ys-meat-banner img,#homeScreen .ys-poultry-banner img{transition:none!important}}
+
+/* Video-inspired independently moving meat and poultry shelves */
+#homeScreen .ys-meat-feature,#homeScreen .ys-poultry-feature{min-width:0;overflow:hidden;margin-bottom:15px!important}
+#homeScreen .ys-auto-viewport{width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-inline:contain;touch-action:pan-x pan-y;direction:ltr;padding:7px 3px 12px}
+#homeScreen .ys-auto-viewport::-webkit-scrollbar{display:none}
+#homeScreen .ys-auto-track{display:flex;align-items:stretch;gap:11px;width:max-content;direction:rtl}
+#homeScreen .ys-slide-card{position:relative;flex:none;overflow:hidden;direction:rtl;background:#fff;border:1px solid #e7edf7;border-radius:19px;box-shadow:0 5px 14px rgba(12,58,120,.07);transition:transform .2s,box-shadow .2s}
+#homeScreen .ys-slide-card:hover{transform:translateY(-3px);box-shadow:0 9px 18px rgba(12,58,120,.12)}
+#homeScreen .ys-slide-open{border:0;background:none;display:flex;flex-direction:column;align-items:stretch;text-align:right;width:100%;height:100%;cursor:pointer;padding:9px;color:#102e59;font-family:inherit}
+#homeScreen .ys-slide-photo{display:flex;align-items:center;justify-content:center;width:100%;overflow:hidden;border-radius:13px;background:#f5f8fd}
+#homeScreen .ys-slide-photo img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s}
+#homeScreen .ys-slide-card:hover img{transform:scale(1.06)}
+#homeScreen .ys-slide-name{font-weight:900;font-size:12px;margin-top:8px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#homeScreen .ys-slide-unit{font-size:10px;color:#8b98ab;min-height:15px}
+#homeScreen .ys-slide-price{font-size:12px;font-weight:900;color:#0870d9;margin-top:auto;padding-top:7px}
+#homeScreen .ys-slide-cta{font-size:10px;font-weight:800;color:#fff;background:#096cce;border-radius:10px;text-align:center;padding:7px 6px;margin-top:8px}
+#homeScreen .ys-slide-meat{width:175px;border-color:#f2dcd9;background:linear-gradient(180deg,#fff8f7,#fff)}
+#homeScreen .ys-slide-meat .ys-slide-photo{height:130px;background:radial-gradient(circle,#fff 30%,#ffefed)}
+#homeScreen .ys-slide-meat .ys-slide-cta{background:#b74446}
+#homeScreen .ys-slide-meat .ys-slide-price{color:#aa3339}
+#homeScreen .ys-slide-poultry{width:137px;border-color:#f5e5c7;background:linear-gradient(180deg,#fffaf0,#fff)}
+#homeScreen .ys-slide-poultry .ys-slide-photo{height:100px;background:radial-gradient(circle,#fff 25%,#fff1d7)}
+#homeScreen .ys-slide-poultry .ys-slide-cta{background:#d58c25}
+#homeScreen .ys-slide-poultry .ys-slide-price{color:#a76713}
+#homeScreen .ys-slide-heart{position:absolute!important;top:13px;left:13px;right:auto!important;z-index:2;width:27px!important;height:27px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:rgba(255,255,255,.95)!important;border:1px solid #e9edf3!important;font-size:18px!important;color:#9aa8b8!important;cursor:pointer}
+#homeScreen .ys-slide-heart.is-favorite{color:#ef4269!important}
+#homeScreen .ys-scroll-hint{text-align:center;font-size:10px;color:#8c9bb0;margin:0 0 5px}
+@media(prefers-reduced-motion:reduce){#homeScreen .ys-slide-card,#homeScreen .ys-slide-photo img{transition:none!important}}
+
+
+/* HERO MIRROR: flip the actual photography, not just its position. */
+#homeScreen.home-screen .photo-hero .banner-image,
+#homeScreen.home-screen .photo-hero .banner-image.active {
+  transform: scaleX(-1) !important;
+  transform-origin: center !important;
+  object-position: center center !important;
+}
+#homeScreen.home-screen .photo-hero::after {
+  background: linear-gradient(270deg, rgba(0,29,80,.75) 0%, rgba(0,42,103,.42) 43%, rgba(0,29,80,.04) 80%),
+              linear-gradient(180deg, rgba(0,19,50,.13), transparent 40%, rgba(0,23,55,.10)) !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy {
+  left: auto !important;
+  right: 0 !important;
+  width: 58% !important;
+  max-width: 58% !important;
+  padding: 10px 19px 10px 7px !important;
+  direction: rtl !important;
+  text-align: right !important;
+  align-items: flex-start !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy h1,
+#homeScreen.home-screen .photo-hero .hero-copy p {
+  direction: rtl !important;
+  text-align: right !important;
+}
+#homeScreen.home-screen .photo-hero .hero-copy .shop-button {
+  align-self: flex-start !important;
+  margin: 0 !important;
+}
+@media(max-width:360px) {
+  #homeScreen.home-screen .photo-hero .hero-copy {
+    width: 61% !important;
+    max-width: 61% !important;
+    padding-right: 15px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  #homeScreen.home-screen .photo-hero .banner-image,
+  #homeScreen.home-screen .photo-hero .banner-image.active {transform:scaleX(-1)!important}
+}
+
+/* HERO HEADER MIRROR — brand on the right, notifications on the left.
+   Keep the logo and lettering upright; only swap their layout positions. */
+#homeScreen.home-screen .top-header .top-row {
+  direction: rtl !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+#homeScreen.home-screen .top-header .brand {
+  direction: ltr !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+#homeScreen.home-screen .top-header .brand-name {
+  align-items: flex-end!important;
+  text-align: left !important;
+}
+#homeScreen.home-screen .top-header .reference-header-actions {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+/* Final logo order: [Logo] [Yalla Shop], on the right of the header. */
+#homeScreen.home-screen .top-header .brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    direction: ltr !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+    order: 0 !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+    order: 1 !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+
+/* FIX 2026-10-27: logo at far RIGHT, name immediately to its LEFT. */
+#homeScreen.home-screen .top-header .brand {
+    direction: rtl !important;
+    flex-direction: row !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+    order: 0 !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+    order: 1 !important;
+    direction: ltr !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.brand-name span {
+    align-self: flex-end;
+    text-align: right;
+}
+/* =========================================================
+   Yalla Shop | Unified premium palette — 2026-10-27
+   Navy + royal blue + white; red reserved for favorites.
+   Homepage pantry prices remain clearly readable.
+   ========================================================= */
+#homeScreen {
+  --ys-primary:#0759bd;
+  --ys-primary-hover:#064b9f;
+  --ys-navy:#102c52;
+  --ys-soft:#f4f8fe;
+  --ys-border:#dce8f6;
+  --ys-muted:#647995;
+}
+#homeScreen .ys-section-head h2,
+#homeScreen .ys-orbit-card strong,
+#homeScreen .ys-slide-name,
+#homeScreen .ys-offers strong {color:var(--ys-navy)!important}
+#homeScreen .ys-section-head small,
+#homeScreen .ys-section-head button,
+#homeScreen .ys-offers span {color:var(--ys-primary)!important}
+#homeScreen .ys-orbit-card {
+  background:#fff!important;
+  border:1px solid var(--ys-border)!important;
+  box-shadow:0 4px 14px rgba(16,44,82,.055)!important;
+  padding-bottom:14px!important;
+  min-height:185px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+#homeScreen .ys-orbit-card .ys-img {
+  background:var(--ys-soft)!important;
+  border-color:#fff!important;
+  box-shadow:0 3px 10px rgba(7,89,189,.12)!important;
+}
+/* Price: dark blue, visible below the name, not a pale/invisible button */
+#homeScreen .ys-orbit-card small {
+  display:block!important;
+  width:100%;
+  margin-top:auto!important;
+  padding:8px 3px 2px!important;
+  color:var(--ys-primary)!important;
+  font-size:11px!important;
+  line-height:1.5!important;
+  font-weight:900!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-align:center!important;
+  direction:rtl;
+}
+#homeScreen .ys-orbit-card strong {min-height:32px;line-height:1.55}
+#homeScreen .ys-orbit-card .ys-fav-toggle {background:#fff!important}
+#homeScreen .ys-slide-card {
+  background:#fff!important;
+  border-color:var(--ys-border)!important;
+  box-shadow:0 4px 14px rgba(16,44,82,.06)!important;
+}
+#homeScreen .ys-slide-meat .ys-slide-photo,
+#homeScreen .ys-slide-poultry .ys-slide-photo {background:var(--ys-soft)!important}
+#homeScreen .ys-slide-meat .ys-slide-price,
+#homeScreen .ys-slide-poultry .ys-slide-price,
+#homeScreen .ys-slide-price {color:var(--ys-primary)!important}
+#homeScreen .ys-slide-meat .ys-slide-cta,
+#homeScreen .ys-slide-poultry .ys-slide-cta,
+#homeScreen .ys-slide-cta {background:var(--ys-primary)!important;color:#fff!important}
+#homeScreen .ys-slide-cta:hover {background:var(--ys-primary-hover)!important}
+#homeScreen .ys-meat-banner {box-shadow:0 6px 18px rgba(16,44,82,.13)!important}
+#homeScreen .ys-banner-shade {background:linear-gradient(270deg,rgba(8,31,65,.87),rgba(8,31,65,.42) 55%,transparent)!important}
+#homeScreen .ys-banner-copy small {color:#dcecff!important}
+#homeScreen .ys-banner-copy em {color:var(--ys-primary)!important;background:#fff!important}
+#homeScreen .ys-poultry-banner {background:var(--ys-soft)!important;border-color:var(--ys-border)!important;box-shadow:0 5px 16px rgba(16,44,82,.06)!important}
+#homeScreen .ys-poultry-photo {background:#edf4fc!important}
+#homeScreen .ys-poultry-copy {color:var(--ys-navy)!important}
+#homeScreen .ys-poultry-copy small {color:var(--ys-primary)!important}
+#homeScreen .ys-poultry-copy>span {color:var(--ys-muted)!important}
+#homeScreen .ys-poultry-copy em {background:var(--ys-primary)!important;color:#fff!important}
+#homeScreen .ys-offers button {border-color:var(--ys-border)!important;box-shadow:0 4px 12px rgba(16,44,82,.055)!important}
+#homeScreen .ys-fav-toggle.is-favorite,
+#homeScreen .ys-slide-heart.is-favorite {color:#e44767!important}
+@media (prefers-reduced-motion:reduce){#homeScreen .ys-orbit-card{animation:none!important}}
+
+/* Yalla Shop | ضبط حواف شرائط المنتجات في الصفحة الرئيسية */
+#homeScreen.home-screen > .home-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/* تبقى العناوين والأقسام العادية بمحاذاة داخلية مريحة */
+#homeScreen .home-content > :not(.pro-featured):not(.ys-meat-feature):not(.ys-poultry-feature) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* الشرائط نفسها تمتد إلى طرفي مساحة العرض، من دون قص أول بطاقة */
+#homeScreen .pro-featured,
+#homeScreen .ys-meat-feature,
+#homeScreen .ys-poultry-feature {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  min-width: 0;
+}
+#homeScreen .pro-featured .pro-section-title,
+#homeScreen .ys-meat-feature .ys-section-head,
+#homeScreen .ys-poultry-feature .ys-section-head {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#homeScreen .pro-featured-track,
+#homeScreen .ys-auto-viewport {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 15px !important;
+  scroll-padding-inline: 15px;
+  overflow-x: auto !important;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+#homeScreen .pro-featured-track::-webkit-scrollbar,
+#homeScreen .ys-auto-viewport::-webkit-scrollbar {display:none}
+#homeScreen .ys-auto-track {direction: rtl; width: max-content; min-width: max-content}
+#homeScreen .ys-slide-card,
+#homeScreen .pro-feature-card {flex-shrink:0}
+@media(max-width:360px){
+  #homeScreen .home-content > :not(.pro-featured):not(.ys-meat-feature):not(.ys-poultry-feature){margin-inline:10px}
+  #homeScreen .pro-featured-track,#homeScreen .ys-auto-viewport{padding-inline:10px!important;scroll-padding-inline:10px}
+}
+
+/* Keep the hero text and header spacing unchanged. Move only the brand. */
+#homeScreen.home-screen .top-header {
+    padding-right: 16px !important;
+}
+#homeScreen.home-screen .top-header .brand {
+    position: relative;
+    left: 11px;
+}
+
+/* Move ONLY the Yalla Shop logo and name toward the right edge. */
+#homeScreen.home-screen .top-header .top-row > .brand {
+  position: relative !important;
+  left: 25px !important;
+}
+
+/* Raise only the logo and store name slightly. */
+#homeScreen.home-screen .top-header .top-row > .brand {
+  top: -5px !important;
+}
+
+/* Yalla Shop — final refined header & compact homepage rhythm */
+#homeScreen.home-screen .top-header {
+  padding: 0 12px !important;
+  height: 76px !important;
+  background: linear-gradient(180deg,rgba(3,32,78,.24),transparent) !important;
+}
+#homeScreen.home-screen .top-header .top-row {
+  display:flex!important;direction:rtl!important;justify-content:space-between!important;
+  align-items:flex-start!important;height:70px!important;min-height:0!important;
+  padding:12px 0 0!important;gap:8px!important;
+}
+#homeScreen.home-screen .top-header .top-row>.brand {
+  position:static!important;top:auto!important;left:auto!important;right:auto!important;
+  transform:none!important;display:inline-flex!important;direction:rtl!important;
+  flex-direction:row!important;align-items:center!important;gap:5px!important;
+  margin:0!important;min-width:0!important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+  width:43px!important;height:43px!important;margin:0!important;order:0!important;
+  object-fit:contain!important;flex-shrink:0!important;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+  display:flex!important;flex-direction:column!important;align-items:flex-end!important;
+  direction:ltr!important;text-align:right!important;order:1!important;gap:0!important;
+  margin:0!important;line-height:1.1!important;
+}
+#homeScreen.home-screen .top-header .brand-name strong {
+  font-size:17px!important;font-weight:900!important;line-height:1.25!important;
+  letter-spacing:-.35px!important;
+}
+#homeScreen.home-screen .top-header .brand-name span {
+  position:static!important;top:auto!important;align-self:flex-end!important;
+  font-size:10px!important;line-height:1.25!important;margin-top:0!important;
+}
+#homeScreen.home-screen .top-header .reference-header-actions {
+  display:flex!important;align-items:center!important;flex-shrink:0!important;
+  margin:5px 0 0!important;
+}
+#homeScreen.home-screen .top-header #notificationButton {
+  display:grid!important;place-items:center!important;width:37px!important;height:37px!important;
+  margin:0!important;padding:0!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.75)!important;
+  color:#fff!important;background:rgba(255,255,255,.16)!important;
+  backdrop-filter:blur(8px);cursor:pointer;
+}
+#homeScreen.home-screen .top-header #notificationButton:active{transform:scale(.94)}
+#homeScreen.home-screen .categories-section{margin-bottom:12px!important}
+#homeScreen.home-screen .reference-curated{margin-top:8px!important;margin-bottom:18px!important}
+#homeScreen.home-screen .reference-curated-grid button{transition:transform .2s ease,box-shadow .2s ease}
+#homeScreen.home-screen .reference-curated-grid button:active{transform:scale(.97)}
+@media(max-width:360px){
+ #homeScreen.home-screen .top-header{padding-inline:10px!important}
+ #homeScreen.home-screen .top-header .brand-name strong{font-size:15px!important}
+ #homeScreen.home-screen .top-header .brand .brand-logo{width:39px!important;height:39px!important}
+}
+@media(prefers-reduced-motion:reduce){#homeScreen.home-screen .reference-curated-grid button{transition:none!important}}
+
+/* Compact centered brand inspired by reference — scoped to home hero only */
+#homeScreen.home-screen .top-header {height:66px!important;padding:0 15px!important;background:linear-gradient(180deg,rgba(2,29,65,.24),transparent)!important}
+#homeScreen.home-screen .top-header .top-row {position:relative!important;display:flex!important;direction:rtl!important;align-items:flex-start!important;justify-content:space-between!important;padding-top:13px!important;height:55px!important}
+#homeScreen.home-screen .top-header .top-row>.brand {position:absolute!important;top:10px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;display:flex!important;direction:rtl!important;align-items:center!important;gap:4px!important;white-space:nowrap!important}
+#homeScreen.home-screen .top-header .brand .brand-logo {width:29px!important;height:29px!important;margin:0!important;order:0!important}
+#homeScreen.home-screen .top-header .brand .brand-name {order:1!important;align-items:flex-end!important;gap:0!important}
+#homeScreen.home-screen .top-header .brand-name strong {font-size:14px!important;line-height:1.1!important;letter-spacing:-.2px!important}
+#homeScreen.home-screen .top-header .brand-name span {font-size:9px!important;line-height:1.25!important;margin-top:2px!important}
+#homeScreen.home-screen .top-header .reference-header-actions {order:2!important;margin:0!important}
+#homeScreen.home-screen .top-header #notificationButton {width:32px!important;height:32px!important;background:rgba(0,28,67,.16)!important}
+#homeScreen.home-screen .top-header .ys-header-menu {order:0!important;width:32px;height:32px;display:grid;place-items:center;color:white;background:rgba(0,28,67,.16);border:1px solid rgba(255,255,255,.65);border-radius:50%;cursor:pointer}
+@media(max-width:350px){#homeScreen.home-screen .top-header .brand-name strong{font-size:12px!important}#homeScreen.home-screen .top-header .brand .brand-logo{width:26px!important;height:26px!important}}
+
+/* Yalla Shop — ضبط تناسب اللوغو والاسم فقط */
+#homeScreen.home-screen .top-header .top-row > .brand {
+    gap: 7px !important;
+    align-items: center !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+    width: 37px !important;
+    height: 37px !important;
+    flex: 0 0 37px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    gap: 1px !important;
+}
+#homeScreen.home-screen .top-header .brand-name strong {
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.3px !important;
+}
+#homeScreen.home-screen .top-header .brand-name span {
+    position: static !important;
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+}
+@media (max-width: 350px) {
+    #homeScreen.home-screen .top-header .brand .brand-logo {
+        width: 33px !important;
+        height: 33px !important;
+        flex-basis: 33px !important;
+    }
+    #homeScreen.home-screen .top-header .brand-name strong {font-size: 14px !important;}
+}
+
+/* Refined brand: a single balanced lockup at the top-right of the hero. */
+#homeScreen.home-screen .top-header .top-row > .brand {
+  top: 11px !important;
+  right: 15px !important;
+  left: auto !important;
+  transform: none !important;
+  gap: 6px !important;
+  direction: rtl !important;
+  align-items: center !important;
+  padding: 3px 5px 3px 8px !important;
+  border-radius: 12px !important;
+  background: rgba(3, 37, 87, .14) !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+  width: 35px !important;
+  height: 35px !important;
+  flex: 0 0 35px !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+  align-items: flex-end !important;
+  text-align: right !important;
+  gap: 2px !important;
+}
+#homeScreen.home-screen .top-header .brand-name strong {
+  font-size: 15px !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.25px !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.12) !important;
+}
+#homeScreen.home-screen .top-header .brand-name span {
+  font-size: 10px !important;
+  line-height: 1.15 !important;
+  align-self: flex-end !important;
+  margin: 0 !important;
+}
+@media(max-width:350px) {
+  #homeScreen.home-screen .top-header .top-row > .brand {right: 10px !important;}
+  #homeScreen.home-screen .top-header .brand .brand-logo {width:32px!important;height:32px!important;flex-basis:32px!important;}
+}
+
+
+/* Final brand lockup — reference image 1 */
+#homeScreen.home-screen .top-header .top-row > .brand {
+  position: absolute !important;
+  top: 7px !important;
+  right: 2px !important;
+  left: auto !important;
+  transform: none !important;
+  display: flex !important;
+  flex-direction: row !important;
+  direction: rtl !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 5px 8px 5px 9px !important;
+  border-radius: 13px !important;
+  background: rgba(5, 54, 118, .30) !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+#homeScreen.home-screen .top-header .brand .brand-logo {
+  order: 0 !important;
+  width: 37px !important;
+  height: 37px !important;
+  flex: 0 0 37px !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+}
+#homeScreen.home-screen .top-header .brand::after {
+  content: "";
+  order: 1;
+  display: block;
+  width: 1px;
+  height: 31px;
+  background: rgba(255,255,255,.62);
+  flex: 0 0 1px;
+}
+#homeScreen.home-screen .top-header .brand .brand-name {
+  order: 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  text-align: right !important;
+}
+#homeScreen.home-screen .top-header .brand-name strong {
+  font-size: 15px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.3px !important;
+}
+#homeScreen.home-screen .top-header .brand-name span {
+  position: static !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+@media (max-width:350px) {
+  #homeScreen.home-screen .top-header .top-row > .brand {right: 2px !important;}
+  #homeScreen.home-screen .top-header .brand .brand-logo {width:33px !important;height:33px !important;flex-basis:33px !important;}
+  #homeScreen.home-screen .top-header .brand-name strong {font-size:14px !important;}
 }

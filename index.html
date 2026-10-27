@@ -40,8 +40,14 @@
 
         <!-- رأس الصفحة -->
        <!-- الهيدر الأزرق -->
+
+
+
+        <!-- محتوى الصفحة -->
+        <div class="home-content">
 <header class="top-header">
     <div class="top-row">
+
         <div class="brand">
             <img
                 src="images/logo.png"
@@ -55,20 +61,22 @@
             </div>
         </div>
 
-    <button id="notificationButton"
-        type="button"
-        class="icon-button"
-        aria-label="الإشعارات">
-            <svg viewBox="0 0 24 24" width="27" height="27"
-                 fill="none" stroke="currentColor"
-                 stroke-width="1.8">
-                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
-                <path d="M10 21h4"/>
-            </svg>
-        </button>
     </div>
 </header>
-
+<!-- بانر الصور المتحركة: صور محلية مضمونة، بدون نقاط -->
+<section class="hero-banner photo-hero" aria-label="عروض يلا شوب">
+  <div class="hero-art" aria-hidden="true">
+    <img src="images/03_cakes.webp" class="banner-image active" alt="" decoding="async" fetchpriority="high">
+    <img src="images/02_stationery.webp" class="banner-image" alt="" decoding="async">
+    <img src="images/01_fruits_vegetables.webp" class="banner-image" alt="" decoding="async">
+    <img src="images/04_cleaning.webp" class="banner-image" alt="" decoding="async">
+  </div>
+  <div class="hero-copy">
+    <h1>كل احتياجاتك<br><em>في مكان واحد</em></h1>
+    <p>جودة عالية وأسعار مناسبة</p>
+    <button id="shopNowButton" class="shop-button" type="button">تسوّق الآن <span aria-hidden="true">←</span></button>
+  </div>
+</section>
 <!-- البحث وخيارات اللغة والعملة -->
 <div class="search-settings">
     <form class="search-box" id="searchForm">
@@ -92,64 +100,26 @@
 </div>
  
 
-        <!-- محتوى الصفحة -->
-        <div class="home-content">
 
-            <!-- البانر الرئيسي -->
-           <section class="hero-banner">
-
-    <div class="hero-copy">
-        <h1>كل احتياجاتك<br>في مكان واحد</h1>
-        <p>تسوّق كل ما تحتاجه بسهولة</p>
-        <button id="shopNowButton" class="shop-button">
-            تسوّق الآن <span>→</span>
-        </button>
-    </div>
-
-    <div class="hero-art" aria-hidden="true">
-        <img src="images/background1.jpg" class="banner-image active" alt="">
-        <img src="images/background2.jpg" class="banner-image" alt="">
-        <img src="images/background3.jpg" class="banner-image" alt="">
-             <img src="images/background4.jpg" class="banner-image" alt="">
-    </div>
-
-</section>
-           
-<div class="slider-dots" aria-label="اختيار صورة العرض">
-
-    <button class="dot active" type="button"
-            aria-label="العرض الأول"></button>
-
-    <button class="dot" type="button"
-            aria-label="العرض الثاني"></button>
-
-    <button class="dot" type="button"
-            aria-label="العرض الثالث"></button>
-
-    <button class="dot" type="button"
-            aria-label="العرض الرابع"></button>
-
-</div>
-
-
-            <!-- الأقسام -->
+<!-- الأقسام -->
             <section class="categories-section" id="categoriesSection">
                 <div class="section-heading">
-                    <h2>الأقسام الرئيسية</h2>
-                    <button id="showAllButton">   </button>
+                    <div class="premium-heading-copy"><h2>تسوّق حسب القسم</h2></div>
+                    <button id="showAllButton">عرض الكل ‹</button>
                 </div>
 
              
-<div class="categories-grid" id="categoriesGrid">
+<div class="categories-grid category-editorial category-premium next-categories reference-categories" id="categoriesGrid">
+    <button class="reference-all-categories" type="button" id="referenceAllCategories" aria-label="كل الأقسام"><span class="reference-all-icon">▦</span><span>كل الأقسام</span></button>
 
-    <button class="category-card" data-category="سوبر ماركت">
+    <button class="category-card category-spotlight premium-hero-category" data-category="سوبر ماركت">
         <div class="category-picture supermarket">
             <img loading="lazy" decoding="async" src="images/supermarket.jpg" alt="سوبر ماركت">
         </div>
         <span>سوبر ماركت</span>
     </button>
 
-    <button class="category-card" data-category="مكتبة">
+    <button class="category-card category-spotlight premium-hero-category" data-category="مكتبة">
         <div class="category-picture stationery">
             <img loading="lazy" decoding="async" src="images/library.jpg" alt="مكتبة">
         </div>
@@ -202,10 +172,48 @@
 </div>
          <p id="searchMessage" class="search-message" hidden></p>
             </section>
+<section class="reference-curated"><div class="reference-section-heading"><h2>تسوّق حسب احتياجاتك</h2><button type="button" id="referenceExplore">عرض الكل ‹</button></div><div class="reference-curated-grid">
+<button type="button" data-pro-category="سوبر ماركت"><img src="images/01_fruits_vegetables.webp" alt="" loading="lazy"><strong>أساسيات يومية</strong></button>
+<button type="button" data-pro-category="مكتبة"><img src="images/02_stationery.webp" alt="" loading="lazy"><strong>عالم الإبداع</strong></button>
+<button type="button" data-pro-category="حلويات"><img src="images/03_cakes.webp" alt="" loading="lazy"><strong>حلويات شهية</strong></button>
+</div></section><section class="pro-featured pro-reveal" id="proFeaturedSection">
+ <div class="pro-section-title"><div><h2>الأكثر مبيعاً</h2></div><button type="button" id="proViewMarket">عرض الكل ‹</button></div>
+ <div class="pro-featured-track" id="proFeaturedTrack"></div>
+</section>
 
-   
+<section class="ys-showcase" id="ysShowcase" aria-label="اكتشف منتجاتنا">
+ <div class="ys-section-head"><div><small>اختيارات من المتجر</small><h2>من المونة للبيت 🛍️</h2></div><button type="button" data-open-category="سوبر ماركت">عرض الكل ‹</button></div>
+ <div class="ys-orbit" id="ysFoodOrbit"></div>
+  <section class="ys-meat-feature" aria-label="اللحوم الطازجة">
+    <div class="ys-section-head"><div><small>مختارة بعناية</small><h2>اللحوم الطازجة 🥩</h2></div><button type="button" data-open-category="ملحمة">عرض كل اللحوم ‹</button></div>
+    <div id="ysMeatFeature"></div>
+  </section>
+  <section class="ys-poultry-feature" aria-label="قسم الدواجن">
+    <div class="ys-section-head"><div><small>جودة كل يوم</small><h2>قسم الدواجن 🐔</h2></div><button type="button" data-open-category="دواجن">عرض كل الدواجن ‹</button></div>
+    <div id="ysPoultryFeature"></div>
+  </section>
+ <div class="ys-section-head"><div><small>كل شي بتحتاجه</small><h2>عروض وأقسام مميزة ✨</h2></div><button type="button" data-open-category="سوبر ماركت">عرض الكل ‹</button></div>
+ <div class="ys-offers" id="ysOffers"></div>
+</section><div class="reference-hidden-hero">
            
+<div class="slider-dots" aria-label="اختيار صورة العرض">
 
+    <button class="dot active" type="button"
+            aria-label="العرض الأول"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الثاني"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الثالث"></button>
+
+    <button class="dot" type="button"
+            aria-label="العرض الرابع"></button>
+
+</div>
+
+
+</div>
         </div>
 
     
@@ -511,9 +519,12 @@
   </div>
 </section>
 
+<section class="ys-favorites" id="ysFavorites" hidden aria-label="المفضلة"><header><button type="button" id="ysFavBack" aria-label="رجوع">→</button><h2>❤️ المفضلة</h2><span id="ysFavTotal"></span></header><div id="ysFavList" class="ys-fav-list"></div></section>
 <!-- القائمة السفلية -->
 <nav class="bottom-nav" aria-label="القائمة الرئيسية">
 
+    <button class="nav-item reference-nav-extra" type="button" data-page="الأقسام"><span class="reference-nav-glyph">▦</span><span>الأقسام</span></button>
+    <button class="nav-item reference-nav-extra" type="button" data-page="المفضلة"><span class="reference-nav-glyph">♡</span><span>المفضلة <i class="ys-fav-count" id="ysFavCount" hidden>0</i></span></button>
     <!-- الرئيسية -->
     <button class="nav-item active"
             type="button"
