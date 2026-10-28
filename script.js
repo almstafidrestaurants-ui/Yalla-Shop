@@ -3922,7 +3922,153 @@ gharibGrid.appendChild(card);
             category: "food",
             image: "images/foodstuffs/Kiri 400 grams.png",
             pictureClass: "cleaning-picture"
+        },
+{
+             id: 654,
+            name: "  جبنة بوك مطبوخة ",
+            price:	380000,
+            unit: " 500 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Puck Cooked Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 655,
+            name: "  نيو بارك جبنة كريمية    ",
+            price:	140000,
+            unit: " 400 غ   ",
+            category: "food",
+            image: "images/foodstuffs/New Park Cream Cheese 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 656,
+            name: "  رب بندورة الجودة  ",
+            price:	150000,
+            unit: " 800 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Quality Tomato Paste 800g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 657,
+            name: "  رب مروة   ",
+            price:	150000,
+            unit: " 800 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Marwa Paste 800g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 658,
+            name: "  رب مروة ",
+            price:	280000,
+            unit: "   2 كيلو    ",
+            category: "food",
+            image: "images/foodstuffs/Marwa Paste 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 659,
+            name: " رب بندورة بيودور ",
+            price:	125000,
+            unit: " 300 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Biodor Tomato Paste 300 g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 670,
+            name: "  رب طاووس",
+            price:	550000,
+            unit: "   70 غ     ",
+            category: "food",
+            image: "images/foodstuffs/Tawous Tomato Paste 70g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 671,
+            name: " رب طاووس ",
+            price:	220000,
+            unit: " 400 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Tawous Tomato Paste 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 672,
+            name: "  رب مروة ",
+            price:	110000,
+            unit: "  400 غ     ",
+            category: "food",
+            image: "images/foodstuffs/Marwa Tomato Paste 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 673,
+            name: " بومي    ",
+            price:	140000,
+            unit: " 500 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Pomi 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 674,
+            name: "  لوتس مرطبان",
+            price:	380000,
+            unit: "  400 غ     ",
+            category: "food",
+            image: "images/foodstuffs/Lotus jar 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 675,
+            name: " بومي    ",
+            price:	250000,
+            unit: " 510 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Deroni peanut butter 510g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 676,
+            name: "  جيستات شوكولا  ",
+            price:	360000,
+            unit: "  800 غ     ",
+            category: "food",
+            image: "images/foodstuffs/Gestat Chocolate 800g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 677,
+            name: " شوكولا دانوي     ",
+            price:	300000,
+            unit: " 350 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Danway Chocolate 350g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 678,
+            name: "    نيوتيلا مرطبان  ",
+            price:	700000,
+            unit: "  750 غ     ",
+            category: "food",
+            image: "images/foodstuffs/Nutella jar 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 679,
+            name: " نيوتيلا     ",
+            price:	360000,
+            unit: " 350 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Nutella 350g.png",
+            pictureClass: "cleaning-picture"
         }
+
+
 
 
 
