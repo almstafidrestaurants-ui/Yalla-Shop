@@ -185,7 +185,7 @@ if (moreCategoriesButton) {
             name: "جوانح  ",
             price: "250000",
             unit: "1ك",
-            image: "images/Wings.png"
+            image: "images/poultry/Wings.png"
         },
         {
             name: "سفاين   ",
@@ -4633,7 +4633,7 @@ function createYallaWhatsAppInvoice({
             price: 70000,
             unit: "1ك",
             category: "vegetable",
-             image: "images/zucchini.png",
+             image: "images/fruit/zucchini.png",
         },
                 {
             id: 1008,
@@ -4713,7 +4713,7 @@ function createYallaWhatsAppInvoice({
             price: 570000,
             unit: "شوال",
             category: "vegetable",
-             image: "images/Sack potatoes.png",
+             image: "images/fruit/Sack potatoes.png",
         },
                    {
             id: 1018,
