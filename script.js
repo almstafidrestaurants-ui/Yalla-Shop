@@ -5155,6 +5155,465 @@ gharibGrid.appendChild(card);
             category: "food",
             image: "images/foodstuffs/High-quality broad green lentils.png",
             pictureClass: "cleaning-picture"
+        },
+         {
+             id: 801,
+            name: " رز مصري الجودة ",
+            price:	115000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Egyptian Rice, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 802,
+            name: " رز بسمتي الجودة ",
+            price:	200000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Basmati rice, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 803,
+            name: " رز امركي الجودة ",
+            price:	110000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/American-quality rice, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 804,
+            name: " رد الجودة ايطالي ",
+            price:	200000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Italian-quality rice.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 805,
+            name: " ترمس حلو دعبول",
+            price:	140000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul Sweet Lupini Beans, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 806,
+            name: " رز مصري دعبول",
+            price:	80000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul Egyptian Rice, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 807,
+            name: " بسمتي ديروني",
+            price:	790000,
+            unit: "   4 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Deirouni Basmati Rice, 4kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 808,
+            name: " بسمتي ديروني",
+            price:	160000,
+            unit: "   800 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Deirouni Basmati Rice, 800g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 809,
+            name: " بسمتي ديروني",
+            price:	770000,
+            unit: "   4 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Abu Rashid Basmati 4 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 810,
+            name: " ابو راشد بسمتي ",
+            price:	160000,
+            unit: "   800 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Abu Rashid Basmati 800 g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 811,
+            name: " برغل طراد",
+            price:	90000,
+            unit: "   1 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Trad Bulgur (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 812,
+            name: " برغل الجودة ",
+            price:	110000,
+            unit: "   800 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Bulgur (900 g).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 813,
+            name: " قمح مقشور طراد ",
+            price:	80000,
+            unit: "    ",
+            category: "food",
+            image: "images/foodstuffs/Hulled wheat (Trad brand).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 814,
+            name: " طحين اكسترا الجودة",
+            price:	90000,
+            unit: "   1 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Extra-quality flour (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 815,
+            name: " ملح هيمالايا الجودة ",
+            price:	180000,
+            unit: "    ",
+            category: "food",
+            image: "images/foodstuffs/Himalayan salt (premium quality).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 816,
+            name: " طحين ذرة الجودة",
+            price:	100000,
+            unit: "   700 غ",
+            category: "food",
+            image: "images/foodstuffs/Corn flour (premium quality) 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 817,
+            name: " طحين اسمر الجودة",
+            price:	100000,
+            unit: "   750 غ ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Whole Wheat Flour 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 818,
+            name: " شوفان طبيعي الجودة  ",
+            price:	200000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Quality Natural Oats.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 819,
+            name: " سكر اسمر الجودة",
+            price:	200000,
+            unit: "   900 غ ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Brown Sugar 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 820,
+            name: " بزر كتان الجودة ",
+            price:	200000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Flax Seeds.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 821,
+            name: " ملح الجودة ",
+            price:	25000,
+            unit: "  1 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Quality salt (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 822,
+            name: " طحين الفورنو",
+            price:	65000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Forno flour.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 823,
+            name: " سميد الجودة",
+            price:	130000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Quality semolina.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 824,
+            name: " زيت وردة ",
+            price:	1400000,
+            unit: " 6 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Warda oil (6 liters).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 825,
+            name: " بهارات الاصيلة   ",
+            price:	50000,
+            unit: " ظرف  ",
+            category: "spices",
+            image: "images/foodstuffs/Al-Aseela spices (sachet).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 826,
+            name: " زيت مازولا دوار",
+            price:	600000,
+            unit: " 1.5 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Mazola sunflower oil (1.5 liters).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 827,
+            name: "زيت عافية دوار  ",
+            price:	680000,
+            unit: " 2.2 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Afia Sunflower Oil 2.2 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 828,
+            name: " زيت ديروني دوار ",
+            price:	180000,
+            unit: " 850 غ ",
+            category: "food",
+            image: "images/foodstuffs/Derouni Sunflower Oil 850g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 829,
+            name: "  زيت مازولا دوار     ",
+            price:	1800000,
+            unit: " 5 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Mazola Sunflower Oil 5 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 830,
+            name: " زيت زير",
+            price:	160000,
+            unit: " 825 غ ",
+            category: "food",
+            image: "images/foodstuffs/Zeer Oil 825g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 831,
+            name: "  زيت مازولا دوار    ",
+            price:	2880000,
+            unit: " 9 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Mazola sunflower oil, 9 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 832,
+            name: " زيت مازولا دوار ",
+            price:	1170000,
+            unit: "  3 ليتر ",
+            category: "food",
+            image: "images/foodstuffs/Mazola sunflower oil, 3 liters.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 833,
+            name: " زيت ميراسول  دوار   ",
+            price:	850000,
+            unit: " 5 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Mirasol Sunflower Oil.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 834,
+            name: " سمنة البقرة الحلوب ",
+            price:	2295000,
+            unit: "  1 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Al-Baqara Al-Haloub Ghee (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 835,
+            name: " سمنة رامي فيجتال  ",
+            price:	1800000,
+            unit: " 3 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Rami Vegetal Ghee 3 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 836,
+            name: " سمنة رامي فيجتال",
+            price:	945000,
+            unit: "  1.5 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Rami Vegetal Ghee 1.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 837,
+            name: " سمنة مازولا ",
+            price:	1125000,
+            unit: " 2 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Mazola Ghee 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 838,
+            name: "  سمنة افت ",
+            price:	590000,
+            unit: "  2 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Afet Ghee 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 839,
+            name: " سممة اريج",
+            price:	670000,
+            unit: " 2 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Areej Ghee 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 840,
+            name: "  سمنة هانم ",
+            price:	400000,
+            unit: "  1.5 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Hanem Ghee 1.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 841,
+            name: " سمنة كريستال",
+            price:	360000,
+            unit: " 1.5 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Crystal Ghee 1.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 842,
+            name: " سمنة روابي",
+            price:	360000,
+            unit: "  1.5 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Rawabi Ghee 1.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 843,
+            name: " سمنة ذهب ",
+            price:	1260000,
+            unit: " 1 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Gold Ghee (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 844,
+            name: " سمنة قوت",
+            price:	370000,
+            unit: "  1.5 كيلو",
+            category: "food",
+            image: "images/foodstuffs/Qoot Ghee (1.5 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 845,
+            name: "برميل رامي فيجيتال ",
+            price:	4950000,
+            unit: " 12.5 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Rami Vegetable Drum 12.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 846,
+            name: " برميل رامي اخضر",
+            price:	4320000,
+            unit: "  12.5 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Rami Green Drum 12.5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 847,
+            name: "سمنة هانم     ",
+            price:	2430000,
+            unit: " 12 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Samna Hanem (12 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 848,
+            name: "سمنة قوت ",
+            price: 2330000,
+            unit: "  11 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Qoot Ghee (11 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 849,
+            name: "سمنة روابي       ",
+            price:	2070000,
+            unit: " 11 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Rawabi Ghee 11 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 850,
+            name: "سمنة كريستال    ",
+            price: 2250000,
+            unit: "  11 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Crystal Ghee 11 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 851,
+            name: "ورق عنب الحكم      ",
+            price: 300000,
+            unit: "  1 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Hakam Grape Leaves, 1 kg.png",
+            pictureClass: "cleaning-picture"
         }
     ];
 
