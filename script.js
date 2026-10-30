@@ -4066,12 +4066,1096 @@ gharibGrid.appendChild(card);
             category: "food",
             image: "images/foodstuffs/Nutella 350g.png",
             pictureClass: "cleaning-picture"
+        },
+{
+             id: 680,
+            name: "    بوبنز كيس    ",
+            price:	100000,
+            unit: "       ",
+            category: "food",
+            image: "images/foodstuffs/Popins bag.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 681,
+            name: " مايونيز مازولا     ",
+            price:	650000,
+            unit: "   1 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Mazola Mayonnaise (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 682,
+            name: "   مايونيز مازولا   ",
+            price:	350000,
+            unit: "   500 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Mazola Mayonnaise 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 683,
+            name: " مايونيز مازولا     ",
+            price:	250000,
+            unit: "   250 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Mazola Mayonnaise 250g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 684,
+            name: "   مايونيز بويدور    ",
+            price:	270000,
+            unit: "   500 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Boidor Mayonnaise 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 685,
+            name: " مايونيز بويدور      ",
+            price:	160000,
+            unit: "   250 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Boidor Mayonnaise 250g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 686,
+            name: "   مايونيز ميا     ",
+            price:	120000,
+            unit: "   450 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Mia Mayonnaise 450ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 687,
+            name: " مايونيز  بلان سوليه لايت      ",
+            price:	310000,
+            unit: "   250 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Blanc Soleil Light Mayonnaise 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 688,
+            name: "   مايونيز ديروني      ",
+            price:	220000,
+            unit: "   500 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Deroni Mayonnaise 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 689,
+            name: " مايونيز بلان سوليه      ",
+            price:	190000,
+            unit: "   250 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Blanc Soleil Mayonnaise 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 690,
+            name: "  خردل ميا     ",
+            price:	100000,
+            unit: "   260 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Mia Mustard 260g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 691,
+            name: " مايونيز ميا   ",
+            price:	100000,
+            unit: "  300 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Mia Mayonnaise 300ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 692,
+            name: "  خردل بويدور ",
+            price:	185000,
+            unit: "   310 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Poydor Mustard 310g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 693,
+            name: " برغر صوص بويدور  ",
+            price:	320000,
+            unit: "   515 مل ",
+            category: "food",
+            image: "images/foodstuffs/Poydor Burger Sauce 515ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 694,
+            name: "  بويدور صلصة البافلو الحار    ",
+            price:	300000,
+            unit: "     ",
+            category: "food",
+            image: "images/foodstuffs/Poidor Buffalo Hot Sauce.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 695,
+            name: " بويدور تشيلي ",
+            price:	270000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Poidor Chili.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 696,
+            name: " كاتشاب بويدور",
+            price:	140000,
+            unit: "   350 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Poidor Ketchup 350g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 697,
+            name: " باربكيو صوص بويدور ",
+            price:	190000,
+            unit: "   350 غ ",
+            category: "food",
+            image: "images/foodstuffs/Poidor BBQ Sauce 350g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 698,
+            name: " كاتشاب اكسترا ",
+            price:	190000,
+            unit: "   800 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Extra Ketchup 800g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 699,
+            name: " كاتشاب الجودة  ",
+            price:	120000,
+            unit: "   510 غ ",
+            category: "food",
+            image: "images/foodstuffs/Quality Ketchup 510g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 700,
+            name: " كاتشاب اكسترا زجاج ",
+            price:	70000,
+            unit: "   340 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Extra Ketchup Glass 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 701,
+            name: " الجودة بيبي كورن ",
+            price:	160000,
+            unit: "   425 غ ",
+            category: "food",
+            image: "images/foodstuffs/Baby Corn Quality 425g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 702,
+            name: " الجودة ذرة حلوة  ",
+            price:	100000,
+            unit: "   340 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Quality Sweet Corn 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 703,
+            name: " ذرة ديروني",
+            price:	120000,
+            unit: "   340 غ ",
+            category: "food",
+            image: "images/foodstuffs/Deroni Corn 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 704,
+            name: " ذرة ادم ",
+            price:	70000,
+            unit: "   340 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Quality Sweet Corn 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 705,
+            name: " شرائح اناناس سلام ",
+            price:	150000,
+            unit: "    ",
+            category: "food",
+            image: "images/foodstuffs/Adam Corn 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 706,
+            name: " ديلي فواكه مشكلة ",
+            price:	145000,
+            unit: "   420 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Deli Mixed Fruits 425g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 707,
+            name: " الامين فواكه مشكلة",
+            price:	120000,
+            unit: "  400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Amin Mixed Fruits 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 708,
+            name: " كونتي فواكه مشكلة",
+            price:	140000,
+            unit: "   425 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Conti Mixed Fruits 425g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 709,
+            name: " فاصولياء داكنة شتورة ",
+            price:	90000,
+            unit: "  400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Dark Beans, 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 710,
+            name: " محراث شتورة بازيلا سادة ومع جزر",
+            price:	50000,
+            unit: "  400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Peas (plain or with carrots).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 711,
+            name: " حمص مطحون شتورة غاردن",
+            price:	60000,
+            unit: "  430 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Garden Ground Chickpeas 430g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 712,
+            name: " حمص مع فول شتورة غاردن ",
+            price:	65000,
+            unit: "  475 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Garden Chickpeas with Fava Beans 475g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 713,
+            name: " فول مدمس شتورة غاردن ",
+            price:	45000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Garden Fava Beans (Foul Medames).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 714,
+            name: " حمص حب شتورة ",
+            price:	50000,
+            unit: "  400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Chickpeas 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 715,
+            name: " حمص مطحون محراث شتورة ",
+            price:	55000,
+            unit: "    400 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Ground Chickpeas (Hummus) 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 716,
+            name: " فول مدمس شتورة ",
+            price:	40000,
+            unit: "  400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Fava Beans (Foul Medames) 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 717,
+            name: " اندومي كباية ",
+            price:	55000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Shtoura Ground Chickpeas (Hummus) 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 718,
+            name: " اندومي خضار سعودي",
+            price:	20000,
+            unit: "     ",
+            category: "food",
+            image: "images/foodstuffs/Indomie cup.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 719,
+            name: " اندومي دجاج ",
+            price:	25000,
+            unit: "      ",
+            category: "food",
+            image: "images/foodstuffs/Indomie Chicken.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 720,
+            name: " كبيس حر المروج",
+            price:	25000,
+            unit: "   1 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Al-Murooj Hot Pickles 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 721,
+            name: " كبي مقتة المروج",
+            price:	230000,
+            unit: "     1 كيلو    ",
+            category: "food",
+            image: "images/foodstuffs/Kabi Maqta (1 kg).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 722,
+            name: " زيتون اسود المروج",
+            price:	300000,
+            unit: "   1 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Al-Murooj Black Olives (pitted).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 723,
+            name: " زيتون اسود الجودة ",
+            price:	360000,
+            unit: "     1 كيلو    ",
+            category: "food",
+            image: "images/foodstuffs/Black olives (premium quality), 1 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 724,
+            name: " زيتون اخضر الجودة ",
+            price:	360000,
+            unit: "   1 كيلو   ",
+            category: "food",
+            image: "images/foodstuffs/Green olives (premium quality), 1 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 725,
+            name: " مكدوس ليبانون غاردن",
+            price:	420000,
+            unit: "     600 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Lebanon Garden Makdous 600g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 726,
+            name: " مكدوس ليبانون غاردن",
+            price:	630000,
+            unit: "  1000 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Lebanon Garden Makdous 1000g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 727,
+            name: " كبيس لفت ليبانون غاردن   ",
+            price:	180000,
+            unit: "     600 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Lebanon Garden Pickled Turnips 600g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 728,
+            name: " مربى مشمش السهل الاخضر ",
+            price:	300000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Sahl Al-Akhdar Apricot Jam 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 729,
+            name: " مربى تين ليبانون غاردن  ",
+            price:	180000,
+            unit: "    380 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Lebanon Garden Fig Jam 380g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 730,
+            name: " مربى فريز الجودة ",
+            price:	250000,
+            unit: "  450 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Strawberry Jam 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 731,
+            name: " طحينة قلعجية  ",
+            price:	230000,
+            unit: "    450 غ   ",
+            category: "food",
+            image: "images/foodstuffs/Qalaajiya Tahini 450 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 732,
+            name: " طحينة قلعجية  ",
+            price:	440000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Qalaajiya Tahini 900 grams.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 733,
+            name: " طحينة قلعجية  ",
+            price:	925000,
+            unit: "   2 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Qalajiya Tahini 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 734,
+            name: " طحينة قلعجية  ",
+            price:	790000,
+            unit: "  2 كيلو    ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Tahini 2 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 735,
+            name: " طحينة علم الدين ",
+            price:	1650000,
+            unit: "   4 كيلو  ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Tahini 4 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 736,
+            name: " طحينة قلعجية  ",
+            price:	210000,
+            unit: "  450 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Tahini 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 737,
+            name: " طحينة علم الدين ",
+            price:	360000,
+            unit: "  900 غ ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Tahini 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 738,
+            name: " حلاوة قلعجية سكرية  ",
+            price:	180000,
+            unit: "  450 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Qalaajiya Sukariya Halva 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 739,
+            name: " حلاوة قلعجية شوشية ",
+            price:	190000,
+            unit: "  450 غ ",
+            category: "food",
+            image: "images/foodstuffs/Shushiya Qalaajiya Halva 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 740,
+            name: " حلاوة قلعجية   ",
+            price:	360000,
+            unit: "  900 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Qalaajiya Halva 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 741,
+            name: " حلاوة علم الدين فستق",
+            price:	270000,
+            unit: "  450 غ ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Halva with Pistachios, 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 742,
+            name: " حلاوة علم الدين فستق  ",
+            price:	480000,
+            unit: "  900 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Halva with Pistachios, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 743,
+            name: " حلاوة علم الدين سكرية",
+            price:	160000,
+            unit: "  450 غ ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Halva with Pistachios, 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 744,
+            name: " حلاوة علم الدين سكرية ",
+            price:	300000,
+            unit: "  900 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Halawa (Sukariya) 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 745,
+            name: " حلاوة دعبول",
+            price:	145000,
+            unit: "  400 غ ",
+            category: "food",
+            image: "images/foodstuffs/Alam El-Din Halva with Pistachios, 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 746,
+            name: " دبس خرنوب ",
+            price:	290000,
+            unit: "    1 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Carob Molasses 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 747,
+            name: " حلاوة دعبول",
+            price:	145000,
+            unit: "  400 غ ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul Halva 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 748,
+            name: " دبس خرنوب ",
+            price:	290000,
+            unit: "    1 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Carob Molasses 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 749,
+            name: " سردين بويدور",
+            price:	90000,
+            unit: "   ",
+            category: "food",
+            image: "images/foodstuffs/Sardines Boujdor.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 750,
+            name: " سردين ادم",
+            price:	60000,
+            unit: "     ",
+            category: "food",
+            image: "images/foodstuffs/Adam's sardines.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 751,
+            name: " سردين boujdor",
+            price:	90000,
+            unit: "     ",
+            category: "food",
+            image: "images/foodstuffs/Sardines Boujdor.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 752,
+            name: " تونا وايت بيب ",
+            price:	390000,
+            unit: "  425 غ   ",
+            category: "food",
+            image: "images/foodstuffs/White Tuna (Big Can) 425g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 753,
+            name: " تونا وايت بل ",
+            price:	180000,
+            unit: "   185 غ  ",
+            category: "food",
+            image: "images/foodstuffs/White Tuna (Small Can) 185g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 754,
+            name: " تونا وايت بيب ",
+            price:	390000,
+            unit: "  425 غ   ",
+            category: "food",
+            image: "images/foodstuffs/White Tuna (Big Can) 425g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 755,
+            name: " تونا وايت بل ",
+            price:	180000,
+            unit: "   185 غ  ",
+            category: "food",
+            image: "images/foodstuffs/White Tuna (Small Can) 185g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 756,
+            name: " تونا سيبلو",
+            price:	150000,
+            unit: "   185 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Tuna in oil 185g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 757,
+            name: " تونا ديروني",
+            price:	140000,
+            unit: "   185 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Deroni Tuna 185g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 758,
+            name: " تونا جرسي ",
+            price:	90000,
+            unit: "   160 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Jersey Tuna 160g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 759,
+            name: "  مرتديلا هنا ",
+            price:	90000,
+            unit: "  200 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Hana Mortadella 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 760,
+            name: "  مرتديلا هنا",
+            price:	130000,
+            unit: "   380 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Hana Mortadella 380g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 761,
+            name: "  مرتديلا منارة شتورة ",
+            price:	160000,
+            unit: "  850 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Manara Chtaura Mortadella 850g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 762,
+            name: "  مرتديلا الراعي زيتون  ",
+            price:	500000,
+            unit: "   840 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Ra’i Mortadella with Olives 840g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 763,
+            name: "  مرتديلا الراعي   ",
+            price:	450000,
+            unit: "   840 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Ra’i Mortadella with Olives 840g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 764,
+            name: "  مرتديلا الراعي بقر   ",
+            price:	180000,
+            unit: "   340 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Ra'i Beef Mortadella 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 765,
+            name: "  مرتديلا الراعي بقر   ",
+            price:	125000,
+            unit: "   200 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Ra'i Beef Mortadella 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 766,
+            name: " مرتديلا التغذية دجاج   ",
+            price:	85000,
+            unit: "   200 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Taghziya Chicken Mortadella 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 767,
+            name: " هوت دوغ التغذية ",
+            price:	190000,
+            unit: "     ",
+            category: "food",
+            image: "images/foodstuffs/Taghziya Hot Dogs.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 768,
+            name: " مرتديلا التغذية بقر  ",
+            price:	140000,
+            unit: "   340 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Taghthiya Beef Mortadella 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 769,
+            name: " مرتديلا التغذية بقر  ",
+            price:	90000,
+            unit: "  200 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Taghthiya Beef Mortadella 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 770,
+            name: "مرتديلا التغذية بقر ",
+            price:	450000,
+            unit: "   840 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Taghthiya Beef Mortadella 840g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 771,
+            name: " مرتديلا تغذية دجاج ",
+            price:	400000,
+            unit: "  840 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Taghthiya Chicken Mortadella 840g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 772,
+            name: "  بوردون بقر    ",
+            price:	270000,
+            unit: "   340 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Bourdon Beef 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 773,
+            name: " زوان لتشون دجاج مع زيتون",
+            price:	350000,
+            unit: "  340 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Zwan Chicken Luncheon Meat with Olives.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 774,
+            name: " زوان بقر  ",
+            price:	310000,
+            unit: "   340 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Zwan Beef 340g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 775,
+            name: " زوان بقر ",
+            price:	700000,
+            unit: "  850 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Zwan Beef 850g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 776,
+            name: "  زعتر احمر واخضر ممتاز ",
+            price:	300000,
+            unit: "   كيلو  1  ",
+            category: "food",
+            image: "images/foodstuffs/premium red and green za'atar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 777,
+            name: " يت ريتون تيفو",
+            price:	280000,
+            unit: "  800 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Tivo olive oil.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 778,
+            name: "  دبس رمان يمامة",
+            price:	300000,
+            unit: "   750 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Yamama Pomegranate Molasses 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 779,
+            name: " خل ابيض الجودة",
+            price:	45000,
+            unit: " 1 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda White Vinegar 1 Liter.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 780,
+            name: "  اكل قطط ",
+            price:	75000,
+            unit: "    ",
+            category: "food",
+            image: "images/foodstuffs/Cat food.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 781,
+            name: " زيت زيتون المونة الفاخر ",
+            price:	230000,
+            unit: " 500 مل    ",
+            category: "food",
+            image: "images/foodstuffs/Premium Al-Mouna olive oil (500ml).png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 782,
+            name: " يمامة صويا صوص",
+            price:	150000,
+            unit: "  300 مل  ",
+            category: "food",
+            image: "images/foodstuffs/Yamama Soy Sauce 300ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 783,
+            name: " حامض الليمون الحودة",
+            price:	85000,
+            unit: " 1 ليتر  ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Lemon Acid 1 Liter.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 784,
+            name: " سكر ناعم دعبول  ",
+            price:	60000,
+            unit: "  500 غ  ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul fine sugar 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 785,
+            name: " سكر ناعم دعبول  ",
+            price:	300000,
+            unit: " 5 كيلو    ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul sugar 5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 786,
+            name: " ديروني رز بالدو ",
+            price:	1000000,
+            unit: " 5 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Add me for Rizz by Do.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 787,
+            name: " سكر ناعم دعبول  ",
+            price:	60000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul sugar 5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 788,
+            name: " رز مصري ديروني",
+            price:	400000,
+            unit: " 5 كيلو ",
+            category: "food",
+            image: "images/foodstuffs/Dirouni Egyptian Rice, 5 kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 789,
+            name: " فريكة الجودة ",
+            price:	340000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Freekeh, 900 g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 790,
+            name: " كرتونة بيض اكروم صفار بلدي ",
+            price:	350000,
+            unit: "  ",
+            category: "food",
+            image: "images/foodstuffs/A carton of eggs.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 791,
+            name: "سمسم محمص الجودة",
+            price:	270000,
+            unit: "  500 غ    ",
+            category: "food",
+            image: "images/foodstuffs/High-quality toasted sesame seeds.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 792,
+            name: " فاصوليا رفيعة الجودة",
+            price:	155000,
+            unit: " 500 غ ",
+            category: "food",
+            image: "images/foodstuffs/High-quality thin beans, 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 793,
+            name: "  مغربية دعبول  ",
+            price:	125000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Daaboul Moghrabieh 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 794,
+            name: "  عدس مقشور الجودة ",
+            price:	150000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Quality Peeled Lentils 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 795,
+            name: "  الجودة حمص كندي ",
+            price:	150000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Canadian Chickpeas 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 796,
+            name: " شعيرية الجودة",
+            price:	60000,
+            unit: " 400 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Vermicelli 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 797,
+            name: "  ذرة بوشار الجودة ",
+            price:	130000,
+            unit: "  900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Premium Popcorn Kernels, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 798,
+            name: " فاصولياء حمرا الجودة",
+            price:	300000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Al-Jawda Red Kidney Beans 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 799,
+            name: " حمص حب فحلي الجودة ",
+            price:	250000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/Premium Whole Chickpeas, 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+            {
+             id: 800,
+            name: " عدس اخضر عريض الجودة",
+            price:	160000,
+            unit: " 900 غ    ",
+            category: "food",
+            image: "images/foodstuffs/High-quality broad green lentils.png",
+            pictureClass: "cleaning-picture"
         }
-
-
-
-
-
     ];
 
     let activeMarketFilter = "all";
