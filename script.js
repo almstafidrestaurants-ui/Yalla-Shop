@@ -5614,6 +5614,537 @@ gharibGrid.appendChild(card);
             category: "food",
             image: "images/foodstuffs/Al-Hakam Grape Leaves, 1 kg.png",
             pictureClass: "cleaning-picture"
+        },
+        {
+             id: 852,
+            name: "كريسبي تنمية       ",
+            price: 1009000,
+            unit: " 900 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tanmiah Crispy 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 853,
+            name: "     كريسبي تنمية       ",
+            price: 600000,
+            unit: "  500 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tanmiah Crispy 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+  {
+             id: 854,
+            name: "ناغتس تنمية         ",
+            price: 554000,
+            unit: " 900 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tanmiah Nuggets 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 855,
+            name: "    ناغتس تنمية      ",
+            price: 326000,
+            unit: "  500 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tanmiah Nuggets 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 856,
+            name: "كريسبي ويلكو           ",
+            price: 830000,
+            unit: " 750 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Wilko Crispy 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 857,
+            name: "      ناغتس ويلكو      ",
+            price: 500000,
+            unit: "  750 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Wilko Nuggets 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 858,
+            name: "  برغر تنمية دجاج بالكعك            ",
+            price: 700000,
+            unit: " 900 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tanmiah Chicken Burger with Buns 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 859,
+            name: "      برغر بقر        ",
+            price: 580000,
+            unit: "  860 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Beef Burgers 860g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 860,
+            name: "   كريسبي تيتا نورا            ",
+            price: 510000,
+            unit: " 700 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tita Noura Crispy 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 861,
+            name: "     بوب كورن تيتا نورا        ",
+            price: 350000,
+            unit: "  700 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tita Noura Popcorn 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 862,
+            name: "   ناغتس تيتا نورا      ",
+            price: 300000,
+            unit: " 700 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tita Noura Nuggets 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 863,
+            name: "    زينجر تيتا نورا     ",
+            price: 510000,
+            unit: "  700 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tita Noura Zinger 700g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 864,
+            name: "   برغر تيب توب    ",
+            price: 300000,
+            unit: " 450 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tip Top Burgers 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 865,
+            name: "   ناغتس تيب توب    ",
+            price: 490000,
+            unit: "  900 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Tip Top Nuggets 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 866,
+            name: "    كريسبي تيب توب   ",
+            price: 645000,
+            unit: "  900 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Crispy Tip Top 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 867,
+            name: " قريدس المحيط    ",
+            price: 585000,
+            unit: " 400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Ocean Shrimp 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 868,
+            name: "  سمك عرموط    ",
+            price: 405000,
+            unit: "  1 كيلو ",
+            category: "IceCream",
+            image: "images/IceCream/Catfish 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 869,
+            name: "  كريسبي فوديز ",
+            price: 630000,
+            unit: "  750 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Foodies Crispy 750g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 870,
+            name: " ناغتس فوديز   ",
+            price: 280000,
+            unit: " 500 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Foodies Nuggets 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 871,
+            name: " فوديز سكالوب  ",
+            price: 470000,
+            unit: "  450 غ",
+            category: "IceCream",
+            image: "images/IceCream/Foodies Scallops 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 872,
+            name: " قريدس فوديز",
+            price: 900000,
+            unit: " 400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Foodies Shrimp 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 873,
+            name: " بطاطا  ",
+            price: 220000,
+            unit: "   ",
+            category: "IceCream",
+            image: "images/IceCream/Potatoes.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 874,
+            name: " فول فوديز ",
+            price: 130000,
+            unit: "  400 غ",
+            category: "IceCream",
+            image: "images/IceCream/Foodies Fava Beans 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 875,
+            name: " بامية زيرو  ",
+            price: 200000,
+            unit: " 400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Zero' (extra-small) okra 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 876,
+            name: " خضروات مشكلة   ",
+            price: 140000,
+            unit: "  400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Mixed vegetables 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 877,
+            name: " ملوخية مفرومة",
+            price: 90000,
+            unit: "  400 غ",
+            category: "IceCream",
+            image: "images/IceCream/Minced molokhia (jute mallow) 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 878,
+            name: " بازيلا مونتانا ",
+            price: 180000,
+            unit: " 400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Montana Peas 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 879,
+            name: " ملوخية   ",
+            price: 200000,
+            unit: "  400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Molokhia 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 880,
+            name: " سبانخ مفرومة  ",
+            price: 135000,
+            unit: "  400 غ",
+            category: "IceCream",
+            image: "images/IceCream/Chopped Spinach 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 881,
+            name: " فراولة ",
+            price: 150000,
+            unit: " 400 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Strawberries 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 882,
+            name: " عجينة بصمة عثملية   ",
+            price: 240000,
+            unit: "  500 غ  ",
+            category: "IceCream",
+            image: "images/IceCream/Othmaliyeh dough 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 883,
+            name: "عجينة الشيخ لحمة بعجين  ",
+            price: 500000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Al-Sheikh dough for Lahm bi-Ajeen (meat pie).png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 884,
+            name: " شيش برك فوزي  ",
+            price: 140000,
+            unit: "   ",
+            category: "IceCream",
+            image: "images/IceCream/Fawzi Shish Barak.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 885,
+            name: " رقائق لحمة بعجين مربعة  ",
+            price: 160000,
+            unit: "     ",
+            category: "IceCream",
+            image: "images/IceCream/Square-shaped Lahm bi Ajeen (meat pastry) sheets.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 886,
+            name: "    عجينة كنافة     ",
+            price: 250000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Kunafa dough.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 887,
+            name: " رقاقات سمبوسك ",
+            price: 200000,
+            unit: "   ",
+            category: "IceCream",
+            image: "images/IceCream/Samosa wrappers.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 888,
+            name: " رقاقات مثلثة فوزي ",
+            price: 200000,
+            unit: "     ",
+            category: "IceCream",
+            image: "images/IceCream/Fawzi triangular wrappers.png",
+            pictureClass: "cleaning-picture"
+        },
+        {
+             id: 889,
+            name: "    ايس كريم بار   ",
+            price: 270000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Ice cream bar.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 890,
+            name: "    دولسي   ",
+            price:  70000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Dulce.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 891,
+            name: "   بوظة غلاكسي  ",
+            price: 360000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Galaxy ice cream.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 892,
+            name: "   ايس كوين  ",
+            price: 60000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Ice Queen.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 893,
+            name: "    دولسي   ",
+            price:  150000,
+            unit: "  ",
+            category: "IceCream",
+            image: "images/IceCream/Dulce12.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 894,
+            name: "    كاجو مكسر   ",
+            price:  400000,
+            unit: " 1 كيلو ",
+            category: "Snacks",
+            image: "images/Snacks/Broken cashews 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 895,
+            name: "    كاجو فلقة   ",
+            price:  1000000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Split cashews 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 896,
+            name: "    زبيب اشقر   ",
+            price:  540000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Golden raisins 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 897,
+            name: "  زبيب اسود   ",
+            price:  500000,
+            unit: " 1 كيلو ",
+            category: "Snacks",
+            image: "images/Snacks/Black raisins 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 898,
+            name: "  جوز فراشة   ",
+            price:  780000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Walnut halves (butterfly) 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 899,
+            name: "    لوز صنوبري  ",
+            price:  1125000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Pine-nut-shaped almonds 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 900,
+            name: "   لوز بالقشر  ",
+            price:  1080000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Almonds (in shell) 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 901,
+            name: "   قلوبات  ",
+            price:  1500000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Assorted nuts (shelled) 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 902,
+            name: "  مخلوطة  ",
+            price:  400000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/Mixed nuts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 903,
+            name: "    مخلوطة اكسترا ",
+            price:  1035000 ,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/kg Extra Mixed [Nuts].png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 904,
+            name: "   كاجو محمص  ",
+            price:  320000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/kg roasted cashews.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 905,
+            name: "  كيلو مخلوطة مشكل  عادي  ",
+            price:  400000,
+            unit: " 1 كيلو  ",
+            category: "Snacks",
+            image: "images/Snacks/kg standard mixed nuts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 906,
+            name: "  قلوبات مشكلة ",
+            price:  450000 ,
+            unit: "  ",
+            category: "Snacks",
+            image: "images/Snacks/Assorted hearts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 907,
+            name: "   كاجو محمص  ",
+            price:  320000,
+            unit: " 200 غ  ",
+            category: "Snacks",
+            image: "images/Snacks/kg roasted cashews.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 908,
+            name: "  قلوبات نية ",
+            price:  370000,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Snacks/Raw hearts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 909,
+            name: "   مكسرات سوبر اكسترا  ",
+            price:  280000,
+            unit: "   ",
+            category: "Snacks",
+            image: "images/Snacks/Super Extra Nuts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 910,
+            name: "  مكسرات  مشكل عادي",
+            price:  200000,
+            unit: "    ",
+            category: "Snacks",
+            image: "images/Snacks/Regular Mixed Nuts.png",
+            pictureClass: "cleaning-picture"
         }
     ];
 
