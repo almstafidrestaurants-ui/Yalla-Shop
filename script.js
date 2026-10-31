@@ -6145,6 +6145,1275 @@ gharibGrid.appendChild(card);
             category: "Snacks",
             image: "images/Snacks/Regular Mixed Nuts.png",
             pictureClass: "cleaning-picture"
+        },
+ {
+             id: 911,
+            name: "  لبن ليبان ليه",
+            price:  200000,
+            unit: "  1 كيلو  ",
+            category: "dairy",
+            image: "images/dairy/Liban Lah 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 912,
+            name: "   لبن ليبان ليه",
+            price:  365000,
+            unit: "  2 كيلو  ",
+            category: "dairy",
+            image: "images/dairy/Liban Lah 2kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 913,
+            name: " لبنة ليبان ليه ",
+            price:  290000,
+            unit: "  450 غ ",
+            category: "dairy",
+            image: "images/dairy/Liban Lah Labneh 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 915,
+            name: "  لبنة ليبان ليه",
+            price:  510000,
+            unit: " 900 غ ",
+            category: "dairy",
+            image: "images/dairy/Liban Layh Labneh 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 916,
+            name: "   حليب كانديا كامل الدسم",
+            price:  180000,
+            unit: "  1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Candia Full Cream Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 917,
+            name: " حليب كانديا خالي الدسم ",
+            price:  180000,
+            unit: "  1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Candia Skimmed Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 918,
+            name: "  حليب كانديا خالي من اللاكتوز ",
+            price:  210000,
+            unit: "  1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Candia Lactose-Free Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 919,
+            name: "   حليب مزارعنا ",
+            price:  140000,
+            unit: "  1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Our Farms Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 920,
+            name: " حليب خوري ",
+            price:  180000,
+            unit: "  1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Khoury Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 921,
+            name: "  حليب كانديا",
+            price:  55000,
+            unit: "   180 مل  ",
+            category: "dairy",
+            image: "images/dairy/Candia Milk 180ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 922,
+            name: "   حليب كانديا",
+            price:  40000,
+            unit: "  125 مل ",
+            category: "dairy",
+            image: "images/dairy/Candia Milk 125ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 923,
+            name: " كاندي اب",
+            price:  45000,
+            unit: "  180 مل ",
+            category: "dairy",
+            image: "images/dairy/Candy Up 180ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 925,
+            name: "  كاندي اب",
+            price:  35000,
+            unit: "   125 مل  ",
+            category: "dairy",
+            image: "images/dairy/Candy Up 125ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 925,
+            name: "   عيران كانديا  ",
+            price:  55000,
+            unit: "  250 مل ",
+            category: "dairy",
+            image: "images/dairy/Candia Ayran 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 926,
+            name: "لبن كانديا ",
+            price:  450000,
+            unit: "  2 كيلو",
+            category: "dairy",
+            image: "images/dairy/Candia Milk 2kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 927,
+            name: "  لبن كانديا  ",
+            price:  235000,
+            unit: "   1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Candia Milk 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 928,
+            name: "   لبنة كانديا  ",
+            price:  335000,
+            unit: " 450 غ",
+            category: "dairy",
+            image: "images/dairy/Candia Labneh 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 929,
+            name: "   لبنة كانديا  ",
+            price:  530000,
+            unit: "   900 غ",
+            category: "dairy",
+            image: "images/dairy/Candia Labneh 900g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 930,
+            name: "  جبنة دوبل كريم ليبان ليه ",
+            price:  250000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Liban Lay's Double Cream Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 931,
+            name: "  جبنة عكاوي ليبان ليه ",
+            price:  320000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Liban Lay's Akkawi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 932,
+            name: "  لبنة كانديا خالية من الدسم  ",
+            price:  355000,
+            unit: "   450 غ",
+            category: "dairy",
+            image: "images/dairy/Candia Fat-Free Labneh 450g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 933,
+            name: "  جبنة عكاوي لايت ليبان ليه",
+            price:  330000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Liban Light Akawi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 934,
+            name: "  جبنة حلوم ليبان ليه",
+            price:  305000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Liban Light Halloumi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 935,
+            name: " جبنة حلوم لايت ليبان ليه ",
+            price:  320000,
+            unit: "   1 كيلو  ",
+            category: "dairy",
+            image: "images/dairy/Liban Light Light Halloumi Cheese.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 936,
+            name: " عكاوي غوراني",
+            price:  855000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Ghorani Akkawi 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 937,
+            name: "  بلدية غوراني ",
+            price:  855000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Ghorani Baladi 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 938,
+            name: "حلوم غوراني",
+            price:  90000,
+            unit: "   1 كيلو  ",
+            category: "dairy",
+            image: "images/dairy/Ghorani Halloumi 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 939,
+            name: " اسطنبولي او دوبل كريم غوراني",
+            price:  585000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Gourani Istambouli (Double Cream) – 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 940,
+            name: "  لبن بقر غوراني",
+            price:  200000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Gourani Cow’s Milk Laban – 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 941,
+            name: " لبنة غوراني  ",
+            price:  220000,
+            unit: "  400 غ ",
+            category: "dairy",
+            image: "images/dairy/Gourani Labneh – 400g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 942,
+            name: " شنكليش غوراني ",
+            price:  720000,
+            unit: "  1 كيلو ",
+            category: "dairy",
+            image: "images/dairy/Gourani Shanklish 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 943,
+            name: "  حالوم بلدية ",
+            price:  540000,
+            unit: " 500 غ",
+            category: "dairy",
+            image: "images/dairy/Baladi Halloumi 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 944,
+            name: " Greek yogurt فواكه ",
+            price:  150000,
+            unit: "   ",
+            category: "dairy",
+            image: "images/dairy/Greek yogurt with fruit.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 945,
+            name: " Greek yogurt مكسرات ",
+            price:  210000,
+            unit: "   ",
+            category: "dairy",
+            image: "images/dairy/Greek yogurt with nuts.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 946,
+            name: "  قشقوان بيهار",
+            price:  810000,
+            unit: " 600 غ",
+            category: "dairy",
+            image: "images/dairy/Bihar Kashkaval 600g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 947,
+            name: " قشقوان بيهار",
+            price:  450000,
+            unit: "   600 غ ",
+            category: "dairy",
+            image: "images/dairy/Bihar Kashkaval 600g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 948,
+            name: " قشقوان كافال",
+            price:  380000,
+            unit: "  275 غ ",
+            category: "dairy",
+            image: "images/dairy/Kashkaval Kaval 275g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 949,
+            name: "  قشقوان امور ",
+            price:  390000,
+            unit: " 300 غ",
+            category: "dairy",
+            image: "images/dairy/Kashkaval Amour 300g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 950,
+            name: " زبدة اوكراني ",
+            price:  400000,
+            unit: "  1 كيلو",
+            category: "dairy",
+            image: "images/dairy/Ukrainian Butter 1kg.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 951,
+            name: " دومتي  ",
+            price:  115000,
+            unit: "  500 غ ",
+            category: "dairy",
+            image: "images/dairy/Domty 500g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 952,
+            name: "  سلايس بلان سولاي",
+            price:  180000,
+            unit: " ",
+            category: "dairy",
+            image: "images/dairy/Plain Slices (Blanc Soleil).png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 953,
+            name: " كريمة طبخ نيو بارك",
+            price:  81000,
+            unit: "   160 غ",
+            category: "dairy",
+            image: "images/dairy/New Park Cooking Cream 160g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 954,
+            name: " نيو بارك كريمة طبخ  ",
+            price:  280000,
+            unit: "  1 ليتر",
+            category: "dairy",
+            image: "images/dairy/New Park Cooking Cream 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 955,
+            name: " كريمة حلويات ",
+            price:  300000,
+            unit: " 1 ليتر ",
+            category: "dairy",
+            image: "images/dairy/Dessert Cream 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 956,
+            name: " لورباك ",
+            price:  250000,
+            unit: "   200 غ",
+            category: "dairy",
+            image: "images/dairy/Lurpak 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 957,
+            name: " زبدة بيار ",
+            price:  45000,
+            unit: "  200 غ",
+            category: "dairy",
+            image: "images/dairy/Paysan Breton Butter 200g.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 958,
+            name: " كريمة طبخ بوك",
+            price:  340000,
+            unit: " 500 مل",
+            category: "dairy",
+            image: "images/dairy/Puck Cooking Cream 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 959,
+            name: " كريمة طبخ برافو ",
+            price:  300000,
+            unit: "   500 مل ",
+            category: "dairy",
+            image: "images/dairy/Bravo Cooking Cream 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 960,
+            name: " ميلكا لوح  ",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Milka Bar.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 961,
+            name: " Abu auf protein bar",
+            price:  180000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Abu Auf Protein Bar.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 962,
+            name: " Protein crunch",
+            price:  280000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Protein Crunch.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 963,
+            name: " ساندويش  ",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Sandwich.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 964,
+            name: " كريمور",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Creamer.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 965,
+            name: " وايف اب ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Wave Up.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 966,
+            name: " Snips  ",
+            price:  15000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Snips.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 967,
+            name: " قلوبات ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Heart-shaped snacks.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 968,
+            name: " برينغلز ",
+            price:  80000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Pringles.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 969,
+            name: " برينغلز كبير  ",
+            price:  200000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Pringles Large.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 970,
+            name: " M&M ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/M&M.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 971,
+            name: " سكيتلز  ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Skittles.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 972,
+            name: " Maltesers ",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Maltesers.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 973,
+            name: " ديجستيف نبيل ",
+            price:  25000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nabil Digestive.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 974,
+            name: " Nutgestive  ",
+            price:  45000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nutgestive.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 975,
+            name: " Nutgestive chocolate  ",
+            price:  50000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nut-filled chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 976,
+            name: "  Dark chocolate Today",
+            price:  250000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Dark chocolate today.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 977,
+            name: " كيندر بوينو   ",
+            price:  80000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kinder Bueno.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 978,
+            name: " Equia  ",
+            price:  270000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Equia.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 979,
+            name: " كيندر اصابع",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kinder Fingers.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 980,
+            name: " كيندر كارد  ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kinder Card.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 981,
+            name: " Kinder joy ",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kinder Joy.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 982,
+            name: " ليون بار ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Lion Bar.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 983,
+            name: " سنيكرز اكستريم ",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Snickers Xtreme.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 984,
+            name: " سنيكرز ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Snickers.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 985,
+            name: " كيندر كريسبي",
+            price:  110000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kinder Krispy Kreme.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 986,
+            name: " Leo go",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Leo go.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 987,
+            name: " كوفي جوي ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Coffee Joy.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 988,
+            name: " هابي هيبو ",
+            price:  65000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Happy Hippo.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 989,
+            name: " توتي فروتي ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Tutti Frutti.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 990,
+            name: " نيوتيلا غو",
+            price:  150000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nutella Go.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 991,
+            name: " Ülker",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Ülker.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 992,
+            name: " هالي ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Hale.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 993,
+            name: " بيسكريم ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Biscreem.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 994,
+            name: " اونيكا",
+            price:  25000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Onika.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 995,
+            name: " Sitndip",
+            price:  180000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Sitndip.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 996,
+            name: " هالي رول ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Halle Roll.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 997,
+            name: " Twirl",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Twirl.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 998,
+            name: " Cent",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Cent.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 999,
+            name: " Kombo",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Combo.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1000,
+            name: " كيت كات شانكي",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kit Kat Chunky.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1201,
+            name: " ديمه سوفتي",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Deema Softy.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1202,
+            name: " Mars  ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mars.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1203,
+            name: " Twix ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Twix.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1204,
+            name: " Bounty ",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Bounty.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1205,
+            name: " ETi Wafe’Up Extra Cocoa  ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/ETi Wafe’Up Extra Cocoa.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1206,
+            name: " شوكو برينس ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Choco Prince.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1207,
+            name: " كيت كات دارك ",
+            price:  80000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Kit Kat Dark.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1208,
+            name: " Albeni Cappuccino ",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Albeni Cappuccino.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1209,
+            name: " البني رول ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Brown Roll.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1210,
+            name: " البيني ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Ülker Albeni Maxi.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1211,
+            name: " البني تان تان ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Brown Tan Tan.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1212,
+            name: " البني كيك",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Brown Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1213,
+            name: " ميترو ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Metro.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1214,
+            name: " اوريو ",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Oreo.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1216,
+            name: "بابلي ",
+            price:  45000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Bubble.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1217,
+            name: " ميلكا ليو ",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Milka Leo.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1218,
+            name: " كوت دور ",
+            price:  130000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Côte d'Or.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1219,
+            name: "ديجاستيف  ",
+            price:  65000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Digestive.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1220,
+            name: " كنوبر ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Knopper.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1221,
+            name: " ETi Wanted Pops Caramel",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/ETi Wanted Pops Caramel.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1222,
+            name: "Lotus Biscoff  ",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Lotus Biscoff.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1223,
+            name: " Torku Tam Digestive Biscuits ",
+            price:  40000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Torku Tam Digestive Biscuits.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1224,
+            name: " بسكويت نبيل دايجستيف ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nabil Digestive Biscuits.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1225,
+            name: "Poppins Choco Bits ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Poppins Choco Bits.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1226,
+            name: " بيسكوتو 4 ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Elegance Biscotto.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1227,
+            name: " بيسكوتو 2 ",
+            price:  20000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Biscotto 2.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1228,
+            name: "شوكو بيسكوتو ",
+            price:  15000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Choco Biscotto.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1229,
+            name: " Stars",
+            price:  20000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Stars.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1230,
+            name: " Snips",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/SnipsSS.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1231,
+            name: "  دولسي ",
+            price:  75000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Dulce.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1232,
+            name: " Doritos",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Doritos.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1233,
+            name: " لايز",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Lay's22.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1234,
+            name: "  شيتوس ",
+            price:  75000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Cheetos.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1235,
+            name: " لايز",
+            price:  275000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Lay's.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1236,
+            name: " شيتوس",
+            price:  150000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Cheeto22s.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1237,
+            name: "  ديو دوبل ",
+            price:  270000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Double duet.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1238,
+            name: " توفيكس",
+            price:  250000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Tufix.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1239,
+            name: " داريلو دارك",
+            price:  190000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Darillo Dark.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1240,
+            name: " ديو ",
+            price:  110000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/DIO.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1241,
+            name: " اديكتو براوني",
+            price:  320000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Edicto Brownie.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1242,
+            name: " بايكز براوني",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Bikes Brownie.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1243,
+            name: " Sombrero ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Sombrero.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1244,
+            name: " Adicto gold  ",
+            price:  240000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Adicto gold.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1245,
+            name: " Adicto browni",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Adicto browni.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1246,
+            name: " Adicto intense ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Adicto intense.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1247,
+            name: " Rice cakes  ",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Ricecakes.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1248,
+            name: " مارشميلو ايركو",
+            price:  250000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Airco Marshmallow.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1249,
+            name: " انغليش كيك  ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/English Cake.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1250,
+            name: " ريماس ",
+            price:  20000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Rimas.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1251,
+            name: " سناكس الزعتر المخبوزة",
+            price:  50000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Snips Double Baked Zaatar Bread Rolls.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1252,
+            name: " ناتس بالعسل والخردل ",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Knots Honey Mustard.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1253,
+            name: " توستيز بالبندورة والأعشاب ",
+            price:  20000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Toasties Tomato & Herbs.png",
+            pictureClass: "cleaning-picture"
         }
     ];
 
