@@ -1,0 +1,1 @@
+{"firestore":{"rules":"firestore.rules"},"hosting":{"public":".","ignore":["firebase.json","firestore.rules","README*","SETUP*","**/.*","**/node_modules/**"],"headers":[{"source":"/catalog.json","headers":[{"key":"Cache-Control","value":"public,max-age=3600"}]},{"source":"/firebase-config.js","headers":[{"key":"Cache-Control","value":"no-cache"}]}]}}

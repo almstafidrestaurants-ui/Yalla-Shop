@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Replace with your Firebase Authentication owner's exact UID, not email/password.
+    function owner() { return request.auth != null && request.auth.uid == 'wf1Gl3zMyEa5RO75UFHfh932dOu1'; }
+    function text(v,max) { return v is string && v.size() <= max && !v.matches('.*[<>"].*'); }
+    function valid(p,key) {
+      return p.keys().hasAll(['ysKey','id','group','category','name','price','unit','description','image','photoKey','deleted','updatedAt'])
+        && p.keys().hasOnly(['ysKey','id','group','category','name','price','unit','description','image','photoKey','deleted','updatedAt'])
+        && key.matches('[a-zA-Z0-9_-]{1,100}') && p.ysKey == key
+        && p.id is int && p.id >= 0 && p.id < 9007199254740991
+        && (p.group in ['market','vegetables','butcher','poultry','library','restaurant0'] || (p.group is string && p.group.matches('section_[a-zA-Z0-9_-]{1,80}') && exists(/databases/$(database)/documents/yallaSections/$(p.group))))
+        && text(p.name,200) && p.name.size() > 0 && text(p.unit,100) && text(p.description,250) && text(p.category,100) && p.category.size() > 0
+        && ((p.price is number && p.price >= 0 && p.price <= 1000000000000) || (p.price == null && p.group == 'restaurant0'))
+        && p.image is string && p.image.size() <= 2000
+        && (p.image == '' || p.image.matches('images/[^"<>\\\\]*') || p.image.matches('https://[^"<> ]+'))
+        && p.photoKey is string && (p.photoKey == '' || p.photoKey.matches('photo_[a-zA-Z0-9_-]+'))
+        && p.deleted is bool && p.updatedAt == request.time;
+    }
+    match /yallaProducts/{key} {
+      allow read: if true;
+      allow create: if owner() && valid(request.resource.data,key);
+      allow update: if owner() && valid(request.resource.data,key) && request.resource.data.id == resource.data.id;
+      allow delete: if owner();
+    }
+    match /yallaSections/{key} {
+      allow read: if true;
+      allow create,update: if owner()
+        && key.matches('section_[a-zA-Z0-9_-]{1,80}')
+        && request.resource.data.keys().hasAll(['id','name','image','photoKey','hidden','order','updatedAt'])
+        && request.resource.data.keys().hasOnly(['id','name','image','photoKey','hidden','order','updatedAt'])
+        && request.resource.data.id == key
+        && text(request.resource.data.name,100) && request.resource.data.name.size() > 0
+        && request.resource.data.image is string && request.resource.data.image.size() <= 2000
+        && (request.resource.data.image == '' || request.resource.data.image.matches('images/[^"<>]*') || request.resource.data.image.matches('https://[^"<> ]+'))
+        && request.resource.data.photoKey is string
+        && (request.resource.data.photoKey == '' || request.resource.data.photoKey.matches('photo_[a-zA-Z0-9_-]+'))
+        && request.resource.data.hidden is bool
+        && request.resource.data.order is int && request.resource.data.order >= 0 && request.resource.data.order <= 1000000
+        && request.resource.data.updatedAt == request.time;
+      // Hide sections instead of deleting their metadata and orphaning their products.
+      allow delete: if false;
+    }
+    match /yallaPhotos/{key} {
+      allow get: if true;
+      allow list: if false;
+      allow create: if owner() && key.matches('photo_[a-zA-Z0-9_-]+')
+        && request.resource.data.keys().hasOnly(['data'])
+        && request.resource.data.data is string && request.resource.data.data.size() <= 100000
+        && request.resource.data.data.matches('data:image/jpeg;base64,[A-Za-z0-9+/=]+');
+      allow update: if false;
+      allow delete: if owner();
+    }
+    match /{document=**} { allow read,write: if false; }
+  }
+}
