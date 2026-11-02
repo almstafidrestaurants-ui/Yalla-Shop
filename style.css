@@ -4669,3 +4669,243 @@ transform: rotate(-135deg);
 #ysNeedsScreen .ys-needs-banner.ys-section-banner{position:relative!important;display:block!important}
 #ysNeedsScreen .ys-needs-banner-caption.ys-banner-title{position:absolute!important;top:auto!important;bottom:0!important;right:0!important;left:0!important;transform:none!important;margin:0!important;padding:0 18px 17px!important;text-align:right!important;z-index:3!important}
 #ysNeedsScreen .ys-needs-banner-caption h2,#ysNeedsScreen .ys-needs-banner-caption p{position:static!important;transform:none!important;text-align:right!important;margin-top:0!important}
+
+
+
+/* Yalla Shop — Global Storefront V4 */
+#homeScreen .ys-discovery{padding:25px 0 30px;background:#fff;direction:rtl}
+#homeScreen .ys-discovery-intro{padding:0 19px 20px}
+#homeScreen .ys-eyebrow{font-size:10px;font-weight:900;letter-spacing:1.5px;color:#1476c5}
+#homeScreen .ys-discovery-intro h2{font-size:23px;line-height:1.5;color:#152d45;font-weight:900;margin:5px 0}
+#homeScreen .ys-discovery-intro h2 span{color:#e3a44b}
+#homeScreen .ys-discovery-intro p{font-size:11px;color:#84919f}
+#homeScreen .gs-section{--gs:#0879c7;--gs2:#b8e7fc;margin-bottom:31px;opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+#homeScreen .gs-section.gs-shown{opacity:1;transform:none}
+#homeScreen .gs-orange{--gs:#e97937;--gs2:#ffdab5}
+#homeScreen .gs-green{--gs:#527f62;--gs2:#d1e4cb}
+#homeScreen .gs-cream{--gs:#a66e4b;--gs2:#f2d6b7}
+#homeScreen .gs-heading{display:flex;justify-content:space-between;align-items:end;gap:8px;padding:0 18px 14px}
+#homeScreen .gs-section-tag{font-size:9px;color:#8897a5;font-weight:800;letter-spacing:.4px}
+#homeScreen .gs-section-tag span{color:var(--gs)}
+#homeScreen .gs-heading h3{font-size:23px;line-height:1.35;color:#1b2e40;font-weight:900;margin:3px 0}
+#homeScreen .gs-heading p{font-size:11px;color:#83909d}
+#homeScreen .gs-all{font:inherit;font-size:11px;font-weight:900;color:var(--gs);background:transparent;border:0;padding:9px 0;white-space:nowrap;cursor:pointer}
+#homeScreen .gs-feature{height:183px;margin:0 13px 17px;position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;border-radius:18px;background:linear-gradient(115deg,var(--gs),var(--gs2));color:white}
+#homeScreen .gs-feature:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #fff5;border-radius:50%;left:-55px;top:-65px}
+#homeScreen .gs-feature-copy{padding:15px;position:relative;z-index:2}
+#homeScreen .gs-feature-label{font-size:9px;font-weight:800;opacity:.9}
+#homeScreen .gs-feature h4{font-size:21px;line-height:1.5;font-weight:900;margin:10px 0 15px}
+#homeScreen .gs-feature-button{border:0;border-radius:30px;padding:8px 13px;background:#fff;color:var(--gs);font-size:11px;font-weight:900;cursor:pointer}
+#homeScreen .gs-feature-image{height:100%;display:grid;place-items:center;padding:13px;min-width:0}
+#homeScreen .gs-feature-image img{width:100%;height:148px;object-fit:contain;filter:drop-shadow(0 12px 12px #0003);animation:gs-float 5s ease-in-out infinite}
+#homeScreen .gs-rail-title{display:flex;justify-content:space-between;align-items:center;padding:0 18px 12px}
+#homeScreen .gs-rail-title strong{font-size:12px;color:#24394d;font-weight:900}
+#homeScreen .gs-rail-title span{font-size:10px;color:#9aa5b0}
+#homeScreen .gs-rail{display:flex;gap:10px;padding:0 13px 10px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;touch-action:pan-x;overscroll-behavior-inline:contain}
+#homeScreen .gs-rail::-webkit-scrollbar{display:none}
+#homeScreen .gs-product{position:relative;flex:0 0 140px;height:209px;min-width:0;display:flex;flex-direction:column;align-items:stretch;text-align:right;padding:9px;background:#fff;border:1px solid #e9eef3;border-radius:15px;scroll-snap-align:start;box-shadow:0 4px 13px #182c3d08;font:inherit;cursor:pointer;color:#1a3146}
+#homeScreen .gs-image{height:118px;width:100%;display:grid;place-items:center;background:#f8fafc;border-radius:11px;overflow:hidden}
+#homeScreen .gs-image img{width:100%;height:100%;object-fit:contain;transition:transform .3s ease}
+#homeScreen .gs-product:active img{transform:scale(.94)}
+#homeScreen .gs-product-name{font-size:11px;font-weight:900;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:7px}
+#homeScreen .gs-product-unit{font-size:9px;color:#8997a4}
+#homeScreen .gs-product-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;gap:3px}
+#homeScreen .gs-product-foot strong{font-size:11px;font-weight:900;color:#0b4c79}
+#homeScreen .gs-product-plus{height:24px;width:24px;border-radius:8px;background:var(--gs);color:#fff;font-size:19px;line-height:24px;text-align:center;font-weight:700}
+#homeScreen .gs-product:focus-visible,#homeScreen .gs-all:focus-visible,#homeScreen .gs-feature-button:focus-visible{outline:3px solid #1684df;outline-offset:2px}
+@keyframes gs-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){#homeScreen .gs-section{opacity:1;transform:none;transition:none}#homeScreen .gs-feature-image img{animation:none}}
+
+/* Drinks only — blue image showcase, no promo text or left-side banner */
+#homeScreen .gs-drinks-motion .gs-heading{padding-bottom:12px}
+#homeScreen .gs-drinks-motion .gs-drink-box{direction:rtl;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-inline:contain;touch-action:pan-x;margin:0 12px;border-radius:18px;padding:18px 12px;background:linear-gradient(115deg,#0451b8 0%,#087bd9 55%,#03449e 100%);box-shadow:0 10px 22px #065ab225}
+#homeScreen .gs-drinks-motion .gs-drink-box::-webkit-scrollbar{display:none}
+#homeScreen .gs-drinks-motion .gs-drink-track{display:flex;gap:10px;width:max-content;align-items:stretch}
+#homeScreen .gs-drinks-motion .gs-drink-card{width:145px;flex:0 0 145px;height:194px;border:0;background:#fff;border-radius:12px;padding:7px;box-shadow:0 4px 15px #003b8b1f;scroll-snap-align:none;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-image{height:130px;background:#fff;border-radius:8px}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-image img{height:100%;width:100%;object-fit:contain;transition:transform .55s ease}
+#homeScreen .gs-drinks-motion .gs-drink-card:hover .gs-image img{transform:scale(1.08)}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-product-name{margin-top:6px;font-size:10px}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-product-unit{font-size:9px}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-product-foot strong{font-size:10px}
+#homeScreen .gs-drinks-motion .gs-drink-card .gs-product-plus{display:none}
+@media(prefers-reduced-motion:reduce){#homeScreen .gs-drinks-motion .gs-drink-card,#homeScreen .gs-drinks-motion .gs-drink-card img{transition:none}}
+
+/* === New animated storefront designs === */
+#homeScreen .ys-discovery{padding:20px 0 30px;background:#fff}
+#homeScreen .fresh-section{margin:0 10px 27px;padding:13px 0 16px;border-radius:20px;overflow:hidden;background:#fff;border:1px solid #e8ebef;box-shadow:0 5px 22px #1d35540c;direction:rtl}
+#homeScreen .fresh-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 14px 12px}
+#homeScreen .fresh-head h3{font-size:19px;font-weight:900;color:#20232a;margin:1px 0}
+#homeScreen .fresh-head p{font-size:11px;color:#687484;margin:0}
+#homeScreen .fresh-kicker{font-size:9px;letter-spacing:1px;font-weight:800;color:#a05b8e}
+#homeScreen .fresh-all{background:#fff;border:1px solid #dce1e8;border-radius:22px;padding:7px 11px;color:#263b57;font-weight:800;font-size:11px;white-space:nowrap;cursor:pointer}
+#homeScreen .fresh-drinks{background:linear-gradient(180deg,#fff 0%,#fff 18%,#9d0a59 18%,#9d0a59 100%);border-color:#9d0a59}
+#homeScreen .fresh-drinks .fresh-head{background:#fff}
+#homeScreen .fresh-marquee{overflow:hidden;direction:ltr;touch-action:pan-y;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);padding:8px 0}
+#homeScreen .fresh-track{display:flex;width:max-content;gap:10px;animation:fresh-slide 35s linear infinite;will-change:transform}
+#homeScreen .fresh-marquee:nth-child(even) .fresh-track{animation-direction:reverse;animation-duration:42s}
+#homeScreen .fresh-marquee:hover .fresh-track,#homeScreen .fresh-marquee:focus-within .fresh-track{animation-play-state:paused}
+@keyframes fresh-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#homeScreen .fresh-card{width:142px;flex:0 0 142px;min-width:0;display:flex;flex-direction:column;align-items:stretch;text-align:right;direction:rtl;background:#fff;border:1px solid #edf0f3;border-radius:13px;overflow:hidden;padding:6px;cursor:pointer;transition:transform .25s,box-shadow .25s;color:#222}
+#homeScreen .fresh-card:hover{transform:translateY(-4px);box-shadow:0 8px 18px #0002}
+#homeScreen .fresh-photo{display:block;width:100%;height:112px;border-radius:9px;overflow:hidden;background:#f5f6f8}
+#homeScreen .fresh-photo img{width:100%;height:100%;object-fit:contain;transition:transform .6s ease}
+#homeScreen .fresh-card:hover img{transform:scale(1.13) rotate(-2deg)}
+#homeScreen .fresh-card strong{font-size:11px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:6px 2px 1px}
+#homeScreen .fresh-price{font-size:11px;font-weight:900;color:#9d0a59;margin:0 2px 3px}
+#homeScreen .fresh-bakery{background:#fff;border-color:#e4d9cd}
+#homeScreen .fresh-bakery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 12px}
+#homeScreen .fresh-bakery-grid .fresh-card{width:100%;min-width:0;border:0;padding:0;border-radius:13px}
+#homeScreen .fresh-bakery-grid .fresh-photo{height:auto;aspect-ratio:1/1;background:#f3ede6}
+#homeScreen .fresh-bakery-grid .fresh-card strong{font-size:12px}
+#homeScreen .fresh-nuts .fresh-card,#homeScreen .fresh-crisps .fresh-card{width:106px;flex-basis:106px;border:0;background:transparent;box-shadow:none;text-align:center}
+#homeScreen .fresh-nuts .fresh-photo,#homeScreen .fresh-crisps .fresh-photo{height:88px;width:88px;border-radius:50%;margin:auto;background:#f2f2f2}
+#homeScreen .fresh-nuts .fresh-card strong,#homeScreen .fresh-crisps .fresh-card strong{text-align:center;color:#5a6069}
+#homeScreen .fresh-nuts .fresh-price,#homeScreen .fresh-crisps .fresh-price{text-align:center;color:#526273}
+#homeScreen .fresh-nuts .fresh-track,#homeScreen .fresh-crisps .fresh-track{gap:8px}
+@media(prefers-reduced-motion:reduce){#homeScreen .fresh-track{animation:none}#homeScreen .fresh-marquee{overflow-x:auto}#homeScreen .fresh-card,#homeScreen .fresh-photo img{transition:none}}
+
+/* Blue & white palette — discovery sections only */
+#homeScreen .ys-discovery{background:#f7fbff}
+#homeScreen .ys-discovery-intro h2{color:#073d85}
+#homeScreen .ys-discovery-intro h2 span,#homeScreen .fresh-kicker{color:#1676d2}
+#homeScreen .ys-discovery-intro p{color:#6885a5}
+#homeScreen .fresh-section{background:#fff;border-color:#d6e7fb;box-shadow:0 6px 22px #0753bd10}
+#homeScreen .fresh-head h3{color:#083e83}
+#homeScreen .fresh-head p{color:#6683a5}
+#homeScreen .fresh-all{background:#fff;border-color:#c6dcf7;color:#0753bd}
+#homeScreen .fresh-all:hover{background:#eaf4ff}
+#homeScreen .fresh-drinks{background:linear-gradient(180deg,#fff 0%,#fff 18%,#0753bd 18%,#087de0 100%);border-color:#0753bd}
+#homeScreen .fresh-drinks .fresh-head{background:#fff}
+#homeScreen .fresh-card{background:#fff;border-color:#e1ecfa;color:#123b6b}
+#homeScreen .fresh-photo{background:#f1f7ff}
+#homeScreen .fresh-price{color:#0753bd}
+#homeScreen .fresh-bakery{background:#fff;border-color:#cfe2f9}
+#homeScreen .fresh-bakery-grid .fresh-photo{background:#edf5ff}
+#homeScreen .fresh-nuts .fresh-photo,#homeScreen .fresh-crisps .fresh-photo{background:#eaf3ff}
+#homeScreen .fresh-nuts .fresh-card strong,#homeScreen .fresh-crisps .fresh-card strong{color:#315c91}
+#homeScreen .fresh-nuts .fresh-price,#homeScreen .fresh-crisps .fresh-price{color:#0753bd}
+
+/* Soft pastel blue: exact existing classes, override all previous gradients */
+#homeScreen .fresh-drinks {
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 18%, #eaf6ff 18%, #d8edff 100%) !important;
+  border: 1px solid #c9e5ff !important;
+  box-shadow: 0 5px 18px rgba(40,112,185,.08) !important;
+}
+#homeScreen .fresh-drinks .fresh-head { background:#ffffff !important; }
+#homeScreen .fresh-drinks .fresh-card { border:1px solid #dcecff !important; box-shadow:0 3px 10px rgba(47,115,185,.07) !important; }
+#homeScreen .fresh-bakery {
+  background:linear-gradient(160deg,#ffffff 0%,#f0f7ff 100%) !important;
+  border:1px solid #a9d2fa !important;
+  box-shadow:0 7px 23px rgba(34,111,192,.11) !important;
+}
+#homeScreen .fresh-bakery .fresh-head {padding-bottom:16px}
+#homeScreen .fresh-bakery-grid {gap:12px}
+#homeScreen .fresh-bakery-grid .fresh-card {background:#fff !important;border:1px solid #d5e6f9 !important;padding:6px !important;box-shadow:0 3px 10px rgba(40,100,170,.07) !important}
+#homeScreen .fresh-bakery-grid .fresh-photo {background:#e7f2ff !important;border-radius:10px}
+#homeScreen .fresh-bakery-grid .fresh-card strong {color:#123f79 !important}
+#homeScreen .ys-priority-sections {margin:12px 10px 20px;direction:rtl}
+#homeScreen .ys-priority-sections .ys-meat-feature,
+#homeScreen .ys-priority-sections .ys-poultry-feature {margin-bottom:18px !important}
+
+/* Fruit and vegetables: circular category-style product gallery */
+#homeScreen .ys-fruit-circles{margin:14px 10px 24px;padding:14px 0 17px;background:#fff;border:1px solid #d8eafa;border-radius:19px;direction:rtl;box-shadow:0 5px 18px #174f8710}
+#homeScreen .ys-fruit-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 15px 12px}
+#homeScreen .ys-fruit-top h2{font-size:18px;font-weight:900;color:#123f79;margin:0}
+#homeScreen .ys-fruit-top button{font:800 11px Cairo,Arial,sans-serif;border:1px solid #c9e1fa;background:#fff;color:#0753bd;border-radius:22px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+#homeScreen .ys-fruit-rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:5px 12px 8px;direction:rtl;touch-action:pan-x}
+#homeScreen .ys-fruit-rail::-webkit-scrollbar{display:none}
+#homeScreen .ys-fruit-item{flex:0 0 112px;min-width:0;display:flex;align-items:center;flex-direction:column;gap:7px;border:0;background:transparent;color:#16334e;font:inherit;cursor:pointer;scroll-snap-align:start}
+#homeScreen .ys-fruit-image{width:110px;height:110px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:#f0f8ff;transition:transform .3s ease,background .3s ease}
+#homeScreen .ys-fruit-image img{width:91%;height:91%;object-fit:contain;transition:transform .35s ease}
+#homeScreen .ys-fruit-item:hover .ys-fruit-image{background:#e4f3ff;transform:translateY(-3px)}
+#homeScreen .ys-fruit-item:hover img{transform:scale(1.08)}
+#homeScreen .ys-fruit-item strong{font-size:12px;font-weight:800;text-align:center;line-height:1.4;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){#homeScreen .ys-fruit-image,#homeScreen .ys-fruit-image img{transition:none}}
+
+/* Nuts only: tall rectangular editorial cards (reference design). */
+#homeScreen .fresh-nuts .fresh-card {
+  width: 128px !important;
+  flex: 0 0 128px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: #eaf5ff !important;
+  box-shadow: 0 2px 7px rgba(20,68,120,.07) !important;
+  text-align: center !important;
+  gap: 0 !important;
+}
+#homeScreen .fresh-nuts .fresh-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 142px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: #f4f9ff !important;
+  overflow: hidden !important;
+}
+#homeScreen .fresh-nuts .fresh-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+#homeScreen .fresh-nuts .fresh-card strong {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 9px 6px 1px !important;
+  color: #123f79 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+}
+#homeScreen .fresh-nuts .fresh-price {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 5px 9px !important;
+  background: #eaf5ff !important;
+  color: #0753bd !important;
+  text-align: center !important;
+  font-size: 11px !important;
+}
+#homeScreen .fresh-nuts .fresh-track {gap: 11px !important;}
+
+/* Nuts: one continuous animated row, without an outer container. */
+#homeScreen .fresh-section.fresh-nuts {
+  margin: 0 0 24px !important; padding: 8px 0 12px !important;
+  background: transparent !important; border: 0 !important;
+  box-shadow: none !important; border-radius: 0 !important;
+  overflow: hidden !important;
+}
+#homeScreen .fresh-nuts .fresh-head {padding: 0 18px 12px !important;}
+#homeScreen .fresh-nuts .fresh-head h3 {margin: 0 !important;}
+#homeScreen .fresh-nuts .fresh-marquee {padding: 2px 0 8px !important;}
+#homeScreen .fresh-nuts .fresh-track {animation-duration: 42s !important;}
+
+/* Crisps: three animated rows, no enclosing section box. */
+#homeScreen .fresh-section.fresh-crisps {
+  margin: 0 0 24px !important;
+  padding: 8px 0 12px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+#homeScreen .fresh-crisps .fresh-head {padding: 0 18px 12px !important;}
+#homeScreen .fresh-crisps .fresh-head h3 {margin: 0 !important;}
+#homeScreen .fresh-crisps .fresh-head p,
+#homeScreen .fresh-crisps .fresh-kicker {display: none !important;}
+#homeScreen .fresh-crisps .fresh-marquee {padding: 3px 0 8px !important;}
+#homeScreen .fresh-crisps .fresh-track {animation-duration: 39s !important;}
+
+/* Separate discovery sections placed between homepage features */
+.ys-discovery-split { margin-top: 16px; margin-bottom: 16px; }
+
+/* Bakery: no enclosing box, only section name and View All */
+#homeScreen .ys-discovery-split[aria-label="Bakery"]{padding:0 !important;margin:16px 0 8px !important;background:transparent !important;border:0 !important;box-shadow:none !important;}
+#homeScreen .ys-discovery-split[aria-label="Bakery"] .fresh-section.fresh-bakery{margin:0 !important;padding:0 0 10px !important;background:transparent !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;overflow:hidden;}
+#homeScreen .fresh-bakery .fresh-head{padding:0 18px 12px !important;background:transparent !important;}
+#homeScreen .fresh-bakery .fresh-head h3{margin:0 !important;}

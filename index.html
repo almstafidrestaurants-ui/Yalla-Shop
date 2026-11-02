@@ -14,6 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sections.css">
+
 </head>
 <body>
 
@@ -176,13 +178,32 @@
 <button type="button" data-need="pantry"><img src="images/Household pantry staples.webp" alt="" loading="lazy"><strong>مونة البيت</strong></button>
 <button type="button" data-need="cooking"><img src="images/Today's dish.webp" alt="" loading="lazy"><strong>طبخة اليوم</strong></button>
 <button type="button" data-need="breakfast"><img src="images/Breakfast and coffee.webp" alt="" loading="lazy"><strong>فطور وقهوة</strong></button>
-</div></section><section class="pro-featured pro-reveal" id="proFeaturedSection">
+</div></section><div class="ys-priority-sections" aria-label="اللحوم والدواجن">
+  <section class="ys-meat-feature" aria-label="اللحوم الطازجة">
+    <div class="ys-section-head"><div> <h2>اللحوم الطازجة  </h2></div><button type="button" data-open-category="ملحمة">عرض   الكل ‹</button></div>
+    <div id="ysMeatFeature"></div>
+  </section>
+  <section class="ys-poultry-feature" aria-label="قسم الدواجن">
+    <div class="ys-section-head"><div> <h2>قسم الدواجن  </h2></div><button type="button" data-open-category="دواجن">عرض   الكل ‹</button></div>
+    <div id="ysPoultryFeature"></div>
+  </section>
+</div>
+<section class="ys-discovery ys-discovery-split" aria-label="Bakery"><div id="ysDiscoveryBakery"></div></section>
+<section class="ys-fruit-circles" id="ysFruitCircles" aria-label="الخضرة والفواكه">
+  <div class="ys-fruit-top"><h2>خضرة وفواكه طازجة</h2><button type="button" id="ysFruitAll">عرض الكل ‹</button></div>
+  <div class="ys-fruit-rail" id="ysFruitRail" aria-label="تصفّح الخضرة والفواكه"></div>
+</section>
+<section class="pro-featured pro-reveal" id="proFeaturedSection">
  <div class="pro-section-title"><div><h2>   البن والقهوة</h2></div><button type="button" id="proViewMarket">عرض الكل ‹</button></div>
  <div class="pro-featured-track" id="proFeaturedTrack"></div>
 </section>
 
-<!-- شريط المكتبة المتحرك: صور فقط، بدون أسماء أو أسعار -->
-<section class="ys-stationery-section" id="ysStationerySection" aria-label="منتجات المكتبة">
+
+<section class="ys-showcase" id="ysShowcase" aria-label="اكتشف منتجاتنا">
+ <div class="ys-section-head"><div> <h2>سرّ النظافة واللمعة ببيتك      </h2></div><button type="button" data-open-category="سوبر ماركت">عرض الكل ‹</button></div>
+ <div class="ys-orbit" id="ysFoodOrbit"></div>
+
+</section><section class="ys-stationery-section" id="ysStationerySection" aria-label="منتجات المكتبة">
   <div class="ys-stationery-heading">
     <h2>من القلم للدفتر… كل شي متوفّر</h2>
     <button type="button" id="ysStationeryViewAll">عرض الكل ‹</button>
@@ -192,20 +213,15 @@
   </div>
 </section>
 
-<section class="ys-showcase" id="ysShowcase" aria-label="اكتشف منتجاتنا">
- <div class="ys-section-head"><div> <h2>سرّ النظافة واللمعة ببيتك      </h2></div><button type="button" data-open-category="سوبر ماركت">عرض الكل ‹</button></div>
- <div class="ys-orbit" id="ysFoodOrbit"></div>
-  <section class="ys-meat-feature" aria-label="اللحوم الطازجة">
-    <div class="ys-section-head"><div> <h2>اللحوم الطازجة  </h2></div><button type="button" data-open-category="ملحمة">عرض   الكل ‹</button></div>
-    <div id="ysMeatFeature"></div>
-  </section>
-  <section class="ys-poultry-feature" aria-label="قسم الدواجن">
-    <div class="ys-section-head"><div> <h2>قسم الدواجن  </h2></div><button type="button" data-open-category="دواجن">عرض   الكل ‹</button></div>
-    <div id="ysPoultryFeature"></div>
-  </section>
- <div class="ys-section-head"><div> <h2>عروض وأقسام مميزة  </h2></div><button type="button" data-open-category="سوبر ماركت">عرض الكل ‹</button></div>
- <div class="ys-offers" id="ysOffers"></div>
-</section><div class="reference-hidden-hero">
+
+
+<section class="ys-discovery ys-discovery-split" aria-label="Purchases"><div id="ysDiscoveryPurchases"></div></section>
+<section class="pro-featured pro-reveal" id="drinksFeaturedSection">
+ <div class="pro-section-title"><div><h2>المشروبات</h2></div><button type="button" id="drinksViewAll">عرض الكل ‹</button></div>
+ <div class="pro-featured-track" id="drinksFeaturedTrack"></div>
+</section>
+<section class="ys-discovery ys-discovery-split" aria-label="Snacks"><div id="ysDiscoverySnacks"></div></section>
+<div class="reference-hidden-hero">
            
 <div class="slider-dots" aria-label="اختيار صورة العرض">
 
@@ -620,6 +636,12 @@
 
     </main>
 
-    <script src="script.js" defer></script>
+    <script src="firebase-config.js" defer></script>
+<script src="catalog-core.js" defer></script>
+<script src="script.js" defer></script>
+<script src="sections-store.js" defer></script>
+
+<script src="cloud-start.js" defer></script>
+<a href="owner.html" style="position:fixed;bottom:90px;left:10px;z-index:20;background:#fff;color:#123b66;padding:8px 12px;border-radius:18px;font:12px sans-serif;text-decoration:none">إدارة المتجر</a>
 </body>
 </html>

@@ -218,6 +218,7 @@ if (moreCategoriesButton) {
             image: "images/poultry/chicken.png"
         }
     ];
+    window.YallaRegistry.register('poultry', gharibProducts, 4);;
 
     const gharibGrid =
         document.getElementById("gharibProductsGrid");
@@ -283,10 +284,10 @@ addButton.textContent = "+";
 addButton.setAttribute("aria-label", "إضافة " + product.name + " إلى السلة");
 
 addButton.addEventListener("click", function () {
-    const cartId = "gharib-" + index;
+    const cartId = "gharib-" + product.ysKey;
     const existing = marketCart.find(item => item.id === cartId);
     if (existing) existing.quantity++;
-    else marketCart.push({
+    else marketCart.push({ysKey: product.ysKey,
         id: cartId,
         name: product.name.trim(),
         price: Number(product.price),
@@ -7082,15 +7083,6 @@ gharibGrid.appendChild(card);
             image: "images/Purchases/Bubble.png",
             pictureClass: "cleaning-picture"
         },
-         {
-             id: 1217,
-            name: " ميلكا ليو ",
-            price:  70000,
-            unit: "   ",
-            category: "Purchases",
-            image: "images/Purchases/Milka Leo.png",
-            pictureClass: "cleaning-picture"
-        },
  {
              id: 1218,
             name: " كوت دور ",
@@ -7414,8 +7406,845 @@ gharibGrid.appendChild(card);
             category: "Purchases",
             image: "images/Purchases/Toasties Tomato & Herbs.png",
             pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1254,
+            name: " بيتي بير",
+            price:  230000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Betty Beer.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1255,
+            name: " بيتي بير",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Betty Beer12.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1256,
+            name: " نيرو كاكاو",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Nero Cacao.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1257,
+            name: " بيسكريم ",
+            price:  120000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Biscrem.png",
+            pictureClass: "cleaning-picture"
+        },
+ {
+             id: 1258,
+            name: " Adicto intense ",
+            price:  320000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Adicto Intense.png",
+            pictureClass: "cleaning-picture"
+        },
+         {
+             id: 1259,
+            name: " هالي عائلي ",
+            price:  180000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Family-size pack.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1260,
+            name: " Eti crax",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Eti Crax.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1261,
+            name: " Sombrero",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Sombrero9.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1262,
+            name: " بيبيتو جيلي",
+            price:  70000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Bebeto Jelly.png",
+            pictureClass: "cleaning-picture"
+        },
+   {
+             id: 1263,
+            name: " تيفاني بريك",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Tiffany Big Break.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1264,
+            name: " كرانشي ويفر بالشوكولاتة",
+            price:  20000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Crunchy Wafer Fingers with Chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1265,
+            name: " هانيميلر رول ",
+            price:  45000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Hannemiller Roll.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1266,
+            name: " بوب كيك ",
+            price:  170000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Popcakes.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1267,
+            name: " رولوكات ",
+            price:  150000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Rolucat.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1268,
+            name: " بيسكولاتا مود ",
+            price:  150000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Pescolata Mod.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1269,
+            name: "منتوس رول",
+            price:  35000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mentos Roll.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1270,
+            name: " ماستر الكبير  ",
+            price:  100000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/The Big Master.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1271,
+            name: " Master kettle ",
+            price:  75000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Master Kettle.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1272,
+            name: "ماستر وسط  ",
+            price:  60000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Master Medium.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1273,
+            name: " منتوس ",
+            price:  350000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mentos.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1274,
+            name: "منتوس نانو  ",
+            price:  90000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mentos Nano.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1274,
+            name: "منتوس    ",
+            price:  50000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mentos12.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1275,
+            name: " Mentos ice ",
+            price:  50000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Mentos Ice.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1276,
+            name: "كلورتس    ",
+            price:  30000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Clorets.png",
+            pictureClass: "cleaning-picture"
+        },
+    {
+             id: 1277,
+            name: "Extra    ",
+            price:  50000,
+            unit: "   ",
+            category: "Purchases",
+            image: "images/Purchases/Extra.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1278,
+            name: "خبز قمرين    ",
+            price:  90000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Bread.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1279,
+            name: "سمون قمرين      ",
+            price:  80000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Samoon.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1280,
+            name: " يان اولية او شوكولا قمرين      ",
+            price:  160000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Olea or Chocolate.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1281,
+            name: " كعك قمرين      ",
+            price:  160000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two-moon cakes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1282,
+            name: "قرواسون قمرين        ",
+            price:  60000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Croissants.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1283,
+            name: " خبز توست وبرغر وفاهيتا قمرين  ",
+            price:  160000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two-moon toast, burgers, and fajitas.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1284,
+            name: " علب حلو وبيتي فور قورين ",
+            price:  170000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Sweets and Petit Fours Boxes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1285,
+            name: " خبز اسمر قمرين",
+            price:  80000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons Sweets and Petit Fours Boxes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1286,
+            name: " خبز تورتيلا 10 ارغفة ",
+            price:  250000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/10 Tortilla Breads.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1287,
+            name: " كرواسون كريسبي  ",
+            price:  50000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Crispy Croissants.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1288,
+            name: "مرقد ",
+            price:  90000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Restaurant.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1289,
+            name: " قمرين بيلو",
+            price:  60000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Two Moons.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1290,
+            name: " تنور العصر    ",
+            price:  65000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Afternoon.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1291,
+            name: "كعك جبنة ",
+            price:  120000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Cheesecakes.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1292,
+            name: "بريوش جوز العند قمرين   ",
+            price:  60000,
+            unit: "   ",
+            category: "Bakery",
+            image: "images/Bakery/Coconut Brioche, Two Moons.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1293,
+            name: "    باربيكان       ",
+            price:  90000,
+            unit: "  330 مل ",
+            category: "drinks",
+            image: "images/drinks/Barbican 330m.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1294,
+            name: "   لزيزة        ",
+            price:  70000,
+            unit: "  330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Laziza 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1295,
+            name: "     بازل      ",
+            price:  80000,
+            unit: "   ",
+            category: "drinks",
+            image: "images/drinks/Basel.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1296,
+            name: "    عصير اكسترا        ",
+            price:  40000,
+            unit: "  350 مل ",
+            category: "drinks",
+            image: "images/drinks/Extra Juice 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1297,
+            name: "   مياه غازية ريم نكهات        ",
+            price:  75000,
+            unit: "  330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Reem Flavored Sparkling Water 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1298,
+            name: "     مياه غازية ريم       ",
+            price:  50000,
+            unit: "   330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Reem Carbonated Water 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1299,
+            name: "  مياه غازية فيا       ",
+            price:  60000,
+            unit: "  240 مل  ",
+            category: "drinks",
+            image: "images/drinks/Via carbonated water 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1300,
+            name: "    مياه غازية بيرية     ",
+            price:  120000,
+            unit: "   330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Via carbonated water 22.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1301,
+            name: "   ميزداو  مع عسل     ",
+            price:  250000,
+            unit: "   450 مل  ",
+            category: "drinks",
+            image: "images/drinks/Mizdaw with honey.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1302,
+            name: "   بلاند    ",
+            price:  120000,
+            unit: "   300 مل  ",
+            category: "drinks",
+            image: "images/drinks/Bland 300ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1303,
+            name: "   راني حبيبات  ",
+            price:  60000,
+            unit: "   240 مل  ",
+            category: "drinks",
+            image: "images/drinks/Rani with fruit pieces 240ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1304,
+            name: "  مايسترو مشروب طاقة زيرو سكر ",
+            price:  70000,
+            unit: "   250 مل  ",
+            category: "drinks",
+            image: "images/drinks/Maestro zero-sugar energy drink 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1305,
+            name: "   Xxl     ",
+            price:  50000,
+            unit: "   250 مل  ",
+            category: "drinks",
+            image: "images/drinks/XXL 250 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1306,
+            name: "   ريندو  ",
+            price:  35000,
+            unit: "   250 مل  ",
+            category: "drinks",
+            image: "images/drinks/Rindo 250 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1307,
+            name: "  بادستر طاقة",
+            price:  90000,
+            unit: "   250 مل  ",
+            category: "drinks",
+            image: "images/drinks/Badster Energy 250 ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1308,
+            name: "   v مشروب طاقة      ",
+            price:  120000,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Energy Drink v.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1309,
+            name: "   دارك بلو  ",
+            price:  60000,
+            unit: "  330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Dark Blue 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1310,
+            name: "  كينزا   ",
+            price:  40000,
+            unit: "   250 مل  ",
+            category: "drinks",
+            image: "images/drinks/Kinza 250ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1311,
+            name: "  ريدبول      ",
+            price:  120000,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Red Bull.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1312,
+            name: "   XXL    ",
+            price:  70000,
+            unit: "  500 مل  ",
+            category: "drinks",
+            image: "images/drinks/XL 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1312,
+            name: "  قنينة مياه    ",
+            price:  20000,
+            unit: "     ",
+            category: "drinks",
+            image: "images/drinks/Water bottle.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1313,
+            name: "  فلقة مياه سبيل       ",
+            price:  160000,
+            unit: "  2 ليتر  ",
+            category: "drinks",
+            image: "images/drinks/Sabeel Water Bottle 2L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1314,
+            name: "   فلقة مياه سبيل    ",
+            price:  160000,
+            unit: "  500 مل  ",
+            category: "drinks",
+            image: "images/drinks/Sabeel Water Bottle 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1315,
+            name: "  فلقة مياه صحة   ",
+            price:  230000,
+            unit: "   1.5 ليتر  ",
+            category: "drinks",
+            image: "images/drinks/Seha Water Bottle 1.5L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1316,
+            name: "  فلقة مياه صحة     ",
+            price:  230000,
+            unit: "  500 مل  ",
+            category: "drinks",
+            image: "images/drinks/Falqa Healthy Water 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1317,
+            name: "  فلقة مياه عالية ",
+            price:  160000,
+            unit: "  500 مل  ",
+            category: "drinks",
+            image: "images/drinks/Falqa Premium Water 500ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1318,
+            name: "  ماكاو  ",
+            price:  35000,
+            unit: "   180 مل  ",
+            category: "drinks",
+            image: "images/drinks/Macao 180ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1319,
+            name: "  اونو اب   ",
+            price:  20000,
+            unit: "  ",
+            category: "drinks",
+            image: "images/drinks/Uno Up.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1320,
+            name: "  اونو ميلك شيك ",
+            price:  30000,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Ono Milkshake.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1321,
+            name: "  ميلك شيك  ",
+            price:  50000,
+            unit: "     ",
+            category: "drinks",
+            image: "images/drinks/Milkshake.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1322,
+            name: " جوسي كانديا  ",
+            price:  20000,
+            unit: "  ",
+            category: "drinks",
+            image: "images/drinks/Juicy Candia.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1323,
+            name: " ايس كوفي لونا ",
+            price:  70000,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Iced Coffee Luna.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1324,
+            name: "  كافيو ",
+            price:  70000,
+            unit: "     ",
+            category: "drinks",
+            image: "images/drinks/Caffeo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1325,
+            name: " ماكاو  ",
+            price:  170000,
+            unit: "  1 ليتر ",
+            category: "drinks",
+            image: "images/drinks/Macao 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1326,
+            name: " ماكاو طبيعي ",
+            price:  240000,
+            unit: "   1 ليتر  ",
+            category: "drinks",
+            image: "images/drinks/Natural Macau 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1327,
+            name: "  اكسترا  ",
+            price:  110000,
+            unit: "   1 ليتر   ",
+            category: "drinks",
+            image: "images/drinks/Extra 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1328,
+            name: "  ريندو   ",
+            price:  80000,
+            unit: "   1.25 ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Rindo 1.25L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1329,
+            name: "  حليب اللوز   ",
+            price:  360000,
+            unit: "   1  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Almond Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1330,
+            name: "   حليب جوز الهند     ",
+            price:  400000 ,
+            unit: "   1  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Coconut Milk 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1331,
+            name: "  تروبيكانا سلايس    ",
+            price:  100000 ,
+            unit: "   1  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Tropicana Slice 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1332,
+            name: "   مستر جوسي ",
+            price:  80000 ,
+            unit: "   1  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Mr Juicy 1L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1333,
+            name: "   مستر جوسي    ",
+            price:  20000 ,
+            unit: "   1  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Mister Juicy.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1334,
+            name: " بيبسي ابو جامبو  ",
+            price:  140000 ,
+            unit: "      ",
+            category: "drinks",
+            image: "images/drinks/Pepsi Jumbo.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1335,
+            name: "  بيبسي  ",
+            price:  120000 ,
+            unit: "   1.25  ليتر     ",
+            category: "drinks",
+            image: "images/drinks/Pepsi 1.25L.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1336,
+            name: "  بيبسي   ",
+            price:  60000 ,
+            unit: "  330 مل  ",
+            category: "drinks",
+            image: "images/drinks/Pepsi 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1337,
+            name: " بيبسي تنك ",
+            price:  60000 ,
+            unit: "   330 مل   ",
+            category: "drinks",
+            image: "images/drinks/Pepsi Can 330ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1338,
+            name: "  ستينغ  ",
+            price:  60000 ,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Sting.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1339,
+            name: "  غاتوريد   ",
+            price:  100000 ,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/Gatorade Zero Sugar.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1340,
+            name: " ليبتون ",
+            price:  60000 ,
+            unit: "   320 مل   ",
+            category: "drinks",
+            image: "images/drinks/Lipton 320ml.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1341,
+            name: "  amp  ",
+            price:  60000 ,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/amp.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1342,
+            name: "  H2oH   ",
+            price:  60000 ,
+            unit: "    ",
+            category: "drinks",
+            image: "images/drinks/H2oH.png",
+            pictureClass: "cleaning-picture"
+        },
+{
+             id: 1343,
+            name: "  غالون مياه    ",
+            price:  60000 ,
+            unit: "  9 ليتر  ",
+            category: "drinks",
+            image: "images/drinks/9L water gallon.png",
+            pictureClass: "cleaning-picture"
         }
+
+
+
+
+
+
+
+
     ];
+    window.YallaRegistry.register('market', marketProducts, 1);;
 
     let activeMarketFilter = "all";
     let marketCart = [];
@@ -7426,7 +8255,7 @@ gharibGrid.appendChild(card);
         if (existing) existing.quantity += 1;
         else {
             const priceUnknown = restaurantName === 'RAAD Resto Café' && product.category === 'sauces' && product.price == null;
-            marketCart.push({
+            marketCart.push({ysKey: product.ysKey,
                 id, name: restaurantName + ' - ' + product.name,
                 price: priceUnknown ? null : Number(product.price),
                 priceUndetermined: priceUnknown,
@@ -7570,7 +8399,7 @@ gharibGrid.appendChild(card);
             if (existing) {
                 existing.quantity++;
             } else {
-                marketCart.push({
+                marketCart.push({ysKey: product.ysKey,
                     id: product.id,
                     name: product.name,
                     price: product.price,
@@ -7730,6 +8559,7 @@ function getCartProduct(item) {
 }
 
 function renderYallaCart() {
+    syncYallaCart();
     cartItemsBox.replaceChildren();
 
     marketCart.forEach((item, index) => {
@@ -7907,6 +8737,9 @@ document.getElementById("ycLocation").onclick = () => {
 };
 // تجهيز الطلب وإرساله إلى واتساب، ثم تفريغ السلة فور فتح الرابط
  document.getElementById("ycOrder").onclick = async () => {
+    if (!navigator.onLine) { ycNotify("اتصل بالإنترنت لتأكيد الأسعار قبل الطلب."); return; }
+    if (!await window.YallaCloud.ensureFresh()) { ycNotify("تعذر تأكيد الأسعار. حاول مجدداً عند عودة المزامنة."); return; }
+    syncYallaCart();
     if (!marketCart.length) { ycNotify("سلتك فاضية، ضيف منتجات أولاً."); return; }
     // Pending RAAD sauce prices must be confirmed by the merchant before checkout.
     if (marketCart.some(item => item.priceUndetermined || item.price == null)) {
@@ -8213,6 +9046,7 @@ function createYallaWhatsAppInvoice({
              image: "images/fruit/eggplant.png",
         }
     ];
+    window.YallaRegistry.register('vegetables', vegetablesProducts, 2);;
 
     // إنشاء بطاقات المنتجات
     function renderVegetablesProducts() {
@@ -8344,7 +9178,7 @@ function createYallaWhatsAppInvoice({
         if (existing) {
             existing.quantity++;
         } else {
-            marketCart.push({
+            marketCart.push({ysKey: product.ysKey,
                 id: product.id,
                 name: product.name,
                 price: product.price,
@@ -8453,6 +9287,7 @@ const butcherProducts = [
         image: "images/grill/Makanek.png"
     }
 ];
+    window.YallaRegistry.register('butcher', butcherProducts, 3);;
 
 // إنشاء بطاقات المنتجات
 function renderButcherProducts() {
@@ -8584,7 +9419,7 @@ butcherProductsGrid.addEventListener("click", function (event) {
     if (existing) {
         existing.quantity++;
     } else {
-        marketCart.push({
+        marketCart.push({ysKey: product.ysKey,
             id: product.id,
             name: product.name,
             price: product.price,
@@ -8764,7 +9599,7 @@ cleaningGrid.addEventListener("click", event => {
     if (!product) return;
     const existing = marketCart.find(item => item.id === product.id);
     if (existing) existing.quantity++;
-    else marketCart.push({id:product.id, name:product.name, price:product.price, quantity:1});
+    else marketCart.push({ysKey: product.ysKey,id:product.id, name:product.name, price:product.price, quantity:1});
     updateMarketCart();
     showAddToCartToast();
 });
@@ -8773,6 +9608,7 @@ cleaningGrid.addEventListener("click", event => {
 // المكتبة: أسعار إرشادية بالليرة اللبنانية على أساس 90,000 ل.ل / دولار.
 // تحقق من الأسعار والتوفر قبل نشر المتجر للبيع.
 const libraryProducts = [{"id":"library-001","name":"قلم لوح كوفرت","price":29970,"category":"pens","image":"images/library/library-001.png","unit":"قطعة"},{"id":"library-002","name":"علبة هندسة زيرو","price":109998,"category":"geometry","image":"images/library/library-002.png","unit":"قطعة"},{"id":"library-003","name":"قلم حبر كلارو اخضر","price":19998,"category":"pens","image":"images/library/library-003.png","unit":"قطعة"},{"id":"library-004","name":"براية مع غطا  يلانغ","price":29997,"category":"pens","image":"images/library/library-004.png","unit":"قطعة"},{"id":"library-005","name":"كوركتار يلانغ*8مل","price":29970,"category":"pens","image":"images/library/library-005.png","unit":"قطعة"},{"id":"library-006","name":"براية فضاء","price":19980,"category":"pens","image":"images/library/library-006.png","unit":"قطعة"},{"id":"library-007","name":"لوح20*30","price":129960,"category":"geometry","image":"images/library/library-007.png","unit":"قطعة"},{"id":"library-008","name":"قلم ماركة صيني","price":24999.3,"category":"pens","image":"images/library/library-008.png","unit":"قطعة"},{"id":"library-009","name":"دفتر 5 مواضيع كوفرت *80","price":90000,"category":"notebooks","image":"images/library/library-009.png","unit":"قطعة"},{"id":"library-010","name":"تلوين مي خفيف*12 قلم","price":49950,"category":"art","image":"images/library/library-010.png","unit":"قطعة"},{"id":"library-011","name":"دفتر *12 لون","price":319950,"category":"notebooks","image":"images/library/library-011.png","unit":"قطعة"},{"id":"library-012","name":"جيب ريموتEQUIPMENT","price":900000,"category":"toys","image":"images/library/library-012.png","unit":"قطعة"},{"id":"library-013","name":"اجاندة نوت بوك صغيرة مع مغيطة","price":90000,"category":"notebooks","image":"images/library/library-013.png","unit":"قطعة"},{"id":"library-014","name":"دفتر 120ورقة 5 الوان","price":149940,"category":"notebooks","image":"images/library/library-014.png","unit":"قطعة"},{"id":"library-015","name":"مسطرة بلاستيك 30سنتم صور","price":9999,"category":"geometry","image":"images/library/library-015.png","unit":"قطعة"},{"id":"library-016","name":"لانش بوكس حجم كبير","price":900000,"category":"supplies","image":"images/library/library-016.png","unit":"قطعة"},{"id":"library-017","name":"دفتر بريو *50ورقة","price":19998,"category":"notebooks","image":"images/library/library-017.png","unit":"قطعة"},{"id":"library-018","name":"مقلمة علب","price":315000,"category":"bags","image":"images/library/library-018.png","unit":"قطعة"},{"id":"library-019","name":"كوركتار","price":45000,"category":"pens","image":"images/library/library-019.png","unit":"قطعة"},{"id":"library-020","name":"علب ورق *500","price":99990,"category":"notebooks","image":"images/library/library-020.png","unit":"قطعة"},{"id":"library-021","name":"شنطة prime.","price":1350000,"category":"bags","image":"images/library/library-021.png","unit":"قطعة"},{"id":"library-022","name":"غورد بلاستيك*750مل*2","price":599940,"category":"supplies","image":"images/library/library-022.png","unit":"قطعة"},{"id":"library-023","name":"دفتر 5 الوان ZOK","price":81000,"category":"notebooks","image":"images/library/library-023.png","unit":"قطعة"},{"id":"library-024","name":"دفتر 10الوان رصور","price":299970,"category":"notebooks","image":"images/library/library-024.png","unit":"قطعة"},{"id":"library-025","name":"اقلام تلوين خشب كاسبر*12قلم","price":90000,"category":"art","image":"images/library/library-025.png","unit":"قطعة"},{"id":"library-026","name":"الة حاسبة علمية eco-026","price":720000,"category":"geometry","image":"images/library/library-026.png","unit":"قطعة"},{"id":"library-027","name":"مقص بونينيا","price":69993,"category":"other","image":"images/library/library-027.png","unit":"قطعة"},{"id":"library-028","name":"اجاندة ستيتش","price":299970,"category":"notebooks","image":"images/library/library-028.png","unit":"قطعة"},{"id":"library-029","name":"غورد فاكيوم كاب","price":900000,"category":"supplies","image":"images/library/library-029.png","unit":"قطعة"},{"id":"library-030","name":"cp 89 mouse","price":270000,"category":"electronics","image":"images/library/library-030.png","unit":"قطعة"},{"id":"library-031","name":"دفتر رصور 5 الوان عربي","price":180000,"category":"notebooks","image":"images/library/library-031.png","unit":"قطعة"},{"id":"library-032","name":"مقص كورفت","price":49950,"category":"other","image":"images/library/library-032.png","unit":"قطعة"},{"id":"library-033","name":"تلوين رنا*12 قلم","price":79992,"category":"art","image":"images/library/library-033.png","unit":"قطعة"},{"id":"library-034","name":"مسطرة BOOKMARKسلكون","price":29970,"category":"geometry","image":"images/library/library-034.png","unit":"قطعة"},{"id":"library-035","name":"شنطة prime   .","price":1350000,"category":"bags","image":"images/library/library-035.png","unit":"قطعة"},{"id":"library-036","name":"دفتر 5الوان *80 ورقة","price":99990,"category":"notebooks","image":"images/library/library-036.png","unit":"قطعة"},{"id":"library-037","name":"قلم حبر كلارو احمر","price":19998,"category":"pens","image":"images/library/library-037.png","unit":"قطعة"},{"id":"library-038","name":"اجاندة لابوبو","price":199980,"category":"notebooks","image":"images/library/library-038.png","unit":"قطعة"},{"id":"library-039","name":"لعبة مجموعة عمار","price":630000,"category":"toys","image":"images/library/library-039.png","unit":"قطعة"},{"id":"library-040","name":"قلم مكتب","price":90000,"category":"pens","image":"images/library/library-040.png","unit":"قطعة"},{"id":"library-041","name":"تلوين شمع يلانغ*12قلم","price":149994,"category":"art","image":"images/library/library-041.png","unit":"قطعة"},{"id":"library-042","name":"مجموعة طيارة وسيارة","price":450000,"category":"toys","image":"images/library/library-042.png","unit":"قطعة"},{"id":"library-043","name":"قلم مع ممحاة","price":24999.93,"category":"pens","image":"images/library/library-043.png","unit":"قطعة"},{"id":"library-044","name":"مقلمة مدرسية 264351","price":199980,"category":"bags","image":"images/library/library-044.png","unit":"قطعة"},{"id":"library-045","name":"رول تسعير","price":99990,"category":"notebooks","image":"images/library/library-045.png","unit":"قطعة"},{"id":"library-046","name":"مكبسة مايبد","price":299999.7,"category":"other","image":"images/library/library-046.png","unit":"قطعة"},{"id":"library-047","name":"محاية استرا ناعمة","price":9999,"category":"pens","image":"images/library/library-047.png","unit":"قطعة"},{"id":"library-050","name":"قلم حبر بيك ازرق","price":19998,"category":"pens","image":"images/library/library-050.png","unit":"قطعة"},{"id":"library-051","name":"دفتر نوت","price":270000,"category":"notebooks","image":"images/library/library-051.png","unit":"قطعة"},{"id":"library-052","name":"شنطة سبورت اسود","price":1800000,"category":"bags","image":"images/library/library-052.png","unit":"قطعة"},{"id":"library-053","name":"قلم رصاص مع محاية vneeds","price":9999,"category":"pens","image":"images/library/library-053.png","unit":"قطعة"},{"id":"library-054","name":"مفكرة بريو *192 ورقة","price":99999.9,"category":"notebooks","image":"images/library/library-054.png","unit":"قطعة"},{"id":"library-055","name":"اجاندة  ستيتش","price":299970,"category":"notebooks","image":"images/library/library-055.png","unit":"قطعة"},{"id":"library-056","name":"wireless mouse ms9922","price":630000,"category":"electronics","image":"images/library/library-056.png","unit":"قطعة"},{"id":"library-057","name":"كوريكتير تايب*2","price":119970,"category":"pens","image":"images/library/library-057.png","unit":"قطعة"},{"id":"library-059","name":"علبة اقلام تلوين خشب يلانغ*12قلم","price":119997,"category":"art","image":"images/library/library-059.png","unit":"قطعة"},{"id":"library-060","name":"جبالة باطون لعبة","price":450000,"category":"toys","image":"images/library/library-060.png","unit":"قطعة"},{"id":"library-061","name":"كول يلانغ اصفر*25غ","price":39996,"category":"other","image":"images/library/library-061.png","unit":"قطعة"},{"id":"library-062","name":"قلم  لوح زيرو","price":39960,"category":"pens","image":"images/library/library-062.png","unit":"قطعة"},{"id":"library-064","name":"علبة اقلام رصاص كورفت*12","price":119997,"category":"pens","image":"images/library/library-064.png","unit":"قطعة"},{"id":"library-065","name":"w 920 mouse wireless","price":450000,"category":"electronics","image":"images/library/library-065.png","unit":"قطعة"},{"id":"library-066","name":"دفتر رسم صغير احمر","price":19998,"category":"notebooks","image":"images/library/library-066.png","unit":"قطعة"},{"id":"library-067","name":"كوركتار *5مم","price":79920,"category":"pens","image":"images/library/library-067.png","unit":"قطعة"},{"id":"library-069","name":"دفتر رصور 72 ورقة","price":90000,"category":"notebooks","image":"images/library/library-069.png","unit":"قطعة"},{"id":"library-071","name":"الة حاسبة kk837b","price":315000,"category":"geometry","image":"images/library/library-071.png","unit":"قطعة"},{"id":"library-073","name":"دفتر غلاف بلاسيك *48ورقة","price":45000,"category":"notebooks","image":"images/library/library-073.png","unit":"قطعة"},{"id":"library-074","name":"شنطة روضة بارلي","price":1350000,"category":"bags","image":"images/library/library-074.png","unit":"قطعة"},{"id":"library-075","name":"براية","price":14994,"category":"pens","image":"images/library/library-075.png","unit":"قطعة"},{"id":"library-076","name":"ورق تصوير*500ورق","price":450000,"category":"notebooks","image":"images/library/library-076.png","unit":"قطعة"},{"id":"library-077","name":"علبة هندسة ماب","price":90000,"category":"geometry","image":"images/library/library-077.png","unit":"قطعة"},{"id":"library-081","name":"قلم رصاص زيرو مع محاية","price":9999,"category":"pens","image":"images/library/library-081.png","unit":"قطعة"},{"id":"library-082","name":"دفتر 48*70غ مجلد حساب","price":34920,"category":"notebooks","image":"images/library/library-082.png","unit":"قطعة"},{"id":"library-084","name":"دفتر ديلوكس*50ورقة","price":24999.3,"category":"notebooks","image":"images/library/library-084.png","unit":"قطعة"},{"id":"library-086","name":"اجاندة صغيرة","price":69930,"category":"notebooks","image":"images/library/library-086.png","unit":"قطعة"},{"id":"library-087","name":"دفتر 48ورقة*70غمجلد","price":34992,"category":"notebooks","image":"images/library/library-087.png","unit":"قطعة"},{"id":"library-088","name":"دفتر*48ورقة فرنسيMPP","price":19980,"category":"notebooks","image":"images/library/library-088.png","unit":"قطعة"},{"id":"library-089","name":"براية دبدوب","price":49950,"category":"pens","image":"images/library/library-089.png","unit":"قطعة"},{"id":"library-091","name":"قلم كورفت اسود","price":14994,"category":"pens","image":"images/library/library-091.png","unit":"قطعة"},{"id":"library-092","name":"شوميز سحاب مع حلقة","price":45000,"category":"bags","image":"images/library/library-092.png","unit":"قطعة"},{"id":"library-094","name":"قلم حبر كلارو ازرق","price":19998,"category":"pens","image":"images/library/library-094.png","unit":"قطعة"},{"id":"library-095","name":"ورق كلاسور حساب","price":45000,"category":"notebooks","image":"images/library/library-095.png","unit":"قطعة"},{"id":"library-097","name":"دفتر رسم احمر كبير","price":49950,"category":"notebooks","image":"images/library/library-097.png","unit":"قطعة"},{"id":"library-098","name":"دفتر غلاف بلاستيك عربي *48 ورقة","price":45000,"category":"notebooks","image":"images/library/library-098.png","unit":"قطعة"},{"id":"library-099","name":"شنطة بارلي روضة","price":1350000,"category":"bags","image":"images/library/library-099.png","unit":"قطعة"},{"id":"library-103","name":"قلم ازرق بيانو","price":19980,"category":"pens","image":"images/library/library-103.png","unit":"قطعة"},{"id":"library-105","name":"دفتر 12 لون رصور","price":319950,"category":"notebooks","image":"images/library/library-105.png","unit":"قطعة"},{"id":"library-106","name":"قلم هايليتر كورفت","price":29997,"category":"pens","image":"images/library/library-106.png","unit":"قطعة"},{"id":"library-107","name":"شنطة prime  .","price":1350000,"category":"bags","image":"images/library/library-107.png","unit":"قطعة"},{"id":"library-108","name":"تلوين خشب mba*24","price":180000,"category":"art","image":"images/library/library-108.png","unit":"قطعة"},{"id":"library-109","name":"علبة اقلام الوان*12 قلم","price":270000,"category":"art","image":"images/library/library-109.png","unit":"قطعة"},{"id":"library-111","name":"مقلمة SPORT24","price":270000,"category":"bags","image":"images/library/library-111.png","unit":"قطعة"},{"id":"library-112","name":"قلم بيانو احمر","price":19999.8,"category":"pens","image":"images/library/library-112.png","unit":"قطعة"},{"id":"library-114","name":"الة حاسبة ستايفري ct-140e","price":675000,"category":"geometry","image":"images/library/library-114.png","unit":"قطعة"},{"id":"library-115","name":"براية دوبل مع محاية دايمرس","price":69993,"category":"pens","image":"images/library/library-115.png","unit":"قطعة"},{"id":"library-117","name":"علبة تلوين شمع*12 لون","price":45000,"category":"art","image":"images/library/library-117.png","unit":"قطعة"},{"id":"library-118","name":"علبة اقلام حبر ملونة*12 قلم","price":139995,"category":"pens","image":"images/library/library-118.png","unit":"قطعة"},{"id":"library-119","name":"كرتون ملون","price":49950,"category":"notebooks","image":"images/library/library-119.png","unit":"قطعة"},{"id":"library-120","name":"شنطة lovencar","price":2700000,"category":"bags","image":"images/library/library-120.png","unit":"قطعة"},{"id":"library-121","name":"قلم حبر كورفيت اخضر","price":14999.94,"category":"pens","image":"images/library/library-121.png","unit":"قطعة"},{"id":"library-122","name":"دفتر نوت زهري","price":270000,"category":"notebooks","image":"images/library/library-122.png","unit":"قطعة"},{"id":"library-131","name":"قلم حبر كلارو اسود","price":19980,"category":"pens","image":"images/library/library-131.png","unit":"قطعة"},{"id":"library-132","name":"دفتر 48 ورقة PAPEC","price":19980,"category":"notebooks","image":"images/library/library-132.png","unit":"قطعة"},{"id":"library-150","name":"قلم بيانو اسود","price":19980,"category":"pens","image":"images/library/library-150.png","unit":"قطعة"},{"id":"library-153","name":"دفتر رصور 5 الوان","price":99990,"category":"notebooks","image":"images/library/library-153.png","unit":"قطعة"},{"id":"library-158","name":"دفتر 6 الوان رصور","price":199980,"category":"notebooks","image":"images/library/library-158.png","unit":"قطعة"},{"id":"library-166","name":"قلم كورفت اخضر","price":14994,"category":"pens","image":"images/library/library-166.png","unit":"قطعة"},{"id":"library-185","name":"قلم حبر كورفيت ازرق فاتح","price":14994,"category":"pens","image":"images/library/library-185.png","unit":"قطعة"},{"id":"library-189","name":"دفتر مدرسي بلاستيك*48ورقة حساب","price":45000,"category":"notebooks","image":"images/library/library-189.png","unit":"قطعة"}];
+    window.YallaRegistry.register('library', libraryProducts, 5);;
 const libraryGrid = document.getElementById('libraryProductsGrid');
 const librarySearchInput = document.getElementById('libraryProductSearch');
 const librarySearchWrap = document.getElementById('librarySearchWrap');
@@ -8809,7 +9645,7 @@ function renderLibraryProducts() {
     card.querySelector('.library-add').addEventListener('click', () => {
       const existing = marketCart.find(item => item.id === product.id);
       if (existing) existing.quantity++;
-      else marketCart.push({id:product.id,name:product.name,price:product.price,image:product.image,quantity:1});
+      else marketCart.push({ysKey: product.ysKey,id:product.id,name:product.name,price:product.price,image:product.image,quantity:1});
       updateMarketCart();
       showAddToCartToast();
     });
@@ -8839,6 +9675,27 @@ renderButcherProducts();
 
 
 
+    window.yallaAddDynamicProduct = function(key){
+      const p=window.YallaRegistry.find(key);if(!p)return;
+      const existing=marketCart.find(item=>item.ysKey===p.ysKey);
+      if(existing)existing.quantity++;
+      else marketCart.push({ysKey:p.ysKey,id:p.id,name:p.name,price:p.price,image:p.image,quantity:1});
+      updateMarketCart();showAddToCartToast();
+    };
+    function syncYallaCart() {
+      for (let i=marketCart.length-1;i>=0;i--) {
+        const item=marketCart[i];
+        const p=window.YallaRegistry.find(item.ysKey);
+        if (!p) {marketCart.splice(i,1);continue;}
+        item.name=(p.group?.startsWith('restaurant')?'RAAD Resto Café - ':'')+p.name;
+        item.price=p.price; item.image=p.image; item.priceUndetermined=p.price==null;
+      }
+    }
+    window.addEventListener('yalla-catalog-change',()=>{
+      renderMarketProducts(); renderVegetablesProducts(); renderButcherProducts();
+      renderGharibProducts(); renderCleaningProducts(); renderLibraryProducts(); renderGlobalSearch();
+      syncYallaCart(); updateMarketCart(); if(!cartScreen.hidden)renderYallaCart();
+    });
     // إنشاء المنتجات عند تحميل الصفحة
     renderMarketProducts();
     // عرض أقسام الصفحة الرئيسية من بيانات المنتجات الأصلية، بدون نسخ بيانات أو تغيير المودالات.
@@ -8848,7 +9705,7 @@ renderButcherProducts();
       const orbit = document.getElementById('ysFoodOrbit');
       const cleanEscape = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
       if (orbit && cleaningFeatured.length) {
-        const card = (x,i) => `<article class="ys-orbit-card ys-clean-card" style="--i:${i}"><button class="ys-clean-open" type="button" data-open-category="منظفات" aria-label="عرض ${cleanEscape(x.name)} في قسم المنظفات"><span class="ys-img"><img src="${cleanEscape(x.image)}" alt="${cleanEscape(x.name)}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('ys-img-fallback')"></span><strong>${cleanEscape(x.name)}</strong><small>${Number(x.price).toLocaleString('en-US')} ل.ل</small><span class="ys-clean-cta">عرض المنتج ←</span></button><button class="ys-fav-toggle" type="button" data-fav-id="market-${x.id}" data-fav-name="${cleanEscape(x.name)}" data-fav-img="${cleanEscape(x.image)}" data-fav-price="${x.price}" data-fav-category="منظفات" aria-label="أضف للمفضلة">♡</button></article>`;
+        const card = (x,i) => `<article class="ys-orbit-card ys-clean-card" data-ys-key="${x.ysKey}" data-ys-group="${x.group}" style="--i:${i}"><button class="ys-clean-open" type="button" data-open-category="منظفات" aria-label="عرض ${cleanEscape(x.name)} في قسم المنظفات"><span class="ys-img"><img src="${cleanEscape(x.image)}" alt="${cleanEscape(x.name)}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('ys-img-fallback')"></span><strong>${cleanEscape(x.name)}</strong><small>${Number(x.price).toLocaleString('en-US')} ل.ل</small><span class="ys-clean-cta">عرض المنتج ←</span></button><button class="ys-fav-toggle" type="button" data-fav-id="market-${x.id}" data-fav-name="${cleanEscape(x.name)}" data-fav-img="${cleanEscape(x.image)}" data-fav-price="${x.price}" data-fav-category="منظفات" aria-label="أضف للمفضلة">♡</button></article>`;
         orbit.innerHTML = [...cleaningFeatured, ...cleaningFeatured].map(card).join('');
         orbit.classList.add('ys-clean-marquee');
         const pause = () => orbit.classList.add('ys-paused');
@@ -8877,7 +9734,7 @@ renderButcherProducts();
       function showcaseCard(p,i,category,type){
         const id=type==='meat'?'butcher-'+p.id:'poultry-'+i;
         const price=Number(p.price||0).toLocaleString('en-US');
-        return `<article class="ys-slide-card ys-slide-${type}"><button type="button" class="ys-slide-open" data-open-category="${category}" aria-label="تصفح ${escShow(p.name)}"><span class="ys-slide-photo"><img src="${escShow(p.image)}" alt="${escShow(p.name)}" loading="lazy" decoding="async" onerror="this.style.visibility='hidden'"></span><span class="ys-slide-name">${escShow(p.name)}</span><span class="ys-slide-unit">${escShow(p.unit||'')}</span><span class="ys-slide-price">${price} ل.ل</span><span class="ys-slide-cta">تسوّق الآن ←</span></button><button type="button" class="ys-fav-toggle ys-slide-heart" data-fav-id="${escShow(id)}" data-fav-name="${escShow(p.name)}" data-fav-img="${escShow(p.image)}" data-fav-price="${escShow(p.price)}" data-fav-category="${category}" aria-label="أضف للمفضلة">♡</button></article>`;
+        return `<article class="ys-slide-card ys-slide-${type}" data-ys-key="${p.ysKey}" data-ys-group="${p.group}"><button type="button" class="ys-slide-open" data-open-category="${category}" aria-label="تصفح ${escShow(p.name)}"><span class="ys-slide-photo"><img src="${escShow(p.image)}" alt="${escShow(p.name)}" loading="lazy" decoding="async" onerror="this.style.visibility='hidden'"></span><span class="ys-slide-name">${escShow(p.name)}</span><span class="ys-slide-unit">${escShow(p.unit||'')}</span><span class="ys-slide-price">${price} ل.ل</span><span class="ys-slide-cta">تسوّق الآن ←</span></button><button type="button" class="ys-fav-toggle ys-slide-heart" data-fav-id="${escShow(id)}" data-fav-name="${escShow(p.name)}" data-fav-img="${escShow(p.image)}" data-fav-price="${escShow(p.price)}" data-fav-category="${category}" aria-label="أضف للمفضلة">♡</button></article>`;
       }
       function setupShowcase(id,items,category,type){
         const host=document.getElementById(id);
@@ -8999,6 +9856,50 @@ renderButcherProducts();
         }, 4200);
     }
 
+    // المشروبات: نفس بطاقات وحركة البن والقهوة، من بيانات المنتجات الأصلية
+    const drinksTrack = document.getElementById('drinksFeaturedTrack');
+    if (drinksTrack) {
+      const drinks = marketProducts.filter(p => p.category === 'drinks' && p.image && p.name && Number.isFinite(Number(p.price)));
+      const openDrinks = (name) => {
+        document.querySelector('.category-card[data-category="سوبر ماركت"]')?.click();
+        document.querySelector('#marketCategories [data-filter="drinks"]')?.click();
+        if (name) {
+          const search = document.getElementById('marketProductSearch');
+          if (search) {search.value=name;search.dispatchEvent(new Event('input',{bubbles:true}));}
+        }
+      };
+      document.getElementById('drinksViewAll')?.addEventListener('click',()=>openDrinks());
+      drinks.forEach((p,index)=>{
+        const card=document.createElement('article');card.className='pro-feature-card';
+        const picture=document.createElement('div');picture.className='pro-feature-picture';
+        const img=document.createElement('img');img.src=p.image;img.alt=p.name.trim();img.width=94;img.height=94;
+        img.loading=index<2?'eager':'lazy';img.decoding='async';
+        img.onerror=()=>{img.style.display='none';picture.classList.add('image-unavailable')};
+        picture.append(img);
+        const name=document.createElement('h3');name.textContent=p.name.trim();
+        const unit=document.createElement('small');unit.textContent=p.unit||'';
+        const price=document.createElement('strong');price.textContent=Number(p.price).toLocaleString('en-US')+' ل.ل';
+        const btn=document.createElement('button');btn.type='button';btn.textContent='عرض المنتج';
+        btn.setAttribute('aria-label','عرض '+p.name.trim());btn.addEventListener('click',()=>openDrinks(p.name.trim()));
+        const meta=document.createElement('div');meta.className='next-price-row';meta.append(price,btn);
+        card.append(picture,name,unit,meta);drinksTrack.append(card);
+      });
+      let paused=false;
+      drinksTrack.addEventListener('pointerenter',()=>paused=true);
+      drinksTrack.addEventListener('pointerleave',()=>paused=false);
+      drinksTrack.addEventListener('touchstart',()=>paused=true,{passive:true});
+      drinksTrack.addEventListener('touchend',()=>setTimeout(()=>paused=false,4500),{passive:true});
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && drinks.length>3) setInterval(()=>{
+        if(paused||document.hidden||!drinksTrack.offsetWidth)return;
+        const step=(drinksTrack.querySelector('.pro-feature-card')?.getBoundingClientRect().width||145)+11;
+        const max=drinksTrack.scrollWidth-drinksTrack.clientWidth;
+        if(max<20)return;
+        const atEnd=Math.abs(drinksTrack.scrollLeft)>=max-step*.4;
+        const next=drinksTrack.scrollLeft+(getComputedStyle(drinksTrack).direction==='rtl'?-step:step);
+        drinksTrack.scrollTo({left:atEnd?0:next,behavior:'smooth'});
+      },4200);
+    }
+
     // مجموعات الاحتياجات: منتجات حقيقية من مصفوفات المتجر الأصلية
     const needsScreen = document.getElementById('ysNeedsScreen');
     const needsGrid = document.getElementById('ysNeedsGrid');
@@ -9034,7 +9935,7 @@ renderButcherProducts();
           const id='needs-'+source+'-'+(p.id??p.name??i);
           const found=marketCart.find(x=>x.id===id);
           if(found)found.quantity++;
-          else marketCart.push({id,name:(p.name||'').trim(),price:Number(p.price)||0,priceUndetermined:p.price==null,unit:p.unit||'',image:p.image||'',quantity:1});
+          else marketCart.push({ysKey: p.ysKey,id,name:(p.name||'').trim(),price:Number(p.price)||0,priceUndetermined:p.price==null,unit:p.unit||'',image:p.image||'',quantity:1});
           updateMarketCart();showAddToCartToast();
         });
         bottom.append(price,add);card.append(picture,title,unit,bottom);needsGrid.append(card);
@@ -9056,11 +9957,14 @@ renderButcherProducts();
       document.getElementById('ysNeedsBrowseLabel').textContent='تصفّح '+group.title;
       needsSearchInput.value='';
       document.getElementById('ysNeedsSearchWrap').hidden=true;
-      currentNeedsEntries=group.entries;
+      currentNeedsEntries = window.YallaRegistry.all().filter(p=>key==='cooking'
+ ? ['vegetables','butcher','poultry'].includes(p.group)||(p.group==='market'&&p.category==='spices')
+ : p.group==='market'&&(key==='breakfast'?['coffee','Bakery','dairy','drinks']:['food','drinks','Bakery','dairy','spices','Snacks','IceCream']).includes(p.category)).map(p=>({p,source:p.group}));
       renderNeedsProducts();
       needsScreen.hidden=false;home.classList.add('market-open');
       needsScreen.querySelector('.ys-needs-scroll').scrollTop=0;
     }
+    window.addEventListener('yalla-catalog-change',()=>{if(!needsScreen.hidden){currentNeedsEntries=currentNeedsEntries.map(e=>({...e,p:window.YallaRegistry.find(e.p.ysKey)})).filter(e=>e.p);renderNeedsProducts();}});
     document.getElementById('ysNeedsSearchButton')?.addEventListener('click',()=>{
       const wrap=document.getElementById('ysNeedsSearchWrap');wrap.hidden=!wrap.hidden;
       if(!wrap.hidden)needsSearchInput.focus();else{needsSearchInput.value='';renderNeedsProducts();}
@@ -9717,6 +10621,7 @@ const restaurantMenus = {
 ]
   }
 };
+window.YallaRegistry.register('restaurant0', restaurantMenus["RAAD Resto Café"].items, 10);;
 let restaurantCurrent = null;
 let restaurantFilter = 'all';
 const restaurantSearch = document.getElementById('restaurantsSearch');
@@ -9815,6 +10720,7 @@ document.getElementById('restaurantsSearchToggle').addEventListener('click',()=>
   if(!wrap.hidden)restaurantSearch.focus();else{restaurantSearch.value='';renderRestaurantView();}
 });
 restaurantSearch.addEventListener('input',renderRestaurantView);
+window.addEventListener('yalla-catalog-change',renderRestaurantView);
 // Populate the restaurant list immediately, even before opening the section.
 renderRestaurantView();
 // سحب التصنيفات بالماوس، واللمس مدعوم عبر CSS overflow-x.
@@ -9867,6 +10773,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const favScreen=document.getElementById('ysFavorites'),list=document.getElementById('ysFavList');
  const esc=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(favorites))}catch(e){};refresh()};
+ window.addEventListener('yalla-catalog-change',()=>{for(const [key,x] of Object.entries(favorites)){if(!x.ysKey)continue;const p=window.YallaRegistry.find(x.ysKey);if(!p){delete favorites[key];continue;}x.name=p.name;x.price=p.price;x.image=p.image;}save();});
  function refresh(){
    const count=Object.keys(favorites).length,el=document.getElementById('ysFavCount');
    if(el){el.textContent=count;el.hidden=!count}
@@ -9881,7 +10788,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.querySelector('.bottom-nav [data-page="الرئيسية"]')?.addEventListener('click',closeFav);
  document.addEventListener('click',e=>{
   const heart=e.target.closest('.ys-fav-toggle');
-  if(heart){e.preventDefault();e.stopPropagation();const id=heart.dataset.favId;if(favorites[id])delete favorites[id];else favorites[id]={name:heart.dataset.favName,image:heart.dataset.favImg,price:heart.dataset.favPrice,category:heart.dataset.favCategory};save();return}
+  if(heart){e.preventDefault();e.stopPropagation();const id=heart.dataset.favId;if(favorites[id])delete favorites[id];else favorites[id]={ysKey:(heart.closest('[data-ys-key]')?.dataset.ysKey||window.YallaRegistry.all().find(p=>String(p.id)===heart.closest('[data-product-id]')?.dataset.productId)?.ysKey||window.YallaRegistry.all().find(p=>p.name.trim()===String(heart.dataset.favName||'').trim()&&Number(p.price)===Number(heart.dataset.favPrice))?.ysKey),name:heart.dataset.favName,image:heart.dataset.favImg,price:heart.dataset.favPrice,category:heart.dataset.favCategory};save();return}
   const remove=e.target.closest('[data-remove-fav]');if(remove){delete favorites[remove.dataset.removeFav];save();return}
   const open=e.target.closest('[data-open-category]');if(open){closeFav();document.querySelector('.category-card[data-category="'+open.dataset.openCategory+'"]')?.click()}
  });
@@ -10169,3 +11076,91 @@ document.addEventListener('DOMContentLoaded', () => {
     tracked = false;
   });
 });
+
+
+
+/* Custom animated storefront — all cards use the existing live product registry. */
+(() => {
+  'use strict';
+  const hosts = {Bakery:document.getElementById('ysDiscoveryBakery'),Purchases:document.getElementById('ysDiscoveryPurchases'),Snacks:document.getElementById('ysDiscoverySnacks')};
+  if (!Object.values(hosts).some(Boolean)) return;
+  const groups = [
+    {key:'Bakery',title:'المخبوزات والإفطار',desc:'طعم طيب لبداية أحلى',theme:'bakery',rows:1},
+    {key:'Snacks',title:'المكسرات',desc:'',theme:'nuts',rows:1},
+    {key:'Purchases',title:'المقرمشات',desc:'قرمشة على كيفك',theme:'crisps',rows:3}
+  ];
+  const escapeHTML = v => String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function openCategory(key){
+    document.querySelector('#categoriesGrid [data-category="سوبر ماركت"]')?.click();
+    document.querySelectorAll('#marketCategories [data-filter]').forEach(b=>{if(b.dataset.filter.toLowerCase()===key.toLowerCase())b.click()});
+  }
+  function card(p,key){
+    const b=document.createElement('button');b.type='button';b.className='fresh-card';
+    b.innerHTML=`<span class="fresh-photo"><img loading="lazy" decoding="async" src="${escapeHTML(p.image)}" alt="${escapeHTML(p.name)}"></span><strong>${escapeHTML(p.name)}</strong><span class="fresh-price">${Number(p.price||0).toLocaleString('en-US')} ل.ل</span>`;
+    b.addEventListener('click',()=>openCategory(key));return b;
+  }
+  function render(){
+    const reg=window.YallaRegistry;
+    if(!reg||typeof reg.all!=='function')return;
+    const all=reg.all().filter(p=>p&&p.group==='market'&&p.image);
+    Object.values(hosts).forEach(h=>h?.replaceChildren());
+    groups.forEach(g=>{
+      const items=all.filter(p=>String(p.category||'').toLowerCase()===g.key.toLowerCase());
+      if(!items.length)return;
+      const section=document.createElement('section');section.className=`fresh-section fresh-${g.theme}`;
+      section.innerHTML=(g.theme==='nuts'||g.theme==='crisps'||g.theme==='bakery') ? `<div class="fresh-head"><h3>${g.title}</h3><button class="fresh-all" type="button">عرض الكل ‹</button></div><div class="fresh-content"></div>` : `<div class="fresh-head"><div><span class="fresh-kicker">YALLA SHOP ✦</span><h3>${g.title}</h3><p>${g.desc}</p></div><button class="fresh-all" type="button">عرض الكل ‹</button></div><div class="fresh-content"></div>`;
+      section.querySelector('.fresh-all').addEventListener('click',()=>openCategory(g.key));
+      const content=section.querySelector('.fresh-content');
+      if(g.theme==='bakery'){
+        const grid=document.createElement('div');grid.className='fresh-bakery-grid';
+        items.slice(0,4).forEach(p=>grid.append(card(p,g.key)));content.append(grid);
+      }else{
+        for(let r=0;r<g.rows;r++){
+          const view=document.createElement('div');view.className='fresh-marquee';view.setAttribute('aria-label',g.title+' - صف '+(r+1));
+          const track=document.createElement('div');track.className='fresh-track';
+          const row=items.filter((_,i)=>g.rows===1||i%g.rows===r).slice(0,12);
+          const selected=row.length?row:items.slice(0,8);
+          for(let copy=0;copy<2;copy++)selected.forEach(p=>{const c=card(p,g.key);if(copy){c.tabIndex=-1;c.setAttribute('aria-hidden','true')}track.append(c)});
+          view.append(track);content.append(view);
+        }
+      }
+      hosts[g.key]?.append(section);
+    });
+  }
+  let pending;
+  function schedule(){clearTimeout(pending);pending=setTimeout(render,100)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{render();setTimeout(render,1000)});
+  else{render();setTimeout(render,1000)}
+  window.addEventListener('yalla-catalog-change',schedule);
+})();
+
+/* Fruit & vegetable circular rail from the existing catalog */
+(() => {
+  const rail=document.getElementById('ysFruitRail');
+  if(!rail)return;
+  const open=(category)=>{
+    document.querySelector('#categoriesGrid [data-category="خضرة وفواكه"]')?.click();
+    if(category){document.querySelector('#vegetablesScreen .vegetables-filter[data-filter="'+category+'"]')?.click()}
+  };
+  document.getElementById('ysFruitAll')?.addEventListener('click',()=>open());
+  const render=()=>{
+    const reg=window.YallaRegistry;
+    if(!reg||typeof reg.all!=='function')return;
+    const products=reg.all().filter(p=>p&&p.group==='vegetables'&&p.image);
+    if(!products.length)return;
+    rail.replaceChildren();
+    const seen=new Set();
+    products.filter(p=>{const name=String(p.name||'').trim();if(!name||seen.has(name))return false;seen.add(name);return true}).slice(0,12).forEach(p=>{
+      const btn=document.createElement('button');btn.type='button';btn.className='ys-fruit-item';
+      const circle=document.createElement('span');circle.className='ys-fruit-image';
+      const img=document.createElement('img');img.src=p.image;img.alt=p.name;img.loading='lazy';img.decoding='async';
+      const title=document.createElement('strong');title.textContent=p.name;
+      circle.append(img);btn.append(circle,title);
+      btn.addEventListener('click',()=>open(p.category==='fruit'?'fruit':'vegetable'));
+      rail.append(btn);
+    });
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{render();setTimeout(render,800)});
+  else{render();setTimeout(render,800)}
+  window.addEventListener('yalla-catalog-change',render);
+})();
