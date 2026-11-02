@@ -614,7 +614,7 @@ cartScreen.innerHTML = `
       <textarea id="ycAddress" rows="2"
         placeholder="المنطقة، الشارع، المبنى..."></textarea>
 
-      <p class="yc-location-help">📍 اضغط على الزر لتحديد موقعك تلقائياً. لازم تفعّل خدمات الموقع وتسمح للمتصفح باستخدامها لإرسال الطلب.</p>
+      <p class="yc-location-help">📍 تحديد الموقع اختياري. يمكنك إرسال الطلب بعنوان التوصيل المكتوب فقط، أو الضغط على الزر لإضافة موقعك تلقائياً.</p>
       <button type="button" id="ycLocation">
         📍 تحديد موقعي من الهاتف
       </button>
@@ -801,11 +801,11 @@ const ycLocationButton = document.getElementById("ycLocation");
 function ycRequestLocation() {
     if (ycLocationPending) return ycLocationPending;
     if (!window.isSecureContext) {
-        cartLocationStatus.textContent = "⚠️ تحديد الموقع يحتاج فتح الموقع برابط HTTPS (مش http أو ملف محلي). لازم تفتح المتجر عبر HTTPS لتقدر ترسل الطلب.";
+        cartLocationStatus.textContent = "⚠️ تحديد الموقع يحتاج رابط HTTPS. يمكنك إرسال الطلب بدون تحديد الموقع باستخدام عنوان التوصيل المكتوب.";
         return Promise.resolve(false);
     }
     if (!navigator.geolocation) {
-        cartLocationStatus.textContent = "⚠️ هالمتصفح ما بيدعم تحديد الموقع. افتح المتجر عبر Safari أو Chrome وفعّل خدمات الموقع لإرسال الطلب.";
+        cartLocationStatus.textContent = "⚠️ هالمتصفح ما بيدعم تحديد الموقع. يمكنك إرسال الطلب باستخدام عنوان التوصيل المكتوب فقط.";
         return Promise.resolve(false);
     }
     cartLocationStatus.textContent = "عم نطلب إذن الموقع… وافق على الرسالة اللي بتظهر على جهازك.";
@@ -822,11 +822,11 @@ function ycRequestLocation() {
                 customerCoordinates = null;
                 customerLocationLink = "";
                 const messages = {
-                    1: "❌ إذن الموقع مرفوض. فعّل السماح بالموقع من إعدادات Safari أو Chrome أو التطبيق، وجرّب من جديد.",
-                    2: "⚠️ الجهاز ما قدر يحدد موقعك. فعّل خدمات الموقع والإنترنت وجرّب مجدداً قبل إرسال الطلب.",
-                    3: "⌛ تحديد الموقع أخد وقت طويل. جرّب بمكان فيه إشارة أفضل قبل إرسال الطلب."
+                    1: "إذن الموقع مرفوض. يمكنك إرسال الطلب بالعنوان المكتوب، أو السماح بالموقع من إعدادات المتصفح والمحاولة مجدداً.",
+                    2: "⚠️ الجهاز ما قدر يحدد موقعك. يمكنك إرسال الطلب بالعنوان المكتوب، أو تفعيل خدمات الموقع والمحاولة مجدداً.",
+                    3: "⌛ تحديد الموقع أخد وقت طويل. يمكنك إرسال الطلب بالعنوان المكتوب أو محاولة تحديد الموقع مجدداً."
                 };
-                cartLocationStatus.textContent = messages[error.code] || "تعذّر تحديد الموقع. لازم تفعّل الموقع وتسمح للمتصفح باستخدامه لإرسال الطلب.";
+                cartLocationStatus.textContent = messages[error.code] || "تعذّر تحديد الموقع. يمكنك إرسال الطلب باستخدام عنوان التوصيل المكتوب فقط.";
                 resolve(false);
             },
             {enableHighAccuracy: false, timeout: 25000, maximumAge: 60000}
@@ -871,12 +871,7 @@ ycLocationButton.addEventListener("click", ycRequestLocation);
         ycNotify("رقم واتساب المتجر غير مضبوط، تواصل مع إدارة المتجر."); return;
     }
     const total = marketCart.reduce((sum,item) => sum + item.price * item.quantity,0);
-    if (!customerLocationLink || !customerCoordinates) {
-        ycNotify("📍 لازم تفعّل خدمات الموقع وتضغط «تحديد موقعي من الهاتف» وتسمح للمتصفح باستخدام الموقع قبل إرسال الطلب.", ycLocationButton);
-        cartLocationStatus.textContent = "⚠️ الموقع مطلوب لإرسال الطلب. فعّل خدمات الموقع من إعدادات الهاتف واسمح للمتصفح بالوصول إليه.";
-        return;
-    }
-    const locationLink = customerLocationLink;
+    const locationLink = customerCoordinates ? customerLocationLink : "";
     const message = createYallaWhatsAppInvoice({
         name,phone,address,locationLink,
         cart:marketCart.map(item => ({...item})),total
