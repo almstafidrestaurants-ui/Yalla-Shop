@@ -8503,16 +8503,11 @@ cartScreen.innerHTML = `
       <textarea id="ycAddress" rows="2"
         placeholder="المنطقة، الشارع، المبنى..."></textarea>
 
-      <p class="yc-location-help">📱 تحديد الموقع اختياري. إذا بدك ترسل موقعك، افتح المتجر من الموبايل وشغّل GPS واضغط الزر. فيك تطلب بدون تحديد موقع.</p>
+      <p class="yc-location-help">📍 اضغط على الزر لتحديد موقعك تلقائياً. لازم تفعّل خدمات الموقع وتسمح للمتصفح باستخدامها لإرسال الطلب.</p>
       <button type="button" id="ycLocation">
         📍 تحديد موقعي من الهاتف
       </button>
-
       <p id="ycLocationStatus" role="status" aria-live="polite"></p>
-      <label for="ycManualLocation">أو الصق رابط موقعك من الخرائط</label>
-      <input id="ycManualLocation" type="url" inputmode="url" dir="ltr"
-        placeholder="https://maps.app.goo.gl/..." autocomplete="off">
-      <p class="yc-location-help">افتح Google Maps، اضغط على موقعك، ثم مشاركة ← نسخ الرابط، والصقه هون.</p>
     </div>
 
     <button type="button" id="ycOrder">
@@ -8692,27 +8687,14 @@ function ycNotify(message, field) {
 let ycLocationPending = null;
 let customerLocationLink = "";
 const ycLocationButton = document.getElementById("ycLocation");
-const ycManualLocation = document.getElementById("ycManualLocation");
-function ycValidMapsLink(value) {
-    try {
-        const url = new URL(value.trim());
-        const host = url.hostname.toLowerCase();
-        return url.protocol === "https:" && (
-            host === "maps.google.com" || host === "www.google.com" ||
-            host === "google.com" || host === "maps.app.goo.gl" ||
-            host === "goo.gl" || host === "www.openstreetmap.org" ||
-            host === "openstreetmap.org"
-        );
-    } catch (_) { return false; }
-}
 function ycRequestLocation() {
     if (ycLocationPending) return ycLocationPending;
     if (!window.isSecureContext) {
-        cartLocationStatus.textContent = "⚠️ تحديد الموقع يحتاج فتح الموقع برابط HTTPS (مش http أو ملف محلي). فيك تلصق رابط موقعك من الخرائط بالأسفل.";
+        cartLocationStatus.textContent = "⚠️ تحديد الموقع يحتاج فتح الموقع برابط HTTPS (مش http أو ملف محلي). لازم تفتح المتجر عبر HTTPS لتقدر ترسل الطلب.";
         return Promise.resolve(false);
     }
     if (!navigator.geolocation) {
-        cartLocationStatus.textContent = "⚠️ هالمتصفح ما بيدعم تحديد الموقع. افتح الموقع بسفاري أو كروم، أو الصق رابط موقعك من الخرائط.";
+        cartLocationStatus.textContent = "⚠️ هالمتصفح ما بيدعم تحديد الموقع. افتح المتجر عبر Safari أو Chrome وفعّل خدمات الموقع لإرسال الطلب.";
         return Promise.resolve(false);
     }
     cartLocationStatus.textContent = "عم نطلب إذن الموقع… وافق على الرسالة اللي بتظهر على جهازك.";
@@ -8722,18 +8704,18 @@ function ycRequestLocation() {
             position => {
                 customerCoordinates = {lat: position.coords.latitude, lng: position.coords.longitude};
                 customerLocationLink = `https://www.google.com/maps?q=${customerCoordinates.lat},${customerCoordinates.lng}`;
-                ycManualLocation.value = customerLocationLink;
                 cartLocationStatus.textContent = "✓ تم تحديد الموقع بنجاح، ورح ينضاف رابط الموقع للطلب.";
                 resolve(true);
             },
             error => {
                 customerCoordinates = null;
+                customerLocationLink = "";
                 const messages = {
                     1: "❌ إذن الموقع مرفوض. فعّل السماح بالموقع من إعدادات Safari أو Chrome أو التطبيق، وجرّب من جديد.",
-                    2: "⚠️ الجهاز ما قدر يحدد موقعك. شغّل خدمات الموقع والإنترنت، أو الصق رابط موقعك من الخرائط.",
-                    3: "⌛ تحديد الموقع أخد وقت طويل. جرّب بمكان فيه إشارة أفضل، أو الصق رابط موقعك."
+                    2: "⚠️ الجهاز ما قدر يحدد موقعك. فعّل خدمات الموقع والإنترنت وجرّب مجدداً قبل إرسال الطلب.",
+                    3: "⌛ تحديد الموقع أخد وقت طويل. جرّب بمكان فيه إشارة أفضل قبل إرسال الطلب."
                 };
-                cartLocationStatus.textContent = messages[error.code] || "تعذّر تحديد الموقع. فيك تستخدم رابط الخرائط بدلًا منه.";
+                cartLocationStatus.textContent = messages[error.code] || "تعذّر تحديد الموقع. لازم تفعّل الموقع وتسمح للمتصفح باستخدامه لإرسال الطلب.";
                 resolve(false);
             },
             {enableHighAccuracy: false, timeout: 25000, maximumAge: 60000}
@@ -8754,11 +8736,6 @@ document.querySelectorAll('.bottom-nav .nav-item[data-page="السلة"]').forEa
     button.addEventListener("click", showMarketCart);
 });
 ycLocationButton.addEventListener("click", ycRequestLocation);
-ycManualLocation.addEventListener("input", () => {
-    customerCoordinates = null;
-    customerLocationLink = "";
-    cartLocationStatus.textContent = "";
-});
 // تجهيز الطلب وإرساله إلى واتساب، ثم تفريغ السلة فور فتح الرابط
  document.getElementById("ycOrder").onclick = async () => {
     if (!navigator.onLine) { ycNotify("اتصل بالإنترنت لتأكيد الأسعار قبل الطلب."); return; }
@@ -8783,12 +8760,12 @@ ycManualLocation.addEventListener("input", () => {
         ycNotify("رقم واتساب المتجر غير مضبوط، تواصل مع إدارة المتجر."); return;
     }
     const total = marketCart.reduce((sum,item) => sum + item.price * item.quantity,0);
-    const manualLocation = ycManualLocation.value.trim();
-    if (manualLocation && !ycValidMapsLink(manualLocation)) {
-        ycNotify("رابط الموقع مش صحيح. انسخ رابط المشاركة من Google Maps أو امسح الرابط.", ycManualLocation);
+    if (!customerLocationLink || !customerCoordinates) {
+        ycNotify("📍 لازم تفعّل خدمات الموقع وتضغط «تحديد موقعي من الهاتف» وتسمح للمتصفح باستخدام الموقع قبل إرسال الطلب.", ycLocationButton);
+        cartLocationStatus.textContent = "⚠️ الموقع مطلوب لإرسال الطلب. فعّل خدمات الموقع من إعدادات الهاتف واسمح للمتصفح بالوصول إليه.";
         return;
     }
-    const locationLink = manualLocation || customerLocationLink || "";
+    const locationLink = customerLocationLink;
     const message = createYallaWhatsAppInvoice({
         name,phone,address,locationLink,
         cart:marketCart.map(item => ({...item})),total
