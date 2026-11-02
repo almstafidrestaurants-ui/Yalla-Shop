@@ -123,7 +123,7 @@
   window.addEventListener('yalla-sections-change',()=>{refreshGroups();renderSections();if(authorized||demo)render();});
   window.addEventListener('yalla-catalog-change',()=>{if(authorized||demo)renderSections();});
   async function init(){
-    try{const response=await fetch('catalog.json');if(!response.ok)throw Error();base=await response.json();for(const [i,g] of groupOrder.entries()){const list=base.filter(p=>p.group===g);R.register(g,list,g==='restaurant0'?10:i+1);}base=groupOrder.flatMap(g=>R.all(true).filter(p=>p.group===g)).map(p=>({...p}));
+    try{if(!Array.isArray(window.YallaCatalog))throw Error('Missing shared catalog');base=window.YallaCatalog.map(p=>({...p}));for(const [i,g] of groupOrder.entries()){const list=base.filter(p=>p.group===g);R.register(g,list,g==='restaurant0'?10:i+1);}base=groupOrder.flatMap(g=>R.all(true).filter(p=>p.group===g)).map(p=>({...p}));
       // Preserve published overrides if Firebase connected before catalog loading.
       if(R.rows().length)R.apply(R.rows());
     }catch(e){notify('تعذر تحميل الأصناف. افتح الصفحة من رابط HTTPS أو خادم محلي، وليس file://.',true);return;}

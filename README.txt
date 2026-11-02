@@ -12,7 +12,7 @@ Use an HTTPS host or local HTTP server; do not open owner.html via file://.
 On Windows, START-LOCAL.bat is provided (requires Python 3).
 No credentials are included. Until configured, only local preview is available.
 
-The website includes 961 original product records. Existing images remain in images/.
+The website includes 1052 original product records. Existing images remain in images/.
 Only overrides/new products are written to Firestore.
 Gallery images are resized to JPEG display thumbnails, at most 96,000 data URL
 characters, in separate Firestore documents. This edition does NOT use Firebase Storage.
@@ -28,3 +28,9 @@ Dynamic sections update (2026-11-01):
   and the shared shopping cart support these sections.
 - Publish the UPDATED firestore.rules before using section saves.
 - Sections use yallaSections; public config and owner UID/email are already set.
+
+Catalog consistency fix (2026-11-02):
+- Both pages now load catalog-data.js as the shared bundled source (1052 products).
+- catalog.json is a matching export; edit catalog-data.js if manually changing bundled items.
+- Customer management link removed. Open owner.html directly to manage products.
+- Upload all updated files together, then refresh both pages with Ctrl+F5.
