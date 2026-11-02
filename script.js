@@ -8508,7 +8508,11 @@ cartScreen.innerHTML = `
         📍 تحديد موقعي من الهاتف
       </button>
 
-      <p id="ycLocationStatus"></p>
+      <p id="ycLocationStatus" role="status" aria-live="polite"></p>
+      <label for="ycManualLocation">أو الصق رابط موقعك من الخرائط</label>
+      <input id="ycManualLocation" type="url" inputmode="url" dir="ltr"
+        placeholder="https://maps.app.goo.gl/..." autocomplete="off">
+      <p class="yc-location-help">افتح Google Maps، اضغط على موقعك، ثم مشاركة ← نسخ الرابط، والصقه هون.</p>
     </div>
 
     <button type="button" id="ycOrder">
@@ -8684,57 +8688,77 @@ function ycNotify(message, field) {
         ycMessage.hidden = true;
     });
 });
-const ycMobile = () => /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+// تحديد الموقع يعمل على iOS وAndroid والمتصفح المكتبي، بشرط HTTPS وإذن المستخدم.
 let ycLocationPending = null;
+let customerLocationLink = "";
+const ycLocationButton = document.getElementById("ycLocation");
+const ycManualLocation = document.getElementById("ycManualLocation");
+function ycValidMapsLink(value) {
+    try {
+        const url = new URL(value.trim());
+        const host = url.hostname.toLowerCase();
+        return url.protocol === "https:" && (
+            host === "maps.google.com" || host === "www.google.com" ||
+            host === "google.com" || host === "maps.app.goo.gl" ||
+            host === "goo.gl" || host === "www.openstreetmap.org" ||
+            host === "openstreetmap.org"
+        );
+    } catch (_) { return false; }
+}
 function ycRequestLocation() {
-    if (!navigator.geolocation) {
-        cartLocationStatus.textContent = "تحديد الموقع غير مدعوم بهالجهاز.";
-        return Promise.resolve(false);
-    }
-    if (!window.isSecureContext) {
-        cartLocationStatus.textContent = "تحديد الموقع بحاجة لاتصال HTTPS آمن أو تطبيق WebView يسمح بالموقع.";
-        return Promise.resolve(false);
-    }
     if (ycLocationPending) return ycLocationPending;
-    cartLocationStatus.textContent = "عم نطلب إذن تحديد موقعك...";
+    if (!window.isSecureContext) {
+        cartLocationStatus.textContent = "⚠️ تحديد الموقع يحتاج فتح الموقع برابط HTTPS (مش http أو ملف محلي). فيك تلصق رابط موقعك من الخرائط بالأسفل.";
+        return Promise.resolve(false);
+    }
+    if (!navigator.geolocation) {
+        cartLocationStatus.textContent = "⚠️ هالمتصفح ما بيدعم تحديد الموقع. افتح الموقع بسفاري أو كروم، أو الصق رابط موقعك من الخرائط.";
+        return Promise.resolve(false);
+    }
+    cartLocationStatus.textContent = "عم نطلب إذن الموقع… وافق على الرسالة اللي بتظهر على جهازك.";
+    ycLocationButton.disabled = true;
     ycLocationPending = new Promise(resolve => {
         navigator.geolocation.getCurrentPosition(
             position => {
-                customerCoordinates = {lat:position.coords.latitude,lng:position.coords.longitude};
-                cartLocationStatus.textContent = "✓ تم تحديد موقع التوصيل بنجاح";
+                customerCoordinates = {lat: position.coords.latitude, lng: position.coords.longitude};
+                customerLocationLink = `https://www.google.com/maps?q=${customerCoordinates.lat},${customerCoordinates.lng}`;
+                ycManualLocation.value = customerLocationLink;
+                cartLocationStatus.textContent = "✓ تم تحديد الموقع بنجاح، ورح ينضاف رابط الموقع للطلب.";
                 resolve(true);
             },
             error => {
                 customerCoordinates = null;
-                cartLocationStatus.textContent = error.code === 1
-                    ? "ما سمحت بتحديد الموقع. فعّل إذن الموقع من إعدادات التطبيق."
-                    : "تعذّر تحديد الموقع. تأكد من تشغيل GPS والإنترنت.";
+                const messages = {
+                    1: "❌ إذن الموقع مرفوض. فعّل السماح بالموقع من إعدادات Safari أو Chrome أو التطبيق، وجرّب من جديد.",
+                    2: "⚠️ الجهاز ما قدر يحدد موقعك. شغّل خدمات الموقع والإنترنت، أو الصق رابط موقعك من الخرائط.",
+                    3: "⌛ تحديد الموقع أخد وقت طويل. جرّب بمكان فيه إشارة أفضل، أو الصق رابط موقعك."
+                };
+                cartLocationStatus.textContent = messages[error.code] || "تعذّر تحديد الموقع. فيك تستخدم رابط الخرائط بدلًا منه.";
                 resolve(false);
             },
-            {enableHighAccuracy:true,timeout:15000,maximumAge:0}
+            {enableHighAccuracy: false, timeout: 25000, maximumAge: 60000}
         );
-    }).finally(() => { ycLocationPending = null; });
+    }).finally(() => {
+        ycLocationPending = null;
+        ycLocationButton.disabled = false;
+    });
     return ycLocationPending;
 }
 function showMarketCart() {
     renderYallaCart();
     cartScreen.hidden = false;
-    if (!ycMobile()) {
-        ycNotify("📱 لتحديد موقع التوصيل وإرساله مع الطلب، افتح Yalla Shop من الموبايل.");
-    }
 }
 function closeYallaCart() { cartScreen.hidden = true; }
 document.getElementById("ycBack").onclick = closeYallaCart;
 document.querySelectorAll('.bottom-nav .nav-item[data-page="السلة"]').forEach(button => {
     button.addEventListener("click", showMarketCart);
 });
-document.getElementById("ycLocation").onclick = () => {
-    if (!ycMobile()) {
-        ycNotify("📱 افتح المتجر من الموبايل حتى تقدر تحدد موقعك وترسله مع الطلب.");
-        return;
-    }
-    ycRequestLocation();
-};
+ycLocationButton.addEventListener("click", ycRequestLocation);
+ycManualLocation.addEventListener("input", () => {
+    customerCoordinates = null;
+    customerLocationLink = "";
+    cartLocationStatus.textContent = "";
+});
 // تجهيز الطلب وإرساله إلى واتساب، ثم تفريغ السلة فور فتح الرابط
  document.getElementById("ycOrder").onclick = async () => {
     if (!navigator.onLine) { ycNotify("اتصل بالإنترنت لتأكيد الأسعار قبل الطلب."); return; }
@@ -8759,9 +8783,12 @@ document.getElementById("ycLocation").onclick = () => {
         ycNotify("رقم واتساب المتجر غير مضبوط، تواصل مع إدارة المتجر."); return;
     }
     const total = marketCart.reduce((sum,item) => sum + item.price * item.quantity,0);
-    const locationLink = customerCoordinates
-        ? `https://www.google.com/maps?q=${customerCoordinates.lat},${customerCoordinates.lng}`
-        : "";
+    const manualLocation = ycManualLocation.value.trim();
+    if (manualLocation && !ycValidMapsLink(manualLocation)) {
+        ycNotify("رابط الموقع مش صحيح. انسخ رابط المشاركة من Google Maps أو امسح الرابط.", ycManualLocation);
+        return;
+    }
+    const locationLink = manualLocation || customerLocationLink || "";
     const message = createYallaWhatsAppInvoice({
         name,phone,address,locationLink,
         cart:marketCart.map(item => ({...item})),total

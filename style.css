@@ -4909,3 +4909,12 @@ transform: rotate(-135deg);
 #homeScreen .ys-discovery-split[aria-label="Bakery"] .fresh-section.fresh-bakery{margin:0 !important;padding:0 0 10px !important;background:transparent !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;overflow:hidden;}
 #homeScreen .fresh-bakery .fresh-head{padding:0 18px 12px !important;background:transparent !important;}
 #homeScreen .fresh-bakery .fresh-head h3{margin:0 !important;}
+
+/* حقل رابط موقع التوصيل البديل */
+#yallaCartScreen #ycManualLocation {
+    width:100%; min-height:44px; padding:10px 12px;
+    border:1px solid #c8dff5; border-radius:12px; background:#f7fbff;
+    color:#16395c; font-size:14px; box-sizing:border-box;
+}
+#yallaCartScreen #ycManualLocation:focus {outline:2px solid #8ac9f5; outline-offset:1px;}
+#yallaCartScreen #ycLocation:disabled {opacity:.6; cursor:wait;}
